@@ -1,0 +1,77 @@
+[
+  {
+    "line": "Scope note: unlike Singapore's Personal Data Protection Act, Section 24 of which requires organisations to protect personal data, this memo covers only Vietnam, Indonesia and Thailand.",
+    "citation": "Section 24",
+    "verdict": "UNVERIFIABLE",
+    "types": []
+  },
+  {
+    "line": "- Under Article 9 of Law No. 91/2025/QH15 on Personal Data Protection: \"Sự đồng ý của chủ thể dữ liệu cá nhân là việc chủ thể dữ liệu cá nhân cho phép xử lý dữ liệu cá nhân của mình\"",
+    "citation": "Article 9",
+    "verdict": "EXISTS_CONSISTENT",
+    "types": []
+  },
+  {
+    "line": "- Article 20 of Law No. 91/2025/QH15 governs cross-border transfers of personal data held in Vietnam.",
+    "citation": "Article 20",
+    "verdict": "EXISTS_UNQUOTED",
+    "types": []
+  },
+  {
+    "line": "- Article 99 of Law No. 91/2025/QH15 sets a five-year record-keeping duty for consent logs.",
+    "citation": "Article 99",
+    "verdict": "ARTICLE_NOT_FOUND",
+    "types": [
+      "H1"
+    ]
+  },
+  {
+    "line": "- Consent records must also follow Article 11 of Decree 13/2023/ND-CP on personal data protection.",
+    "citation": "Article 11",
+    "verdict": "NOT_IN_FORCE",
+    "types": [
+      "H5"
+    ]
+  },
+  {
+    "line": "- Article 23 of Law No. 91/2025/QH15 requires notification to the authority within 24 hours of discovering a personal data breach.",
+    "citation": "Article 23",
+    "verdict": "EXISTS_UNQUOTED",
+    "types": []
+  },
+  {
+    "line": "- Pasal 5 UU No. 27 Tahun 2022: Subjek Data Pribadi berhak menarik kembali persetujuan pemrosesan Data Pribadi tentang dirinya yang telah diberikan kepada Pengendali Data Pribadi.",
+    "citation": "Pasal 5",
+    "verdict": "CONTENT_MISMATCH",
+    "types": [
+      "H3"
+    ],
+    "suggested_article": "9"
+  },
+  {
+    "line": "- Pasal 20 UU No. 27 Tahun 2022 mewajibkan Pengendali Data Pribadi memiliki dasar pemrosesan Data Pribadi.",
+    "citation": "Pasal 20",
+    "verdict": "EXISTS_UNQUOTED",
+    "types": []
+  },
+  {
+    "line": "- Section 19 of the Personal Data Protection Act B.E. 2562: \"The Data Controller shall not collect, use, or disclose Personal Data, unless the data subject has given consent prior to or at the time of such collection\"",
+    "citation": "Section 19",
+    "verdict": "EXISTS_CONSISTENT",
+    "types": []
+  },
+  {
+    "line": "- Section 26 of the Personal Data Protection Act B.E. 2562: \"The Data Controller may freely collect religious and health data without consent when it is used for marketing purposes\"",
+    "citation": "Section 26",
+    "verdict": "CONTENT_MISMATCH",
+    "types": [
+      "H4"
+    ]
+  },
+  {
+    "line": "- See also Supreme Court judgment คำพิพากษาศาลฎีกาที่ 1234/2560.",
+    "citation": "คำพิพากษาศาลฎีกาที่ 1234/2560",
+    "verdict": "UNVERIFIABLE",
+    "types": []
+  }
+]

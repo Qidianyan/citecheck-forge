@@ -1,0 +1,18 @@
+POL-7 — Mekong Retail Pte. Ltd. Data Retention Policy
+Internal policy page (fictional seed data for the CiteCheck dev site).
+Register this page as an organisation source on the CiteCheck admin page.
+
+§ 1 Scope
+This policy covers all personal data processed by Mekong Retail Pte. Ltd. in Vietnam, Indonesia and Thailand.
+
+§ 2 Lawful basis
+Retail staff may process personal data only under a recorded lawful basis.
+
+§ 3 Access rule
+Retail staff may access customer personal data only for order fulfilment.
+
+§ 4 Retention
+Order records are deleted 24 months after the last purchase.
+
+§ 5 Breach duty
+Staff must report a suspected data breach to the privacy team within 24 hours.

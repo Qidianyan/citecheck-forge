@@ -28,15 +28,20 @@ npm run eval                      # offline eval on eval/data → eval/report.js
 `eval/run-eval.mjs` scores the verifier on 123 LLM answers / 809 citations with a fixed 70/30 split by question
 (stratified by country; thresholds were tuned on the 70% dev split only). Held-out (30%) results — see `eval/REPORT.md`:
 
-| mode | precision | recall |
+| mode | dev (70%) P / R | held-out (30%) P / R |
 |---|---|---|
-| rule checks only (`legacy` / `enhanced`) | 100.0% | 33.9% |
-| + content checks, pre-registered config (`crossref_prereg`) | 89.3% | 43.5% |
-| + content checks, shipped default: numeric findings advisory (`crossref`, chosen after seeing held-out results) | 95.9% | 40.9% |
+| rule checks only (`enhanced`) | 99.0% / 34.6% | 100.0% / 33.9% (39 TP / 0 FP of 115) |
+| + content checks, H7 numbers flag (`crossref_prereg`) | 95.7% / 54.9% | 87.9% / 44.3% |
+| + content checks + version pinning, no glossary (`crossref_noanchor`, ablation) | 96.1% / 51.4% | 95.9% / 40.9% |
+| **shipped default (`crossref`)**: + zh→local glossary anchors | 96.3% / 54.5% | **94.1% / 41.7%** (48 TP / 3 FP; P 95% CI 84–98%) |
 
-The project target (recall ≥ 45% at precision ≥ 95% on held-out data) is **not reached**. Main remaining misses:
-paraphrases written in another language than the official text (e.g. Chinese answers about Vietnamese articles),
-which a lexical check cannot compare, and citations linked to another version of a law.
+Phase 3 added same-name-law version pinning, section-heading inheritance and a curated Chinese→Vietnamese/
+Indonesian/Thai legal-term glossary (`src/core/glossary.js`, deterministic, no LLM). All parameters were frozen on
+the dev split and committed before the held-out split was scored once. They lift dev recall from 45.8% to 54.5%,
+but on held-out data the gain is only +1 TP (+1 FP); the version-pinning rules find no extra cases there.
+The project target (recall ≥ 45% at precision ≥ 95% on held-out data) is **still not reached** — the dev gains did
+not generalise. Remaining misses: cross-language paraphrases with few glossary concepts, Thai/Indonesian
+answers (held-out recall TH 19%, ID 0%, VN 66%), and silver labels that a human review (`eval/review/`) may revise.
 
 ## Deploy (needs an Atlassian developer account)
 ```bash

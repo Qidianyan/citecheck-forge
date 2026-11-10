@@ -1,0 +1,1932 @@
+﻿sample_id,aid,cid,split,country,question_lang,model,law_id,article,clause,law_as_written,claim,quoted_text,answer_excerpt,official_excerpt,official_source_url,gold_verdict,gold_types,gold_basis,verifier_verdict,verifier_types,verifier_reason_en,disagreement,reviewer_verdict,reviewer_types,reviewer_confidence,reviewer_notes,reviewer_initials
+R001,QVNVI02-glm-5.3-flash,C07,test,VN,local,glm-5.3-flash,VN-ND-13-2023-CP,9,7,Nghị định số 13/2023/NĐ-CP,"Quyền cung cấp dữ liệu: Yêu cầu chuyển dữ liệu cá nhân của mình cho chủ thể khác, trừ trường hợp quy định tại điểm b khoản 7 Điều 9.",,## 1. Nghị định số 13/2023/NĐ-CP ngày 17/4/2023 của Chính phủ về bảo vệ dữ liệu cá nhân — **Điều 9**,"Điều 42. Hiệu lực và trách nhiệm thi hành
+1. Nghị định này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2026.
+2. Nghị định số 13/2023/NĐ-CP ngày 17 tháng 4 năm 2023 của Chính
+phủ về bảo vệ dữ liệu cá nhân hết hiệu lực kể từ ngày Nghị định này có hiệu
+lực thi hành.
+3. Sửa đổi khoản 2 Điều 16 của Nghị định số 165/2025/NĐ-CP ngày 30
+tháng 6 năm 2025 của Chính phủ quy định chi tiết một số điều và biện pháp thi
+hành Luật Dữ liệu như sau:
+“2. Việc bảo vệ dữ liệu cốt lõi, dữ liệu quan trọng là dữ liệu cá nhân thực
+hiện theo quy định của Luật Bảo vệ dữ liệu cá nhân và văn bản quy định chi
+tiết thi hành.
+Trường hợp chuyển, xử lý dữ liệu cốt lõi, dữ liệu quan trọng xuyên biên
+giới là dữ liệu cá nhân, chủ quản dữ liệu cốt lõi, dữ liệu quan trọng thực hiện
+hồ sơ đánh giá tác động xử lý dữ liệu cá nhân, đánh giá tác động chuyển dữ liệu
+cá nhân xuyên biên giới theo quy định của pháp luật về bảo vệ dữ liệu cá nhân;
+không phải thực hiện đánh giá rủi ro, đánh giá tác động chuyển, xử lý dữ liệu
+xuyên biên giới theo quy định của Nghị định này.”
+4. Bộ Công an chịu trách nhiệm hướng dẫn, kiểm tra, đôn đốc việc thực
+hiện Nghị định này.
+
+CÔNG BÁO/Số 18/Ngày 18-01-2026
+
+39
+
+5. Bộ trưởng các bộ, Thủ trưởn",https://vanban.chinhphu.vn/?docid=216387&pageid=27160,NOT_IN_FORCE,H5,VN-ND-13-2023-CP 已于 2026-01-01 失效（VN-ND-356-2025-CP Điều 42，见缓存原文）,NOT_IN_FORCE,H5,"Nghị định về bảo vệ dữ liệu cá nhân (VN-ND-13-2023-CP) was repealed on 2026-01-01 by VN-ND-356-2025-CP Điều 42, before the check date.",no,,,,,
+R002,QTHZH02-deepseek-v4.1-flash,C03,test,TH,zh,deepseek-v4.1-flash,TH-PDPA-2562-TH,26,2,PDPA,规定在下列情形之一时，可例外处理敏感个人数据：(1)取得明示同意；(2)防止对生命健康危险所必要；(3)履行劳动保护等法律义务所必要；(4)医学诊断等医疗服务所必要；(5)公共利益科研等所必要；(6)法律主张所必要；(7)其他法律规定情形。,"(1) 取得数据主体的明示同意（explicit consent）；
+(2) 为防止或抑制对生命、健康或他人身体的危险所必要；
+(3) 为履行以下法律义务或行使以下法定权利所必要：关于劳动保护、社会保险、社会保障、健康保险、公共卫生、雇员赔偿等法律；
+(4) 为医学诊断、提供医疗保健服务、公共卫生服务，或为管理卫生保健系统所必要，且由负有保密义务的专业人员或卫生机构进行；
+(5) 为公共利益、科学研究、统计或政府机关行使法定职权所必要，且已依第28条采取适当保障措施；
+(6) 为确立、行使或抗辩法律主张所必要；
+(7) 其他依法律规定的必要情形。",泰国《个人数据保护法》（Personal Data Protection Act B.E. 2562 (2019)，简称 PDPA）对敏感个人数据的规定主要集中在**第26条**，此外**第27条**涉及敏感个人数据的处理限制，**第28条**涉及敏感个人数据的跨境传输例外。以下按条说明。,"มาตรา ๒๖ ห้ามมิให้เก็บรวบรวมข้อมูลส่วนบุคคลเกี่ยวกับเชื้อชาติ เผ่าพันธุ์ ความคิดเห็น
+ทางการเมือง ความเชื่อในลัทธิ ศาสนาหรือปรัชญา พฤติกรรมทางเพศ ประวัติอาชญากรรม
+ข้อมูลสุขภาพ ความพิการ ข้อมูลสหภาพแรงงาน ข้อมูลพันธุกรรม ข้อมูลชีวภาพ หรือข้อมูลอื่นใด
+ซึ่งกระทบต่อเจ้าของข้อมูลส่วนบุคคลในท านองเดียวกันตามที่คณะกรรมการประกาศก าหนด โดยไม่ได้รับ
+ความยินยอมโดยชัดแจ้งจากเจ้าของข้อมูลส่วนบุคคล เว้นแต่
+(๑) เพื่อป้องกันหรือระงับอันตรายต่อชีวิต ร่างกาย หรือสุขภาพของบุคคลซึ่งเจ้าของข้อมูล
+ส่วนบุคคลไม่สามารถให้ความยินยอมได้ ไม่ว่าด้วยเหตุใดก็ตาม
+(๒) เป็นการด าเนินกิจกรรมโดยชอบด้วยกฎหมายที่มีการคุ้มครองที่เหมาะสมของมูลนิธิ สมาคม
+หรือองค์กรที่ไม่แสวงหาก าไรที่มีวัตถุประสงค์เกี่ยวกับการเมือง ศาสนา ปรัชญา หรือสหภาพแรงงาน
+ให้แก่สมาชิก ผู้ซึ่งเคยเป็นสมาชิก หรือผู้ซึ่งมีการติดต่ออย่างสม่ าเสมอกับมูลนิธิ สมาคม หรือองค์กร
+ที่ไม่แสวงหาก าไรตามวัตถุประสงค์ดังกล่าวโดยไม่ได้เปิดเผยข้อมูลส่วนบุคคลนั้นออกไปภายนอกมูลนิธิ
+สมาคม หรือองค์กรที่ไม่แสวงหาก าไรนั้น
+หนา ๖๔่
+เลม ๑๓๖ ตอนที่ ๖๙ ก
+ราชกิจจานุเบกษา
+๒๗ พฤษภาคม ๒๕๖๒
+(๓) เป็นข้อมูลที่เปิดเผยต่อสาธารณะด้วยความยินยอมโดยชัดแจ้งของเจ้าของข้อมูลส่วนบุคคล
+(๔) เป็นการจ าเป็นเพื่อการก่อตั้งสิทธิเรียกร้องตามกฎหมาย การปฏิบัติตามหรือการใช้สิทธิ
+เรียกร้องตามกฎหมาย หรือการยก",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,EXISTS_CONSISTENT,,条文存在、现行，claim 被原文支持（LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",no,,,,,
+R003,QVNZH06-glm-5.3-flash,C26,dev,VN,zh,glm-5.3-flash,VN-DN-59-2020-QH14,28,,《企业法》,结合01/2021/NĐ-CP议定第26条，规定登记机关自收到完整材料之日起3个工作日内颁发《企业登记证书》（ERC）。,,依据《企业法》**第28条**和01/2021/NĐ-CP议定第26条，登记机关自收到完整材料之日起**3个工作日内**颁发《企业登记证书》（ERC）。,"Điều 28. Nội dung Giấy chứng nhận đăng ký doanh nghiệp
+Giấy chứng nhận đăng ký doanh nghiệp bao gồm các nội dung chủ yếu sau đây:
+1. Tên doanh nghiệp và mã số doanh nghiệp;
+2. Địa chỉ trụ sở chính của doanh nghiệp;
+3. Họ, tên, địa chỉ liên lạc, quốc tịch, số giấy tờ pháp lý của cá nhân đối với
+người đại diện theo pháp luật của công ty trách nhiệm hữu hạn và công ty cổ phần;
+đối với thành viên hợp danh của công ty hợp danh; đối với chủ doanh nghiệp của
+doanh nghiệp tư nhân. Họ, tên, địa chỉ liên lạc, quốc tịch, số giấy tờ pháp lý của cá
+nhân đối với thành viên là cá nhân; tên, mã số doanh nghiệp và địa chỉ trụ sở chính
+của thành viên là tổ chức đối với công ty trách nhiệm hữu hạn;
+4. Vốn điều lệ đối với công ty, vốn đầu tư đối với doanh nghiệp tư nhân.
+
+24
+
+CÔNG BÁO/Số 713 + 714/Ngày 24-7-2020",https://congbao.chinhphu.vn/van-ban/luat-so-59-2020-qh14-31674.htm,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R004,QTHTH01-deepseek-v4.1-flash,C08,test,TH,local,deepseek-v4.1-flash,TH-PDPA-2562-TH,35,,พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562,เจ้าของข้อมูลมีสิทธิขอให้แก้ไขข้อมูลส่วนบุคคลของตนให้ถูกต้อง เป็นปัจจุบัน สมบูรณ์ และไม่ก่อให้เกิดความเข้าใจผิด,,3) **สิทธิขอให้แก้ไขข้อมูลให้ถูกต้อง (มาตรา 35)**,"มาตรา ๓๕ ผู้ควบคุมข้อมูลส่วนบุคคลต้องด าเนินการให้ข้อมูลส่วนบุคคลนั้นถูกต้อง
+เป็นปัจจุบัน สมบูรณ์ และไม่ก่อให้เกิดความเข้าใจผิด",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,CONTENT_MISMATCH,H3,claim 与原文不符（CONTRADICTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R005,QTHZH05-glm-5.3-flash,C03,test,TH,zh,glm-5.3-flash,TH-LPA-2541,27,,泰国《劳动保护法》,规定每日工作中应有休息时间。,,此外，第27条规定每日工作中应有休息时间；第29条规定雇员每周至少应有1天休息日（传统为周日）。,"มาตรา ๒๗ ในวันที่มีการทำงาน ให้นายจ้างจัดให้ลูกจ้างมีเวลาพักระหว่างการ
+ทำงานวันหนึ่งไม่น้อยกว่าหนึ่งชั่วโมงหลังจากที่ลูกจ้างทำงานมาแล้วไม่เกินห้าชั่วโมงติดต่อกัน นายจ้าง
+และลูกจ้างอาจตกลงกันล่วงหน้าให้มีเวลาพักครั้งหนึ่งน้อยกว่าหนึ่งชั่วโมงได้ แต่เมื่อรวมกันแล้ววันหนึ่ง
+ต้องไม่น้อยกว่าหนึ่งชั่วโมง
+ในกรณีที่นายจ้างและลูกจ้างตกลงกันกำหนดเวลาพักระหว่างการทำงานตามวรรคหนึ่ง
+เป็นอย่างอื่น ถ้าข้อตกลงนั้นเป็นประโยชน์แก่ลูกจ้าง ให้ข้อตกลงนั้นใช้บังคับได้
+เวลาพักระหว่างการทำงานไม่ให้นับรวมเป็นเวลาทำงาน เว้นแต่เวลาพักที่รวมกันแล้ว
+ในวันหนึ่งเกินสองชั่วโมง ให้นับเวลาที่เกินสองชั่วโมงนั้นเป็นเวลาทำงานปกติ
+ในกรณีที่มีการทำงานล่วงเวลาต่อจากเวลาทำงานปกติไม่น้อยกว่าสองชั่วโมง
+นายจ้างต้องจัดให้ลูกจ้างมีเวลาพักไม่น้อยกว่ายี่สิบนาทีก่อนที่ลูกจ้างเริ่มทำงานล่วงเวลา
+ความในวรรคหนึ่งและวรรคสี่ มิให้ใช้บังคับแก่กรณีที่ลูกจ้างทำงานที่มีลักษณะหรือ
+สภาพของงานต้องทำติดต่อกันไปโดยได้รับความยินยอมจากลูกจ้างหรือเป็นงานฉุกเฉิน",https://ccpl.mol.go.th/,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R006,QIDZH02-qwen3.8-flash,C02,dev,ID,zh,qwen3.8-flash,ID-UU-27-2022,57–59,,《个人数据保护法》（Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi，简称 UU PDP）,行政制裁：如书面警告、暂停处理活动、删除数据、罚款等。,,"需要首先澄清一个关键的法律事实：**截至 2024 年，印度尼西亚的《个人数据保护法》（Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi，简称 UU PDP）主要规定的是行政处罚和民事赔偿责任，并未直接在该法中设立“刑事处罚”条款。**
+
+但是，**违反该法的行为可能同时触犯其他现行刑事法律**，从而引发刑事责任。此外，UU PDP 第 65 条明确规定：“本法与有关刑事犯罪的法律法规并行适用。”这意味着如果数据处理行为构成犯罪，将依据其他刑法追究刑责。
+
+以下是详细分析：
+
+### 一、《个人数据保护法》（UU No. 27/2022）本身的规定
+
+#### 1. 无直接刑事处罚
+UU PDP **没有**设立专门的“监禁”或“刑事罚金”作为对该法违规行为的直接处罚。其法律责任体系主要包括：
+- **行政制裁**（Sanksi Administratif）：如书面警告、暂停处理活动、删除数据、罚款等（见第 57–59 条）。
+- **民事赔偿**（Ganti Rugi）：数据主体可提起民事诉讼要求赔偿损失（见第 12 条、第 58 条）。
+
+#### 2. 关键条款引用
+> **第 65 条（Ketentuan Pidana）**  
+> *“Dalam hal terjadi tindak pi","Pasal 57
+ (1) Pelanggaran terhadap ketentuan Pasal 2O ayat (l),
+ ' Pasal 21, Pasal 24, Pasal 25 ayat (2), Pasal 26ayat(31,
+ Pasal 27, Pasal 28, Pasal 29, Pasal 30, Pasal 31,
+ Pasal 32 ayat (1), Pasal 33, Pasal 34 ayat (1), Pasal 35,
+ Pasal 36, Pasal 37, Pasal 38, Pasal 39 ayat (1),
+ Pasal 4O ayat (1), Pasal 41 ayat (1) dan ayat (3),
+ Pasal 42 ayat (1), Pasal 43 ayat (1), Pasal 44 ayat (1),
+ Pasal 45, Pasal 46 ayat (1) dan ayat (3), Pasal 47,
+ Pasal 48 ayat (l), Pasal 49, Pasal 51 ayat (1) dan
+ ayat (5), Pasal 52, Pasal 53 ayat (l), Pasal 55 ayat (21,
+ dan Pasal 56 ayat (2) sampai dengan ayat (4) dikenai
+ sanksi administratif.
+ (2) Sanksi administratif sebagaimana dimaksud pada
+ ayat (l) berupa:
+ a. peringatantertulis;
+ b. penghentian sementara kegiatan pemrosesan Data
+ Pribadi;
+ c. penghapusan atau pemusnahan Data Pribadi;
+ dan/atau
+ d. dendaadministratif.
+ (3) Sanksi administratif berupa denda administratif
+ sebagaimana dimaksud pada ayat (2) huruf d paling
+ tinggi 2 (dua) persen dari perrdapatan tahunan atau
+ . penerimaan tahunan terhadap variabel pelanggaran.
+ (4) Penjatuhan sanksi administratif sebagaimana
+ dimaksud pada ayat (2) diberikan oleh lembaga.
+ (5) Ketentuan lebih lan",https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022,EXISTS_CONSISTENT,,条文存在、现行，claim 被原文支持（LLM 辅助标注）,MISSED,,The verifier produced no matching prediction for this citation.,no,,,,,
+R007,QTHZH01-qwen3.8-flash,C05,dev,TH,zh,qwen3.8-flash,TH-PDPA-2562-TH,28,,泰国《个人数据保护法》（Personal Data Protection Act B.E. 2562 (2019)）,跨境传输限制，需满足目的地国家保护水平相当性或适当保障措施的要求。,,'- **跨境传输限制**：若将个人数据转移至境外，还需满足 **第28条** 关于目的地国家保护水平相当性或适当保障措施的要求。,"มาตรา ๒๘ ในกรณีที่ผู้ควบคุมข้อมูลส่วนบุคคลส่งหรือโอนข้อมูลส่วนบุคคลไปยังต่างประเทศ
+ประเทศปลายทางหรือองค์การระหว่างประเทศที่รับข้อมูลส่วนบุคคลต้องมีมาตรฐานการคุ้มครองข้อมูล
+ส่วนบุคคลที่เพียงพอ ทั้งนี้ ต้องเป็นไปตามหลักเกณฑ์การให้ความคุ้มครองข้อมูลส่วนบุคคลตามที่
+คณะกรรมการประกาศก าหนดตามมาตรา ๑๖ (๕) เว้นแต่
+(๑) เป็นการปฏิบัติตามกฎหมาย
+(๒) ได้รับความยินยอมจากเจ้าของข้อมูลส่วนบุคคลโดยได้แจ้งให้เจ้าของข้อมูลส่วนบุคคลทราบถึง
+มาตรฐานการคุ้มครองข้อมูลส่วนบุคคลที่ไม่เพียงพอของประเทศปลายทางหรือองค์การระหว่างประเทศ
+ที่รับข้อมูลส่วนบุคคลแล้ว
+หนา ๖๖่
+เลม ๑๓๖ ตอนที่ ๖๙ ก
+ราชกิจจานุเบกษา
+๒๗ พฤษภาคม ๒๕๖๒
+(๓) เป็นการจ าเป็นเพื่อการปฏิบัติตามสัญญาซึ่งเจ้าของข้อมูลส่วนบุคคลเป็นคู่สัญญาหรือ
+เพื่อใช้ในการด าเนินการตามค าขอของเจ้าของข้อมูลส่วนบุคคลก่อนเข้าท าสัญญานั้น
+(๔) เป็นการกระท าตามสัญญาระหว่างผู้ควบคุมข้อมูลส่วนบุคคลกับบุคคลหรือนิติบุคคลอื่น
+เพื่อประโยชน์ของเจ้าของข้อมูลส่วนบุคคล
+(๕) เพื่อป้องกันหรือระงับอันตรายต่อชีวิต ร่างกาย หรือสุขภาพของเจ้าของข้อมูลส่วนบุคคล
+หรือบุคคลอื่น เมื่อเจ้าของข้อมูลส่วนบุคคลไม่สามารถให้ความยินยอมในขณะนั้นได้
+(๖) เป็นการจ าเป็นเพื่อการด าเนินภารกิจเพื่อประโยชน์สาธารณะที่ส าคัญ
+ในกรณีที่มีปัญหาเกี่ยวกับมาตรฐานการคุ้มครองข้อมูลส่วนบุคคลที่เพียงพอของประเทศปลายทาง
+หรืออง",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,EXISTS_CONSISTENT,,条文存在、现行，claim 被原文支持（LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",no,,,,,
+R008,QVNZH04-glm-5.3-flash,C03,dev,VN,zh,glm-5.3-flash,VN-BLLD-45-2019-QH14,14,2,《劳动法》,除家庭佣工外，雇用10人以下、期限12个月以下的用工可用口头形式订立；口头合同履行超过一定期限后视情况转为书面合同。,,**《劳动法》第14条第1款**规定，劳动合同分为以下三种类型：,"Điều 14. Hình thức hợp đồng lao động
+1. Hợp đồng lao động phải được giao kết bằng văn bản và được làm thành
+02 bản, người lao động giữ 01 bản, người sử dụng lao động giữ 01 bản, trừ trường
+hợp quy định tại khoản 2 Điều này.
+Hợp đồng lao động được giao kết thông qua phương tiện điện tử dưới hình
+thức thông điệp dữ liệu theo quy định của pháp luật về giao dịch điện tử có giá trị
+như hợp đồng lao động bằng văn bản.
+2. Hai bên có thể giao kết hợp đồng lao động bằng lời nói đối với hợp đồng
+có thời hạn dưới 01 tháng, trừ trường hợp quy định tại khoản 2 Điều 18, điểm a
+khoản 1 Điều 145 và khoản 1 Điều 162 của Bộ luật này.",https://congbao.chinhphu.vn/van-ban/van-ban-hop-nhat-so-18-vbhn-vpqh-468971.htm,CONTENT_MISMATCH,H7,claim 与原文不符（CONTRADICTED，LLM 辅助标注）,CONTENT_MISMATCH,H3,The statement matches article 8 of Bộ luật Lao động (văn bản hợp nhất 18/VBHN-VPQH) (VN-BLLD-45-2019-QH14) much better than the cited article 14 (overlap 0.927 vs 0.12) — likely a misattributed provision; did you mean article 8?,no,,,,,
+R009,QVNVI03-deepseek-v4.1-flash,C02,test,VN,local,deepseek-v4.1-flash,,102,1 điểm c,Nghị định 15/2020/NĐ-CP,"Phạt tiền từ 10.000.000 đồng đến 20.000.000 đồng đối với hành vi thu thập, sử dụng thông tin cá nhân của người khác mà không được sự đồng ý, hoặc chia sẻ thông tin cá nhân cho bên thứ ba khi chưa được phép.",,"'- **Điều 102 khoản 1 điểm c** (vi phạm quy định về thu thập, sử dụng, chia sẻ thông tin cá nhân): phạt tiền từ **10.000.000 đồng đến 20.000.000 đồng** đối với hành vi thu thập, sử dụng thông tin cá nhân của người khác mà không được sự đồng ý, hoặc chia sẻ thông tin cá nhân cho bên thứ ba khi chưa được phép.",,,UNVERIFIABLE,,法规未缓存（number_uncached），无官方原文可比对,UNVERIFIABLE,,"""14/2022/NĐ-CP"" is not in the CiteCheck corpus (or no law was named), so it cannot be verified.",no,,,,,
+R010,QVNVI04-glm-5.3-flash,C01,dev,VN,local,glm-5.3-flash,VN-GDDT-51-2005-QH11,22,,Luật Giao dịch điện tử 2005,Thông điệp dữ liệu không bị loại bỏ hiệu lực pháp lý chỉ vì lý do thông điệp dữ liệu đó được thể hiện dưới dạng thông điệp dữ liệu.,"""Thông điệp dữ liệu không bị loại bỏ hiệu lực pháp lý chỉ vì lý do thông điệp dữ liệu đó được thể hiện dưới dạng thông điệp dữ liệu.""","# Chữ ký điện tử và giá trị pháp lý theo pháp luật Việt Nam
+
+## 1. Luật Giao dịch điện tử 2005 (số 51/2005/QH12)
+
+**Điều 22 – Giá trị của thông điệp dữ liệu:**
+> ""Thông điệp dữ liệu không bị loại bỏ hiệu lực pháp lý chỉ vì lý do thông điệp dữ liệu đó được thể hiện dưới dạng thông điệp dữ liệu.""
+
+**Điều 24 – Tình trạng pháp lý của chữ ký điện tử:**
+> ""1. Chữ ký điện tử được coi là đủ khi thông tin được tạo ra dưới dạng thông điệp dữ liệu, được gắn với, kết hợp với hoặc được liên kết một cách logic với thông điệp dữ liệu khác, phương thức tạo ra chữ ký điện tử đó có thể xác định được người ký và","Điều 52. Hiệu lực thi hành
+1. Luật này có hiệu lực thi hành từ ngày 01 tháng 7 năm 2024.
+2. Luật Giao dịch điện tử số 51/2005/QH11 hết hiệu lực kể từ ngày Luật này
+có hiệu lực thi hành, trừ trường hợp quy định tại Điều 53 của Luật này.",https://congbao.chinhphu.vn/van-ban/luat-so-20-2023-qh15-39848.htm,NOT_IN_FORCE,H5,VN-GDDT-51-2005-QH11 已于 2024-07-01 失效（VN-GDDT-20-2023-QH15 Điều 52，见缓存原文）,MISSED,,The verifier produced no matching prediction for this citation.,yes,,,,,
+R011,QTHTH01-deepseek-v4.1-flash,C09,test,TH,local,deepseek-v4.1-flash,TH-PDPA-2562-TH,73,,พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562,เจ้าของข้อมูลมีสิทธิร้องเรียนต่อคณะกรรมการคุ้มครองข้อมูลส่วนบุคคลหรือสำนักงาน หากเห็นว่ามีการฝ่าฝืนหรือไม่ปฏิบัติตามพระราชบัญญัตินี้,,9) **สิทธิร้องเรียนต่อคณะกรรมการหรือสำนักงาน (มาตรา 73)**,"มาตรา ๗๓ เจ้าของข้อมูลส่วนบุคคลมีสิทธิร้องเรียนในกรณีที่ผู้ควบคุมข้อมูลส่วนบุคคล
+หรือผู้ประมวลผลข้อมูลส่วนบุคคล รวมทั้งลูกจ้างหรือผู้รับจ้างของผู้ควบคุมข้อมูลส่วนบุคคลหรือผู้ประมวลผล
+ข้อมูลส่วนบุคคล ฝ่าฝืนหรือไม่ปฏิบัติตามพระราชบัญญัติหรือประกาศที่ออกตามพระราชบัญญัตินี้
+การยื่น การไม่รับเรื่อง การยุติเรื่อง การพิจารณา และระยะเวลาในการพิจารณาค าร้องเรียน
+ให้เป็นไปตามระเบียบที่คณะกรรมการประกาศก าหนดโดยค านึงถึงการก าหนดให้ไม่รับเรื่องร้องเรียนหรือ
+ยุติเรื่องในกรณีที่มีผู้มีอ านาจพิจารณาในเรื่องนั้นอยู่แล้วตามกฎหมายอื่นด้วย",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,EXISTS_CONSISTENT,,条文存在、现行，claim 被原文支持（LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",no,,,,,
+R012,QIDID01-glm-5.3-flash,C09,dev,ID,local,glm-5.3-flash,ID-UU-27-2022,12,,UU PDP,"Hak Menunda atau Membatasi Pemrosesan terkait proporsionalitas, akurasi, validitas sumber, relevansi perubahan, keperluan, dan pembuatan profil (kecuali pelayanan publik).",,### 7. Hak Menunda atau Membatasi Pemrosesan (Pasal 12),"Pasal 12
+ (I) Subjek Data Pribadi berhak menggugat dan menerima
+ ganti rugi atas pelanggaran pemrosesan Data Pribadi
+ tentang dirinya sesuai dengan ketentuan peraturan
+ perundang-undangan.
+
+ (2) Ketentuan . . .
+
+
+SK No 155207A
+ PRESlDEN
+ REPUBLIK INDONES]A
+
+
+ -7 -
+ (2) Ketentuan lebih lanjut mengenai pelanggaran
+ pemrosesan Data Pribadi dan tata cara pengenaan
+ ganti rugi sebagaimana dimaksud pada ayat (1) diatur
+ dalam Peraturan Pemerintah.",https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,CONTENT_MISMATCH,H3,The statement matches article 11 of Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (ID-UU-27-2022) much better than the cited article 12 (overlap 0.215 vs 0.065) — likely a misattributed provision; did you mean article 11?,no,,,,,
+R013,QIDZH02-deepseek-v4.1-flash,C05,dev,ID,zh,deepseek-v4.1-flash,ID-UU-27-2022,69,1,《个人数据保护法》（Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi，简称 UU PDP，2022年第27号法律）,数据控制者或处理者故意且未经授权披露、使用或篡改个人数据，适用第67条的刑罚加三分之一。,,**三、第69条：数据控制者/处理者的加重情节**,"Pasal 69...
+
+
+SK No 155350A
+ PRESIDEN
+ BLIK INDONES
+
+
+ -31 -
+ Pasal 69
+ Selain dijatuhi pidana ssfagaimana dimaksud dalam
+ Pasal 67 dan Pasal 68 juga dapat dijatuhi pidana
+ tambahan berupa perampasan keuntungan dan/ atau
+ harta kekayaan yang diperoleh atau hasil dari tindak
+ pidana dan pembayaran ganti kerugian.
+
+ Pasal 7O
+ (1) Dafam hal tindak pidana sebagaimana dimaksud
+ dalam Pasal 67 dan Pasal 68 dilakukan oleh Korporasi,
+ pidana dapat dljatuhkan kepada pengurus, pemegang
+ kendali, pemberi perintah, pemilik manfaat, dan/ atau
+ Korporasi.
+ (2) Pidana yang dapat d[jatuhkan terhadap Korporasi
+ hanya pidana denda.
+ (3) Pidana denda yang dijatuhkan kepada Korporasi
+ paling banyak 10 (sepuluh) kali dari maksimal pidana
+ denda yang diancamkan.
+ (4) Selain dijatuhi pidana denda sebagaimana dimaksud
+ pada ayat (2), Korporasi dapat dijatuhi pidana
+ ' tambahan berupa:
+ a. perampasan keuntungan dan/ atau harta
+ kekayaan yang diperoleh atau hasil dari tindak
+ pidana;
+ b. pembekuan seluruh atau sebagian usaha
+ Korporasi;
+ c. pelarangan permanen melakukan perbuatan
+ tertentu;
+ d. penutupan seluruh atau sebagian tempat usaha
+ dan/ atau kegiatan Korporasi;
+ e. melaksanakan kewajiban yang telah",https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,CONTENT_MISMATCH,H3,The statement matches article 59 of Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (ID-UU-27-2022) much better than the cited article 69 (overlap 1 vs 0) — likely a misattributed provision; did you mean article 59?,no,,,,,
+R014,QVNVI02-deepseek-v4.1-flash,C01,test,VN,local,deepseek-v4.1-flash,VN-ND-13-2023-CP,9,,Nghị định số 13/2023/NĐ-CP,Quyền của chủ thể dữ liệu cá nhân được quy định tại Điều 9 Nghị định 13/2023/NĐ-CP.,,"**Lưu ý quan trọng:** Ở Việt Nam hiện **chưa có một văn bản luật riêng mang tên ""Luật Bảo vệ dữ liệu cá nhân""**. Nội dung về quyền của chủ thể dữ liệu cá nhân hiện được quy định chủ yếu tại **Nghị định số 13/2023/NĐ-CP** ngày 17/4/2023 của Chính phủ về bảo vệ dữ liệu cá nhân (sau đây gọi là ""Nghị định 13/2023/NĐ-CP""), cụ thể tại **Điều 9**.","Điều 42. Hiệu lực và trách nhiệm thi hành
+1. Nghị định này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2026.
+2. Nghị định số 13/2023/NĐ-CP ngày 17 tháng 4 năm 2023 của Chính
+phủ về bảo vệ dữ liệu cá nhân hết hiệu lực kể từ ngày Nghị định này có hiệu
+lực thi hành.
+3. Sửa đổi khoản 2 Điều 16 của Nghị định số 165/2025/NĐ-CP ngày 30
+tháng 6 năm 2025 của Chính phủ quy định chi tiết một số điều và biện pháp thi
+hành Luật Dữ liệu như sau:
+“2. Việc bảo vệ dữ liệu cốt lõi, dữ liệu quan trọng là dữ liệu cá nhân thực
+hiện theo quy định của Luật Bảo vệ dữ liệu cá nhân và văn bản quy định chi
+tiết thi hành.
+Trường hợp chuyển, xử lý dữ liệu cốt lõi, dữ liệu quan trọng xuyên biên
+giới là dữ liệu cá nhân, chủ quản dữ liệu cốt lõi, dữ liệu quan trọng thực hiện
+hồ sơ đánh giá tác động xử lý dữ liệu cá nhân, đánh giá tác động chuyển dữ liệu
+cá nhân xuyên biên giới theo quy định của pháp luật về bảo vệ dữ liệu cá nhân;
+không phải thực hiện đánh giá rủi ro, đánh giá tác động chuyển, xử lý dữ liệu
+xuyên biên giới theo quy định của Nghị định này.”
+4. Bộ Công an chịu trách nhiệm hướng dẫn, kiểm tra, đôn đốc việc thực
+hiện Nghị định này.
+
+CÔNG BÁO/Số 18/Ngày 18-01-2026
+
+39
+
+5. Bộ trưởng các bộ, Thủ trưởn",https://vanban.chinhphu.vn/?docid=216387&pageid=27160,NOT_IN_FORCE,H5,VN-ND-13-2023-CP 已于 2026-01-01 失效（VN-ND-356-2025-CP Điều 42，见缓存原文）,NOT_IN_FORCE,H5,"Nghị định về bảo vệ dữ liệu cá nhân (VN-ND-13-2023-CP) was repealed on 2026-01-01 by VN-ND-356-2025-CP Điều 42, before the check date.",no,,,,,
+R015,QVNVI05-glm-5.3-flash,C02,dev,VN,local,glm-5.3-flash,,444,,BLDS 2015,Quy định về thời hiệu 02 năm đối với các yêu cầu về hợp đồng.,,"g thiệt hại do hành vi trái pháp luật, thiệt hại do nguồn nguy hiểm cao độ, thiệt hại về tính mạng, sức khỏe, danh dự, nhân phẩm, uy tín...).
+- Lưu ý: Điều 588 quy định riêng về thời hiệu khởi kiện yêu cầu bồi thường thiệt hại, khác với thời hiệu 02 năm đối với các yêu cầu về hợp đồng theo Điều 444 BLDS 2015.
+
+## Lưu ý thực tiễn
+
+Việc xác định thời điểm ""biết hoặc phải biết"" thường là tranh chấp trong thực tiễn xét xử, nên người bị thiệt hại nên thu thập, lưu giữ bằng chứng về thời điểm phát hiện thiệt hại để bảo vệ quyền khởi kiện của mình.",,,UNVERIFIABLE,,法规未缓存（unknown），无官方原文可比对,MISSED,,The verifier produced no matching prediction for this citation.,no,,,,,
+R016,QVNZH04-mimo-v2.6-flash,C04,dev,VN,zh,mimo-v2.6-flash,VN-BLLD-45-2019-QH14,16,,《2019年劳动法》（Bộ luật Lao động 2019）,规定季节性或特定工作劳动合同，适用于季节性工作或特定项目工作，最长期限为12个月。,季节性或特定工作劳动合同是指根据一个特定工作项目而签订的，且该工作项目在12个月内完成后即告结束的合同，合同期限最长不超过12个月。,'- 依据：**第16条（Điều 16）**,"Điều 16. Nghĩa vụ cung cấp thông tin khi giao kết hợp đồng lao động
+1. Người sử dụng lao động phải cung cấp thông tin trung thực cho người lao
+động về công việc, địa điểm làm việc, điều kiện làm việc, thời giờ làm việc, thời
+
+CÔNG BÁO/Số 131/Ngày 28-02-2026
+
+29
+
+giờ nghỉ ngơi, an toàn, vệ sinh lao động, tiền lương, hình thức trả lương, bảo hiểm
+xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp, quy định về bảo vệ bí mật kinh doanh,
+bảo vệ bí mật công nghệ và vấn đề khác liên quan trực tiếp đến việc giao kết hợp
+đồng lao động mà người lao động yêu cầu.
+2. Người lao động phải cung cấp thông tin trung thực cho người sử dụng lao
+động về họ tên, ngày tháng năm sinh, giới tính, nơi cư trú, trình độ học vấn, trình
+độ kỹ năng nghề, xác nhận tình trạng sức khỏe và vấn đề khác liên quan trực tiếp
+đến việc giao kết hợp đồng lao động mà người sử dụng lao động yêu cầu.",https://congbao.chinhphu.vn/van-ban/van-ban-hop-nhat-so-18-vbhn-vpqh-468971.htm,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in Bộ luật Lao động (văn bản hợp nhất 18/VBHN-VPQH) (VN-BLLD-45-2019-QH14) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R017,QTHZH05-deepseek-v4.1-flash,C08,test,TH,zh,deepseek-v4.1-flash,TH-LPA-2541,68,,《劳动保护法》,日工资按正常工作时间计算；小时工资由日工资除以正常工作时间小时数得出，加班费按此小时工资乘以相应倍数计算。,,**第68条**规定：日工资按正常工作时间计算；小时工资由日工资除以正常工作时间小时数得出，加班费按此小时工资乘以相应倍数计算。,"มาตรา ๖๘ เพื่อประโยชน์แก่การคำนวณค่าล่วงเวลา ค่าทำงานในวันหยุด และ
+ค่าล่วงเวลาในวันหยุด ในกรณีที่ลูกจ้างได้รับค่าจ้างเป็นรายเดือน อัตราค่าจ้างต่อชั่วโมงในวันทำงาน
+หมายถึงค่าจ้างรายเดือนหารด้วยผลคูณของสามสิบและจำนวนชั่วโมงทำงานในวันทำงานต่อวัน
+โดยเฉลี่ย",https://ccpl.mol.go.th/,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R018,QVNZH06-glm-5.3-flash,C18,dev,VN,zh,glm-5.3-flash,VN-DN-59-2020-QH14,26,,《企业法》,涉及企业登记相关规定（与第27条并列引用）。,,"省级计划投资厅（现为财政厅）投资登记机关：负责其他项目；
+- 不涉及国家预算资金调整、不属禁止限制行业的项目，投资登记机关不得拒绝颁发（第39条第2款精神）。
+
+**5. 例外——免办IRC**
+《投资法》**第35条**规定，下列情况**无需办理IRC**：国家机关批准的其他投资主张已获批准的项目；内资投资者的小额项目（不需办理者）；符合投资登记简化条件的项目（具体见31/2021/NĐ-CP议定第36条）。但**外国投资者不享受第35条第1款c项（小额项目免办）的简化待遇**。
+
+## 三、企业登记（ERC）——成立公司
+
+《投资法》**第28条**规定，外国投资者投资设立经济组织的，依照《企业法》和《投资法》办理。
+
+依《企业法》**第26、27条**及01/2021/NĐ-CP议定：
+- **第27条第1款**：企业登记申请书；
+- 投资登记证书副本（《企业法》**第27条第2款**明确列出须随附IRC）；
+- 公司章程（**第27条第3款**）；
+- 成员/股东名单（**第27条第4款**）；
+- 个人投资者的身份证明、组织投资者的法人登记文件（第27条第5款）；
+- 授权文件（如委托办理，第27条第6款）。
+
+依据《企业法》**第28条**和01/2021/NĐ-CP议定第26条，登记机关自收到完整材料之日起**3个工作日内**颁发《企业登记证书》（ERC）。
+
+## ","Điều 26. Trình tự, thủ tục đăng ký doanh nghiệp
+1. Người thành lập doanh nghiệp hoặc người được ủy quyền thực hiện đăng ký
+doanh nghiệp với Cơ quan đăng ký kinh doanh theo phương thức sau đây:
+a) Đăng ký doanh nghiệp trực tiếp tại Cơ quan đăng ký kinh doanh;
+b) Đăng ký doanh nghiệp qua dịch vụ bưu chính;
+c) Đăng ký doanh nghiệp qua mạng thông tin điện tử.
+2. Đăng ký doanh nghiệp qua mạng thông tin điện tử là việc người thành lập
+doanh nghiệp nộp hồ sơ đăng ký doanh nghiệp qua mạng thông tin điện tử tại
+Cổng thông tin quốc gia về đăng ký doanh nghiệp. Hồ sơ đăng ký doanh nghiệp
+qua mạng thông tin điện tử bao gồm các dữ liệu theo quy định của Luật này và
+được thể hiện dưới dạng văn bản điện tử. Hồ sơ đăng ký doanh nghiệp qua mạng
+thông tin điện tử có giá trị pháp lý tương đương hồ sơ đăng ký doanh nghiệp bằng
+bản giấy.
+3. Tổ chức, cá nhân có quyền lựa chọn sử dụng chữ ký số theo quy định của
+pháp luật về giao dịch điện tử hoặc sử dụng tài khoản đăng ký kinh doanh để đăng
+ký doanh nghiệp qua mạng thông tin điện tử.
+4. Tài khoản đăng ký kinh doanh là tài khoản được tạo bởi Hệ thống thông tin
+quốc gia về đăng ký doanh nghiệp, cấp cho cá nhân để thực hiện đăng ký doanh
+nghiệp qua mạng th",https://congbao.chinhphu.vn/van-ban/luat-so-59-2020-qh14-31674.htm,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,MISSED,,The verifier produced no matching prediction for this citation.,no,,,,,
+R019,QIDID01-glm-5.3-flash,C12,dev,ID,local,glm-5.3-flash,ID-UU-27-2022,5,,UU PDP,Penyebutan ulang Pasal 5 sebagai dasar hak atas pelindungan data pribadi sesuai ketentuan peraturan perundang-undangan.,,"**Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP)**, khususnya **Pasal 5 sampai dengan Pasal 13**.","Pasal 5
+ Subjek Data Pribadi berhak mendapatkan Informasi
+ tentang kejelasan identitas, dasar kepentingan hukum,
+ tujuan permintaan dan penggu.naan Data Pribadi, dan
+ akuntabilitas pihak yang meminta Data Pribadi.",https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (ID-UU-27-2022) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R020,QIDID05-glm-5.3-flash,C03,dev,ID,local,glm-5.3-flash,ID-UU-1-1974,6,,Pasal 6 UU No. 1 Tahun 1974,"Perkawinan didasarkan pada persetujuan kedua calon mempelai, dan bagi calon yang berusia kurang dari 21 tahun memerlukan izin dari: orang tua pihaknya; pelindung pihaknya; keluarga yang berhak menurut ketentuan hukum pihaknya; dalam hal tidak ada semua pihak tersebut, izin dari Kepala Kantor Lembaga Perkawinan atau pejabat yang ditunjuk.",,"**Pasal 6 UU No. 1 Tahun 1974** — Perkawinan didasarkan pada persetujuan kedua calon mempelai, dan bagi calon yang berusia kurang dari 21 tahun memerlukan izin dari:","Pasal 6
+(1) Perkawinan harus didasarkan atas persetujuan kedua calon
+mempelai.
+(2) Untuk melangsungkan perkawinan seorang yang belum mencapai
+umur 21 (duapuluh satu) tahun harus mendapat izin kedua orang tua.
+(3) Dalam hal salah seorang dari kedua orang tua telah meninggal dunia
+atau dalam keadaan tidak mampu menyatakan kehendaknya, maka
+izin dimaksud ayat (2) pasal ini cukup diperoleh dari orang tua yang
+masih ...
+
+PRESIDEN
+REPUBLIK INDONESIA
+
+-4-
+
+masih hidup atau dari orang tua yang mampu menyatakan
+kehendaknya.
+(4) Dalam hal kedua orang tua telah meninggal dunia atau dalam
+keadaan tidak mampu untuk menyatakan kehendaknya, maka izin
+diperoleh dari wali, orang yang memelihara atau keluarga yang
+mempunyai hubungan darah dalam garis keturunan lurus keatas
+selama mereka masih hidup dan dalam keadaan dapat menyatakan
+kehendaknya.
+(5) Dalam hal ada perbedaan pendapat antara orang-orang yang disebut
+dalam ayat (2), (3) dan (4) pasal ini, atau salah seorang atau lebih
+diantara mereka tidak menyatakan pendapatnya, maka Pengadilan
+dalam daerah hukum tempat tinggal orang yang akan melangsungkan
+perkawinan atas permintaan orang tersebut dapat memberikan izin
+setelah lebih dahulu mendengar ",https://peraturan.bpk.go.id/Details/47406/uu-no-1-tahun-1974,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in UU Nomor 1 Tahun 1974 tentang Perkawinan (ID-UU-1-1974) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R021,QTHTH04-glm-5.3-flash,C05,dev,TH,local,glm-5.3-flash,TH-LPA-2541,17,,พระราชบัญญัติคุ้มครองแรงงาน,ลูกจ้างยังมีสิทธิได้รับค่าปรับสำหรับการบอกกล่าวล่วงหน้าตาม มาตรา 17 และมาตรา 121 (ถ้านายจ้างไม่บอกกล่าวล่วงหน้า),,'- ลูกจ้างยังมีสิทธิได้รับค่าปรับสำหรับการบอกกล่าวล่วงหน้าตาม **มาตรา 17 และมาตรา 121** (ถ้านายจ้างไม่บอกกล่าวล่วงหน้า),"มาตรา ๑๗๑๑ สัญญาจ้างย่อมสิ้นสุดลงเมื่อครบกำหนดระยะเวลาในสัญญาจ้างโดย
+มิต้องบอกกล่าวล่วงหน้า
+ในกรณีที่สัญญาจ้างไม่มีกำหนดระยะเวลา นายจ้างหรือลูกจ้างอาจบอกเลิกสัญญาจ้าง
+โดยบอกกล่าวล่วงหน้าเป็นหนังสือให้อีกฝ่ายหนึ่งทราบในเมื่อถึงหรือก่อนจะถึงกำหนดจ่ายค่าจ้าง
+คราวหนึ่งคราวใด เพื่อให้เป็นผลเลิกสัญญากันเมื่อถึงกำหนดจ่ายค่าจ้างคราวถัดไปข้างหน้าก็ได้ แต่ไม่
+จำต้องบอกกล่าวล่วงหน้าเกินสามเดือน ทั้งนี้ ให้ถือว่าสัญญาจ้างทดลองงานเป็นสัญญาจ้างที่ไม่มี
+กำหนดระยะเวลาด้วย
+การบอกเลิกสัญญาจ้างตามวรรคสอง นายจ้างอาจจ่ายค่าจ้างให้ตามจำนวนที่จะต้อง
+จ่ายจนถึงเวลาเลิกสัญญาตามกำหนดที่บอกกล่าวและให้ลูกจ้างออกจากงานทันทีได้
+การบอกกล่าวล่วงหน้าตามมาตรานี้ไม่ใช้บังคับแก่การเลิกจ้างตามมาตรา ๑๑๙
+แห่งพระราชบัญญัตินี้ และมาตรา ๕๘๓ แห่งประมวลกฎหมายแพ่งและพาณิชย์",https://ccpl.mol.go.th/,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R022,QIDZH05-glm-5.3-flash,C14,dev,ID,zh,glm-5.3-flash,ID-UU-40-2007-PT,33,,《有限责任公司法》,设董事会（Direksi，至少1人）,,'- **第33条**：设董事会（Direksi，至少1人）；,"Pasal 33
+
+(1)
+
+Paling sedikit 25% (dua puluh lima persen) dari modal
+dasar sebagaimana dimaksud dalam Pasal 32 harus
+ditempatkan dan disetor penuh.
+(2) Modal . . .
+
+- 19 (2)
+
+Modal ditempatkan dan disetor penuh sebagaimana
+dimaksud pada ayat (1) dibuktikan dengan bukti
+penyetoran yang sah.
+
+(3)
+
+Pengeluaran saham lebih lanjut yang dilakukan setiap kali
+untuk menambah modal yang ditempatkan harus disetor
+penuh.",https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R023,QTHTH03-glm-5.3-flash,C08,dev,TH,local,glm-5.3-flash,TH-PDPA-2562-TH,29,,พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562,ข้อยกเว้นสำหรับหน่วยงานของรัฐในการโอนข้อมูลข้ามพรมแดนเมื่อจำเป็นตามหน้าที่ (อ้างถึงในหมายเหตุท้ายคำตอบ),,*หมายเหตุ: ข้อยกเว้นเฉพาะสำหรับหน่วยงานของรัฐเมื่อจำเป็นตามอำนาจหน้าที่ มีบัญญัติไว้ในมาตรา 29 ประกอบมาตรา 28*,"มาตรา ๒๙ ในกรณีที่ผู้ควบคุมข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูลส่วนบุคคลซึ่งอยู่
+ในราชอาณาจักรได้ก าหนดนโยบายในการคุ้มครองข้อมูลส่วนบุคคลเพื่อการส่งหรือโอนข้อมูลส่วนบุคคล
+ไปยังผู้ควบคุมข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูลส่วนบุคคลซึ่งอยู่ต่างประเทศและอยู่ในเครือกิจการ
+หรือเครือธุรกิจเดียวกันเพื่อการประกอบกิจการหรือธุรกิจร่วมกัน หากนโยบายในการคุ้มครองข้อมูล
+ส่วนบุคคลดังกล่าวได้รับการตรวจสอบและรับรองจากส านักงาน การส่งหรือโอนข้อมูลส่วนบุคคลไปยัง
+ต่างประเทศที่เป็นไปตามนโยบายในการคุ้มครองข้อมูลส่วนบุคคลที่ได้รับการตรวจสอบและรับรองดังกล่าว
+ให้สามารถกระท าได้โดยได้รับยกเว้นไม่ต้องปฏิบัติตามมาตรา ๒๘
+นโยบายในการคุ้มครองข้อมูลส่วนบุคคล ลักษณะของเครือกิจการหรือเครือธุรกิจเดียวกัน
+เพื่อการประกอบกิจการหรือธุรกิจร่วมกัน และหลักเกณฑ์และวิธีการตรวจสอบและรับรองตามวรรคหนึ่ง
+ให้เป็นไปตามที่คณะกรรมการประกาศก าหนด
+ในกรณีที่ยังไม่มีค าวินิจฉัยของคณะกรรมการตามมาตรา ๒๘ หรือยังไม่มีนโยบายในการคุ้มครอง
+ข้อมูลส่วนบุคคลตามวรรคหนึ่ง ผู้ควบคุมข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูลส่วนบุคคลอาจส่ง
+หรือโอนข้อมูลส่วนบุคคลไปยังต่างประเทศได้โดยได้รับยกเว้นไม่ต้องปฏิบัติตามมาตรา ๒๘ เมื่อผู้ควบคุม
+ข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูลส่วนบุคคลได้จัดให้มีมาตรการคุ้มครองที่เหมาะสมสามารถบังคับ
+ตามสิทธิของเจ้าของข้อมูลส่วนบุ",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R024,QVNZH06-deepseek-v4.1-flash,C09,dev,VN,zh,deepseek-v4.1-flash,VN-DT-61-2020-QH14,38,,《2020年投资法》,规定申请材料，包括投资登记表、投资者法律资格文件、投资项目方案、土地/场地相关文件、财务能力证明等。,,"外国投资者在越南设立公司，通常需要同时办理**投资登记（IRC）**和**企业登记（ERC）**两类程序，并视项目情况办理额外手续。主要法律依据为《2020年投资法》（第61/2020/QH14号）、《2020年企业法》（第59/2020/QH14号）及其指导法令（如第31/2021/NĐ-CP号法令、第01/2021/NĐ-CP号法令）。核心程序如下：
+
+1. **投资政策批准（如适用）**  
+   依据《2020年投资法》第30条、第31条、第32条，涉及国会批准、政府总理批准或省级人民委员会批准的投资项目，须先取得相应投资政策批准决定。  
+   - 第30条规定国会批准的投资项目范围；  
+   - 第31条规定政府总理批准的投资项目范围；  
+   - 第32条规定省级人民委员会批准的投资项目范围。  
+   若项目不属于上述范围，则无需此程序。
+
+2. **签发投资登记证（IRC）**  
+   依据《2020年投资法》第37条至第39条及第31/2021/NĐ-CP号法令相关规定，外国投资者实施投资项目一般须向投资登记机关申请投资登记证。  
+   - 第38条规定申请材料，包括投资登记表、投资者法律资格文件、投资项目方案、土地/场地相关文件、财务能力证明等；  
+   - 第39条规定审批时限，一般为收到完整材料之日起15个工作日内（复杂项目或需征求意见时可能延长","Điều 38. Thủ tục cấp Giấy chứng nhận đăng ký đầu tư
+1. Cơ quan đăng ký đầu tư cấp Giấy chứng nhận đăng ký đầu tư đối với dự án
+đầu tư thuộc diện chấp thuận chủ trương đầu tư quy định tại các điều 30, 31 và 32
+của Luật này trong thời hạn sau đây:
+a) 05 ngày làm việc kể từ ngày nhận được văn bản chấp thuận chủ trương đầu
+tư đồng thời với chấp thuận nhà đầu tư đối với dự án đầu tư thuộc diện cấp Giấy
+chứng nhận đăng ký đầu tư;
+b) 15 ngày kể từ ngày nhận được đề nghị cấp Giấy chứng nhận đăng ký đầu tư
+của nhà đầu tư đối với dự án đầu tư không thuộc trường hợp quy định tại điểm a
+khoản này.
+2. Đối với dự án đầu tư không thuộc diện chấp thuận chủ trương đầu tư quy
+định tại các điều 30, 31 và 32 của Luật này, nhà đầu tư được cấp Giấy chứng nhận
+đăng ký đầu tư nếu đáp ứng các điều kiện sau đây:
+a) Dự án đầu tư không thuộc ngành, nghề cấm đầu tư kinh doanh;
+b) Có địa điểm thực hiện dự án đầu tư;
+c) Dự án đầu tư phù hợp với quy hoạch quy định tại điểm a khoản 3 Điều 33
+của Luật này;
+d) Đáp ứng điều kiện về suất đầu tư trên một diện tích đất, số lượng lao động
+sử dụng (nếu có);
+đ) Đáp ứng điều kiện tiếp cận thị trường đối với nhà đầu tư nước ngoài.
+3. Chính phủ quy định chi tiết điều kiện, hồ",https://congbao.chinhphu.vn/van-ban/luat-so-61-2020-qh14-31682.htm,NOT_IN_FORCE,H5,VN-DT-61-2020-QH14 第38条相对 2026-10-18 已失效,MISSED,,The verifier produced no matching prediction for this citation.,yes,,,,,
+R025,QIDID05-deepseek-v4.1-flash,C09,dev,ID,local,deepseek-v4.1-flash,ID-UU-1-1974,8,,Undang-Undang Nomor 1 Tahun 1974 tentang Perkawinan,"Larangan perkawinan karena hubungan darah/kekerabatan dalam garis lurus/menyamping, semenda, susuan, dll.","Perkawinan dilarang antara dua orang yang: a. berhubungan darah dalam garis keturunan lurus downward maupun upward; b. berhubungan darah dalam garis keturunan menyamping yaitu antara saudara, antara seorang dengan saudara orang tua dan antara seorang dengan saudara neneknya; c. berhubungan semenda, yaitu mertua, anak tiri, menantu dan ibu/bapak tiri; d. berhubungan susuan, yaitu orang tua susuan, anak susuan, saudara susuan dan bibi/paman susuan; e. berhubungan saudara dengan isteri atau sebagai bibi atau kemenakan dari isteri, dalam hal seorang suami beristeri lebih dari seorang; f. mempunyai hubungan yang oleh agamanya atau peraturan lain yang berlaku, dilarang kawin.","# Syarat Sah Perkawinan dan Batas Usia Minimal Menikah di Indonesia
+
+## 1. Dasar Hukum Utama
+
+**Undang-Undang Nomor 1 Tahun 1974 tentang Perkawinan** (sebagaimana diubah dengan **Undang-Undang Nomor 16 Tahun 2019 tentang Perubahan atas Undang-Undang Nomor 1 Tahun 1974 tentang Perkawinan**).
+
+---
+
+## 2. Syarat Sah Perkawinan — Pasal 2 UU No. 1 Tahun 1974
+
+**Pasal 2:**
+
+> (1) Perkawinan adalah sah, apabila dilakukan menurut hukum masing-masing agamanya dan kepercayaannya itu.
+>
+> (2) Tiap-tiap perkawinan dicatat menurut peraturan perundang-undangan yang berlaku.
+
+**Uraian isi:**
+- **Ayat (1):** ","Pasal 8
+Perkawinan dilarang antara dua orang yang:
+a. berhubungan darah dalam garis keturunan lurus kebawah ataupun
+keatas;
+b. berhubungan darah dalam garis keturunan menyamping yaitu
+antara saudara, antara seorang dengan saudara orang tua dan
+antara seorang dengan saudara neneknya;
+c. berhubungan semenda, yaitu mertua, anak tiri menantu dan
+ibu/bapak tiri;
+d. berhubungan susuan, yaitu orang tua susuan, anak susuan,
+saudara susuan dan bibi/paman susuan;
+e. berhubungan saudara dengan isteri atau sebagai bibi atau
+kemenakan dari isteri, dalam hal seorang suami beristeri lebih
+dari seorang;
+f. mempunyai hubungan yang oleh agamanya atau peraturan lain
+yang berlaku, dilarang kawin.",https://peraturan.bpk.go.id/Details/47406/uu-no-1-tahun-1974,EXISTS_CONSISTENT,,条文存在、现行，claim 被原文支持（LLM 辅助标注）,MISSED,,The verifier produced no matching prediction for this citation.,no,,,,,
+R026,QVNZH06-deepseek-v4.1-flash,C06,dev,VN,zh,deepseek-v4.1-flash,VN-DT-61-2020-QH14,31,,《2020年投资法》,规定政府总理批准的投资项目范围；涉及此类项目须先取得相应投资政策批准决定。,,依据《2020年投资法》第30条、第31条、第32条，涉及国会批准、政府总理批准或省级人民委员会批准的投资项目，须先取得相应投资政策批准决定。,"Điều 31. Thẩm quyền chấp thuận chủ trương đầu tư của Thủ tướng
+Chính phủ
+Trừ các dự án đầu tư quy định tại Điều 30 của Luật này, Thủ tướng Chính phủ
+chấp thuận chủ trương đầu tư đối với các dự án đầu tư sau đây:
+1. Dự án đầu tư không phân biệt nguồn vốn thuộc một trong các trường hợp
+sau đây:
+a) Dự án đầu tư có yêu cầu di dân tái định cư từ 10.000 người trở lên ở miền
+núi, từ 20.000 người trở lên ở vùng khác;
+b) Dự án đầu tư xây dựng mới: cảng hàng không, sân bay; đường cất hạ cánh
+của cảng hàng không, sân bay; nhà ga hành khách của cảng hàng không quốc tế;
+nhà ga hàng hóa của cảng hàng không, sân bay có công suất từ 01 triệu tấn/năm
+trở lên;
+
+CÔNG BÁO/Số 717 + 718/Ngày 25-7-2020
+
+25
+
+c) Dự án đầu tư mới kinh doanh vận chuyển hành khách bằng đường hàng không;
+d) Dự án đầu tư xây dựng mới: bến cảng, khu bến cảng thuộc cảng biển đặc
+biệt; bến cảng, khu bến cảng có quy mô vốn đầu tư từ 2.300 tỷ đồng trở lên thuộc
+cảng biển loại I;
+đ) Dự án đầu tư chế biến dầu khí;
+e) Dự án đầu tư có kinh doanh đặt cược, ca-si-nô (casino), trừ kinh doanh trò
+chơi điện tử có thưởng dành cho người nước ngoài;
+g) Dự án đầu tư xây dựng nhà ở (để bán, cho thuê, cho thuê mua), khu đô thị
+trong các trường hợ",https://congbao.chinhphu.vn/van-ban/luat-so-61-2020-qh14-31682.htm,NOT_IN_FORCE,H5,VN-DT-61-2020-QH14 第31条相对 2026-10-18 已失效,NOT_IN_FORCE,H5,"Luật Đầu tư (2020) (VN-DT-61-2020-QH14) was repealed on 2026-03-01 by 143/2025/QH15 Điều 51 khoản 4（整体自2026-03-01失效，第7条及附录IV至2026-07-01失效, before the check date.",no,,,,,
+R027,QTHTH01-glm-5.3-flash,C06,test,TH,local,glm-5.3-flash,TH-PDPA-2562-TH,34,,พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562,สิทธิในการคัดค้านการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคล เช่น เมื่อใช้เพื่อประโยชน์สาธารณะ ผลประโยชน์โดยชอบด้วยกฎหมาย หรือการตลาดโดยตรง,,## 6. สิทธิในการคัดค้านการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูล (มาตรา 34),"มาตรา ๓๔ เจ้าของข้อมูลส่วนบุคคลมีสิทธิขอให้ผู้ควบคุมข้อมูลส่วนบุคคลระงับการใช้
+ข้อมูลส่วนบุคคลได้ ในกรณีดังต่อไปนี้
+(๑) เมื่อผู้ควบคุมข้อมูลส่วนบุคคลอยู่ในระหว่างการตรวจสอบตามที่เจ้าของข้อมูลส่วนบุคคล
+ร้องขอให้ด าเนินการตามมาตรา ๓๖
+หนา ๗๐่
+เลม ๑๓๖ ตอนที่ ๖๙ ก
+ราชกิจจานุเบกษา
+๒๗ พฤษภาคม ๒๕๖๒
+(๒) เมื่อเป็นข้อมูลส่วนบุคคลที่ต้องลบหรือท าลายตามมาตรา ๓๓ (๔) แต่เจ้าของข้อมูล
+ส่วนบุคคลขอให้ระงับการใช้แทน
+(๓) เมื่อข้อมูลส่วนบุคคลหมดความจ าเป็นในการเก็บรักษาไว้ตามวัตถุประสงค์ในการเก็บรวบรวม
+ข้อมูลส่วนบุคคล แต่เจ้าของข้อมูลส่วนบุคคลมีความจ าเป็นต้องขอให้เก็บรักษาไว้เพื่อใช้ในการก่อตั้ง
+สิทธิเรียกร้องตามกฎหมาย การปฏิบัติตามหรือการใช้สิทธิเรียกร้องตามกฎหมาย หรือการยกขึ้นต่อสู้
+สิทธิเรียกร้องตามกฎหมาย
+(๔) เมื่อผู้ควบคุมข้อมูลส่วนบุคคลอยู่ในระหว่างการพิสูจน์ตามมาตรา ๓๒ (๑) หรือตรวจสอบ
+ตามมาตรา ๓๒ (๓) เพื่อปฏิเสธการคัดค้านของเจ้าของข้อมูลส่วนบุคคลตามมาตรา ๓๒ วรรคสาม
+กรณีผู้ควบคุมข้อมูลส่วนบุคคลไม่ด าเนินการตามวรรคหนึ่ง เจ้าของข้อมูลส่วนบุคคลมีสิทธิ
+ร้องเรียนต่อคณะกรรมการผู้เชี่ยวชาญเพื่อสั่งให้ผู้ควบคุมข้อมูลส่วนบุคคลด าเนินการได้
+คณะกรรมการอาจประกาศก าหนดหลักเกณฑ์ในการระงับการใช้ตามวรรคหนึ่งก็ได้",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R028,QTHZH05-qwen3.8-flash,C02,test,TH,zh,qwen3.8-flash,TH-LPA-2541,24,,《劳动保护法》,雇员每工作六天应享有至少一天的带薪休假，连续工作天数不得超过六天；若因工作性质无法在周日休息，则可在其他工作日补休。,,此外，**第24条**规定：,"มาตรา ๒๔ ห้ามมิให้นายจ้างให้ลูกจ้างทำงานล่วงเวลาในวันทำงาน เว้นแต่ได้รับ
+ความยินยอมจากลูกจ้างก่อนเป็นคราว ๆ ไป
+ในกรณีที่ลักษณะหรือสภาพของงานต้องทำติดต่อกันไปถ้าหยุดจะเสียหายแก่งาน
+หรือเป็นงานฉุกเฉิน หรือเป็นงานอื่นตามที่กำหนดในกฎกระทรวง นายจ้างอาจให้ลูกจ้างทำงาน
+ล่วงเวลาได้เท่าที่จำเป็น
+๑๓ มาตรา ๒๓ แก้ไขเพิ่มเติมโดยพระราชบัญญัติคุ้มครองแรงงาน (ฉบับที่ ๒) พ.ศ. ๒๕๕๑
+- ๘ -",https://ccpl.mol.go.th/,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R029,QIDID01-glm-5.3-flash,C15,dev,ID,local,glm-5.3-flash,ID-UU-27-2022,6,,UU PDP,Pasal 6 menegaskan bahwa hak-hak tersebut berlaku sepanjang tidak diatur lain oleh peraturan perundang-undangan.,,### 2. Hak Memperbarui dan/atau Memperbaiki Data Pribadi (Pasal 6),"Pasal 6
+ Subjek Data Pribadi berhak melengkapi, memperbarui,
+ dan/atau memperbaiki kesalahan dan/atau
+ ketidakakuratan Data Pribadi tentang dirinya sesuai
+ dengan tujuan pemrosesan Data Pribadi.",https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022,CONTENT_MISMATCH,H4,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (ID-UU-27-2022) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R030,QVNVI01-mimo-v2.6-flash,C04,test,VN,local,mimo-v2.6-flash,VN-BLLD-45-2019-QH14,34,4,Bộ luật Lao động 2019,Trường hợp người lao động làm việc theo hợp đồng lao động theo mùa vụ hoặc cho một công việc nhất định có thời hạn từ 12 tháng trở lên thì phải báo trước ít nhất 07 ngày.,"""Trường hợp người lao động làm việc theo hợp đồng lao động theo mùa vụ hoặc cho một công việc nhất định có thời hạn từ 12 tháng trở lên thì phải báo trước ít nhất 07 ngày.""","**Bộ luật Lao động 2019** (Luật số **45/2019/QH14**, có hiệu lực từ ngày 01/01/2021), **Điều 34** - *""Đơn phương chấm dứt hợp đồng lao động""*.","Điều 34. Các trường hợp chấm dứt hợp đồng lao động
+1. Hết hạn hợp đồng lao động, trừ trường hợp quy định tại khoản 4 Điều 177
+của Bộ luật này.
+2. Đã hoàn thành công việc theo hợp đồng lao động.
+3. Hai bên thỏa thuận chấm dứt hợp đồng lao động.
+4. Người lao động bị kết án phạt tù nhưng không được hưởng án treo hoặc
+không thuộc trường hợp được trả tự do theo quy định tại khoản 5 Điều 328 của
+Bộ luật Tố tụng hình sự, tử hình hoặc bị cấm làm công việc ghi trong hợp đồng
+lao động theo bản án, quyết định của Tòa án đã có hiệu lực pháp luật.
+5. Người lao động là người nước ngoài làm việc tại Việt Nam bị trục xuất
+theo bản án, quyết định của Tòa án đã có hiệu lực pháp luật, quyết định của cơ
+quan nhà nước có thẩm quyền.
+6. Người lao động chết; bị Tòa án tuyên bố mất năng lực hành vi dân sự, mất
+tích hoặc đã chết.
+7. Người sử dụng lao động là cá nhân chết; bị Tòa án tuyên bố mất năng lực
+hành vi dân sự, mất tích hoặc đã chết. Người sử dụng lao động không phải là cá
+nhân chấm dứt hoạt động hoặc bị cơ quan chuyên môn về đăng ký kinh doanh
+thuộc Ủy ban nhân dân cấp tỉnh ra thông báo không có người đại diện theo pháp
+luật, người được ủy quyền thực hiện quyền và nghĩa vụ của người đại diện theo
+",https://congbao.chinhphu.vn/van-ban/van-ban-hop-nhat-so-18-vbhn-vpqh-468971.htm,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in Bộ luật Lao động (văn bản hợp nhất 18/VBHN-VPQH) (VN-BLLD-45-2019-QH14) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R031,QVNZH03-qwen3.8-flash,C03,dev,VN,zh,qwen3.8-flash,VN-ANM-24-2018-QH14,26,3,越南《网络安全法》,当发现存在违反越南法律的行为时，相关组织和个人必须停止跨境传输这些数据，并配合越南主管部门进行调查和处理。,“当发现存在违反越南法律的行为时，相关组织和个人必须停止跨境传输这些数据，并配合越南主管部门进行调查和处理。”,越南《网络安全法》（Luật An ninh mạng）对境内外企业的数据存储和本地化要求主要规定在**第26条**。,"Điều 26. Bảo đảm an ninh thông tin trên không gian mạng
+1. Trang thông tin điện tử, cổng thông tin điện tử hoặc chuyên trang trên mạng
+xã hội của cơ quan, tổ chức, cá nhân không được cung cấp, đăng tải, truyền đưa
+thông tin có nội dung quy định tại các khoản 1, 2, 3, 4 và 5 Điều 16 của Luật này
+và thông tin khác có nội dung xâm phạm an ninh quốc gia.
+2. Doanh nghiệp trong nước và ngoài nước cung cấp dịch vụ trên mạng viễn
+thông, mạng Internet, các dịch vụ gia tăng trên không gian mạng tại Việt Nam có
+trách nhiệm sau đây:
+
+66
+
+CÔNG BÁO/Số 775 + 776/Ngày 14-7-2018
+
+a) Xác thực thông tin khi người dùng đăng ký tài khoản số; bảo mật thông tin,
+tài khoản của người dùng; cung cấp thông tin người dùng cho lực lượng chuyên
+trách bảo vệ an ninh mạng thuộc Bộ Công an khi có yêu cầu bằng văn bản để phục
+vụ điều tra, xử lý hành vi vi phạm pháp luật về an ninh mạng;
+b) Ngăn chặn việc chia sẻ thông tin, xóa bỏ thông tin có nội dung quy định tại
+các khoản 1, 2, 3, 4 và 5 Điều 16 của Luật này trên dịch vụ hoặc hệ thống thông tin
+do cơ quan, tổ chức trực tiếp quản lý chậm nhất là 24 giờ kể từ thời điểm có yêu
+cầu của lực lượng chuyên trách bảo vệ an ninh mạng thuộc Bộ Công an hoặc cơ
+quan có thẩm ",https://congbao.chinhphu.vn/van-ban/luat-so-24-2018-qh14-26894.htm,NOT_IN_FORCE,H5,VN-ANM-24-2018-QH14 第26条相对 2026-10-18 已失效,NOT_IN_FORCE,H5,"Luật An ninh mạng (2018) (VN-ANM-24-2018-QH14) was repealed on 2026-07-01 by 116/2025/QH15 Điều 44 khoản 2, before the check date.",no,,,,,
+R032,QVNVI01-qwen3.8-flash,C07,test,VN,local,qwen3.8-flash,VN-BLLD-45-2019-QH14,35,2,Bộ luật Lao động 2019,Cơ sở pháp lý cho thời gian báo trước tối thiểu 45 ngày đối với hợp đồng không xác định thời hạn hoặc xác định thời hạn từ 12-36 tháng,,> **Trích dẫn nguyên văn khoản 2 Điều 35:**,"Điều 35. Quyền đơn phương chấm dứt hợp đồng lao động của người lao động
+1. Người lao động có quyền đơn phương chấm dứt hợp đồng lao động nhưng
+phải báo trước cho người sử dụng lao động như sau:
+a) Ít nhất 45 ngày nếu làm việc theo hợp đồng lao động không xác định thời hạn;
+b) Ít nhất 30 ngày nếu làm việc theo hợp đồng lao động xác định thời hạn có
+thời hạn từ 12 tháng đến 36 tháng;
+c) Ít nhất 03 ngày làm việc nếu làm việc theo hợp đồng lao động xác định
+thời hạn có thời hạn dưới 12 tháng;
+d) Đối với một số ngành, nghề, công việc đặc thù thì thời hạn báo trước được
+thực hiện theo quy định của Chính phủ.
+2. Người lao động có quyền đơn phương chấm dứt hợp đồng lao động không
+cần báo trước trong trường hợp sau đây:
+a) Không được bố trí theo đúng công việc, địa điểm làm việc hoặc không
+được bảo đảm điều kiện làm việc theo thỏa thuận, trừ trường hợp quy định tại
+Điều 29 của Bộ luật này;
+b) Không được trả đủ lương hoặc trả lương không đúng thời hạn, trừ trường
+hợp quy định tại khoản 4 Điều 97 của Bộ luật này;
+c) Bị người sử dụng lao động ngược đãi, đánh đập hoặc có lời nói, hành vi
+nhục mạ, hành vi làm ảnh hưởng đến sức khỏe, nhân phẩm, danh dự; bị cưỡng
+bức lao động;
+d) Bị quấy rối tình ",https://congbao.chinhphu.vn/van-ban/van-ban-hop-nhat-so-18-vbhn-vpqh-468971.htm,CONTENT_MISMATCH,H7,claim 与原文不符（CONTRADICTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in Bộ luật Lao động (văn bản hợp nhất 18/VBHN-VPQH) (VN-BLLD-45-2019-QH14) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R033,QTHZH05-mimo-v2.6-flash,C03,test,TH,zh,mimo-v2.6-flash,TH-LPA-2541,24,,《劳动保护法》,对于可能危害员工健康与安全的岗位，如因工作需要确须延长正常工时的，雇主与员工可以约定在劳动部长通告规定的限额内延长工时。,对于可能危害员工健康与安全的岗位，如因工作需要确须延长正常工时的，雇主与员工可以约定在劳动部长通告规定的限额内延长工时。,### 第24条——特殊行业的延长工时,"มาตรา ๒๔ ห้ามมิให้นายจ้างให้ลูกจ้างทำงานล่วงเวลาในวันทำงาน เว้นแต่ได้รับ
+ความยินยอมจากลูกจ้างก่อนเป็นคราว ๆ ไป
+ในกรณีที่ลักษณะหรือสภาพของงานต้องทำติดต่อกันไปถ้าหยุดจะเสียหายแก่งาน
+หรือเป็นงานฉุกเฉิน หรือเป็นงานอื่นตามที่กำหนดในกฎกระทรวง นายจ้างอาจให้ลูกจ้างทำงาน
+ล่วงเวลาได้เท่าที่จำเป็น
+๑๓ มาตรา ๒๓ แก้ไขเพิ่มเติมโดยพระราชบัญญัติคุ้มครองแรงงาน (ฉบับที่ ๒) พ.ศ. ๒๕๕๑
+- ๘ -",https://ccpl.mol.go.th/,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R034,QVNVI02-qwen3.8-flash,C01,test,VN,local,qwen3.8-flash,VN-ND-13-2023-CP,4,1,Nghị định 13/2023/NĐ-CP,Chủ thể dữ liệu cá nhân có quyền được biết rõ về việc xử lý dữ liệu cá nhân của mình.,Chủ thể dữ liệu cá nhân có quyền được biết rõ về việc xử lý dữ liệu cá nhân của mình.,### 🔹 Điều khoản quy định quyền của chủ thể dữ liệu cá nhân: **Điều 4**,"Điều 42. Hiệu lực và trách nhiệm thi hành
+1. Nghị định này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2026.
+2. Nghị định số 13/2023/NĐ-CP ngày 17 tháng 4 năm 2023 của Chính
+phủ về bảo vệ dữ liệu cá nhân hết hiệu lực kể từ ngày Nghị định này có hiệu
+lực thi hành.
+3. Sửa đổi khoản 2 Điều 16 của Nghị định số 165/2025/NĐ-CP ngày 30
+tháng 6 năm 2025 của Chính phủ quy định chi tiết một số điều và biện pháp thi
+hành Luật Dữ liệu như sau:
+“2. Việc bảo vệ dữ liệu cốt lõi, dữ liệu quan trọng là dữ liệu cá nhân thực
+hiện theo quy định của Luật Bảo vệ dữ liệu cá nhân và văn bản quy định chi
+tiết thi hành.
+Trường hợp chuyển, xử lý dữ liệu cốt lõi, dữ liệu quan trọng xuyên biên
+giới là dữ liệu cá nhân, chủ quản dữ liệu cốt lõi, dữ liệu quan trọng thực hiện
+hồ sơ đánh giá tác động xử lý dữ liệu cá nhân, đánh giá tác động chuyển dữ liệu
+cá nhân xuyên biên giới theo quy định của pháp luật về bảo vệ dữ liệu cá nhân;
+không phải thực hiện đánh giá rủi ro, đánh giá tác động chuyển, xử lý dữ liệu
+xuyên biên giới theo quy định của Nghị định này.”
+4. Bộ Công an chịu trách nhiệm hướng dẫn, kiểm tra, đôn đốc việc thực
+hiện Nghị định này.
+
+CÔNG BÁO/Số 18/Ngày 18-01-2026
+
+39
+
+5. Bộ trưởng các bộ, Thủ trưởn",https://vanban.chinhphu.vn/?docid=216387&pageid=27160,NOT_IN_FORCE,H5,VN-ND-13-2023-CP 已于 2026-01-01 失效（VN-ND-356-2025-CP Điều 42，见缓存原文）,NOT_IN_FORCE,H5,"Nghị định về bảo vệ dữ liệu cá nhân (VN-ND-13-2023-CP) was repealed on 2026-01-01 by VN-ND-356-2025-CP Điều 42, before the check date.",no,,,,,
+R035,QVNZH03-glm-5.3-flash,C02,dev,VN,zh,glm-5.3-flash,,9,,第53/2022/NĐ-CP号议定,对数据本地化作出细化规定，明确适用对象包括在越南境内提供电信服务、互联网服务、增值服务的外资企业等。,,## 三、第53/2022/NĐ-CP号议定第9条的细化规定,,,UNVERIFIABLE,,法规未缓存（number_uncached），无官方原文可比对,UNVERIFIABLE,,"""53/2022/NĐ-CP"" is not in the CiteCheck corpus (or no law was named), so it cannot be verified.",no,,,,,
+R036,QVNVI01-glm-5.3-flash,C02,test,VN,local,glm-5.3-flash,VN-BLLD-10-2012-QH13,35,1,Bộ luật Lao động số 10/2012/QH13,"Nêu các trường hợp NLĐ được đơn phương chấm dứt HĐLĐ như được sắp xếp lại lao động, không đảm bảo sức khỏe, chậm trả lương, bị ngược đãi...",,"> *""Khi đơn phương chấm dứt hợp đồng lao động theo quy định tại các điểm a, b, c và d khoản 1 Điều 35 của Bộ luật này, người lao động phải báo trước cho người sử dụng lao động biết trước khoảng thời gian sau đây:""*","Điều 220. Hiệu lực thi hành
+1. Bộ luật này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2021.
+Bộ luật Lao động số 10/2012/QH13 hết hiệu lực thi hành kể từ ngày Bộ luật
+này có hiệu lực.
+2. Kể từ ngày Bộ luật này có hiệu lực thi hành, hợp đồng lao động, thỏa ước
+lao động tập thể, các thỏa thuận hợp pháp đã giao kết có nội dung không trái hoặc
+bảo đảm cho người lao động có quyền và điều kiện thuận lợi hơn so với quy định
+của Bộ luật này được tiếp tục thực hiện, trừ trường hợp các bên có thỏa thuận về
+việc sửa đổi, bổ sung để phù hợp và để áp dụng quy định của Bộ luật này.
+3. Chế độ lao động đối với cán bộ, công chức, viên chức, người thuộc lực
+lượng Quân đội nhân dân, Công an nhân dân, tổ chức xã hội, xã viên hợp tác
+xã, người làm việc không có quan hệ lao động do các văn bản pháp luật khác
+quy định nhưng tùy từng đối tượng mà được áp dụng một số quy định trong Bộ
+luật này.
+VĂN PHÒNG QUỐC HỘI
+
+XÁC THỰC VĂN BẢN HỢP NHẤT
+
+Số: 18 /VBHN-VPQH
+
+Hà Nội, ngày 12 tháng 02 năm 2026
+CHỦ NHIỆM
+
+Lê Quang Mạnh",https://congbao.chinhphu.vn/van-ban/van-ban-hop-nhat-so-18-vbhn-vpqh-468971.htm,NOT_IN_FORCE,H5,VN-BLLD-10-2012-QH13 已于 2021-01-01 失效（VN-BLLD-45-2019-QH14 Điều 220，见缓存原文）,NOT_IN_FORCE,H5,"Bộ luật Lao động (2012) (VN-BLLD-10-2012-QH13) was repealed on 2021-01-01 by VN-BLLD-45-2019-QH14 Điều 220, before the check date.",no,,,,,
+R037,QIDZH05-glm-5.3-flash,C08,dev,ID,zh,glm-5.3-flash,,13,,Peraturan BKPM No. 4/2021,最低投资额规则延续至BKPM 5/2024,,"dua orang atau lebih.""
+> （公司由两人或以上设立。）
+
+外国人（自然人或法人）均可作为股东，但设立契约须有公证并经法律与人权部批准（第21条、第29条）。
+
+### 2. 全部注册资本须认缴（《有限责任公司法》第25条第1款）
+
+> 转述：经批准设立时，全部股份须被认缴，且至少25%（出资额的）须实缴并存放于印尼银行。
+
+### 3. 必须为外资公司形式（PT PMA）
+
+根据《投资法》第1条第5款及第6条，外国投资须以印尼有限责任公司（PT）形式进行。PT PMA指外国人持股的PT；纯外资（100%外资）或与印尼方合资均可。
+
+### 4. 最低投资额100亿印尼盾（Peraturan BKPM No. 4/2021第1条第2款a项及第13条，其规则在BKPM 5/2024下延续）
+
+> 转述：每位外资股东针对每一个五位数KBLI行业分类、在每一个项目地点的投资额，**不含土地和建筑物**，须超过100亿印尼盾（约合450万人民币）。
+
+⚠️ 注意：这是**投资额**（含设备、营运资金等）而非注册资本。注册资本实缴额可低于此数（实践中建议至少100亿认缴）。
+
+### 5. 经营领域限制（PP No. 10/2021 jo. PP No. 49/2021）
+
+- **第9条**：原则上除专门保留给微型、小型企业的行业（第10条）外，外国投资者均可投资；
+-",,,UNVERIFIABLE,,法规未缓存（number_uncached），无官方原文可比对,MISSED,,The verifier produced no matching prediction for this citation.,no,,,,,
+R038,QVNVI06-mimo-v2.6-flash,C10,dev,VN,local,mimo-v2.6-flash,VN-ANM-24-2018-QH14,15,,Luật An ninh mạng,"Trách nhiệm của cơ quan, tổ chức, cá nhân trong bảo vệ an ninh mạng",,"| **Điều 15** | Trách nhiệm của cơ quan, tổ chức, cá nhân trong bảo vệ an ninh mạng |","Điều 15. Ứng phó, khắc phục sự cố an ninh mạng đối với hệ thống thông
+tin quan trọng về an ninh quốc gia
+1. Hoạt động ứng phó, khắc phục sự cố an ninh mạng đối với hệ thống thông
+tin quan trọng về an ninh quốc gia bao gồm:
+a) Phát hiện, xác định sự cố an ninh mạng;
+
+54
+
+CÔNG BÁO/Số 775 + 776/Ngày 14-7-2018
+b) Bảo vệ hiện trường, thu thập chứng cứ;
+
+c) Phong tỏa, giới hạn phạm vi xảy ra sự cố an ninh mạng, hạn chế thiệt hại do
+sự cố an ninh mạng gây ra;
+d) Xác định mục tiêu, đối tượng, phạm vi cần ứng cứu;
+đ) Xác minh, phân tích, đánh giá, phân loại sự cố an ninh mạng;
+e) Triển khai phương án ứng phó, khắc phục sự cố an ninh mạng;
+g) Xác minh nguyên nhân và truy tìm nguồn gốc;
+h) Điều tra, xử lý theo quy định của pháp luật.
+2. Chủ quản hệ thống thông tin quan trọng về an ninh quốc gia xây dựng
+phương án ứng phó, khắc phục sự cố an ninh mạng đối với hệ thống thông tin
+thuộc phạm vi quản lý; triển khai phương án ứng phó, khắc phục khi sự cố an ninh
+mạng xảy ra và kịp thời báo cáo với lực lượng chuyên trách bảo vệ an ninh mạng
+có thẩm quyền.
+3. Điều phối hoạt động ứng phó, khắc phục sự cố an ninh mạng đối với hệ
+thống thông tin quan trọng về an ninh quốc gia được quy định như sau:
+a) ",https://congbao.chinhphu.vn/van-ban/luat-so-24-2018-qh14-26894.htm,NOT_IN_FORCE,H5,VN-ANM-24-2018-QH14 第15条相对 2026-10-18 已失效,NOT_IN_FORCE,H5,"Luật An ninh mạng (2018) (VN-ANM-24-2018-QH14) was repealed on 2026-07-01 by 116/2025/QH15 Điều 44 khoản 2, before the check date.",no,,,,,
+R039,QVNVI06-qwen3.8-flash,C06,dev,VN,local,qwen3.8-flash,VN-ANM-24-2018-QH14,26,1,Luật An ninh mạng,"Lưu trữ tại Việt Nam đối với thông tin cá nhân của người sử dụng dịch vụ tại Việt Nam và dữ liệu do người sử dụng dịch vụ tại Việt Nam tạo ra gồm: tên tài khoản, thời gian sử dụng dịch vụ, thông tin thẻ tín dụng, địa chỉ IP truy cập gần nhất (nếu có), mã thiết bị đăng nhập và các dữ liệu khác để xác định danh tính của người sử dụng dịch vụ.","""Lưu trữ tại Việt Nam đối với thông tin cá nhân của người sử dụng dịch vụ tại Việt Nam và dữ liệu do người sử dụng dịch vụ tại Việt Nam tạo ra gồm: tên tài khoản, thời gian sử dụng dịch vụ, thông tin thẻ tín dụng, địa chỉ IP truy cập gần nhất (nếu có), mã thiết bị đăng nhập và các dữ liệu khác để xác định danh tính của người sử dụng dịch vụ.""",Dưới đây là các nghĩa vụ chính được quy định tại **Điều 26** của Luật này:,"Điều 26. Bảo đảm an ninh thông tin trên không gian mạng
+1. Trang thông tin điện tử, cổng thông tin điện tử hoặc chuyên trang trên mạng
+xã hội của cơ quan, tổ chức, cá nhân không được cung cấp, đăng tải, truyền đưa
+thông tin có nội dung quy định tại các khoản 1, 2, 3, 4 và 5 Điều 16 của Luật này
+và thông tin khác có nội dung xâm phạm an ninh quốc gia.
+2. Doanh nghiệp trong nước và ngoài nước cung cấp dịch vụ trên mạng viễn
+thông, mạng Internet, các dịch vụ gia tăng trên không gian mạng tại Việt Nam có
+trách nhiệm sau đây:
+
+66
+
+CÔNG BÁO/Số 775 + 776/Ngày 14-7-2018
+
+a) Xác thực thông tin khi người dùng đăng ký tài khoản số; bảo mật thông tin,
+tài khoản của người dùng; cung cấp thông tin người dùng cho lực lượng chuyên
+trách bảo vệ an ninh mạng thuộc Bộ Công an khi có yêu cầu bằng văn bản để phục
+vụ điều tra, xử lý hành vi vi phạm pháp luật về an ninh mạng;
+b) Ngăn chặn việc chia sẻ thông tin, xóa bỏ thông tin có nội dung quy định tại
+các khoản 1, 2, 3, 4 và 5 Điều 16 của Luật này trên dịch vụ hoặc hệ thống thông tin
+do cơ quan, tổ chức trực tiếp quản lý chậm nhất là 24 giờ kể từ thời điểm có yêu
+cầu của lực lượng chuyên trách bảo vệ an ninh mạng thuộc Bộ Công an hoặc cơ
+quan có thẩm ",https://congbao.chinhphu.vn/van-ban/luat-so-24-2018-qh14-26894.htm,NOT_IN_FORCE,H5,VN-ANM-24-2018-QH14 第26条相对 2026-10-18 已失效,NOT_IN_FORCE,H5,"Luật An ninh mạng (2018) (VN-ANM-24-2018-QH14) was repealed on 2026-07-01 by 116/2025/QH15 Điều 44 khoản 2, before the check date.",no,,,,,
+R040,QTHZH02-qwen3.8-flash,C07,test,TH,zh,qwen3.8-flash,TH-PDPA-2562-TH,26,7,《个人数据保护法》（Personal Data Protection Act B.E. 2562 (2019)，简称 PDPA）,若处理是由医疗保健专业人员、医疗机构或公共卫生机构，在遵守保密义务的前提下，为评估、诊断、治疗或预防疾病等医疗目的进行。,,根据 **第26条第1款**，以下数据被明确列为敏感个人数据：,"มาตรา ๒๖ ห้ามมิให้เก็บรวบรวมข้อมูลส่วนบุคคลเกี่ยวกับเชื้อชาติ เผ่าพันธุ์ ความคิดเห็น
+ทางการเมือง ความเชื่อในลัทธิ ศาสนาหรือปรัชญา พฤติกรรมทางเพศ ประวัติอาชญากรรม
+ข้อมูลสุขภาพ ความพิการ ข้อมูลสหภาพแรงงาน ข้อมูลพันธุกรรม ข้อมูลชีวภาพ หรือข้อมูลอื่นใด
+ซึ่งกระทบต่อเจ้าของข้อมูลส่วนบุคคลในท านองเดียวกันตามที่คณะกรรมการประกาศก าหนด โดยไม่ได้รับ
+ความยินยอมโดยชัดแจ้งจากเจ้าของข้อมูลส่วนบุคคล เว้นแต่
+(๑) เพื่อป้องกันหรือระงับอันตรายต่อชีวิต ร่างกาย หรือสุขภาพของบุคคลซึ่งเจ้าของข้อมูล
+ส่วนบุคคลไม่สามารถให้ความยินยอมได้ ไม่ว่าด้วยเหตุใดก็ตาม
+(๒) เป็นการด าเนินกิจกรรมโดยชอบด้วยกฎหมายที่มีการคุ้มครองที่เหมาะสมของมูลนิธิ สมาคม
+หรือองค์กรที่ไม่แสวงหาก าไรที่มีวัตถุประสงค์เกี่ยวกับการเมือง ศาสนา ปรัชญา หรือสหภาพแรงงาน
+ให้แก่สมาชิก ผู้ซึ่งเคยเป็นสมาชิก หรือผู้ซึ่งมีการติดต่ออย่างสม่ าเสมอกับมูลนิธิ สมาคม หรือองค์กร
+ที่ไม่แสวงหาก าไรตามวัตถุประสงค์ดังกล่าวโดยไม่ได้เปิดเผยข้อมูลส่วนบุคคลนั้นออกไปภายนอกมูลนิธิ
+สมาคม หรือองค์กรที่ไม่แสวงหาก าไรนั้น
+หนา ๖๔่
+เลม ๑๓๖ ตอนที่ ๖๙ ก
+ราชกิจจานุเบกษา
+๒๗ พฤษภาคม ๒๕๖๒
+(๓) เป็นข้อมูลที่เปิดเผยต่อสาธารณะด้วยความยินยอมโดยชัดแจ้งของเจ้าของข้อมูลส่วนบุคคล
+(๔) เป็นการจ าเป็นเพื่อการก่อตั้งสิทธิเรียกร้องตามกฎหมาย การปฏิบัติตามหรือการใช้สิทธิ
+เรียกร้องตามกฎหมาย หรือการยก",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,EXISTS_CONSISTENT,,条文存在、现行，claim 被原文支持（LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",no,,,,,
+R041,QVNZH06-glm-5.3-flash,C04,dev,VN,zh,glm-5.3-flash,VN-DT-143-2025-QH15,24,,《投资法》,限制准入行业。,,"# 外国投资者在越南设立公司的投资程序（中文说明）
+
+外国投资者（外资企业）在越南开展投资，主要受以下法律法规调整：
+
+- **《2020年投资法》**（Luật Đầu tư số 61/2020/QH14，2020年6月17日通过）
+- **《2020年企业法》**（Luật Doanh nghiệp số 59/2020/QH14）
+- **2021年3月31日政府第31/2021/NĐ-CP号议定**（指导实施《投资法》）
+- 2021年1月6日政府第01/2021/NĐ-CP号议定（企业登记实施细则，现已部分被2025年第168/2025/NĐ-CP号议定取代，请以最新文本为准）
+
+## 一、投资前的准入审查
+
+**1. 市场准入条件**
+- 《投资法》**第22条第1款**规定，外国投资者须满足市场准入条件方可投资，包括属于允许准入的行业、满足国际条约（如CPTPP、EVFTA、RCEP）承诺、满足越南法律规定的参与比例和条件。
+- 《投资法》第23条规定了市场准入条件不予适用的情形。
+- 禁止投资的行业见《投资法》**第6条**（如毒品、部分化学品、濒危野生动植物经营等）；限制准入行业见**第24条**及政府《限制投资经营行业目录》（31/2021/NĐ-CP议定附件）。
+
+**2. 投资形式**
+《投资法》**第21条**列举投资形式：设立经济组织；出资、购买股份；","Điều 24. Dự án thuộc diện chấp thuận chủ trương đầu tư
+1. Dự án đầu tư có yêu cầu chuyển mục đích sử dụng đất rừng đặc dụng,
+rừng phòng hộ đầu nguồn, rừng phòng hộ biên giới từ 50 ha trở lên; rừng phòng
+hộ chắn gió, chắn cát bay và rừng phòng hộ chắn sóng, lấn biển từ 500 ha trở lên;
+rừng sản xuất từ 1.000 ha trở lên.
+2. Dự án đầu tư có yêu cầu chuyển mục đích sử dụng đất trồng hai vụ lúa
+nước trở lên trong năm với quy mô từ 500 ha trở lên.
+3. Dự án đầu tư có yêu cầu di dân tái định cư từ 10.000 người trở lên ở miền
+núi, từ 20.000 người trở lên ở vùng khác.
+4. Dự án đầu tư có kinh doanh đặt cược, ca-si-nô (casino), trừ kinh doanh
+trò chơi điện tử có thưởng dành cho người nước ngoài.
+5. Dự án đầu tư phù hợp với quy định của pháp luật về di sản văn hóa không
+phân biệt quy mô diện tích đất, dân số thuộc phạm vi khu vực bảo vệ I và khu vực
+bảo vệ II của di tích được cấp có thẩm quyền công nhận là di tích quốc gia đặc biệt
+thuộc Danh mục di sản thế giới, di tích quốc gia, di tích quốc gia đặc biệt.
+6. Dự án đầu tư nhà máy điện hạt nhân.
+7. Dự án đầu tư của nhà đầu tư nước ngoài trong lĩnh vực kinh doanh dịch
+vụ viễn thông có hạ tầng mạng, trồng rừng, xuất bản, báo chí.
+8. Dự án đầu tư m",https://congbao.chinhphu.vn/van-ban/luat-so-143-2025-qh15-468703/61729.htm,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,MISSED,,The verifier produced no matching prediction for this citation.,yes,,,,,
+R042,QVNZH06-qwen3.8-flash,C12,dev,VN,zh,qwen3.8-flash,VN-DN-59-2020-QH14,43,,《2020年企业法》,企业自行决定印章的形式和内容，并通知登记机关。,,1.  **刻制公章：** 依据《企业法》第43条，企业自行决定印章的形式和内容，并通知登记机关。,"Điều 43. Dấu của doanh nghiệp
+1. Dấu bao gồm dấu được làm tại cơ sở khắc dấu hoặc dấu dưới hình thức chữ
+ký số theo quy định của pháp luật về giao dịch điện tử.
+2. Doanh nghiệp quyết định loại dấu, số lượng, hình thức và nội dung dấu của
+doanh nghiệp, chi nhánh, văn phòng đại diện và đơn vị khác của doanh nghiệp.
+3. Việc quản lý và lưu giữ dấu thực hiện theo quy định của Điều lệ công ty
+hoặc quy chế do doanh nghiệp, chi nhánh, văn phòng đại diện hoặc đơn vị khác
+của doanh nghiệp có dấu ban hành. Doanh nghiệp sử dụng dấu trong các giao dịch
+theo quy định của pháp luật.",https://congbao.chinhphu.vn/van-ban/luat-so-59-2020-qh14-31674.htm,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R043,QVNZH06-glm-5.3-flash,C01,dev,VN,zh,glm-5.3-flash,VN-DT-143-2025-QH15,22,1,《投资法》,外国投资者须满足市场准入条件方可投资，包括属于允许准入的行业、满足国际条约承诺、满足参与比例和条件。,,"# 外国投资者在越南设立公司的投资程序（中文说明）
+
+外国投资者（外资企业）在越南开展投资，主要受以下法律法规调整：
+
+- **《2020年投资法》**（Luật Đầu tư số 61/2020/QH14，2020年6月17日通过）
+- **《2020年企业法》**（Luật Doanh nghiệp số 59/2020/QH14）
+- **2021年3月31日政府第31/2021/NĐ-CP号议定**（指导实施《投资法》）
+- 2021年1月6日政府第01/2021/NĐ-CP号议定（企业登记实施细则，现已部分被2025年第168/2025/NĐ-CP号议定取代，请以最新文本为准）
+
+## 一、投资前的准入审查
+
+**1. 市场准入条件**
+- 《投资法》**第22条第1款**规定，外国投资者须满足市场准入条件方可投资，包括属于允许准入的行业、满足国际条约（如CPTPP、EVFTA、RCEP）承诺、满足越南法律规定的参与比例和条件。
+- 《投资法》第23条规定了市场准入条件不予适用的情形。
+- 禁止投资的行业见《投资法》**第6条**（如毒品、部分化学品、濒危野生动植物经营等）；限制准入行业见**第24条**及政府《限制投资经营行业目录》（31/2021/NĐ-CP议定附件）。
+
+**2. 投资形式**
+《投资法》**第21条**列举投资形式：设立经济组织；出资、购买股份；","Điều 22. Đầu tư theo hình thức hợp đồng BCC
+1. Hợp đồng BCC được ký kết giữa các nhà đầu tư trong nước thực hiện theo
+quy định của pháp luật về dân sự và pháp luật có liên quan.
+2. Hợp đồng BCC được ký kết giữa nhà đầu tư trong nước với nhà đầu tư
+nước ngoài hoặc giữa các nhà đầu tư nước ngoài thực hiện thủ tục cấp Giấy chứng
+nhận đăng ký đầu tư theo quy định tại Điều 26 của Luật này.
+3. Các bên tham gia hợp đồng BCC thành lập ban điều phối để thực hiện hợp
+đồng BCC. Chức năng, nhiệm vụ, quyền hạn của ban điều phối do các bên thỏa thuận.
+4. Trong quá trình thực hiện hợp đồng BCC, các bên tham gia hợp đồng
+được thỏa thuận sử dụng tài sản hình thành từ việc hợp tác kinh doanh để thành lập
+doanh nghiệp theo quy định của pháp luật về doanh nghiệp.
+5. Chính phủ quy định về nội dung hợp đồng BCC.
+
+17
+
+Mục 2
+THỦ TỤC CHẤP THUẬN CHỦ TRƯƠNG ĐẦU TƯ,
+LỰA CHỌN NHÀ ĐẦU TƯ, CẤP GIẤY CHỨNG NHẬN ĐĂNG KÝ ĐẦU TƯ
+VÀ THỦ TỤC ĐẦU TƯ ĐẶC BIỆT",https://congbao.chinhphu.vn/van-ban/luat-so-143-2025-qh15-468703/61729.htm,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,MISSED,,The verifier produced no matching prediction for this citation.,yes,,,,,
+R044,QIDID01-deepseek-v4.1-flash,C10,dev,ID,local,deepseek-v4.1-flash,ID-UU-27-2022,14,,Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi,Ketentuan lebih lanjut mengenai tata cara pelaksanaan hak diatur dalam Peraturan Pemerintah,Ketentuan lebih lanjut mengenai tata cara pelaksanaan hak Subjek Data Pribadi sebagaimana dimaksud dalam Pasal 5 sampai dengan Pasal 13 diatur dalam Peraturan Pemerintah.,**Catatan tambahan — Pasal 14:**,"Pasal 14
+ Pelaksanaan hak Subjek Data Pribadi sebagaimana
+ dimaksud dalam Pasal 6 sampai dengan Pasal 11 diajukan
+ melalui permohonan tercatat yang disampaikan secara
+ elektronik atau nonelektronik kepada Pengendali Data
+ Pribadi.",https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022,CONTENT_MISMATCH,H3,claim 与原文不符（CONTRADICTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (ID-UU-27-2022) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R045,QIDID01-mimo-v2.6-flash,C05,dev,ID,local,mimo-v2.6-flash,ID-UU-27-2022,5,1,UU PDP,Pemilik Data Pribadi memiliki hak menaruh keberatan terhadap keputusan otomatis (butir d).,,"Berdasarkan **Pasal 5 Ayat (1) UU PDP**, Pemilik Data Pribadi memiliki hak:","Pasal 5
+ Subjek Data Pribadi berhak mendapatkan Informasi
+ tentang kejelasan identitas, dasar kepentingan hukum,
+ tujuan permintaan dan penggu.naan Data Pribadi, dan
+ akuntabilitas pihak yang meminta Data Pribadi.",https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,CONTENT_MISMATCH,H4,The statement shares almost no specific wording with article 5 of Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (ID-UU-27-2022) (overlap 0.014); its content may not come from this article.,no,,,,,
+R046,QVNZH05-glm-5.3-flash,C03,test,VN,zh,glm-5.3-flash,VN-BLLD-45-2019-QH14,98,,Bộ luật Lao động 2019,平日加班不低于正常时薪的150%；休息日加班不低于200%；法定节假日、带薪年休假加班不低于300%（另加加班日工资）。,,## 四、加班工资（相关条款，第98条）,"Điều 98. Tiền lương làm thêm giờ, làm việc vào ban đêm
+1. Người lao động làm thêm giờ được trả lương tính theo đơn giá tiền lương
+hoặc tiền lương thực trả theo công việc đang làm như sau:
+a) Vào ngày thường, ít nhất bằng 150%;
+b) Vào ngày nghỉ hằng tuần, ít nhất bằng 200%;
+c) Vào ngày nghỉ lễ, tết, ngày nghỉ có hưởng lương, ít nhất bằng 300% chưa
+kể tiền lương ngày lễ, tết, ngày nghỉ có hưởng lương đối với người lao động hưởng
+lương ngày.
+2. Người lao động làm việc vào ban đêm thì được trả thêm ít nhất bằng 30%
+tiền lương tính theo đơn giá tiền lương hoặc tiền lương thực trả theo công việc
+của ngày làm việc bình thường.
+3. Người lao động làm thêm giờ vào ban đêm thì ngoài việc trả lương theo
+quy định tại khoản 1 và khoản 2 Điều này, người lao động còn được trả thêm 20%
+tiền lương tính theo đơn giá tiền lương hoặc tiền lương theo công việc làm vào
+ban ngày của ngày làm việc bình thường hoặc của ngày nghỉ hằng tuần hoặc của
+ngày nghỉ lễ, tết.
+4. Chính phủ quy định chi tiết Điều này.",https://congbao.chinhphu.vn/van-ban/van-ban-hop-nhat-so-18-vbhn-vpqh-468971.htm,EXISTS_CONSISTENT,,条文存在、现行，claim 被原文支持（LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in Bộ luật Lao động (văn bản hợp nhất 18/VBHN-VPQH) (VN-BLLD-45-2019-QH14) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",no,,,,,
+R047,QIDZH02-glm-5.3-flash,C01,dev,ID,zh,glm-5.3-flash,,67,1,印度尼西亚共和国2012年第27号法律,故意获取、收集不属于自己权限范围内的个人数据，以使自己或他人获利，可处5年以下有期徒刑，并处（罚金）50亿印尼盾以下罚款。,故意获取、收集不属于自己权限范围内的个人数据，以使自己或他人获利，可处**5年以下有期徒刑**，并处（罚金）**50亿印尼盾以下罚款**。,"# 印尼《个人数据保护法》刑事处罚概述
+
+**法律依据：印度尼西亚共和国2012年第27号法律——关于个人数据保护**（Indonesia Law No. 27 of 2022 on Personal Data Protection，简称 PDP Law / UU PDP）。该法于2022年10月17日颁布，经过两年过渡期后已于2024年10月全面生效。
+
+该法第八章（违法规定）中的**第67条、第68条、第69条**规定了刑事责任，均属于**刑事犯罪，而非仅行政违法**。
+
+---
+
+## 一、第67条——非法收集、披露或使用个人数据
+
+**第67条第(1)款：**
+> 故意获取、收集不属于自己权限范围内的个人数据，以使自己或他人获利，可处**5年以下有期徒刑**，并处（罚金）**50亿印尼盾以下罚款**。
+
+**第67条第(2)款：**
+> 故意披露不属于自己权限范围内、依法应予保密的个人数据，可处**4年以下有期徒刑**和/或**40亿印尼盾以下罚款**。
+
+**第67条第(3)款：**
+> 故意使用不属于自己权限范围内的个人数据，可处**5年以下有期徒刑**和/或**50亿印尼盾以下罚款**。
+
+---
+
+## 二、第68条——伪造个人数据
+
+> 故意**伪造、篡改**个人数据以使自己或他人获利，可处**6年以下有期徒刑**和/或**60亿印尼盾以下罚款**。
+
+---
+
+",,,UNVERIFIABLE,,法规未缓存（number_uncached），无官方原文可比对,MISSED,,The verifier produced no matching prediction for this citation.,no,,,,,
+R048,QIDZH02-glm-5.3-flash,C10,dev,ID,zh,glm-5.3-flash,,26,,印度尼西亚共和国2012年第27号法律,个人数据主体（受害人）在满足一定条件时也可就侵权行为提出损害赔偿民事诉讼。,,"# 印尼《个人数据保护法》刑事处罚概述
+
+**法律依据：印度尼西亚共和国2012年第27号法律——关于个人数据保护**（Indonesia Law No. 27 of 2022 on Personal Data Protection，简称 PDP Law / UU PDP）。该法于2022年10月17日颁布，经过两年过渡期后已于2024年10月全面生效。
+
+该法第八章（违法规定）中的**第67条、第68条、第69条**规定了刑事责任，均属于**刑事犯罪，而非仅行政违法**。
+
+---
+
+## 一、第67条——非法收集、披露或使用个人数据
+
+**第67条第(1)款：**
+> 故意获取、收集不属于自己权限范围内的个人数据，以使自己或他人获利，可处**5年以下有期徒刑**，并处（罚金）**50亿印尼盾以下罚款**。
+
+**第67条第(2)款：**
+> 故意披露不属于自己权限范围内、依法应予保密的个人数据，可处**4年以下有期徒刑**和/或**40亿印尼盾以下罚款**。
+
+**第67条第(3)款：**
+> 故意使用不属于自己权限范围内的个人数据，可处**5年以下有期徒刑**和/或**50亿印尼盾以下罚款**。
+
+---
+
+## 二、第68条——伪造个人数据
+
+> 故意**伪造、篡改**个人数据以使自己或他人获利，可处**6年以下有期徒刑**和/或**60亿印尼盾以下罚款**。
+
+---
+
+",,,UNVERIFIABLE,,法规未缓存（number_uncached），无官方原文可比对,MISSED,,The verifier produced no matching prediction for this citation.,no,,,,,
+R049,QIDZH03-deepseek-v4.1-flash,C04,test,ID,zh,deepseek-v4.1-flash,ID-UU-11-2008-ITE,5,4,Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik,第1款、第2款和第3款关于电子信息和/或电子文件作为证据的规定，不适用于以下情形：a. 依照法律规定必须采用书面形式的文件和/或合同；b. 依照法律规定必须采用公证书形式的文件和/或合同；c. 因为其他法律规定而必须采用书面形式的文件和/或合同。,,"在印尼，电子信息和电子文件的证据效力主要由《电子信息与电子交易法》规定。该法全称为 **Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik**（2008年第11号法律），后经 **Undang-Undang Nomor 19 Tahun 2016** 修订。相关核心条款如下：
+
+1. **第5条**规定电子信息和/或电子文件及其打印件具有法律效力，可作为证据：
+   - 第1款：电子信息和/或电子文件及其打印件，依照本法规定，是合法且具有约束力的证据。
+   - 第2款：电子信息和/或电子文件及其打印件，依照本法规定，是合法且具有约束力的证据，但该证据须使用能够保证电子文件完整性和可访问性的电子系统，符合第1款的规定，且该电子信息或电子文件与案件事实相关。
+   - 第3款：电子信息和/或电子文件及其打印件，依照本法规定，是合法且具有约束力的证据，其效力等同于非电子文件。
+   - 第4款：第1款、第2款和第3款关于电子信息和/或电子文件作为证据的规定，不适用于以下情形：
+     a. 依照法律规定必须采用书面形式的文件和/或合同；
+     b. 依照法律规定必须采用公证书形式的文件和/或合同；
+     c. 因为其他法律规定而必须采用书面形式的文件和/或合同。
+
+2. **","Pasal 5
+
+(1)
+
+Informasi
+Elektronik
+dan/atau
+Dokumen
+Elektronik
+dan/atau hasil cetaknya merupakan alat bukti hukum yang
+sah.
+
+(2)
+
+Informasi
+Elektronik
+dan/atau
+Dokumen
+Elektronik
+dan/atau hasil cetaknya sebagaimana dimaksud pada ayat (1)
+merupakan perluasan dari alat bukti yang sah sesuai
+dengan Hukum Acara yang berlaku di Indonesia.
+
+(3)
+
+Informasi
+Elektronik
+dan/atau
+Dokumen
+Elektronik
+dinyatakan sah apabila menggunakan Sistem Elektronik
+sesuai dengan ketentuan yang diatur dalam UndangUndang ini.
+
+(4)
+
+Ketentuan
+mengenai
+Informasi
+Elektronik
+dan/atau
+Dokumen Elektronik sebagaimana dimaksud pada ayat (1) tidak
+berlaku untuk:
+a. surat yang menurut
+bentuk tertulis; dan
+
+Undang-Undang
+
+harus
+
+dibuat dalam
+
+b. surat beserta dokumennya yang menurut UndangUndang harus dibuat dalam bentuk akta notaril atau
+akta yang dibuat oleh pejabat pembuat akta.",https://peraturan.bpk.go.id/Details/37589/uu-no-11-tahun-2008,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,MISSED,,The verifier produced no matching prediction for this citation.,no,,,,,
+R050,QTHZH02-qwen3.8-flash,C15,test,TH,zh,qwen3.8-flash,TH-PDPA-2562-TH,79–82,,《个人数据保护法》（Personal Data Protection Act B.E. 2562 (2019)，简称 PDPA）,在特定恶意情况下（如出售、泄露以牟利或造成严重伤害），还可能构成刑事犯罪，处以监禁和罚金。,,"得父母/监护人的明示同意。
+
+### 4. 跨境传输限制更严
+虽然PDPA未单独设立“敏感数据跨境条款”，但依据 **第28条和第29条**，所有个人数据（包括敏感数据）的跨境传输都必须确保接收国具备充分的数据保护水平，或存在适当保障措施（如标准合同条款）。对于敏感数据，监管机构在实践中通常施加更严格的审查。
+
+### 5. 违规处罚加重
+违反敏感个人数据处理规定的行为，可能面临更高的行政罚款和刑事责任：
+- **第83条**：若非法收集、使用或披露敏感个人数据，造成损害或潜在损害，可处最高 **500万泰铢** 的行政罚款（高于一般个人数据的最高300万泰铢）。
+- **第79–82条**：在特定恶意情况下（如出售、泄露以牟利或造成严重伤害），还可能构成刑事犯罪，处以监禁和罚金。
+
+---
+
+✅ **总结关键点**：
+- 敏感数据包括：种族、宗教、健康、生物识别、基因、性取向、犯罪记录、工会成员、儿童数据等。
+- 默认禁止处理，除非满足第26条列举的11项例外之一。
+- 最常用例外是“明示同意”，但门槛高于一般同意。
+- 儿童数据一律视为敏感数据。
+- 违规后果更严重，罚款上限达500万泰铢，并可能涉刑。
+
+📌 **主要法律依据**：
+- 《泰国个人数据保护法 B.E. 2562 (2019)》  
+  - 第26条（敏感个人数据的定义与处理规则）  
+  - 第28–29条（","มาตรา ๗๙ ผู้ควบคุมข้อมูลส่วนบุคคลผู้ใดฝ่าฝืนมาตรา ๒๗ วรรคหนึ่งหรือวรรคสอง
+หรือไม่ปฏิบัติตามมาตรา ๒๘ อันเกี่ยวกับข้อมูลส่วนบุคคลตามมาตรา ๒๖ โดยประการที่น่าจะท าให้
+ผู้อื่นเกิดความเสียหาย เสียชื่อเสียง ถูกดูหมิ่น ถูกเกลียดชัง หรือได้รับความอับอาย ต้องระวางโทษ
+จ าคุกไม่เกินหกเดือน หรือปรับไม่เกินห้าแสนบาท หรือทั้งจ าทั้งปรับ
+หนา ๘๙่
+เลม ๑๓๖ ตอนที่ ๖๙ ก
+ราชกิจจานุเบกษา
+๒๗ พฤษภาคม ๒๕๖๒
+ผู้ควบคุมข้อมูลส่วนบุคคลผู้ใดฝ่าฝืนมาตรา ๒๗ วรรคหนึ่งหรือวรรคสอง หรือไม่ปฏิบัติ
+ตามมาตรา ๒๘ อันเกี่ยวกับข้อมูลส่วนบุคคลตามมาตรา ๒๖ เพื่อแสวงหาประโยชน์ที่มิควรได้โดยชอบ
+ด้วยกฎหมายส าหรับตนเองหรือผู้อื่น ต้องระวางโทษจ าคุกไม่เกินหนึ่งปี หรือปรับไม่เกินหนึ่งล้านบาท
+หรือทั้งจ าทั้งปรับ
+ความผิดตามมาตรานี้เป็นความผิดอันยอมความได้",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,EXISTS_CONSISTENT,,条文存在、现行，claim 被原文支持（LLM 辅助标注）,MISSED,,The verifier produced no matching prediction for this citation.,no,,,,,
+R051,QVNVI04-deepseek-v4.1-flash,C03,dev,VN,local,deepseek-v4.1-flash,VN-GDDT-20-2023-QH15,23,,Luật Giao dịch điện tử,"Chữ ký điện tử chuyên dùng (dùng trong phạm vi cơ quan, tổ chức theo quy định riêng) có giá trị pháp lý trong phạm vi hoạt động của cơ quan, tổ chức đó nếu đáp ứng điều kiện bảo đảm an toàn theo quy định.",,### Điều 23 – Giá trị pháp lý của chữ ký điện tử chuyên dùng,"Điều 23. Giá trị pháp lý của chữ ký điện tử
+1. Chữ ký điện tử không bị phủ nhận giá trị pháp lý chỉ vì được thể hiện dưới
+dạng chữ ký điện tử.
+
+16
+
+CÔNG BÁO/Số 867 + 868/Ngày 30-7-2023
+2. Chữ ký điện tử chuyên dùng bảo đảm an toàn hoặc chữ ký số có giá trị pháp
+
+lý tương đương chữ ký của cá nhân đó trong văn bản giấy.
+3. Trường hợp pháp luật quy định văn bản phải được cơ quan, tổ chức xác
+nhận thì yêu cầu đó được xem là đáp ứng đối với một thông điệp dữ liệu nếu thông
+điệp dữ liệu đó được ký bằng chữ ký điện tử chuyên dùng bảo đảm an toàn hoặc
+chữ ký số của cơ quan, tổ chức đó.",https://congbao.chinhphu.vn/van-ban/luat-so-20-2023-qh15-39848.htm,EXISTS_CONSISTENT,,条文存在、现行，claim 被原文支持（LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in Luật Giao dịch điện tử (VN-GDDT-20-2023-QH15) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",no,,,,,
+R052,QVNZH01-deepseek-v4.1-flash,C03,dev,VN,zh,deepseek-v4.1-flash,VN-ND-13-2023-CP,11,3,第13/2023/NĐ-CP号政府法令《关于个人数据保护》,沉默或不作为不构成同意（Im lặng hoặc không phản hồi không được coi là sự đồng ý）。,Im lặng hoặc không phản hồi không được coi là sự đồng ý,"，请提供具体名称和文号，我再作针对性说明。
+
+**一、同意的核心规则**
+
+1. **第9条第1款**：处理个人数据须取得数据主体的同意，法律另有规定的情形除外。同意须在数据主体**充分知悉**（được biết）的情况下自愿作出，具体包括知悉处理的目的、被处理的个人数据类型、处理方式、数据接收方、数据主体的权利与义务等信息。
+
+2. **第11条第2款**：同意必须以**可证明的形式**（hình thức có thể chứng minh được）作出，例如书面、电子形式、勾选同意框、短信、技术方式或其他可验证的方式。
+
+3. **第11条第3款**：**沉默或不作为不构成同意**（Im lặng hoặc không phản hồi không được coi là sự đồng ý）。
+
+4. **第11条第4款**：对于**敏感个人数据**（dữ liệu cá nhân nhạy cảm），同意须以书面或电子形式明确作出，且须明确说明被处理的敏感数据类型。
+
+5. **第9条第2款**：同意须针对**每一项目的**分别取得；同一数据用于多个目的时，须就每个目的分别取得同意。
+
+6. **第9条第3款**：数据主体有权**随时撤回同意**，撤回不影响撤回前基于同意进行的处理的合法性。
+
+7. **第9条第4款**：数据控制者/处理者须提供**撤回同意的便捷方式","Điều 42. Hiệu lực và trách nhiệm thi hành
+1. Nghị định này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2026.
+2. Nghị định số 13/2023/NĐ-CP ngày 17 tháng 4 năm 2023 của Chính
+phủ về bảo vệ dữ liệu cá nhân hết hiệu lực kể từ ngày Nghị định này có hiệu
+lực thi hành.
+3. Sửa đổi khoản 2 Điều 16 của Nghị định số 165/2025/NĐ-CP ngày 30
+tháng 6 năm 2025 của Chính phủ quy định chi tiết một số điều và biện pháp thi
+hành Luật Dữ liệu như sau:
+“2. Việc bảo vệ dữ liệu cốt lõi, dữ liệu quan trọng là dữ liệu cá nhân thực
+hiện theo quy định của Luật Bảo vệ dữ liệu cá nhân và văn bản quy định chi
+tiết thi hành.
+Trường hợp chuyển, xử lý dữ liệu cốt lõi, dữ liệu quan trọng xuyên biên
+giới là dữ liệu cá nhân, chủ quản dữ liệu cốt lõi, dữ liệu quan trọng thực hiện
+hồ sơ đánh giá tác động xử lý dữ liệu cá nhân, đánh giá tác động chuyển dữ liệu
+cá nhân xuyên biên giới theo quy định của pháp luật về bảo vệ dữ liệu cá nhân;
+không phải thực hiện đánh giá rủi ro, đánh giá tác động chuyển, xử lý dữ liệu
+xuyên biên giới theo quy định của Nghị định này.”
+4. Bộ Công an chịu trách nhiệm hướng dẫn, kiểm tra, đôn đốc việc thực
+hiện Nghị định này.
+
+CÔNG BÁO/Số 18/Ngày 18-01-2026
+
+39
+
+5. Bộ trưởng các bộ, Thủ trưởn",https://vanban.chinhphu.vn/?docid=216387&pageid=27160,NOT_IN_FORCE,H5,VN-ND-13-2023-CP 已于 2026-01-01 失效（VN-ND-356-2025-CP Điều 42，见缓存原文）,MISSED,,The verifier produced no matching prediction for this citation.,yes,,,,,
+R053,QVNZH03-deepseek-v4.1-flash,C02,dev,VN,zh,deepseek-v4.1-flash,,26,,第53/2022/NĐ-CP号政府法令,对《网络安全法》第26条作出操作化规定，细化数据存储和本地化要求,,"**第53/2022/NĐ-CP号法令第26条**（Điều 26. Lưu trữ dữ liệu và đặt chi nhánh, văn phòng đại diện tại Việt Nam）对《网络安全法》第26条作出操作化规定：",,,UNVERIFIABLE,,法规未缓存（number_uncached），无官方原文可比对,UNVERIFIABLE,,"""53/2022/NĐ-CP"" is not in the CiteCheck corpus (or no law was named), so it cannot be verified.",no,,,,,
+R054,QTHZH03-mimo-v2.6-flash,C02,dev,TH,zh,mimo-v2.6-flash,TH-PDPA-2562-TH,96,(1),《个人数据保护法》,"无合法依据处理个人数据，或未按本法规定/原则处理个人数据的行政罚款上限为不超过 5,000,000 泰铢。",,本法**第95条（Section 95）** 规定：个人数据保护委员会（PDPC委员会）有权对违反本法的数据控制者（data controller）、数据处理者（data processor）或数据主体（data subject）处以行政罚款，具体按第96条执行。,"มาตรา ๙๖ การด าเนินการออกระเบียบ และประกาศตามพระราชบัญญัตินี้ ให้ด าเนินการ
+ให้แล้วเสร็จภายในหนึ่งปีนับแต่วันที่พระราชบัญญัตินี้ใช้บังคับ หากไม่สามารถด าเนินการได้ให้รัฐมนตรี
+รายงานเหตุผลที่ไม่อาจด าเนินการได้ต่อคณะรัฐมนตรีเพื่อทราบ
+ผู้รับสนองพระบรมราชโองการ
+พลเอก ประยุทธ์ จันทร์โอชา
+นายกรัฐมนตรี
+หนา ๙๔่
+เลม ๑๓๖ ตอนที่ ๖๙ ก
+ราชกิจจานุเบกษา
+๒๗ พฤษภาคม ๒๕๖๒
+หมายเหตุ :- เหตุผลในการประกาศใช้พระราชบัญญัติฉบับนี้ คือ เนื่องจากปัจจุบันมีการล่วงละเมิด
+สิทธิความเป็นส่วนตัวของข้อมูลส่วนบุคคลเป็นจ านวนมากจนสร้างความเดือดร้อนร าคาญหรือความเสียหาย
+ให้แก่เจ้าของข้อมูลส่วนบุคคล ประกอบกับความก้าวหน้าของเทคโนโลยีท าให้การเก็บรวบรวม ใช้ หรือ
+เปิดเผยข้อมูลส่วนบุคคลอันเป็นการล่วงละเมิดดังกล่าว ท าได้โดยง่าย สะดวก และรวดเร็ว ก่อให้เกิด
+ความเสียหายต่อเศรษฐกิจโดยรวม สมควรก าหนดให้มีกฎหมายว่าด้วยการคุ้มครองข้อมูลส่วนบุคคล
+เป็นการทั่วไปขึ้น เพื่อก าหนดหลักเกณฑ์ กลไก หรือมาตรการก ากับดูแลเกี่ยวกับการให้ความคุ้มครองข้อมูล
+ส่วนบุคคลที่เป็นหลักการทั่วไป จึงจ าเป็นต้องตราพระราชบัญญัตินี้
+หนา ๙๕่
+เลม ๑๓๖ ตอนที่ ๖๙ ก
+ราชกิจจานุเบกษา
+๒๗ พฤษภาคม ๒๕๖๒",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,CONTENT_MISMATCH,H3,The statement matches article 88 of พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) much better than the cited article 96 (overlap 0.757 vs 0.04) — likely a misattributed provision; did you mean article 88?,no,,,,,
+R055,QVNVI02-qwen3.8-flash,C08,test,VN,local,qwen3.8-flash,VN-ND-13-2023-CP,4,8,Nghị định 13/2023/NĐ-CP,Chủ thể dữ liệu cá nhân có quyền tự bảo vệ hoặc nhờ bên thứ ba thực hiện các biện pháp bảo vệ quyền và lợi ích hợp pháp của mình theo quy định của pháp luật.,Chủ thể dữ liệu cá nhân có quyền tự bảo vệ hoặc nhờ bên thứ ba thực hiện các biện pháp bảo vệ quyền và lợi ích hợp pháp của mình theo quy định của pháp luật.,### 🔹 Điều khoản quy định quyền của chủ thể dữ liệu cá nhân: **Điều 4**,"Điều 42. Hiệu lực và trách nhiệm thi hành
+1. Nghị định này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2026.
+2. Nghị định số 13/2023/NĐ-CP ngày 17 tháng 4 năm 2023 của Chính
+phủ về bảo vệ dữ liệu cá nhân hết hiệu lực kể từ ngày Nghị định này có hiệu
+lực thi hành.
+3. Sửa đổi khoản 2 Điều 16 của Nghị định số 165/2025/NĐ-CP ngày 30
+tháng 6 năm 2025 của Chính phủ quy định chi tiết một số điều và biện pháp thi
+hành Luật Dữ liệu như sau:
+“2. Việc bảo vệ dữ liệu cốt lõi, dữ liệu quan trọng là dữ liệu cá nhân thực
+hiện theo quy định của Luật Bảo vệ dữ liệu cá nhân và văn bản quy định chi
+tiết thi hành.
+Trường hợp chuyển, xử lý dữ liệu cốt lõi, dữ liệu quan trọng xuyên biên
+giới là dữ liệu cá nhân, chủ quản dữ liệu cốt lõi, dữ liệu quan trọng thực hiện
+hồ sơ đánh giá tác động xử lý dữ liệu cá nhân, đánh giá tác động chuyển dữ liệu
+cá nhân xuyên biên giới theo quy định của pháp luật về bảo vệ dữ liệu cá nhân;
+không phải thực hiện đánh giá rủi ro, đánh giá tác động chuyển, xử lý dữ liệu
+xuyên biên giới theo quy định của Nghị định này.”
+4. Bộ Công an chịu trách nhiệm hướng dẫn, kiểm tra, đôn đốc việc thực
+hiện Nghị định này.
+
+CÔNG BÁO/Số 18/Ngày 18-01-2026
+
+39
+
+5. Bộ trưởng các bộ, Thủ trưởn",https://vanban.chinhphu.vn/?docid=216387&pageid=27160,NOT_IN_FORCE,H5,VN-ND-13-2023-CP 已于 2026-01-01 失效（VN-ND-356-2025-CP Điều 42，见缓存原文）,NOT_IN_FORCE,H5,"Nghị định về bảo vệ dữ liệu cá nhân (VN-ND-13-2023-CP) was repealed on 2026-01-01 by VN-ND-356-2025-CP Điều 42, before the check date.",no,,,,,
+R056,QIDZH05-deepseek-v4.1-flash,C02,dev,ID,zh,deepseek-v4.1-flash,ID-UU-40-2007-PT,5,,《有限责任公司法》,PT至少由2名股东设立。,,'- 依第5条，PT至少由2名股东设立。外资PT PMA可由2名以上外国自然人或法人股东设立（允许100%外资，除非投资清单限制）。,"Pasal 5
+(1)
+
+Perseroan mempunyai nama dan tempat kedudukan
+dalam wilayah negara Republik Indonesia
+yang
+ditentukan dalam anggaran dasar.
+(2) Perseroan . . .
+
+- 5 (2)
+
+Perseroan mempunyai alamat lengkap sesuai dengan
+tempat kedudukannya.
+
+(3)
+
+Dalam surat-menyurat, pengumuman yang diterbitkan
+oleh Perseroan, barang cetakan, dan akta dalam hal
+Perseroan menjadi pihak harus menyebutkan nama dan
+alamat lengkap Perseroan.",https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R057,QIDID01-deepseek-v4.1-flash,C08,dev,ID,local,deepseek-v4.1-flash,ID-UU-27-2022,12,,Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi,Hak memperoleh dan/atau menggunakan Data Pribadi dalam bentuk yang dapat dibaca dan disalin (portabilitas),"Subjek Data Pribadi berhak memperoleh dan/atau menggunakan Data Pribadi tentang dirinya dalam bentuk yang dapat dibaca dan disalin, yang dikirimkan dari satu Pengendali ke Pengendali Data Pribadi lainnya, dalam hal: a. pemrosesan dilakukan secara otomatis; atau b. pemrosesan didasarkan pada persetujuan atau kontrak.",**8. Pasal 12 — Hak memperoleh dan/atau menggunakan Data Pribadi dalam bentuk yang dapat dibaca dan disalin (portabilitas)**,"Pasal 12
+ (I) Subjek Data Pribadi berhak menggugat dan menerima
+ ganti rugi atas pelanggaran pemrosesan Data Pribadi
+ tentang dirinya sesuai dengan ketentuan peraturan
+ perundang-undangan.
+
+ (2) Ketentuan . . .
+
+
+SK No 155207A
+ PRESlDEN
+ REPUBLIK INDONES]A
+
+
+ -7 -
+ (2) Ketentuan lebih lanjut mengenai pelanggaran
+ pemrosesan Data Pribadi dan tata cara pengenaan
+ ganti rugi sebagaimana dimaksud pada ayat (1) diatur
+ dalam Peraturan Pemerintah.",https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,CONTENT_MISMATCH,H3,The statement matches article 13 of Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (ID-UU-27-2022) much better than the cited article 12 (overlap 0.276 vs 0.072) — likely a misattributed provision; did you mean article 13?,no,,,,,
+R058,QTHZH04-deepseek-v4.1-flash,C03,dev,TH,zh,deepseek-v4.1-flash,TH-LPA-2541,17,last paragraph,《劳动保护法》佛历2541年（1998年）,作为触发第118条解雇补偿金支付的法定情形之一被提及。,,《劳动保护法》佛历2541年（1998年）**第118条**规定（准确转述）：雇主依第17条最后一段、第121条或第119条以外情形解除劳动合同时，应支付解雇补偿金予雇员，其金额按雇员连续工作年限计算如下：,"มาตรา ๑๗๑๑ สัญญาจ้างย่อมสิ้นสุดลงเมื่อครบกำหนดระยะเวลาในสัญญาจ้างโดย
+มิต้องบอกกล่าวล่วงหน้า
+ในกรณีที่สัญญาจ้างไม่มีกำหนดระยะเวลา นายจ้างหรือลูกจ้างอาจบอกเลิกสัญญาจ้าง
+โดยบอกกล่าวล่วงหน้าเป็นหนังสือให้อีกฝ่ายหนึ่งทราบในเมื่อถึงหรือก่อนจะถึงกำหนดจ่ายค่าจ้าง
+คราวหนึ่งคราวใด เพื่อให้เป็นผลเลิกสัญญากันเมื่อถึงกำหนดจ่ายค่าจ้างคราวถัดไปข้างหน้าก็ได้ แต่ไม่
+จำต้องบอกกล่าวล่วงหน้าเกินสามเดือน ทั้งนี้ ให้ถือว่าสัญญาจ้างทดลองงานเป็นสัญญาจ้างที่ไม่มี
+กำหนดระยะเวลาด้วย
+การบอกเลิกสัญญาจ้างตามวรรคสอง นายจ้างอาจจ่ายค่าจ้างให้ตามจำนวนที่จะต้อง
+จ่ายจนถึงเวลาเลิกสัญญาตามกำหนดที่บอกกล่าวและให้ลูกจ้างออกจากงานทันทีได้
+การบอกกล่าวล่วงหน้าตามมาตรานี้ไม่ใช้บังคับแก่การเลิกจ้างตามมาตรา ๑๑๙
+แห่งพระราชบัญญัตินี้ และมาตรา ๕๘๓ แห่งประมวลกฎหมายแพ่งและพาณิชย์",https://ccpl.mol.go.th/,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R059,QIDZH05-glm-5.3-flash,C06,dev,ID,zh,glm-5.3-flash,ID-UU-25-2007-PM,6,,《投资法》,外国投资须以印尼有限责任公司（PT）形式进行；投资者可将资本转移海外（利润、股息等）,,根据《投资法》第1条第5款及第6条，外国投资须以印尼有限责任公司（PT）形式进行。PT PMA指外国人持股的PT；纯外资（100%外资）或与印尼方合资均可。,"Pasal 6
+(1)
+
+Pemerintah memberikan perlakuan yang sama kepada
+semua penanam modal yang berasal dari negara mana
+pun yang melakukan kegiatan penanaman modal di
+Indonesia sesuai dengan ketentuan
+peraturan
+perundang-undangan.
+
+(2)
+
+Perlakuan sebagaimana dimaksud pada ayat (1) tidak
+berlaku bagi penanam modal dari suatu negara yang
+memperoleh hak istimewa berdasarkan perjanjian dengan
+Indonesia.",https://peraturan.bpk.go.id/Details/39903/uu-no-25-tahun-2007,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R060,QIDID03-qwen3.8-flash,C03,dev,ID,local,qwen3.8-flash,ID-UU-11-2008-ITE,45,3,UU No. 11 Tahun 2008,Ancaman hukuman pada versi awal adalah penjara paling lama 6 tahun dan/atau denda paling banyak Rp1 miliar.,,### 2. Sanksi Pidana (Pasal 45 ayat (3)),"Pasal 45
+
+(1)
+
+Setiap
+Orang
+yang
+memenuhi
+unsur
+sebagaimana
+dimaksud dalam Pasal 27 ayat (1), ayat (2), ayat (3), atau ayat
+(4) dipidana dengan pidana penjara paling lama 6 (enam)
+tahun
+dan/atau
+denda
+paling
+banyak
+Rp1.000.000.000,00 (satu miliar rupiah).
+
+(2) Setiap . . .
+
+PRESIDEN
+REPUBLIK INDONESIA
+
+- 22 (2)
+
+Setiap
+Orang
+yang
+memenuhi
+unsur
+sebagaimana
+dimaksud dalam Pasal 28 ayat (1) atau ayat (2) dipidana
+dengan pidana penjara paling lama 6 (enam) tahun
+dan/atau denda paling banyak Rp1.000.000.000,00 (satu
+miliar rupiah).
+
+(3)
+
+Setiap
+Orang
+yang
+memenuhi
+unsur
+sebagaimana
+dimaksud dalam Pasal 29 dipidana dengan pidana penjara
+paling lama 12 (dua belas) tahun dan/atau denda paling
+banyak Rp2.000.000.000,00 (dua miliar rupiah).",https://peraturan.bpk.go.id/Details/37589/uu-no-11-tahun-2008,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R061,QTHZH04-mimo-v2.6-flash,C01,dev,TH,zh,mimo-v2.6-flash,TH-LPA-2541,118,,泰国《劳动保护法》,主要条款之一，规定解雇补偿金（遣散费）标准。,,'- **主要条款**：**第118条**（Severance pay）、**第119条**（不享有遣散费的情形）,"มาตรา ๑๑๘ ให้นายจ้างจ่ายค่าชดเชยให้แก่ลูกจ้างซึ่งเลิกจ้าง ดังต่อไปนี้
+(๑) ลูกจ้างซึ่งทำงานติดต่อกันครบหนึ่งร้อยยี่สิบวัน แต่ไม่ครบหนึ่งปี ให้จ่ายไม่น้อย
+กว่าค่าจ้างอัตราสุดท้ายสามสิบวัน หรือไม่น้อยกว่าค่าจ้างของการทำงานสามสิบวันสุดท้ายสำหรับ
+ลูกจ้างซึ่งได้รับค่าจ้างตามผลงานโดยคำนวณเป็นหน่วย
+(๒) ลูกจ้างซึ่งทำงานติดต่อกันครบหนึ่งปี แต่ไม่ครบสามปี ให้จ่ายไม่น้อยกว่าค่าจ้าง
+อัตราสุดท้ายเก้าสิบวัน หรือไม่น้อยกว่าค่าจ้างของการทำงานเก้าสิบวันสุดท้ายสำหรับลูกจ้างซึ่งได้รับ
+ค่าจ้างตามผลงานโดยคำนวณเป็นหน่วย
+(๓) ลูกจ้างซึ่งทำงานติดต่อกันครบสามปี แต่ไม่ครบหกปี ให้จ่ายไม่น้อยกว่าค่าจ้าง
+อัตราสุดท้ายหนึ่งร้อยแปดสิบวัน หรือไม่น้อยกว่าค่าจ้างของการทำงานหนึ่งร้อยแปดสิบวันสุดท้าย
+สำหรับลูกจ้างซึ่งได้รับค่าจ้างตามผลงานโดยคำนวณเป็นหน่วย
+(๔) ลูกจ้างซึ่งทำงานติดต่อกันครบหกปี แต่ไม่ครบสิบปี ให้จ่ายไม่น้อยกว่าค่าจ้าง
+อัตราสุดท้ายสองร้อยสี่สิบวัน หรือไม่น้อยกว่าค่าจ้างของการทำงานสองร้อยสี่สิบวันสุดท้ายสำหรับ
+ลูกจ้างซึ่งได้รับค่าจ้างตามผลงานโดยคำนวณเป็นหน่วย
+(๕) ลูกจ้างซึ่งทำงานติดต่อกันครบสิบปีขึ้นไป ให้จ่ายไม่น้อยกว่าค่าจ้างอัตราสุดท้าย
+สามร้อยวัน หรือไม่น้อยกว่าค่าจ้างของการทำงานสามร้อยวันสุดท้ายสำหรับลูกจ้างซึ่งได้รับค่าจ้าง
+ตามผลงานโดยคำนวณเป็นหน่วย
+การเลิกจ้างตามมาตรานี้ หมายความว่า การกระทำใดที่นายจ้",https://ccpl.mol.go.th/,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R062,QVNZH04-qwen3.8-flash,C03,dev,VN,zh,qwen3.8-flash,VN-BLLD-45-2019-QH14,25,1,《2019年劳动法》,试用期由双方根据工作的性质和规模协商确定，但须符合以下规定：（a）对于无固定期限劳动合同以及期限为12个月以上的确定期限劳动合同，试用期不得超过60天；（b）对于期限为1个月以上但不足12个月的确定期限劳动合同，试用期不得超过30天；（c）对于期限不足1个月的劳动合同，不设试用期。,“试用期由双方根据工作的性质和规模协商确定，但须符合以下规定： （a）对于无固定期限劳动合同以及期限为12个月以上的确定期限劳动合同，试用期不得超过60天； （b）对于期限为1个月以上但不足12个月的确定期限劳动合同，试用期不得超过30天； （c）对于期限不足1个月的劳动合同，不设试用期。”,依据**《2019年劳动法》第25条**的规定，试用期的长度取决于劳动合同的期限：,"Điều 25. Thời gian thử việc
+Thời gian thử việc do hai bên thỏa thuận căn cứ vào tính chất và mức độ
+phức tạp của công việc nhưng chỉ được thử việc một lần đối với một công việc và
+bảo đảm điều kiện sau đây:
+1. Không quá 180 ngày đối với công việc của người quản lý doanh nghiệp
+theo quy định của Luật Doanh nghiệp, Luật Quản lý, sử dụng vốn nhà nước đầu
+tư vào sản xuất, kinh doanh tại doanh nghiệp;
+2. Không quá 60 ngày đối với công việc có chức danh nghề nghiệp cần trình
+độ chuyên môn, kỹ thuật từ cao đẳng trở lên;
+3. Không quá 30 ngày đối với công việc có chức danh nghề nghiệp cần trình
+độ chuyên môn, kỹ thuật trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ;
+4. Không quá 06 ngày làm việc đối với công việc khác.",https://congbao.chinhphu.vn/van-ban/van-ban-hop-nhat-so-18-vbhn-vpqh-468971.htm,CONTENT_MISMATCH,H3,claim 与原文不符（CONTRADICTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in Bộ luật Lao động (văn bản hợp nhất 18/VBHN-VPQH) (VN-BLLD-45-2019-QH14) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R063,QIDID01-qwen3.8-flash,C10,dev,ID,local,qwen3.8-flash,ID-UU-27-2022,19,,UU PDP,"Beberapa hak dapat dibatasi oleh alasan hukum tertentu (seperti keamanan negara, pertahanan, atau penyelidikan pidana).",,"Catatan penting: Pelaksanaan hak-hak ini harus dilakukan melalui prosedur yang ditetapkan oleh Pengendali Data Pribadi, dan beberapa hak dapat dibatasi oleh alasan hukum tertentu (seperti keamanan negara, pertahanan, atau penyelidikan pidana) sebagaimana diatur dalam Pasal 19 hingga Pasal 21 UU PDP.","Pasal 19
+ Pengendali Data Pribadi dan Prosesor Data Pribadi meliputi:
+ a. Setiap Orang;
+ b. Badan Publik; dan
+ c. Organisasi Internasional.
+
+ Bagian Kedua
+ Kewajiban Pengendali Data Pribadi",https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,CONTENT_MISMATCH,H4,The statement shares almost no specific wording with article 19 of Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (ID-UU-27-2022) (overlap 0.007); its content may not come from this article.,no,,,,,
+R064,QTHTH01-qwen3.8-flash,C03,test,TH,local,qwen3.8-flash,TH-PDPA-2562-TH,32,,พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562,"เจ้าของข้อมูลส่วนบุคคลมีสิทธิขอให้ผู้ควบคุมข้อมูลส่วนบุคคลดำเนินการลบ ทำลาย หรือทำให้ข้อมูลส่วนบุคคลไม่สามารถระบุตัวบุคคลที่เป็นเจ้าของข้อมูลได้ ในกรณีดังต่อไปนี้: เมื่อหมดความจำเป็นในการใช้ข้อมูลตามวัตถุประสงค์, เมื่อเจ้าของข้อมูลถอนความยินยอม และไม่มีฐานทางกฎหมายอื่นรองรับ, เมื่อเจ้าของข้อมูลคัดค้านการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูล, เมื่อข้อมูลถูกเก็บรวบรวม ใช้ หรือเปิดเผยโดยไม่ชอบด้วยกฎหมาย",,*   **อ้างอิง:** **มาตรา 32**,"มาตรา ๓๒ เจ้าของข้อมูลส่วนบุคคลมีสิทธิคัดค้านการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูล
+ส่วนบุคคลที่เกี่ยวกับตนเมื่อใดก็ได้ ดังต่อไปนี้
+(๑) กรณีที่เป็นข้อมูลส่วนบุคคลที่เก็บรวบรวมได้โดยได้รับยกเว้นไม่ต้องขอความยินยอม
+ตามมาตรา ๒๔ (๔) หรือ (๕) เว้นแต่ผู้ควบคุมข้อมูลส่วนบุคคลพิสูจน์ได้ว่า
+(ก) การเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลนั้น ผู้ควบคุมข้อมูลส่วนบุคคล
+ได้แสดงให้เห็นถึงเหตุอันชอบด้วยกฎหมายที่ส าคัญยิ่งกว่า
+(ข) การเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลนั้นเป็นไปเพื่อก่อตั้งสิทธิเรียกร้อง
+ตามกฎหมาย การปฏิบัติตามหรือการใช้สิทธิเรียกร้องตามกฎหมาย หรือการยกขึ้นต่อสู้สิทธิเรียกร้อง
+ตามกฎหมาย
+(๒) กรณีที่เป็นการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลเพื่อวัตถุประสงค์เกี่ยวกับ
+การตลาดแบบตรง
+(๓) กรณีที่เป็นการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลเพื่อวัตถุประสงค์เกี่ยวกับ
+การศึกษาวิจัยทางวิทยาศาสตร์ ประวัติศาสตร์ หรือสถิติ เว้นแต่เป็นการจ าเป็นเพื่อการด าเนินภารกิจ
+เพื่อประโยชน์สาธารณะของผู้ควบคุมข้อมูลส่วนบุคคล
+ในกรณีที่เจ้าของข้อมูลส่วนบุคคลใช้สิทธิคัดค้านตามวรรคหนึ่ง ผู้ควบคุมข้อมูลส่วนบุคคล
+ไม่สามารถเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลนั้นต่อไปได้ ทั้งนี้ ผู้ควบคุมข้อมูลส่วนบุคคล
+ต้องปฏิบัติโดยแยกส่วนออกจากข้อมูลอื่นอย่างชัดเจนในทันทีเมื่อเจ้าของข้อมูลส่วนบุคคลได้แจ้ง
+กา",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R065,QIDZH04-glm-5.3-flash,C13,dev,ID,zh,glm-5.3-flash,,,,2015年最高法院第7号通函（SEMA No. 7/2015）,明确将本应签PKWTT的工作签成PKWT的，劳动关系被视为永久性，雇主终止时须支付全额遣散费。,,"（但并非因雇员辞职或严重违纪被解雇的情形），雇主必须支付**工作期限补偿金**，计算标准为：
+  - 服务期为12个月以下：每服务1个月，补偿1个月的工资（satu kali upah）；
+  - 服务期为12个月及以上：每服务满6个月，补偿1个月工资。
+- **PP 34/2021第16条**规定，雇主须在合同期满或解除之前支付该补偿金。
+
+### 6. 违反的法律后果
+
+- 《劳工法》**第59条第（2）款**（经综合法修改）：如果PKWT的工作根据规定应当订立无固定期限合同（PKWTT），则该合同依法**转为（dianggap）无固定期限劳动合同**。
+- 《劳工法》**第160条**及2015年最高法院第7号通函（SEMA No. 7/2015）进一步明确，将本应签PKWTT的工作签成PKWT的，劳动关系被视为永久性，雇主终止时须支付全额遣散费。
+
+## 三、简要总结
+
+| 事项 | 规定 |
+|---|---|
+| 最长期限 | 5年（含延长） |
+| 试用期 | 最长1个月 |
+| 续签间隔 | 新工作续签须间隔30天 |
+| 书面及登记 | 必须印尼文书面，并向人力部门登记 |
+| 补偿金 | 每满12个月服务补偿1个月工资（按PP 34/2021具体计算） |
+| 违规后果 | 转为无固定期限合同，产生遣散费义务 |
+
+**提示**：以上为一般性介绍，具体个案（尤其",,,UNVERIFIABLE,,案号：判决库未接入，无法核实是否存在,MISSED,,The verifier produced no matching prediction for this citation.,no,,,,,
+R066,QIDZH04-deepseek-v4.1-flash,C08,dev,ID,zh,deepseek-v4.1-flash,,13,,2021年第35号政府条例（Peraturan Pemerintah No. 35 Tahun 2021）,固定期限劳动合同终止时，雇主须按第17条向劳动者支付补偿金，金额按工作月数乘以1个月工资除以12计算。,,'- **第13条**：固定期限劳动合同终止时，雇主须按《政府条例》第17条向劳动者支付补偿金（uang kompensasi），金额按工作月数乘以1个月工资除以12计算（工作满12个月为1个月工资），按月支付。,,,UNVERIFIABLE,,法规未缓存（number_uncached），无官方原文可比对,UNVERIFIABLE,,"""《政府条例》"" is not in the CiteCheck corpus (or no law was named), so it cannot be verified.",no,,,,,
+R067,QTHZH02-glm-5.3-flash,C07,test,TH,zh,glm-5.3-flash,TH-PDPA-2562-TH,41,,《个人数据保护法》,规定数据控制者处理生物特征数据时，须履行数据保护影响评估（DPIA）义务。,,'- **第41条**：数据控制者处理生物特征数据时，须履行**数据保护影响评估（DPIA）**义务（配合第39条高风险处理义务）。,"มาตรา ๔๑ ผู้ควบคุมข้อมูลส่วนบุคคลและผู้ประมวลผลข้อมูลส่วนบุคคลต้องจัดให้มี
+เจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคลของตน ในกรณีดังต่อไปนี้
+(๑) ผู้ควบคุมข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูลส่วนบุคคลเป็นหน่วยงานของรัฐตามที่
+คณะกรรมการประกาศก าหนด
+(๒) การด าเนินกิจกรรมของผู้ควบคุมข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูลส่วนบุคคล
+ในการเก็บรวบรวม ใช้ หรือเปิดเผย จ าเป็นต้องตรวจสอบข้อมูลส่วนบุคคลหรือระบบอย่างสม่ าเสมอ
+โดยเหตุที่มีข้อมูลส่วนบุคคลเป็นจ านวนมากตามที่คณะกรรมการประกาศก าหนด
+(๓) กิจกรรมหลักของผู้ควบคุมข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูลส่วนบุคคลเป็น
+การเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลตามมาตรา ๒๖
+ในกรณีที่ผู้ควบคุมข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูลส่วนบุคคลอยู่ในเครือกิจการ
+หรือเครือธุรกิจเดียวกันเพื่อการประกอบกิจการหรือธุรกิจร่วมกันตามที่คณะกรรมการประกาศก าหนด
+ตามมาตรา ๒๙ วรรคสอง ผู้ควบคุมข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูลส่วนบุคคลดังกล่าว
+อาจจัดให้มีเจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคลร่วมกันได้ ทั้งนี้ สถานที่ท าการแต่ละแห่งของผู้ควบคุม
+ข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูลส่วนบุคคลที่อยู่ในเครือกิจการหรือเครือธุรกิจเดียวกันดังกล่าว
+ต้องสามารถติดต่อกับเจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคลได้โดยง่าย
+ความในวรรคสองให้น ามาใช้บังคับแก่ผู้ควบคุมข้อมูลส่วนบุคคลหรือผู้ประมวลผลข้อมูล
+",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R068,QIDID04-deepseek-v4.1-flash,C06,test,ID,local,deepseek-v4.1-flash,,43-45,,Pasal 43–45 PP 35/2021,"PHK karena efisiensi, merger, atau tutupnya perusahaan karena kerugian: pekerja berhak atas 0,5 kali uang pesangon dan 1 kali uang penghargaan masa kerja, ditambah uang penggantian hak.",,"'- **PHK karena efisiensi, merger, atau tutupnya perusahaan karena kerugian** (Pasal 43–45 PP 35/2021): pekerja berhak atas **0,5 kali** uang pesangon dan **1 kali** uang penghargaan masa kerja, ditambah uang penggantian hak.",,,UNVERIFIABLE,,法规未缓存（number_uncached），无官方原文可比对,UNVERIFIABLE,,"""PP 35/2021"" is not in the CiteCheck corpus (or no law was named), so it cannot be verified.",no,,,,,
+R069,QIDID04-deepseek-v4.1-flash,C09,test,ID,local,deepseek-v4.1-flash,ID-UU-13-2003,157,,Pasal 157 UU 13/2003,"Besaran upah yang dipakai sebagai dasar perhitungan adalah upah terakhir (termasuk tunjangan tetap), dengan pengecualian tertentu untuk pekerja yang di-PHK karena alasan tertentu.",,"1. **Besaran upah** yang dipakai sebagai dasar perhitungan diatur dalam **Pasal 157 UU 13/2003**, yaitu upah terakhir (termasuk tunjangan tetap), dengan pengecualian tertentu untuk pekerja yang di-PHK karena alasan tertentu.","Pasal 157
+(1)
+
+Komponen upah yang digunakan sebagai dasar perhitungan uang
+pesangon, uang penghargaan masa kerja, dan uang pengganti hak yang
+seharusnya diterima yang tertunda, terdiri atas :
+a. upah pokok;
+b. segala macam bentuk tunjangan yang bersifat tetap yang diberikan
+kepada pekerja/buruh dan keluarganya, termasuk harga pembelian dari
+catu yang diberikan kepada pekerja/buruh secara cuma-cuma, yang
+apabila catu harus dibayar pekerja/buruh dengan subsidi, maka sebagai
+upah dianggap selisih antara harga pembelian dengan harga yang harus
+dibayar oleh pekerja/buruh.
+(2) Dalam …
+
+PRESIDEN
+REPUBLIK INDONESIA
+- 63 (2)
+
+Dalam hal penghasilan pekerja/buruh dibayarkan atas dasar perhitungan
+harian, maka penghasilan sebulan adalah sama dengan 30 kali penghasilan
+sehari.
+
+(3)
+
+Dalam hal upah pekerja/buruh dibayarkan atas dasar perhitungan satuan
+hasil, potongan/borongan atau komisi, maka penghasilan sehari adalah
+sama dengan pendapatan rata-rata per hari selama 12 (dua belas) bulan
+terakhir, dengan ketentuan tidak boleh kurang dari ketentuan upah
+minimum provinsi atau kabupaten/kota.
+
+(4)
+
+Dalam hal pekerjaan tergantung pada keadaan cuaca dan upahnya
+didasarkan pada upah borongan, maka p",https://peraturan.bpk.go.id/Details/43013/uu-no-13-tahun-2003,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R070,QTHTH04-glm-5.3-flash,C06,dev,TH,local,glm-5.3-flash,TH-LPA-2541,121,,พระราชบัญญัติคุ้มครองแรงงาน,ลูกจ้างยังมีสิทธิได้รับค่าปรับสำหรับการบอกกล่าวล่วงหน้าตาม มาตรา 17 และมาตรา 121 (ถ้านายจ้างไม่บอกกล่าวล่วงหน้า),,'- ลูกจ้างยังมีสิทธิได้รับค่าปรับสำหรับการบอกกล่าวล่วงหน้าตาม **มาตรา 17 และมาตรา 121** (ถ้านายจ้างไม่บอกกล่าวล่วงหน้า),"มาตรา ๑๒๑ ในกรณีที่นายจ้างจะเลิกจ้างลูกจ้างเพราะเหตุที่นายจ้างปรับปรุง
+หน่วยงาน กระบวนการผลิต การจำหน่าย หรือการบริการ อันเนื่องมาจากการนำเครื่องจักรมาใช้หรือ
+เปลี่ยนแปลงเครื่องจักรหรือเทคโนโลยี ซึ่งเป็นเหตุให้ต้องลดจำนวนลูกจ้าง ห้ามมิให้นำมาตรา ๑๗
+วรรคสอง มาใช้บังคับ และให้นายจ้างแจ้งวันที่จะเลิกจ้าง เหตุผลของการเลิกจ้างและรายชื่อลูกจ้างต่อ
+พนักงานตรวจแรงงาน และลูกจ้างที่จะเลิกจ้างทราบล่วงหน้าไม่น้อยกว่าหกสิบวันก่อนวันที่จะเลิกจ้าง
+ในกรณีที่นายจ้างไม่แจ้งให้ลูกจ้างที่จะเลิกจ้างทราบล่วงหน้า หรือแจ้งล่วงหน้า
+น้อยกว่าระยะเวลาที่กำหนดตามวรรคหนึ่ง นอกจากจะได้รับค่าชดเชยตามมาตรา ๑๑๘ แล้ว
+ให้นายจ้างจ่ายค่าชดเชยพิเศษแทนการบอกกล่าวล่วงหน้าเท่ากับค่าจ้างอัตราสุดท้ายหกสิบวัน หรือ
+เท่ากับค่าจ้างของการทำงานหกสิบวันสุดท้ายสำหรับลูกจ้างซึ่งได้รับค่าจ้างตามผลงานโดยคำนวณ
+เป็นหน่วยด้วย
+ในกรณีที่มีการจ่ายค่าชดเชยพิเศษแทนการบอกกล่าวล่วงหน้าตามวรรคสองแล้ว
+ให้ถือว่านายจ้างได้จ่ายสินจ้างแทนการบอกกล่าวล่วงหน้าตามประมวลกฎหมายแพ่งและพาณิชย์ด้วย",https://ccpl.mol.go.th/,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R071,QIDZH04-glm-5.3-flash,C10,dev,ID,zh,glm-5.3-flash,,16,,PP 34/2021,规定雇主须在合同期满或解除之前支付该补偿金。,,'- **PP 34/2021第16条**规定，雇主须在合同期满或解除之前支付该补偿金。,,,UNVERIFIABLE,,法规未缓存（number_uncached），无官方原文可比对,UNVERIFIABLE,,"""PP 34/2021"" is not in the CiteCheck corpus (or no law was named), so it cannot be verified.",no,,,,,
+R072,QIDID04-glm-5.3-flash,C04,test,ID,local,glm-5.3-flash,ID-UU-13-2003,156,4,UU No. 13 Tahun 2003,"Dalam hal terjadi PHK, pengusaha wajib membayar uang pesangon, uang penghasilan yang tidak dibayarkan, dan uang penggantian hak.",,## Bunyi Pasal 156 ayat (4) UU No. 13 Tahun 2003,,https://peraturan.bpk.go.id/Details/43013/uu-no-13-tahun-2003,UNVERIFIABLE,,第156条在缓存切分中缺失（OCR）,UNVERIFIABLE,,This article is missing from the digitised official text (scan/OCR gap); check the official PDF.,no,,,,,
+R073,QIDID03-deepseek-v4.1-flash,C05,dev,ID,local,deepseek-v4.1-flash,ID-UU-11-2008-ITE,45,3,UU No. 11 Tahun 2008,"Sebelumnya, ketentuan serupa diatur dalam Pasal 27 ayat (3) jo. Pasal 45 ayat (3) UU No. 11 Tahun 2008... dengan ancaman pidana penjara maksimal 4 tahun dan/atau denda maksimal Rp750.000.000,00.",,"'- Sebelumnya, ketentuan serupa diatur dalam Pasal 27 ayat (3) jo. Pasal 45 ayat (3) UU No. 11 Tahun 2008 sebagaimana diubah dengan UU No. 19 Tahun 2016, dengan ancaman pidana penjara maksimal 4 tahun dan/atau denda maksimal Rp750.000.000,00. Setelah UU No. 1 Tahun 2024, ancamannya menjadi maksimal 2 tahun dan/atau denda Rp400.000.000,00.","Pasal 45
+
+(1)
+
+Setiap
+Orang
+yang
+memenuhi
+unsur
+sebagaimana
+dimaksud dalam Pasal 27 ayat (1), ayat (2), ayat (3), atau ayat
+(4) dipidana dengan pidana penjara paling lama 6 (enam)
+tahun
+dan/atau
+denda
+paling
+banyak
+Rp1.000.000.000,00 (satu miliar rupiah).
+
+(2) Setiap . . .
+
+PRESIDEN
+REPUBLIK INDONESIA
+
+- 22 (2)
+
+Setiap
+Orang
+yang
+memenuhi
+unsur
+sebagaimana
+dimaksud dalam Pasal 28 ayat (1) atau ayat (2) dipidana
+dengan pidana penjara paling lama 6 (enam) tahun
+dan/atau denda paling banyak Rp1.000.000.000,00 (satu
+miliar rupiah).
+
+(3)
+
+Setiap
+Orang
+yang
+memenuhi
+unsur
+sebagaimana
+dimaksud dalam Pasal 29 dipidana dengan pidana penjara
+paling lama 12 (dua belas) tahun dan/atau denda paling
+banyak Rp2.000.000.000,00 (dua miliar rupiah).",https://peraturan.bpk.go.id/Details/37589/uu-no-11-tahun-2008,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R074,QIDZH01-qwen3.8-flash,C05,dev,ID,zh,qwen3.8-flash,ID-UU-27-2022,67,,UU PDP,若未按时通知，个人数据控制者可能面临行政处罚甚至刑事责任。,,"根据印度尼西亚《个人数据保护法》（Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi，简称 **UU PDP**），关于数据泄露通知的时限要求主要规定在 **第46条**。
+
+### 具体法律依据与条款内容：
+
+**法律名称**：  
+《个人数据保护法》（Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi）
+
+**文号**：  
+Law No. 27 of 2022 on Personal Data Protection (UU PDP)
+
+**相关条款**：  
+**第46条（Pasal 46）** —— “个人数据控制者向个人数据主体和监管机构通报个人数据保护失效”
+
+#### 条文核心内容转述：
+1. **通知对象**：  
+   个人数据控制者（Pengendali Data Pribadi）在发生“个人数据保护失效”（kegagalan pelindungan data pribadi，即数据泄露或安全事件）时，必须同时通知：
+   - **个人数据主体**（Subjek Data Pribadi）；以及
+   - **印尼通信与信息部**（Kementerian Komunikasi dan Informat","Pasal 67
+ (1) Setiap Orang yang dengan sengaja dan melawan hukum
+ memperoleh atau mengumpulkan Data Pribadi yang
+ bukan mililoeya dengan maksud untuk menguntungkan
+ diri sendiri atau orang lain yang dapat mengakibatkan
+ kerugian Subjek Data Pribadi sebagaimana dimaksud
+ dalam Pasal 65 ayat (1) dipidana dengan pidana penjara
+ paling lama 5 (lima) tahun dan/atau pidana denda
+ paling banyak Rp5.000.000.000,00 (lima miliar rupiah).
+ (2) Setiap Orang yang dengan sengaja dan melawan hukum
+ mengunglapkan Data Pribadi yang bukan miliknya
+ sebagaimana dimaksud dalam Pasal 65 ayat (2) dipidana
+ dengan pidana penjara paling lama 4 (empat) tahun
+ dan/atau pidana denda paling banyak
+ Rp4.000.000.000,00 (empat miliar rupiah).
+ (3) Setiap Orang yang dengan senqaja dan melawan hukum
+ menggunakan Data Pribadi yang bukan miliknya
+ sebagaimana dimaksud dalam Pasal 65 ayat (3) dipidana
+ dengan pidana penjara paling lama 5 (lima) tahun
+ dan/atau pidana denda paling banyak
+ Rp5.00O.OOO.000,00 (lima miliar rupiah).",https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,MISSED,,The verifier produced no matching prediction for this citation.,yes,,,,,
+R075,QVNVI06-glm-5.3-flash,C09,dev,VN,local,glm-5.3-flash,VN-ANM-24-2018-QH14,28,,Luật An ninh mạng,"Báo cáo sự cố, vi phạm an ninh mạng và tội phạm mạng cho cơ quan chuyên trách bảo vệ an ninh mạng.",,"chống phá Nhà nước, không đổrey phạm an ninh quốc gia, trật tự an toàn xã hội; không xâm phạm quyền và lợi ích hợp pháp của tổ chức, cá nhân khác.
+
+---
+
+## 3. Các nghĩa vụ liên quan khác
+
+- **Điều 42:** Chủ trì xử lý thông tin vi phạm (phối hợp với cơ quan nhà nước có thẩm quyền).
+- **Điều 28–29:** Báo cáo sự cố, vi phạm an ninh mạng và tội phạm mạng cho cơ quan chuyên trách bảo vệ an ninh mạng.
+- **Điều 18:** Áp dụng biện pháp phòng ngừa, ngăn chặn, xử lý thông tin có nội dung tuyên truyền chống Nhà nước, khiêu dâm trẻ em, lừa đảo… theo thời hạn do Bộ Công an quy định (Nghị định 15/2020/NĐ-CP","Điều 28. Nâng cao năng lực tự chủ về an ninh mạng
+1. Nhà nước khuyến khích, tạo điều kiện để cơ quan, tổ chức, cá nhân nâng cao
+năng lực tự chủ về an ninh mạng và nâng cao khả năng sản xuất, kiểm tra, đánh
+giá, kiểm định thiết bị số, dịch vụ mạng, ứng dụng mạng.
+2. Chính phủ thực hiện các biện pháp sau đây để nâng cao năng lực tự chủ về
+an ninh mạng cho cơ quan, tổ chức, cá nhân:
+a) Thúc đẩy chuyển giao, nghiên cứu, làm chủ và phát triển công nghệ, sản
+phẩm, dịch vụ, ứng dụng để bảo vệ an ninh mạng;
+b) Thúc đẩy ứng dụng công nghệ mới, công nghệ tiên tiến liên quan đến an
+ninh mạng;
+c) Tổ chức đào tạo, phát triển và sử dụng nhân lực an ninh mạng;
+d) Tăng cường môi trường kinh doanh, cải thiện điều kiện cạnh tranh hỗ trợ
+doanh nghiệp nghiên cứu, sản xuất sản phẩm, dịch vụ, ứng dụng để bảo vệ an
+ninh mạng.",https://congbao.chinhphu.vn/van-ban/luat-so-24-2018-qh14-26894.htm,NOT_IN_FORCE,H5,VN-ANM-24-2018-QH14 第28条相对 2026-10-18 已失效,MISSED,,The verifier produced no matching prediction for this citation.,yes,,,,,
+R076,QIDZH02-qwen3.8-flash,C05,dev,ID,zh,qwen3.8-flash,ID-UU-11-2008-ITE,32,,《信息电子交易法》（UU ITE）,禁止任何人故意且未经授权使用、更改、破坏、隐藏、删除、移动、复制、篡改、传输、广播、公开、销毁或使他人无法访问电子系统或电子文档。,,"如非法获取、出售、泄露敏感数据）可能构成以下刑事犯罪：
+
+#### 1. 《信息电子交易法》（UU ITE）及其修正案
+这是印尼最常用于追究数据滥用刑事责任的法律。
+
+- **法律依据**：  
+  - Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik（2008 年第 11 号信息电子交易法）  
+  - 经 Undang-Undang Nomor 19 Tahun 2016 修正（2016 年第 19 号修正案）
+
+- **相关条款**：
+  > **第 32 条（Pasal 32）**：禁止任何人故意且未经授权使用、更改、破坏、隐藏、删除、移动、复制、篡改、传输、广播、公开、销毁或使他人无法访问电子系统或电子文档。  
+  > **第 48 条（Pasal 48）**：违反上述第 32 条者，可处最高 **8 年监禁** 或最高 **20 亿印尼盾** 罚金；若造成损害，可加重处罚。
+
+  > **第 35 条（Pasal 35）**：禁止伪造、篡改、删除、隐藏、改变、添加、移动、复制、传播、广播、公开、销毁或使他人无法访问电子文档以欺骗他人。  
+  > **第 51 条第 (1) 款**：违反第 35 条者，可处最高 **6 年监禁** 或最高 **6 亿印尼盾** 罚金","Pasal 32
+
+(1)
+
+Setiap Orang dengan sengaja dan tanpa hak atau melawan
+hukum dengan cara apa pun mengubah, menambah,
+mengurangi,
+melakukan
+transmisi,
+merusak,
+menghilangkan, memindahkan, menyembunyikan suatu
+Informasi Elektronik dan/atau Dokumen Elektronik milik
+Orang lain atau milik publik.
+
+(2)
+
+Setiap Orang dengan sengaja dan tanpa hak atau melawan
+hukum dengan cara apa pun memindahkan atau
+mentransfer Informasi Elektronik dan/atau Dokumen
+Elektronik kepada Sistem Elektronik Orang lain yang tidak
+berhak.
+
+(3)
+
+Terhadap perbuatan sebagaimana dimaksud pada ayat (1) yang
+mengakibatkan
+terbukanya
+suatu
+Informasi Elektronik
+dan/atau Dokumen Elektronik yang bersifat
+rahasia
+menjadi dapat diakses oleh publik dengan keutuhan data
+yang tidak sebagaimana mestinya.",https://peraturan.bpk.go.id/Details/37589/uu-no-11-tahun-2008,EXISTS_CONSISTENT,,条文存在、现行，claim 被原文支持（LLM 辅助标注）,MISSED,,The verifier produced no matching prediction for this citation.,no,,,,,
+R077,QTHZH05-qwen3.8-flash,C05,test,TH,zh,qwen3.8-flash,TH-LPA-2541,33,,《劳动保护法》,雇主经同意可安排法定节假日工作；须支付不低于原时薪3倍的工资。,"雇主经雇员同意，可安排其在法定节假日工作。
+雇主须向雇员支付不低于原时薪3倍的工资作为报酬。",**相关条款：** **第31条、第32条、第33条**,"มาตรา ๓๓ ให้ลูกจ้างมีสิทธิลาเพื่อทำหมันได้และมีสิทธิลาเนื่องจากการทำหมัน
+ตามระยะเวลาที่แพทย์แผนปัจจุบันชั้นหนึ่งกำหนดและออกใบรับรอง",https://ccpl.mol.go.th/,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R078,QVNZH04-deepseek-v4.1-flash,C03,dev,VN,zh,deepseek-v4.1-flash,VN-BLLD-45-2019-QH14,34,1,《2019年劳动法典》,引用该条第1款第1、4、5、6、8项所列原因暂时停工的劳动者作为允许再签固定期限合同的例外情形之一。,,此外，**第20条第2款**规定：固定期限劳动合同期满而劳动者继续工作的，劳动者与用人单位须在**30日内**签订新劳动合同；在此期间双方不得再签固定期限合同，除非是下列情形之一：(a) 替代因履行军事义务、服完兵役或履行公民义务而暂时工作的劳动者；(b) 替代因第34条第1款第1、4、5、6、8项所列原因暂时停工的劳动者；(c) 季节性、特定工作合同，期限在12个月以下。除上述情形外，固定期限合同期满后必须转为无固定期限合同。,"Điều 34. Các trường hợp chấm dứt hợp đồng lao động
+1. Hết hạn hợp đồng lao động, trừ trường hợp quy định tại khoản 4 Điều 177
+của Bộ luật này.
+2. Đã hoàn thành công việc theo hợp đồng lao động.
+3. Hai bên thỏa thuận chấm dứt hợp đồng lao động.
+4. Người lao động bị kết án phạt tù nhưng không được hưởng án treo hoặc
+không thuộc trường hợp được trả tự do theo quy định tại khoản 5 Điều 328 của
+Bộ luật Tố tụng hình sự, tử hình hoặc bị cấm làm công việc ghi trong hợp đồng
+lao động theo bản án, quyết định của Tòa án đã có hiệu lực pháp luật.
+5. Người lao động là người nước ngoài làm việc tại Việt Nam bị trục xuất
+theo bản án, quyết định của Tòa án đã có hiệu lực pháp luật, quyết định của cơ
+quan nhà nước có thẩm quyền.
+6. Người lao động chết; bị Tòa án tuyên bố mất năng lực hành vi dân sự, mất
+tích hoặc đã chết.
+7. Người sử dụng lao động là cá nhân chết; bị Tòa án tuyên bố mất năng lực
+hành vi dân sự, mất tích hoặc đã chết. Người sử dụng lao động không phải là cá
+nhân chấm dứt hoạt động hoặc bị cơ quan chuyên môn về đăng ký kinh doanh
+thuộc Ủy ban nhân dân cấp tỉnh ra thông báo không có người đại diện theo pháp
+luật, người được ủy quyền thực hiện quyền và nghĩa vụ của người đại diện theo
+",https://congbao.chinhphu.vn/van-ban/van-ban-hop-nhat-so-18-vbhn-vpqh-468971.htm,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in Bộ luật Lao động (văn bản hợp nhất 18/VBHN-VPQH) (VN-BLLD-45-2019-QH14) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R079,QIDID01-qwen3.8-flash,C12,dev,ID,local,qwen3.8-flash,ID-UU-27-2022,21,,UU PDP,"Beberapa hak dapat dibatasi oleh alasan hukum tertentu (seperti keamanan negara, pertahanan, atau penyelidikan pidana).",,"Catatan penting: Pelaksanaan hak-hak ini harus dilakukan melalui prosedur yang ditetapkan oleh Pengendali Data Pribadi, dan beberapa hak dapat dibatasi oleh alasan hukum tertentu (seperti keamanan negara, pertahanan, atau penyelidikan pidana) sebagaimana diatur dalam Pasal 19 hingga Pasal 21 UU PDP.","Pasal 21
+ (1) Dalam hal pemrosesan Data Pribadi berdasarkan
+ persetujuan sebagaimana dimaksud dalam Pasal 2O ayat
+ (21 huruf a, Pengendali Data Pribadi wajib
+ menyampaikan Informasi mengenai:
+ a. legalitas dari pemrosesan Data Pribadi;
+ b. tujuan pemrosesan Data Pribadi;
+ c. jenis dan relevansi Data Pribadi yang akan diproses;
+ d. jangka waktu retensi dokumen yang memuat Data
+ Pribadi;
+ e. rincian mengenai Informasi yang
+ f. jangka waktu pemrosesan Data Pribadi; dan
+ C. hak Subjek Data Pribadi.
+ (2) Dalam . . .
+
+SK No l552l2A
+ PRESIEIEN
+ REPUBLIK INOONESIA
+
+
+ -t2-
+ (2) Dalam hal terdapat perubahan Informasi sebagaimana
+ dimaksud pada ayat (1), Pengendali Data Pribadi wajib
+ . memberitahukan kepada Subjek Data Pribadi sebelum
+ terjadi perubahan Informasi.
+
+ Pasa722
+ (1) Persetujuan pemrosesan Data Pribadi dilakukan
+ melalui persetujuan tertulis atau terekam.
+ (2) Persetqiuan sebagaimana dimaksud pada ayat (1)
+ dapat disampaikan secara elektronik atau
+ nonelektronik.
+ (3) Persetqjuan sebagaimana dimaksud pada ayat (1)
+ mempunyai kekuatan hukum yang sama.
+ (4). Dalam hal persetqluan sebagaimana dimaksud pada
+ ayat (1) memuat tujuan lain, permintaan persetqjuan
+ harus memenuhi ketentu",https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,CONTENT_MISMATCH,H4,The statement shares almost no specific wording with article 21 of Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (ID-UU-27-2022) (overlap 0.056); its content may not come from this article.,no,,,,,
+R080,QTHZH01-glm-5.3-flash,C05,dev,TH,zh,glm-5.3-flash,TH-PDPA-2562-TH,24,3,PDPA,履行法律义务,为控制者履行法律规定的义务而收集、使用或披露个人数据是必要的。,"泰国《个人数据保护法》（Personal Data Protection Act, B.E. 2562 (2019)），简称 PDPA，于2019年5月27日颁布，2022年6月1日全面生效。其核心规定为**第二章“个人数据的收集、使用或披露”第24条**。","มาตรา ๒๔ ห้ามมิให้ผู้ควบคุมข้อมูลส่วนบุคคลท าการเก็บรวบรวมข้อมูลส่วนบุคคล
+โดยไม่ได้รับความยินยอมจากเจ้าของข้อมูลส่วนบุคคล เว้นแต่
+(๑) เพื่อให้บรรลุวัตถุประสงค์ที่เกี่ยวกับการจัดท าเอกสารประวัติศาสตร์หรือจดหมายเหตุ
+เพื่อประโยชน์สาธารณะ หรือที่เกี่ยวกับการศึกษาวิจัยหรือสถิติซึ่งได้จัดให้มีมาตรการปกป้องที่เหมาะสม
+เพื่อคุ้มครองสิทธิและเสรีภาพของเจ้าของข้อมูลส่วนบุคคล ทั้งนี้ ตามที่คณะกรรมการประกาศก าหนด
+(๒) เพื่อป้องกันหรือระงับอันตรายต่อชีวิต ร่างกาย หรือสุขภาพของบุคคล
+(๓) เป็นการจ าเป็นเพื่อการปฏิบัติตามสัญญาซึ่งเจ้าของข้อมูลส่วนบุคคลเป็นคู่สัญญาหรือ
+เพื่อใช้ในการด าเนินการตามค าขอของเจ้าของข้อมูลส่วนบุคคลก่อนเข้าท าสัญญานั้น
+(๔) เป็นการจ าเป็นเพื่อการปฏิบัติหน้าที่ในการด าเนินภารกิจเพื่อประโยชน์สาธารณะของผู้ควบคุม
+ข้อมูลส่วนบุคคล หรือปฏิบัติหน้าที่ในการใช้อ านาจรัฐที่ได้มอบให้แก่ผู้ควบคุมข้อมูลส่วนบุคคล
+(๕) เป็นการจ าเป็นเพื่อประโยชน์โดยชอบด้วยกฎหมายของผู้ควบคุมข้อมูลส่วนบุคคล
+หรือของบุคคลหรือนิติบุคคลอื่นที่ไม่ใช่ผู้ควบคุมข้อมูลส่วนบุคคล เว้นแต่ประโยชน์ดังกล่าวมีความส าคัญ
+น้อยกว่าสิทธิขั้นพื้นฐานในข้อมูลส่วนบุคคลของเจ้าของข้อมูลส่วนบุคคล
+(๖) เป็นการปฏิบัติตามกฎหมายของผู้ควบคุมข้อมูลส่วนบุคคล",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R081,QTHTH05-deepseek-v4.1-flash,C01,dev,TH,local,deepseek-v4.1-flash,TH-LPA-2541,59,,พระราชบัญญัติคุ้มครองแรงงาน พ.ศ. 2541,กำหนดว่าให้ลูกจ้างหญิงมีสิทธิลาคลอดบุตรได้ไม่เกินเก้าสิบแปดวัน โดยให้นับรวมวันหยุดที่มีในระหว่างการลาด้วย และนายจ้างจ่ายค่าจ้างแก่ลูกจ้างหญิงในระหว่างลาคลอดบุตรเป็นจำนวนเท่ากับค่าจ้างอัตราสุดท้ายไม่เกิน 45 วัน,“ให้ลูกจ้างหญิงมีสิทธิลาคลอดบุตรได้ไม่เกินเก้าสิบแปดวัน โดยให้นับรวมวันหยุดที่มีในระหว่างการลาด้วย”,ตามพระราชบัญญัติคุ้มครองแรงงาน พ.ศ. 2541 (แก้ไขเพิ่มเติมโดยพระราชบัญญัติคุ้มครองแรงงาน (ฉบับที่ 4) พ.ศ. 2558) มาตรา 59 กำหนดว่า,"มาตรา ๕๙ ให้นายจ้างจ่ายค่าจ้างให้แก่ลูกจ้างซึ่งเป็นหญิงในวันลาเพื่อคลอดบุตร
+เท่ากับค่าจ้างในวันทำงานตลอดระยะเวลาที่ลา แต่ไม่เกินสี่สิบห้าวัน",https://ccpl.mol.go.th/,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R082,QTHTH03-qwen3.8-flash,C02,dev,TH,local,qwen3.8-flash,TH-PDPA-2562-TH,28,วรรคสอง,พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562,กรณีประเทศปลายทางไม่มีมาตรฐานเพียงพอ ผู้ควบคุมข้อมูลต้องเข้าเงื่อนไขอย่างใดอย่างหนึ่ง เช่น การขอความยินยอม หรือการจัดให้มีมาตรการคุ้มครองข้อมูลตามสัญญา,,โดยหลักเกณฑ์สำคัญในการโอนข้อมูลไปต่างประเทศระบุไว้ใน **มาตรา 28** และ **มาตรา 29** ดังนี้:,"มาตรา ๒๘ ในกรณีที่ผู้ควบคุมข้อมูลส่วนบุคคลส่งหรือโอนข้อมูลส่วนบุคคลไปยังต่างประเทศ
+ประเทศปลายทางหรือองค์การระหว่างประเทศที่รับข้อมูลส่วนบุคคลต้องมีมาตรฐานการคุ้มครองข้อมูล
+ส่วนบุคคลที่เพียงพอ ทั้งนี้ ต้องเป็นไปตามหลักเกณฑ์การให้ความคุ้มครองข้อมูลส่วนบุคคลตามที่
+คณะกรรมการประกาศก าหนดตามมาตรา ๑๖ (๕) เว้นแต่
+(๑) เป็นการปฏิบัติตามกฎหมาย
+(๒) ได้รับความยินยอมจากเจ้าของข้อมูลส่วนบุคคลโดยได้แจ้งให้เจ้าของข้อมูลส่วนบุคคลทราบถึง
+มาตรฐานการคุ้มครองข้อมูลส่วนบุคคลที่ไม่เพียงพอของประเทศปลายทางหรือองค์การระหว่างประเทศ
+ที่รับข้อมูลส่วนบุคคลแล้ว
+หนา ๖๖่
+เลม ๑๓๖ ตอนที่ ๖๙ ก
+ราชกิจจานุเบกษา
+๒๗ พฤษภาคม ๒๕๖๒
+(๓) เป็นการจ าเป็นเพื่อการปฏิบัติตามสัญญาซึ่งเจ้าของข้อมูลส่วนบุคคลเป็นคู่สัญญาหรือ
+เพื่อใช้ในการด าเนินการตามค าขอของเจ้าของข้อมูลส่วนบุคคลก่อนเข้าท าสัญญานั้น
+(๔) เป็นการกระท าตามสัญญาระหว่างผู้ควบคุมข้อมูลส่วนบุคคลกับบุคคลหรือนิติบุคคลอื่น
+เพื่อประโยชน์ของเจ้าของข้อมูลส่วนบุคคล
+(๕) เพื่อป้องกันหรือระงับอันตรายต่อชีวิต ร่างกาย หรือสุขภาพของเจ้าของข้อมูลส่วนบุคคล
+หรือบุคคลอื่น เมื่อเจ้าของข้อมูลส่วนบุคคลไม่สามารถให้ความยินยอมในขณะนั้นได้
+(๖) เป็นการจ าเป็นเพื่อการด าเนินภารกิจเพื่อประโยชน์สาธารณะที่ส าคัญ
+ในกรณีที่มีปัญหาเกี่ยวกับมาตรฐานการคุ้มครองข้อมูลส่วนบุคคลที่เพียงพอของประเทศปลายทาง
+หรืออง",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,EXISTS_CONSISTENT,,条文存在、现行，claim 被原文支持（LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",no,,,,,
+R083,QTHZH01-deepseek-v4.1-flash,C03,dev,TH,zh,deepseek-v4.1-flash,TH-PDPA-2562-TH,24,(1),Personal Data Protection Act B.E. 2562 (2019),同意（Consent）：数据主体已就其个人数据处理给予同意。,,泰国《个人数据保护法》（**Personal Data Protection Act B.E. 2562 (2019)**，佛历2562年，即2019年）规定的合法处理个人数据的依据，集中在**第24条**。该条是PDPA处理个人数据的一般合法性基础条款。以下按条文结构和内容说明。,"มาตรา ๒๔ ห้ามมิให้ผู้ควบคุมข้อมูลส่วนบุคคลท าการเก็บรวบรวมข้อมูลส่วนบุคคล
+โดยไม่ได้รับความยินยอมจากเจ้าของข้อมูลส่วนบุคคล เว้นแต่
+(๑) เพื่อให้บรรลุวัตถุประสงค์ที่เกี่ยวกับการจัดท าเอกสารประวัติศาสตร์หรือจดหมายเหตุ
+เพื่อประโยชน์สาธารณะ หรือที่เกี่ยวกับการศึกษาวิจัยหรือสถิติซึ่งได้จัดให้มีมาตรการปกป้องที่เหมาะสม
+เพื่อคุ้มครองสิทธิและเสรีภาพของเจ้าของข้อมูลส่วนบุคคล ทั้งนี้ ตามที่คณะกรรมการประกาศก าหนด
+(๒) เพื่อป้องกันหรือระงับอันตรายต่อชีวิต ร่างกาย หรือสุขภาพของบุคคล
+(๓) เป็นการจ าเป็นเพื่อการปฏิบัติตามสัญญาซึ่งเจ้าของข้อมูลส่วนบุคคลเป็นคู่สัญญาหรือ
+เพื่อใช้ในการด าเนินการตามค าขอของเจ้าของข้อมูลส่วนบุคคลก่อนเข้าท าสัญญานั้น
+(๔) เป็นการจ าเป็นเพื่อการปฏิบัติหน้าที่ในการด าเนินภารกิจเพื่อประโยชน์สาธารณะของผู้ควบคุม
+ข้อมูลส่วนบุคคล หรือปฏิบัติหน้าที่ในการใช้อ านาจรัฐที่ได้มอบให้แก่ผู้ควบคุมข้อมูลส่วนบุคคล
+(๕) เป็นการจ าเป็นเพื่อประโยชน์โดยชอบด้วยกฎหมายของผู้ควบคุมข้อมูลส่วนบุคคล
+หรือของบุคคลหรือนิติบุคคลอื่นที่ไม่ใช่ผู้ควบคุมข้อมูลส่วนบุคคล เว้นแต่ประโยชน์ดังกล่าวมีความส าคัญ
+น้อยกว่าสิทธิขั้นพื้นฐานในข้อมูลส่วนบุคคลของเจ้าของข้อมูลส่วนบุคคล
+(๖) เป็นการปฏิบัติตามกฎหมายของผู้ควบคุมข้อมูลส่วนบุคคล",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,CONTENT_MISMATCH,H3,claim 与原文不符（CONTRADICTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R084,QIDZH01-glm-5.3-flash,C02,dev,ID,zh,glm-5.3-flash,ID-UU-27-2022,46,,UU No. 27 Tahun 2022,书面通知必须至少包含：泄露的个人数据内容/类型、泄露发生的时间和日期、数据主体可以采取的措施、数据控制者为处理和补救泄露所作的努力、数据控制者/机构可以向数据主体提供的联系方式。,,**核心条款**：**第46条（Pasal 46）**,"Pasal 46
+ (1) Dalam hal terjadi kegagalan Pelindungan Data Pribadi,
+ Pengendali Data Pribadi wajib
+ pemberitahuan secara tertulis paling lambat 3 x 24
+ (tiga kali dua puluh empat) jam kepada:
+ a. Subjek Data Pribadi; dan
+ b. lembaga.
+ (2) Pemberitahuan tertulis sebagaimana dimaksud pada
+ ayat (1) minimal memuat:
+ a. Data Pribadi yang terungkap;
+ b. kapan dan bagaimana Data Pribadi terungkap; dan
+ c. upaya penanganan dan pemulihan atas
+ terungkapnya Data Pribadi oleh Pengendali Data
+ Pribadi.
+ (3) Dalam hal tertentu, Pengendali Data Pribadi wajib
+ memberitahukan kepada masyarakat mengenai
+ kegagalan Pelindungan Data Pribadi.",https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (ID-UU-27-2022) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R085,QTHTH04-qwen3.8-flash,C01,dev,TH,local,qwen3.8-flash,TH-LPA-2541,118,,พระราชบัญญัติคุ้มครองแรงงาน พ.ศ. 2541,กำหนดให้นายจ้างซึ่งเลิกจ้างลูกจ้างโดยมิใช่เป็นกรณีตามมาตรา 119 ต้องจ่ายค่าชดเชยให้แก่ลูกจ้าง โดยคำนวณจากอายุงาน ดังนี้: ลูกจ้างซึ่งทำงานติดต่อกันมาแล้วครบสามปีแต่ไม่ครบหกปี ให้ได้รับค่าชดเชยเท่ากับค่าจ้างอัตราสุดท้ายเก้าสิบวัน,ลูกจ้างซึ่งทำงานติดต่อกันมาแล้วครบสามปีแต่ไม่ครบหกปี ให้ได้รับค่าชดเชยเท่ากับค่าจ้างอัตราสุดท้ายเก้าสิบวัน,*   **เลขมาตรา:** มาตรา 118,"มาตรา ๑๑๘ ให้นายจ้างจ่ายค่าชดเชยให้แก่ลูกจ้างซึ่งเลิกจ้าง ดังต่อไปนี้
+(๑) ลูกจ้างซึ่งทำงานติดต่อกันครบหนึ่งร้อยยี่สิบวัน แต่ไม่ครบหนึ่งปี ให้จ่ายไม่น้อย
+กว่าค่าจ้างอัตราสุดท้ายสามสิบวัน หรือไม่น้อยกว่าค่าจ้างของการทำงานสามสิบวันสุดท้ายสำหรับ
+ลูกจ้างซึ่งได้รับค่าจ้างตามผลงานโดยคำนวณเป็นหน่วย
+(๒) ลูกจ้างซึ่งทำงานติดต่อกันครบหนึ่งปี แต่ไม่ครบสามปี ให้จ่ายไม่น้อยกว่าค่าจ้าง
+อัตราสุดท้ายเก้าสิบวัน หรือไม่น้อยกว่าค่าจ้างของการทำงานเก้าสิบวันสุดท้ายสำหรับลูกจ้างซึ่งได้รับ
+ค่าจ้างตามผลงานโดยคำนวณเป็นหน่วย
+(๓) ลูกจ้างซึ่งทำงานติดต่อกันครบสามปี แต่ไม่ครบหกปี ให้จ่ายไม่น้อยกว่าค่าจ้าง
+อัตราสุดท้ายหนึ่งร้อยแปดสิบวัน หรือไม่น้อยกว่าค่าจ้างของการทำงานหนึ่งร้อยแปดสิบวันสุดท้าย
+สำหรับลูกจ้างซึ่งได้รับค่าจ้างตามผลงานโดยคำนวณเป็นหน่วย
+(๔) ลูกจ้างซึ่งทำงานติดต่อกันครบหกปี แต่ไม่ครบสิบปี ให้จ่ายไม่น้อยกว่าค่าจ้าง
+อัตราสุดท้ายสองร้อยสี่สิบวัน หรือไม่น้อยกว่าค่าจ้างของการทำงานสองร้อยสี่สิบวันสุดท้ายสำหรับ
+ลูกจ้างซึ่งได้รับค่าจ้างตามผลงานโดยคำนวณเป็นหน่วย
+(๕) ลูกจ้างซึ่งทำงานติดต่อกันครบสิบปีขึ้นไป ให้จ่ายไม่น้อยกว่าค่าจ้างอัตราสุดท้าย
+สามร้อยวัน หรือไม่น้อยกว่าค่าจ้างของการทำงานสามร้อยวันสุดท้ายสำหรับลูกจ้างซึ่งได้รับค่าจ้าง
+ตามผลงานโดยคำนวณเป็นหน่วย
+การเลิกจ้างตามมาตรานี้ หมายความว่า การกระทำใดที่นายจ้",https://ccpl.mol.go.th/,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R086,QVNZH04-mimo-v2.6-flash,C09,dev,VN,zh,mimo-v2.6-flash,VN-BLLD-45-2019-QH14,25,,《2019年劳动法》（Bộ luật Lao động 2019）,试用期工资不得低于同岗位正式工工资的85%，或该岗位同类工作的85%。,,根据**第25条（Điều 25）**：,"Điều 25. Thời gian thử việc
+Thời gian thử việc do hai bên thỏa thuận căn cứ vào tính chất và mức độ
+phức tạp của công việc nhưng chỉ được thử việc một lần đối với một công việc và
+bảo đảm điều kiện sau đây:
+1. Không quá 180 ngày đối với công việc của người quản lý doanh nghiệp
+theo quy định của Luật Doanh nghiệp, Luật Quản lý, sử dụng vốn nhà nước đầu
+tư vào sản xuất, kinh doanh tại doanh nghiệp;
+2. Không quá 60 ngày đối với công việc có chức danh nghề nghiệp cần trình
+độ chuyên môn, kỹ thuật từ cao đẳng trở lên;
+3. Không quá 30 ngày đối với công việc có chức danh nghề nghiệp cần trình
+độ chuyên môn, kỹ thuật trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ;
+4. Không quá 06 ngày làm việc đối với công việc khác.",https://congbao.chinhphu.vn/van-ban/van-ban-hop-nhat-so-18-vbhn-vpqh-468971.htm,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in Bộ luật Lao động (văn bản hợp nhất 18/VBHN-VPQH) (VN-BLLD-45-2019-QH14) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R087,QTHTH01-qwen3.8-flash,C02,test,TH,local,qwen3.8-flash,TH-PDPA-2562-TH,31,,พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562,เจ้าของข้อมูลส่วนบุคคลมีสิทธิขอแก้ไขข้อมูลส่วนบุคคลที่ไม่ถูกต้องหรือไม่เป็นปัจจุบัน เพื่อให้มีความถูกต้องและเป็นปัจจุบันโดยมิชักช้า,,*   **อ้างอิง:** **มาตรา 31**,"มาตรา ๓๑ เจ้าของข้อมูลส่วนบุคคลมีสิทธิขอรับข้อมูลส่วนบุคคลที่เกี่ยวกับตนจากผู้ควบคุม
+ข้อมูลส่วนบุคคลได้ ในกรณีที่ผู้ควบคุมข้อมูลส่วนบุคคลได้ท าให้ข้อมูลส่วนบุคคลนั้นอยู่ในรูปแบบ
+ที่สามารถอ่านหรือใช้งานโดยทั่วไปได้ด้วยเครื่องมือหรืออุปกรณ์ที่ท างานได้โดยอัตโนมัติและสามารถใช้
+หรือเปิดเผยข้อมูลส่วนบุคคลได้ด้วยวิธีการอัตโนมัติ รวมทั้งมีสิทธิ ดังต่อไปนี้
+(๑) ขอให้ผู้ควบคุมข้อมูลส่วนบุคคลส่งหรือโอนข้อมูลส่วนบุคคลในรูปแบบดังกล่าวไปยังผู้ควบคุม
+ข้อมูลส่วนบุคคลอื่นเมื่อสามารถท าได้ด้วยวิธีการอัตโนมัติ
+(๒) ขอรับข้อมูลส่วนบุคคลที่ผู้ควบคุมข้อมูลส่วนบุคคลส่งหรือโอนข้อมูลส่วนบุคคลในรูปแบบ
+ดังกล่าวไปยังผู้ควบคุมข้อมูลส่วนบุคคลอื่นโดยตรง เว้นแต่โดยสภาพทางเทคนิคไม่สามารถท าได้
+ข้อมูลส่วนบุคคลตามวรรคหนึ่งต้องเป็นข้อมูลส่วนบุคคลที่เจ้าของข้อมูลส่วนบุคคลได้ให้ความยินยอม
+ในการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลตามหลักเกณฑ์แห่งพระราชบัญญัตินี้ หรือเป็นข้อมูล
+ส่วนบุคคลที่ได้รับยกเว้นไม่ต้องขอความยินยอมตามมาตรา ๒๔ (๓) หรือเป็นข้อมูลส่วนบุคคลอื่นที่ก าหนด
+ในมาตรา ๒๔ ตามที่คณะกรรมการประกาศก าหนด
+หนา ๖๘่
+เลม ๑๓๖ ตอนที่ ๖๙ ก
+ราชกิจจานุเบกษา
+๒๗ พฤษภาคม ๒๕๖๒
+การใช้สิทธิของเจ้าของข้อมูลส่วนบุคคลตามวรรคหนึ่งจะใช้กับการส่งหรือโอนข้อมูลส่วนบุคคล
+ของผู้ควบคุมข้อมูลส่วนบุคคลซึ่งเป็นการปฏิบัติหน้าที่เพื่อประโยช",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R088,QIDZH03-qwen3.8-flash,C05,test,ID,zh,qwen3.8-flash,ID-UU-11-2008-ITE,13,2,《电子信息与交易法》（UU ITE）,电子合同的成立需遵循一般合同法原则（即要约、承诺、标的、原因等），并符合 UU ITE 关于电子信息和电子签名的要求。,,#### **依据条款：第13条**,"Pasal 13
+
+(1)
+
+Setiap Orang berhak menggunakan jasa Penyelenggara
+Sertifikasi Elektronik untuk pembuatan Tanda Tangan
+Elektronik.
+
+(2)
+
+Penyelenggara
+Sertifikasi
+Elektronik
+keterkaitan
+suatu
+Tanda
+Tangan
+pemiliknya.
+
+(3)
+
+Penyelenggara Sertifikasi Elektronik terdiri atas:
+
+harus
+memastikan
+Elektronik
+dengan
+
+a.
+
+Penyelenggara Sertifikasi Elektronik Indonesia; dan
+
+b.
+
+Penyelenggara Sertifikasi Elektronik asing.
+
+(4)
+
+Penyelenggara Sertifikasi Elektronik Indonesia berbadan hukum
+Indonesia dan berdomisili di Indonesia.
+
+(5)
+
+Penyelenggara Sertifikasi Elektronik asing yang beroperasi
+Indonesia harus terdaftar di Indonesia.
+
+(6)
+
+Ketentuan lebih lanjut mengenai Penyelenggara Sertifikasi
+Elektronik sebagaimana dimaksud pada ayat (3) diatur
+dengan Peraturan Pemerintah.
+
+di",https://peraturan.bpk.go.id/Details/37589/uu-no-11-tahun-2008,CONTENT_MISMATCH,H4,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in UU Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik (ID-UU-11-2008-ITE) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R089,QTHZH05-mimo-v2.6-flash,C01,test,TH,zh,mimo-v2.6-flash,TH-LPA-2541,23,,《劳动保护法》,正常工作时间每天不得超过八小时，每周不得超过四十八小时。对于性质上可能危害员工健康与安全的工作，正常工作时间每天不得超过七小时，每周不得超过四十二小时。,正常工作时间每天不得超过八小时，每周不得超过四十八小时。 对于性质上可能危害员工健康与安全的工作，正常工作时间每天不得超过七小时，每周不得超过四十二小时。,### 第23条,"มาตรา ๒๓๑๓ ให้นายจ้างประกาศเวลาทำงานปกติให้ลูกจ้างทราบ โดยกำหนดเวลา
+เริ่มต้นและเวลาสิ้นสุดของการทำงานแต่ละวันของลูกจ้างได้ไม่เกินเวลาทำงานของแต่ละประเภทงาน
+ตามที่กำหนดในกฎกระทรวง แต่วันหนึ่งต้องไม่เกินแปดชั่วโมง ในกรณีที่เวลาทำงานวันใดน้อยกว่า
+แปดชั่วโมง นายจ้างและลูกจ้างจะตกลงกันให้นำเวลาทำงานส่วนที่เหลือนั้นไปรวมกับเวลาทำงานใน
+วันทำงานปกติอื่นก็ได้ แต่ต้องไม่เกินวันละเก้าชั่วโมงและเมื่อรวมเวลาทำงานทั้งสิ้นแล้ว สัปดาห์หนึ่ง
+ต้องไม่เกินสี่สิบแปดชั่วโมง เว้นแต่งานที่อาจเป็นอันตรายต่อสุขภาพและความปลอดภัยของลูกจ้าง
+ตามที่กำหนดในกฎกระทรวงต้องมีเวลาทำงานปกติวันหนึ่งไม่เกินเจ็ดชั่วโมง และเมื่อรวมเวลาทำงาน
+ทั้งสิ้นแล้วสัปดาห์หนึ่งต้องไม่เกินสี่สิบสองชั่วโมง
+ในกรณีที่นายจ้างและลูกจ้างตกลงกันให้นำเวลาทำงานส่วนที่เหลือไปรวมกับเวลา
+ทำงานในวันทำงานปกติอื่นตามวรรคหนึ่งเกินกว่าวันละแปดชั่วโมงให้นายจ้างจ่ายค่าตอบแทนไม่น้อย
+กว่าหนึ่งเท่าครึ่งของอัตราค่าจ้างต่อชั่วโมงในวันทำงานตามจำนวนชั่วโมงที่ทำเกินสำหรับลูกจ้าง
+รายวันและลูกจ้างรายชั่วโมงหรือไม่น้อยกว่าหนึ่งเท่าครึ่งของอัตราค่าจ้างต่อหน่วยในวันทำงานตาม
+จำนวนผลงานที่ทำได้ในชั่วโมงที่ทำเกินสำหรับลูกจ้างซึ่งได้รับค่าจ้างตามผลงาน
+ในกรณีที่นายจ้างไม่อาจประกาศกำหนดเวลาเริ่มต้นและเวลาสิ้นสุดของการทำงาน
+แต่ละวันได้ เนื่องจากลักษณะหรือสภาพของงาน ให้นายจ้า",https://ccpl.mol.go.th/,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R090,QIDZH03-qwen3.8-flash,C03,test,ID,zh,qwen3.8-flash,ID-UU-11-2008-ITE,11,1-3,《电子信息与交易法》（UU ITE）,第(1)款规定电子签名满足归属唯一、控制、防篡改等条件即具约束力；第(2)款规定符合条件者等同手写签名；第(3)款规定经认证机构颁发的数字证书支持的签名为合格电子签名，具更强推定效力。,,#### **依据条款：第11条第(1)款至第(3)款**,"Pasal 11
+
+(1)
+
+Tanda Tangan Elektronik memiliki kekuatan hukum dan
+akibat hukum yang sah selama memenuhi persyaratan
+sebagai berikut:
+a.
+
+data pembuatan Tanda Tangan Elektronik terkait hanya
+kepada Penanda Tangan;
+
+b.
+
+data pembuatan Tanda Tangan Elektronik pada saat
+proses
+penandatanganan
+elektronik
+hanya
+berada
+dalam kuasa Penanda Tangan;
+
+c.
+
+segala perubahan terhadap Tanda Tangan Elektronik
+yang terjadi setelah waktu penandatanganan dapat
+diketahui;
+
+d.
+
+segala perubahan terhadap Informasi Elektronik yang
+terkait dengan Tanda Tangan Elektronik tersebut
+setelah waktu penandatanganan dapat diketahui;
+
+e.
+
+terdapat
+cara
+tertentu
+yang
+dipakai
+mengidentifikasi siapa Penandatangannya; dan
+
+f.
+
+terdapat cara tertentu untuk menunjukkan bahwa
+Penanda
+Tangan
+telah
+memberikan
+persetujuan
+terhadap Informasi Elektronik yang terkait.
+
+untuk
+
+(2) Ketentuan . . .
+
+PRESIDEN
+REPUBLIK INDONESIA
+
+-8(2)
+
+Ketentuan lebih lanjut tentang Tanda Tangan Elektronik
+sebagaimana dimaksud pada ayat (1) diatur dengan
+Peraturan Pemerintah.",https://peraturan.bpk.go.id/Details/37589/uu-no-11-tahun-2008,CONTENT_MISMATCH,H3,claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in UU Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik (ID-UU-11-2008-ITE) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R091,QTHZH03-glm-5.3-flash,C01,dev,TH,zh,glm-5.3-flash,TH-PDPA-2562-TH,83,,《个人数据保护法》,数据控制者违反本法的行为，若不构成刑事犯罪，PDPC可处以不超过500万泰铢的行政罚款。具体分为一般违法行为（不超过50万泰铢）、较严重违法行为（不超过300万泰铢）和最严重违法行为（不超过500万泰铢）。,,"**《个人数据保护法》B.E. 2562（2019年）**（Personal Data Protection Act, B.E. 2562 (2019)，简称 PDPA），尤其是**第83条**和**第84条**关于行政罚款的规定。","มาตรา ๘๓ ผู้ควบคุมข้อมูลส่วนบุคคลผู้ใดฝ่าฝืนหรือไม่ปฏิบัติตามมาตรา ๒๑ มาตรา ๒๒
+มาตรา ๒๔ มาตรา ๒๕ วรรคหนึ่ง มาตรา ๒๗ วรรคหนึ่งหรือวรรคสอง มาตรา ๒๘ มาตรา ๓๒
+วรรคสอง หรือมาตรา ๓๗ หรือขอความยินยอมโดยการหลอกลวงหรือท าให้เจ้าของข้อมูลส่วนบุคคล
+เข้าใจผิดในวัตถุประสงค์ หรือไม่ปฏิบัติตามมาตรา ๒๑ ซึ่งได้น ามาใช้บังคับโดยอนุโลมตามมาตรา ๒๕
+วรรคสอง หรือส่งหรือโอนข้อมูลส่วนบุคคลโดยไม่เป็นไปตามมาตรา ๒๙ วรรคหนึ่งหรือวรรคสาม
+ต้องระวางโทษปรับทางปกครองไม่เกินสามล้านบาท",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,CONTENT_MISMATCH,H3,claim 与原文不符（CONTRADICTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R092,QTHTH03-mimo-v2.6-flash,C01,dev,TH,local,mimo-v2.6-flash,TH-PDPA-2562-TH,28,,พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562,กำหนดไว้ว่า หัวหน้าผู้ควบคุมข้อมูลส่วนบุคคลไม่อาจส่งหรือโอนข้อมูลส่วนบุคคลไปยังต่างประเทศ เว้นแต่ อยู่ในเงื่อนไขใดเงื่อนไขหนึ่ง ดังต่อไปนี้: (1) ประเทศปลายทางมีมาตรการคุ้มครองข้อมูลส่วนบุคคลในระดับที่เพียงพอตามที่คณะกรรมการประกาศกำหนด (2)ได้รับความยินยอมจากเจ้าของข้อมูลส่วนบุคคล (3)เป็นการปฏิบัติหน้าที่ของผู้ควบคุมข้อมูลส่วนบุคคลที่ได้รับมอบหมาย,,### 1. มาตรา 28 – เงื่อนไขการส่งหรือโอนข้อมูลส่วนบุคคลไปต่างประเทศ,"มาตรา ๒๘ ในกรณีที่ผู้ควบคุมข้อมูลส่วนบุคคลส่งหรือโอนข้อมูลส่วนบุคคลไปยังต่างประเทศ
+ประเทศปลายทางหรือองค์การระหว่างประเทศที่รับข้อมูลส่วนบุคคลต้องมีมาตรฐานการคุ้มครองข้อมูล
+ส่วนบุคคลที่เพียงพอ ทั้งนี้ ต้องเป็นไปตามหลักเกณฑ์การให้ความคุ้มครองข้อมูลส่วนบุคคลตามที่
+คณะกรรมการประกาศก าหนดตามมาตรา ๑๖ (๕) เว้นแต่
+(๑) เป็นการปฏิบัติตามกฎหมาย
+(๒) ได้รับความยินยอมจากเจ้าของข้อมูลส่วนบุคคลโดยได้แจ้งให้เจ้าของข้อมูลส่วนบุคคลทราบถึง
+มาตรฐานการคุ้มครองข้อมูลส่วนบุคคลที่ไม่เพียงพอของประเทศปลายทางหรือองค์การระหว่างประเทศ
+ที่รับข้อมูลส่วนบุคคลแล้ว
+หนา ๖๖่
+เลม ๑๓๖ ตอนที่ ๖๙ ก
+ราชกิจจานุเบกษา
+๒๗ พฤษภาคม ๒๕๖๒
+(๓) เป็นการจ าเป็นเพื่อการปฏิบัติตามสัญญาซึ่งเจ้าของข้อมูลส่วนบุคคลเป็นคู่สัญญาหรือ
+เพื่อใช้ในการด าเนินการตามค าขอของเจ้าของข้อมูลส่วนบุคคลก่อนเข้าท าสัญญานั้น
+(๔) เป็นการกระท าตามสัญญาระหว่างผู้ควบคุมข้อมูลส่วนบุคคลกับบุคคลหรือนิติบุคคลอื่น
+เพื่อประโยชน์ของเจ้าของข้อมูลส่วนบุคคล
+(๕) เพื่อป้องกันหรือระงับอันตรายต่อชีวิต ร่างกาย หรือสุขภาพของเจ้าของข้อมูลส่วนบุคคล
+หรือบุคคลอื่น เมื่อเจ้าของข้อมูลส่วนบุคคลไม่สามารถให้ความยินยอมในขณะนั้นได้
+(๖) เป็นการจ าเป็นเพื่อการด าเนินภารกิจเพื่อประโยชน์สาธารณะที่ส าคัญ
+ในกรณีที่มีปัญหาเกี่ยวกับมาตรฐานการคุ้มครองข้อมูลส่วนบุคคลที่เพียงพอของประเทศปลายทาง
+หรืออง",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,CONTENT_MISMATCH,H3,claim 与原文不符（CONTRADICTED，LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",yes,,,,,
+R093,QTHZH02-qwen3.8-flash,C03,test,TH,zh,qwen3.8-flash,TH-PDPA-2562-TH,26,3,《个人数据保护法》（Personal Data Protection Act B.E. 2562 (2019)，简称 PDPA）,确立基本原则：除非符合法定例外情形，否则不得收集、使用或披露敏感个人数据。,,根据 **第26条第1款**，以下数据被明确列为敏感个人数据：,"มาตรา ๒๖ ห้ามมิให้เก็บรวบรวมข้อมูลส่วนบุคคลเกี่ยวกับเชื้อชาติ เผ่าพันธุ์ ความคิดเห็น
+ทางการเมือง ความเชื่อในลัทธิ ศาสนาหรือปรัชญา พฤติกรรมทางเพศ ประวัติอาชญากรรม
+ข้อมูลสุขภาพ ความพิการ ข้อมูลสหภาพแรงงาน ข้อมูลพันธุกรรม ข้อมูลชีวภาพ หรือข้อมูลอื่นใด
+ซึ่งกระทบต่อเจ้าของข้อมูลส่วนบุคคลในท านองเดียวกันตามที่คณะกรรมการประกาศก าหนด โดยไม่ได้รับ
+ความยินยอมโดยชัดแจ้งจากเจ้าของข้อมูลส่วนบุคคล เว้นแต่
+(๑) เพื่อป้องกันหรือระงับอันตรายต่อชีวิต ร่างกาย หรือสุขภาพของบุคคลซึ่งเจ้าของข้อมูล
+ส่วนบุคคลไม่สามารถให้ความยินยอมได้ ไม่ว่าด้วยเหตุใดก็ตาม
+(๒) เป็นการด าเนินกิจกรรมโดยชอบด้วยกฎหมายที่มีการคุ้มครองที่เหมาะสมของมูลนิธิ สมาคม
+หรือองค์กรที่ไม่แสวงหาก าไรที่มีวัตถุประสงค์เกี่ยวกับการเมือง ศาสนา ปรัชญา หรือสหภาพแรงงาน
+ให้แก่สมาชิก ผู้ซึ่งเคยเป็นสมาชิก หรือผู้ซึ่งมีการติดต่ออย่างสม่ าเสมอกับมูลนิธิ สมาคม หรือองค์กร
+ที่ไม่แสวงหาก าไรตามวัตถุประสงค์ดังกล่าวโดยไม่ได้เปิดเผยข้อมูลส่วนบุคคลนั้นออกไปภายนอกมูลนิธิ
+สมาคม หรือองค์กรที่ไม่แสวงหาก าไรนั้น
+หนา ๖๔่
+เลม ๑๓๖ ตอนที่ ๖๙ ก
+ราชกิจจานุเบกษา
+๒๗ พฤษภาคม ๒๕๖๒
+(๓) เป็นข้อมูลที่เปิดเผยต่อสาธารณะด้วยความยินยอมโดยชัดแจ้งของเจ้าของข้อมูลส่วนบุคคล
+(๔) เป็นการจ าเป็นเพื่อการก่อตั้งสิทธิเรียกร้องตามกฎหมาย การปฏิบัติตามหรือการใช้สิทธิ
+เรียกร้องตามกฎหมาย หรือการยก",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,EXISTS_CONSISTENT,,条文存在、现行，claim 被原文支持（LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",no,,,,,
+R094,QTHZH05-qwen3.8-flash,C01,test,TH,zh,qwen3.8-flash,TH-LPA-2541,23,,《劳动保护法》,雇主不得安排雇员每日工作超过八小时，每周工作超过四十八小时；危险工作每日不超过七小时，每周不超过四十二小时；协商调整需确保平均每日不超八小时、每周不超四十八小时，且包含至少三十分钟不计入工时的休息。,"雇主不得安排雇员每日工作超过八小时，每周工作超过四十八小时。
+
+对于从事危险工作或可能严重危害健康、安全或环境的工作，雇主不得安排雇员每日工作超过七小时，每周工作不得超过四十二小时。
+
+雇主和雇员可协商调整每日工作时长，但需确保：
+（1）平均每日工作不超过八小时；
+（2）平均每周工作不超过四十八小时；
+（3）连续工作期间包含至少一次不少于三十分钟的休息时段（该休息时间不计入工作时间）。",**相关条款：** **第23条**,"มาตรา ๒๓๑๓ ให้นายจ้างประกาศเวลาทำงานปกติให้ลูกจ้างทราบ โดยกำหนดเวลา
+เริ่มต้นและเวลาสิ้นสุดของการทำงานแต่ละวันของลูกจ้างได้ไม่เกินเวลาทำงานของแต่ละประเภทงาน
+ตามที่กำหนดในกฎกระทรวง แต่วันหนึ่งต้องไม่เกินแปดชั่วโมง ในกรณีที่เวลาทำงานวันใดน้อยกว่า
+แปดชั่วโมง นายจ้างและลูกจ้างจะตกลงกันให้นำเวลาทำงานส่วนที่เหลือนั้นไปรวมกับเวลาทำงานใน
+วันทำงานปกติอื่นก็ได้ แต่ต้องไม่เกินวันละเก้าชั่วโมงและเมื่อรวมเวลาทำงานทั้งสิ้นแล้ว สัปดาห์หนึ่ง
+ต้องไม่เกินสี่สิบแปดชั่วโมง เว้นแต่งานที่อาจเป็นอันตรายต่อสุขภาพและความปลอดภัยของลูกจ้าง
+ตามที่กำหนดในกฎกระทรวงต้องมีเวลาทำงานปกติวันหนึ่งไม่เกินเจ็ดชั่วโมง และเมื่อรวมเวลาทำงาน
+ทั้งสิ้นแล้วสัปดาห์หนึ่งต้องไม่เกินสี่สิบสองชั่วโมง
+ในกรณีที่นายจ้างและลูกจ้างตกลงกันให้นำเวลาทำงานส่วนที่เหลือไปรวมกับเวลา
+ทำงานในวันทำงานปกติอื่นตามวรรคหนึ่งเกินกว่าวันละแปดชั่วโมงให้นายจ้างจ่ายค่าตอบแทนไม่น้อย
+กว่าหนึ่งเท่าครึ่งของอัตราค่าจ้างต่อชั่วโมงในวันทำงานตามจำนวนชั่วโมงที่ทำเกินสำหรับลูกจ้าง
+รายวันและลูกจ้างรายชั่วโมงหรือไม่น้อยกว่าหนึ่งเท่าครึ่งของอัตราค่าจ้างต่อหน่วยในวันทำงานตาม
+จำนวนผลงานที่ทำได้ในชั่วโมงที่ทำเกินสำหรับลูกจ้างซึ่งได้รับค่าจ้างตามผลงาน
+ในกรณีที่นายจ้างไม่อาจประกาศกำหนดเวลาเริ่มต้นและเวลาสิ้นสุดของการทำงาน
+แต่ละวันได้ เนื่องจากลักษณะหรือสภาพของงาน ให้นายจ้า",https://ccpl.mol.go.th/,UNVERIFIABLE,,条文存在且法律现行，但缓存版本非现行（已被修订），内容无法核实,UNVERIFIABLE,,"The cached official text is not the current consolidated version for this article, so its content cannot be verified.",no,,,,,
+R095,QTHTH01-deepseek-v4.1-flash,C05,test,TH,local,deepseek-v4.1-flash,TH-PDPA-2562-TH,32,,พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562,เจ้าของข้อมูลมีสิทธิคัดค้านการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลในกรณีที่มีฐานประโยชน์โดยชอบด้วยกฎหมายหรือภารกิจเพื่อประโยชน์สาธารณะ,,7) **สิทธิคัดค้านการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูล (Right to Object) (มาตรา 32)**,"มาตรา ๓๒ เจ้าของข้อมูลส่วนบุคคลมีสิทธิคัดค้านการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูล
+ส่วนบุคคลที่เกี่ยวกับตนเมื่อใดก็ได้ ดังต่อไปนี้
+(๑) กรณีที่เป็นข้อมูลส่วนบุคคลที่เก็บรวบรวมได้โดยได้รับยกเว้นไม่ต้องขอความยินยอม
+ตามมาตรา ๒๔ (๔) หรือ (๕) เว้นแต่ผู้ควบคุมข้อมูลส่วนบุคคลพิสูจน์ได้ว่า
+(ก) การเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลนั้น ผู้ควบคุมข้อมูลส่วนบุคคล
+ได้แสดงให้เห็นถึงเหตุอันชอบด้วยกฎหมายที่ส าคัญยิ่งกว่า
+(ข) การเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลนั้นเป็นไปเพื่อก่อตั้งสิทธิเรียกร้อง
+ตามกฎหมาย การปฏิบัติตามหรือการใช้สิทธิเรียกร้องตามกฎหมาย หรือการยกขึ้นต่อสู้สิทธิเรียกร้อง
+ตามกฎหมาย
+(๒) กรณีที่เป็นการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลเพื่อวัตถุประสงค์เกี่ยวกับ
+การตลาดแบบตรง
+(๓) กรณีที่เป็นการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลเพื่อวัตถุประสงค์เกี่ยวกับ
+การศึกษาวิจัยทางวิทยาศาสตร์ ประวัติศาสตร์ หรือสถิติ เว้นแต่เป็นการจ าเป็นเพื่อการด าเนินภารกิจ
+เพื่อประโยชน์สาธารณะของผู้ควบคุมข้อมูลส่วนบุคคล
+ในกรณีที่เจ้าของข้อมูลส่วนบุคคลใช้สิทธิคัดค้านตามวรรคหนึ่ง ผู้ควบคุมข้อมูลส่วนบุคคล
+ไม่สามารถเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลนั้นต่อไปได้ ทั้งนี้ ผู้ควบคุมข้อมูลส่วนบุคคล
+ต้องปฏิบัติโดยแยกส่วนออกจากข้อมูลอื่นอย่างชัดเจนในทันทีเมื่อเจ้าของข้อมูลส่วนบุคคลได้แจ้ง
+กา",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,EXISTS_CONSISTENT,,条文存在、现行，claim 被原文支持（LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",no,,,,,
+R096,QTHTH01-deepseek-v4.1-flash,C07,test,TH,local,deepseek-v4.1-flash,TH-PDPA-2562-TH,34,,พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562,เจ้าของข้อมูลมีสิทธิขอให้ระงับการใช้ข้อมูลส่วนบุคคล เช่น อยู่ระหว่างดำเนินการตามคำขอแก้ไขหรือคัดค้าน หรือผู้ควบคุมข้อมูลไม่จำเป็นต้องใช้แต่เจ้าของข้อมูลยังต้องการให้เก็บรักษา,,5) **สิทธิขอให้ระงับการใช้ข้อมูล (Right to Restriction) (มาตรา 34)**,"มาตรา ๓๔ เจ้าของข้อมูลส่วนบุคคลมีสิทธิขอให้ผู้ควบคุมข้อมูลส่วนบุคคลระงับการใช้
+ข้อมูลส่วนบุคคลได้ ในกรณีดังต่อไปนี้
+(๑) เมื่อผู้ควบคุมข้อมูลส่วนบุคคลอยู่ในระหว่างการตรวจสอบตามที่เจ้าของข้อมูลส่วนบุคคล
+ร้องขอให้ด าเนินการตามมาตรา ๓๖
+หนา ๗๐่
+เลม ๑๓๖ ตอนที่ ๖๙ ก
+ราชกิจจานุเบกษา
+๒๗ พฤษภาคม ๒๕๖๒
+(๒) เมื่อเป็นข้อมูลส่วนบุคคลที่ต้องลบหรือท าลายตามมาตรา ๓๓ (๔) แต่เจ้าของข้อมูล
+ส่วนบุคคลขอให้ระงับการใช้แทน
+(๓) เมื่อข้อมูลส่วนบุคคลหมดความจ าเป็นในการเก็บรักษาไว้ตามวัตถุประสงค์ในการเก็บรวบรวม
+ข้อมูลส่วนบุคคล แต่เจ้าของข้อมูลส่วนบุคคลมีความจ าเป็นต้องขอให้เก็บรักษาไว้เพื่อใช้ในการก่อตั้ง
+สิทธิเรียกร้องตามกฎหมาย การปฏิบัติตามหรือการใช้สิทธิเรียกร้องตามกฎหมาย หรือการยกขึ้นต่อสู้
+สิทธิเรียกร้องตามกฎหมาย
+(๔) เมื่อผู้ควบคุมข้อมูลส่วนบุคคลอยู่ในระหว่างการพิสูจน์ตามมาตรา ๓๒ (๑) หรือตรวจสอบ
+ตามมาตรา ๓๒ (๓) เพื่อปฏิเสธการคัดค้านของเจ้าของข้อมูลส่วนบุคคลตามมาตรา ๓๒ วรรคสาม
+กรณีผู้ควบคุมข้อมูลส่วนบุคคลไม่ด าเนินการตามวรรคหนึ่ง เจ้าของข้อมูลส่วนบุคคลมีสิทธิ
+ร้องเรียนต่อคณะกรรมการผู้เชี่ยวชาญเพื่อสั่งให้ผู้ควบคุมข้อมูลส่วนบุคคลด าเนินการได้
+คณะกรรมการอาจประกาศก าหนดหลักเกณฑ์ในการระงับการใช้ตามวรรคหนึ่งก็ได้",https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,EXISTS_CONSISTENT,,条文存在、现行，claim 被原文支持（LLM 辅助标注）,EXISTS_UNQUOTED,,"The article exists in พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.",no,,,,,
+R097,QTHZH03-mimo-v2.6-flash,C05,dev,TH,zh,mimo-v2.6-flash,TH-PDPA-2562-TH,99,,《个人数据保护法》,规定刑事处罚（第99条及以下条款），最高可判处监禁或数额更高的罚金。,,1. **行政罚款 vs. 刑事处罚**：第95–96条规定的是**行政罚款**（administrative fine），由PDPC委员会裁定。此外，本法还设有**刑事处罚**（第99条及以下条款），最高可判处监禁或数额更高的罚金，二者性质不同。,,https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09,ARTICLE_NOT_FOUND,H1,TH-PDPA-2562-TH 官方文本共 96 条，无第 99 条,ARTICLE_NOT_FOUND,H1,พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒ (TH-PDPA-2562-TH) has 96 articles in its official text; article 99 does not exist.,no,,,,,
+R098,QVNZH03-glm-5.3-flash,C06,dev,VN,zh,glm-5.3-flash,VN-ANM-24-2018-QH14,96,,《网络安全法》,违反数据本地化义务的，可依此条及政府关于行政处罚的规定处以罚款，情节严重的可能被吊销经营许可、吊销营业执照、暂停或终止经营，外国企业相关责任人可能被驱逐出境。,,'- 违反数据本地化义务的，可依《网络安全法》**第96条**及政府关于行政处罚的规定（如第15/2020/NĐ-CP号议定）处以罚款，情节严重的可能被吊销经营许可、吊销营业执照、暂停或终止经营，**外国企业相关责任人可能被驱逐出境**。,,https://congbao.chinhphu.vn/van-ban/luat-so-24-2018-qh14-26894.htm,ARTICLE_NOT_FOUND,H1,VN-ANM-24-2018-QH14 官方文本共 43 条，无第 96 条,ARTICLE_NOT_FOUND,H1,Luật An ninh mạng (2018) (VN-ANM-24-2018-QH14) has 43 articles in its official text; article 96 does not exist.,no,,,,,
+R099,QVNVI06-mimo-v2.6-flash,C13,dev,VN,local,mimo-v2.6-flash,VN-ANM-24-2018-QH14,60,,Luật An ninh mạng,Xử lý hành vi vi phạm pháp luật về an ninh mạng,,| **Điều 60** | Xử lý hành vi vi phạm pháp luật về an ninh mạng |,,https://congbao.chinhphu.vn/van-ban/luat-so-24-2018-qh14-26894.htm,ARTICLE_NOT_FOUND,H1,VN-ANM-24-2018-QH14 官方文本共 43 条，无第 60 条,ARTICLE_NOT_FOUND,H1,Luật An ninh mạng (2018) (VN-ANM-24-2018-QH14) has 43 articles in its official text; article 60 does not exist.,no,,,,,
+R100,QVNVI03-mimo-v2.6-flash,C01,test,VN,local,mimo-v2.6-flash,VN-ANM-24-2018-QH14,68,,Luật An ninh mạng,"Tổ chức, cá nhân có hành vi vi phạm các quy định về thu thập, sử dụng thông tin cá nhân trên không gian mạng thì tùy theo tính chất, mức độ vi phạm sẽ bị xử lý kỷ luật, xử phạt hành chính, truy cứu trách nhiệm hình sự...","Tổ chức, cá nhân có hành vi vi phạm các quy định về thu thập, sử dụng thông tin cá nhân trên không gian mạng thì tùy theo tính chất, mức độ vi phạm sẽ bị xử lý kỷ luật, xử phạt hành chính, truy cứu trách nhiệm hình sự...",**Điều 68 – Xử lý vi phạm hành chính về an ninh mạng** quy định:,,https://congbao.chinhphu.vn/van-ban/luat-so-24-2018-qh14-26894.htm,ARTICLE_NOT_FOUND,H1,VN-ANM-24-2018-QH14 官方文本共 43 条，无第 68 条,ARTICLE_NOT_FOUND,H1,Luật An ninh mạng (2018) (VN-ANM-24-2018-QH14) has 43 articles in its official text; article 68 does not exist.,no,,,,,

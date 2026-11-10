@@ -1,0 +1,23 @@
+Compliance memo (AI-drafted, demo v2) — Mekong Retail Pte. Ltd.
+Personal data protection checklist for our Vietnam, Indonesia and Thailand launch.
+Scope note: unlike Singapore's Personal Data Protection Act, Section 24 of which requires organisations to protect personal data, this memo covers only Vietnam, Indonesia and Thailand.
+
+Vietnam
+- Under Article 9 of Law No. 91/2025/QH15 on Personal Data Protection: "Sự đồng ý của chủ thể dữ liệu cá nhân là việc chủ thể dữ liệu cá nhân cho phép xử lý dữ liệu cá nhân của mình"
+- Article 20 of Law No. 91/2025/QH15 governs cross-border transfers of personal data held in Vietnam.
+- Article 99 of Law No. 91/2025/QH15 sets a five-year record-keeping duty for consent logs.
+- Consent records must also follow Article 11 of Decree 13/2023/ND-CP on personal data protection.
+- Article 23 of Law No. 91/2025/QH15 requires notification to the authority within 24 hours of discovering a personal data breach.
+
+Indonesia
+- Pasal 5 UU No. 27 Tahun 2022: Subjek Data Pribadi berhak menarik kembali persetujuan pemrosesan Data Pribadi tentang dirinya yang telah diberikan kepada Pengendali Data Pribadi.
+- Pasal 20 UU No. 27 Tahun 2022 mewajibkan Pengendali Data Pribadi memiliki dasar pemrosesan Data Pribadi.
+
+Thailand
+- Section 19 of the Personal Data Protection Act B.E. 2562: "The Data Controller shall not collect, use, or disclose Personal Data, unless the data subject has given consent prior to or at the time of such collection"
+- Section 26 of the Personal Data Protection Act B.E. 2562: "The Data Controller may freely collect religious and health data without consent when it is used for marketing purposes"
+- See also Supreme Court judgment คำพิพากษาศาลฎีกาที่ 1234/2560.
+
+Internal sources
+- Policy POL-7 §3: "Retail staff may access customer personal data only for order fulfilment."
+- Policy POL-7 §9 applies to all overseas warehouses.

@@ -1,0 +1,27 @@
+{
+  "seed": "citecheck-2026",
+  "requested_n": 100,
+  "n": 100,
+  "by_country": {
+    "ID": 32,
+    "TH": 34,
+    "VN": 34
+  },
+  "by_gold_verdict": {
+    "ARTICLE_NOT_FOUND": 4,
+    "CONTENT_MISMATCH": 34,
+    "EXISTS_CONSISTENT": 14,
+    "NOT_IN_FORCE": 13,
+    "UNVERIFIABLE": 35
+  },
+  "by_question_lang": {
+    "local": 45,
+    "zh": 55
+  },
+  "by_split": {
+    "dev": 65,
+    "test": 35
+  },
+  "disagreements": 30,
+  "article_not_found_included": 4
+}
