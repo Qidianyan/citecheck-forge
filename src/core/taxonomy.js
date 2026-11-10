@@ -28,6 +28,7 @@ export function hallucinationTypes(r) {
     case 'ARTICLE_NOT_FOUND': return ['H1'];
     case 'NOT_IN_FORCE': return ['H5'];
     case 'CONTENT_MISMATCH': {
+      if (Array.isArray(r.content_types) && r.content_types.length) return [...r.content_types];
       const t = ['H4'];
       const q = (r.quote || '').match(NUM_RE) || [];
       const src = new Set((r.original_excerpt || '').match(NUM_RE) || []);
@@ -47,8 +48,16 @@ export function reasonEn(r) {
       return `The quoted text matches the official text of ${law}${r.quote_score != null ? ` (similarity ${r.quote_score})` : ''}.`;
     case 'EXISTS_UNQUOTED':
       return `The article exists in ${law} and is in force; the text paraphrases or translates it, so the wording was not compared word-for-word.`;
-    case 'CONTENT_MISMATCH':
+    case 'CONTENT_MISMATCH': {
+      if (r.crossref || r.numbers) {
+        const out = [];
+        if (r.crossref?.kind === 'unsupported') out.push(`The statement shares almost no specific wording with article ${r.article} of ${law} (overlap ${r.crossref.score_cited}); its content may not come from this article.`);
+        else if (r.crossref) out.push(`The statement matches article ${r.crossref.suggested_article} of ${law} much better than the cited article ${r.article} (overlap ${r.crossref.score_best} vs ${r.crossref.score_cited}) — likely a misattributed provision; did you mean article ${r.crossref.suggested_article}?`);
+        if (r.numbers) out.push(`The figures do not match the cited article (${r.numbers.mismatches.map((m) => `${m.claimed} ${m.unit} vs official ${m.official.join('/')}`).join('; ')}).`);
+        return out.join(' ');
+      }
       return `The article exists, but the quoted text does not match the official text (similarity ${r.quote_score ?? 'low'}).`;
+    }
     case 'ARTICLE_NOT_FOUND': {
       const m = /共\s*(\d+)\s*条/u.exec(r.reason || '');
       return `${law} has ${m ? m[1] : 'fewer'} articles in its official text; article ${r.article} does not exist.`;
