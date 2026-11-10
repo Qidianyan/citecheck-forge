@@ -102,7 +102,7 @@ export function createOrgSourceStore({ kvs } = {}) {
     const seen = new Set();
     let cursor = null;
     for (let guard = 0; guard < 1000; guard++) {
-      let q = e.query().index('by-key');
+      let q = e.query().index('by-source-key');
       if (typeof q.limit === 'function') q = q.limit(500);
       if (cursor && typeof q.cursor === 'function') q = q.cursor(cursor);
       const page = await q.getMany(cursor ? { cursor } : {});

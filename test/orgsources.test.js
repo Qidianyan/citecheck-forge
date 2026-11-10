@@ -16,7 +16,7 @@ import {
 
 // ── fakes ────────────────────────────────────────────────────────────────
 
-/** In-memory Custom Entity Store mock: entity('orgsource').query().index('by-key').getMany(). */
+/** In-memory Custom Entity Store mock: entity('orgsource').query().index('by-source-key').getMany(). */
 function fakeEntityKvs({ pageSize = 100 } = {}) {
   const map = new Map();
   let getManyCalls = 0;

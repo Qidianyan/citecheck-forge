@@ -23,6 +23,14 @@ app:
           - name: by-time
             range:
               - verifiedAt
+      - name: orgsource
+        attributes:
+          sourceKey:
+            type: string
+        indexes:
+          - name: by-source-key
+            range:
+              - sourceKey
 modules:
   rovo:agent:
     - key: citecheck-agent
@@ -202,6 +210,14 @@ modules:
       resolver:
         function: ui-resolver-fn
 
+  confluence:globalSettings:
+    - key: citecheck-admin
+      title: CiteCheck admin
+      resource: ui-admin
+      render: native
+      resolver:
+        function: admin-resolver-fn
+
   trigger:
     - key: conf-updated-trigger
       function: conf-updated-fn
@@ -236,10 +252,14 @@ modules:
       handler: index.postJiraReport
     - key: ui-resolver-fn
       handler: index.uiResolver
+    - key: admin-resolver-fn
+      handler: index.adminResolver
 
 resources:
   - key: ui
     path: src/frontend/index.jsx
+  - key: ui-admin
+    path: src/frontend/admin.jsx
   - key: agent-assets
     path: prompts
 

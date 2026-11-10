@@ -28,3 +28,4 @@ export const onJiraUpdated = (event, context) => events.onJiraUpdated(event, con
 export const recheckConsumer = (event, context) => events.consumer(event, context);
 
 export { handler as uiResolver } from './resolver.js';
+export { handler as adminResolver } from './adminResolver.js';
