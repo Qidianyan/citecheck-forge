@@ -1,0 +1,222 @@
+# CiteCheck — Rovo Agent that verifies legal citations in AI-generated text.
+# app.id is a placeholder until `forge register` is run with the team's Atlassian developer account.
+app:
+  id: ari:cloud:ecosystem::app/00000000-0000-0000-0000-000000000000
+  runtime:
+    name: nodejs22.x
+    memoryMB: 512
+    architecture: arm64
+
+modules:
+  rovo:agent:
+    - key: citecheck-agent
+      name: CiteCheck Legal Citations
+      description: >-
+        Checks every legal citation in a Confluence page, Jira work item or pasted AI answer against
+        bundled official statute texts (Vietnam, Indonesia, Thailand). Flags articles that do not exist,
+        repealed laws, misquoted text, and citations it cannot verify, with links to the official source.
+      icon: resource:agent-assets;icon.svg
+      prompt: resource:agent-assets;prompt.txt
+      conversationStarters:
+        - Check the legal citations on this page
+        - Verify the citations in this work item and post a report
+        - Is Article 45 of Vietnam's Law 91/2025/QH15 real?
+        - Which laws can you verify against?
+      followUpPrompt: >-
+        Suggest one or two next steps, such as posting the verification report as a comment,
+        labelling the content for legal review, or opening the official source of a flagged citation.
+      actions:
+        - extract-citations
+        - verify-citation
+        - verify-content
+        - list-sources
+        - post-confluence-report
+        - post-jira-report
+      skills:
+        - citation-audit
+
+  rovo:skill:
+    - key: citation-audit
+      source:
+        dir: skills/citation-audit
+      dependencies:
+        tools:
+          - verify-content
+          - verify-citation
+          - post-confluence-report
+          - post-jira-report
+
+  rovo:mcp:
+    - key: citecheck-mcp
+      name: CiteCheck Citation Tools
+      tools:
+        - verify-citation
+        - verify-content
+        - list-sources
+
+  action:
+    - key: extract-citations
+      name: Extract legal citations
+      function: extract-citations-fn
+      actionVerb: GET
+      description: >-
+        Extract the legal citations (statute articles, law numbers, case numbers and quoted text) from the
+        current Confluence page or Jira work item, or from text supplied by the user. Does not verify them.
+      inputs:
+        text:
+          title: Text
+          type: string
+          required: false
+          description: Text to scan. Leave empty to use the Confluence page or Jira work item in context.
+        contentId:
+          title: Confluence page ID
+          type: string
+          required: false
+          description: ID of a Confluence page to scan when it is not the page in context.
+        issueKey:
+          title: Jira work item key
+          type: string
+          required: false
+          description: Key of a Jira work item (e.g. LEGAL-12) to scan when it is not the item in context.
+    - key: verify-citation
+      name: Verify one legal citation
+      function: verify-citation-fn
+      actionVerb: GET
+      description: >-
+        Verify a single citation, e.g. "Article 13 of Indonesia's Law 27 of 2022" or "Điều 9 Luật 91/2025/QH15",
+        optionally with the quoted text. Returns whether the law and article exist in the official text,
+        whether they are in force on the given date, how closely the quote matches, the hallucination type,
+        and the official source link and excerpt.
+      inputs:
+        citation:
+          title: Citation
+          type: string
+          required: true
+          description: The citation as written, including the law name or number and the article.
+        quote:
+          title: Quoted text
+          type: string
+          required: false
+          description: Text the citation claims the article says, if any.
+        asOf:
+          title: As-of date
+          type: string
+          required: false
+          description: Date (YYYY-MM-DD) to check whether the law is in force. Defaults to today.
+    - key: verify-content
+      name: Verify all citations in content
+      function: verify-content-fn
+      actionVerb: GET
+      description: >-
+        Verify every legal citation in the current Confluence page or Jira work item (or in supplied text)
+        and return a per-citation verdict table with hallucination types, reasons, evidence links and a summary.
+        Results are saved so the page byline / issue panel shows the status.
+      inputs:
+        text:
+          title: Text
+          type: string
+          required: false
+          description: Text to verify. Leave empty to use the Confluence page or Jira work item in context.
+        contentId:
+          title: Confluence page ID
+          type: string
+          required: false
+          description: ID of a Confluence page to verify when it is not the page in context.
+        issueKey:
+          title: Jira work item key
+          type: string
+          required: false
+          description: Key of a Jira work item to verify when it is not the item in context.
+        asOf:
+          title: As-of date
+          type: string
+          required: false
+          description: Date (YYYY-MM-DD) for the in-force check. Defaults to today.
+    - key: list-sources
+      name: List verifiable laws
+      function: list-sources-fn
+      actionVerb: GET
+      description: >-
+        List the laws CiteCheck can verify against (country, number, title, in-force status, number of
+        articles, official source URL and fetch date).
+      inputs:
+        country:
+          title: Country
+          type: string
+          required: false
+          description: Optional filter, one of VN, ID, TH.
+    - key: post-confluence-report
+      name: Post citation report to Confluence page
+      function: post-confluence-report-fn
+      actionVerb: CREATE
+      description: >-
+        Verify the citations on a Confluence page and post the verification report as a footer comment,
+        and add the label citecheck-flagged or citecheck-verified. Only call after the user confirms.
+      inputs:
+        contentId:
+          title: Confluence page ID
+          type: string
+          required: false
+          description: ID of the page. Leave empty to use the page in context.
+    - key: post-jira-report
+      name: Post citation report to Jira work item
+      function: post-jira-report-fn
+      actionVerb: CREATE
+      description: >-
+        Verify the citations in a Jira work item and post the verification report as a comment, and add the
+        label citecheck-flagged or citecheck-verified. Only call after the user confirms.
+      inputs:
+        issueKey:
+          title: Jira work item key
+          type: string
+          required: false
+          description: Key of the work item. Leave empty to use the work item in context.
+
+  confluence:contentBylineItem:
+    - key: citecheck-byline
+      title: Citations
+      resource: ui
+      render: native
+      resolver:
+        function: ui-resolver-fn
+
+  jira:issuePanel:
+    - key: citecheck-issue-panel
+      title: Legal citation check
+      icon: resource:agent-assets;icon.svg
+      resource: ui
+      render: native
+      resolver:
+        function: ui-resolver-fn
+
+  function:
+    - key: extract-citations-fn
+      handler: index.extractCitations
+    - key: verify-citation-fn
+      handler: index.verifyCitation
+    - key: verify-content-fn
+      handler: index.verifyContent
+    - key: list-sources-fn
+      handler: index.listSources
+    - key: post-confluence-report-fn
+      handler: index.postConfluenceReport
+    - key: post-jira-report-fn
+      handler: index.postJiraReport
+    - key: ui-resolver-fn
+      handler: index.uiResolver
+
+resources:
+  - key: ui
+    path: src/frontend/index.jsx
+  - key: agent-assets
+    path: prompts
+
+permissions:
+  scopes:
+    - storage:app
+    - read:page:confluence
+    - read:confluence-content.all
+    - write:confluence-content
+    - write:comment:confluence
+    - read:jira-work
+    - write:jira-work
