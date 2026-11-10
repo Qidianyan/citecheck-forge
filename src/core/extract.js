@@ -111,7 +111,7 @@ function dominantLaw(text, corpus, country) {
 const dist = (p, pos, zh) => Math.abs(p - pos) + (zh ? (p > pos ? 30 : 0) : (p > pos ? 0 : 15));
 
 /** Extract citations: [{citation,type,article,clause,law,law_hint,inferred,sentence,quote,quote_lang}] */
-export function extract(text, corpus, country = null) {
+export function extract(text, corpus, country = null, opts = {}) {
   country = country || detectCountry(text, corpus.enhanced ? COUNTRY_WORDS_EN : COUNTRY_WORDS);
   const out = [];
   let ctx = null; // last mentioned law (object) or uncached law reference (string)
@@ -124,8 +124,26 @@ export function extract(text, corpus, country = null) {
     const l = line.normalize('NFC').toLowerCase();
     return versionMarkers(law).some((m) => l.includes(m)) ? law : p; // the line itself names this version: keep it
   };
-  for (const line of text.split(/\n+/u)) {
+  const lines = text.split(/\n+/u);
+  const ART1 = new RegExp(ART_RE.source, ART_RE.flags.replace('g', ''));
+  /** Enhanced: a quotation in the block-quote that directly follows a citation line (Markdown "> "…""). */
+  const nextQuote = (i) => {
+    for (let j = i + 1, seen = 0; j < lines.length && seen < 3; j++) {
+      const l = lines[j];
+      if (!strip(l)) continue;
+      seen++;
+      if (!/^\s*>/u.test(l)) return null;
+      const lt = thaiDigits(l);
+      const qm = [...lt.matchAll(QUOTE_RE)];
+      if (qm.length) return ART1.test(lt.slice(0, qm[0].index)) ? null : qm[0][1];
+      if (ART1.test(lt)) return null;
+    }
+    return null;
+  };
+  for (let li = 0; li < lines.length; li++) {
+    const line = lines[li];
     if (!strip(line)) continue;
+    const before = out.length;
     const lineT = thaiDigits(line);
     let lc;
     if (corpus.enhanced) lc = detectCountry(lineT, COUNTRY_WORDS_EN) || country;
@@ -169,6 +187,13 @@ export function extract(text, corpus, country = null) {
       const cm = CLAUSE_RE.exec(lineT.slice(end, end + 25));
       out.push({ citation: strip(m[0]), type: 'statute', article: art, clause: cm ? cm[1] : null, law, law_hint: hint,
         inferred, sentence: sentence800, quote: q, quote_lang: q ? scriptOf(q) : null });
+    }
+    if (corpus.enhanced && opts.followQuotes !== false) {
+      const added = out.slice(before).filter((r) => r.type === 'statute');
+      if (added.length === 1 && !added[0].quote) {
+        const q = nextQuote(li);
+        if (q) { added[0].quote = q; added[0].quote_lang = scriptOf(q); added[0].quote_from = 'blockquote'; }
+      }
     }
     const mentions = [...hits.map((h) => [h.start, resolveByNumber(h.law, lineT, corpus)]), ...unknown];
     if (mentions.length) {

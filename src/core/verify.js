@@ -116,6 +116,7 @@ export function ruleVerdict(c, asOf, corpus) {
     r.checks.quote_score = sc;
     if (sc >= 0.8) [v, w] = ['EXISTS_CONSISTENT', `引文与原文字面匹配率 ${sc}`];
     else if (sc < 0.5) [v, w] = ['CONTENT_MISMATCH', `引文与原文字面匹配率仅 ${sc}`];
+    else if (c.quote_from === 'blockquote') [v, w] = ['EXISTS_UNQUOTED', `下一行块引用匹配率 ${sc} 处于灰区，按转述处理`]; // enhanced only
     else [v, w] = ['QUOTE_GRAY', `引文匹配率 ${sc} 处于灰区`];
   } else {
     if (c.quote) notes.push('引文为译文/转述（语言与原文不同），不做字面比对');
