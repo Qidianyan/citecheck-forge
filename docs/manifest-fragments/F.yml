@@ -1,0 +1,11 @@
+# Manifest fragment for task F — fresh held-out evaluation set (eval/fresh/).
+# Reviewer note: NO manifest changes are required. Task F adds offline eval assets
+# (eval/fresh/make-fresh.mjs, score-fresh.mjs, METHOD.md, zh_paraphrases.json and the
+# generated fresh.jsonl / fresh_stats.json) plus test/fresh.test.js. No new Forge
+# modules, permissions, storage entities, or runtime code paths are introduced; the
+# generator and scorer take the corpus via read-only imports of src/core and a
+# injectable verifyFn, and never touch @forge/* or the network.
+app:
+  storage:
+    entities: []
+modules: {}

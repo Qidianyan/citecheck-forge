@@ -1,0 +1,54 @@
+{
+  "seed": "fresh-2026-11",
+  "as_of": "2026-11-10",
+  "total": 301,
+  "by_type": {
+    "C_QUOTE": 42,
+    "C_CLAIM": 42,
+    "H3_CLAIM": 42,
+    "H4_QUOTE": 42,
+    "H1_ARTICLE": 42,
+    "H7_NUMBER": 42,
+    "H5_REPEALED": 12,
+    "ZH_SAME": 19,
+    "ZH_H3": 18
+  },
+  "by_country": {
+    "VN": 110,
+    "ID": 95,
+    "TH": 96
+  },
+  "by_lang": {
+    "vi": 96,
+    "id": 84,
+    "th": 84,
+    "zh": 37
+  },
+  "per_law": {
+    "VN-BLLD-45-2019-QH14": 34,
+    "VN-BLDS-91-2015-QH13": 40,
+    "VN-GDDT-20-2023-QH15": 9,
+    "VN-ND-356-2025-CP": 4,
+    "VN-91-2025-QH15": 5,
+    "VN-DT-61-2020-QH14": 6,
+    "VN-ANM-24-2018-QH14": 6,
+    "ID-UU-1-2023-KUHP": 40,
+    "ID-UU-8-1999": 22,
+    "ID-UU-1-1974": 25,
+    "ID-UU-11-2008-ITE": 8,
+    "TH-ETA-2544": 17,
+    "TH-FBA-2542": 39,
+    "TH-PDPA-2562-TH": 40,
+    "VN-DT-143-2025-QH15": 3,
+    "VN-ANM-116-2025-QH15": 3
+  },
+  "used_article_pairs": 255,
+  "candidate_pool": {
+    "VN": 842,
+    "ID": 574,
+    "TH": 104,
+    "not_in_force": 56
+  },
+  "zh_provided": true,
+  "note": "Labels correct by construction. Scored exactly once after the verifier config is frozen; never tune on this set."
+}
