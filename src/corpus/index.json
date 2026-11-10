@@ -1,0 +1,955 @@
+[
+ {
+  "law_id": "ID-UU-1-1974",
+  "country": "ID",
+  "lang": "id",
+  "title": "UU Nomor 1 Tahun 1974 tentang Perkawinan",
+  "number": "UU 1/1974",
+  "aliases": [
+   "UU No. 1 Tahun 1974",
+   "UU Nomor 1 Tahun 1974",
+   "UU 1/1974",
+   "UU Perkawinan",
+   "Undang-Undang Perkawinan"
+  ],
+  "chinese_aliases": [
+   "婚姻法"
+  ],
+  "issued": "1974-01-02",
+  "effective": "1974-01-02",
+  "amended_articles": {
+   "7": "UU 16/2019"
+  },
+  "content_current": "partial",
+  "translation": false,
+  "source_page": "https://peraturan.bpk.go.id/Details/47406/uu-no-1-tahun-1974",
+  "source_pdf": "https://peraturan.bpk.go.id/Download/36382/UU%20Nomor%201%20Tahun%201974.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 67,
+  "missing_articles": [
+   13
+  ],
+  "article_count": 66
+ },
+ {
+  "law_id": "ID-UU-1-2023-KUHP",
+  "country": "ID",
+  "lang": "id",
+  "title": "UU Nomor 1 Tahun 2023 tentang Kitab Undang-Undang Hukum Pidana",
+  "number": "UU 1/2023",
+  "aliases": [
+   "UU No. 1 Tahun 2023",
+   "UU Nomor 1 Tahun 2023",
+   "UU 1/2023",
+   "KUHP baru",
+   "KUHP Nasional",
+   "KUHP 2023",
+   "Kitab Undang-Undang Hukum Pidana (UU 1/2023)"
+  ],
+  "chinese_aliases": [
+   "新刑法典",
+   "2023年刑法典",
+   "新《刑法典》"
+  ],
+  "issued": "2023-01-02",
+  "effective": "2026-01-02",
+  "content_current": true,
+  "translation": false,
+  "source_page": "https://peraturan.bpk.go.id/Details/234935/uu-no-1-tahun-2023",
+  "source_pdf": "https://peraturan.bpk.go.id/Download/287456/UU%20Nomor%201%20Tahun%202023.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 624,
+  "missing_articles": [
+   22,
+   51,
+   70,
+   72,
+   77,
+   80,
+   91,
+   100,
+   102,
+   111,
+   120,
+   171,
+   190,
+   202,
+   207,
+   208,
+   209,
+   212,
+   220,
+   223,
+   250,
+   264,
+   270,
+   279,
+   300,
+   305,
+   307,
+   309,
+   311,
+   330,
+   390,
+   402,
+   408,
+   410,
+   411,
+   416,
+   419,
+   426,
+   442,
+   462,
+   467,
+   470,
+   480,
+   490,
+   509,
+   511,
+   519,
+   520,
+   540,
+   580,
+   591,
+   600,
+   601,
+   602,
+   603,
+   604,
+   608,
+   610,
+   620
+  ],
+  "article_count": 565
+ },
+ {
+  "law_id": "ID-UU-11-2008-ITE",
+  "country": "ID",
+  "lang": "id",
+  "title": "UU Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik",
+  "number": "UU 11/2008",
+  "aliases": [
+   "UU No. 11 Tahun 2008",
+   "UU Nomor 11 Tahun 2008",
+   "UU 11/2008",
+   "UU ITE",
+   "Undang-Undang Informasi dan Transaksi Elektronik",
+   "Undang-Undang ITE"
+  ],
+  "chinese_aliases": [
+   "电子信息与交易法",
+   "电子信息和交易法",
+   "信息与电子交易法",
+   "电子信息和电子交易法",
+   "ITE法"
+  ],
+  "issued": "2008-04-21",
+  "effective": "2008-04-21",
+  "amended_articles": {
+   "1": "UU 19/2016 和/或 UU 1/2024（据修正案文本解析，OCR 可能漏项）",
+   "5": "UU 19/2016 和/或 UU 1/2024（据修正案文本解析，OCR 可能漏项）",
+   "17": "UU 19/2016 和/或 UU 1/2024（据修正案文本解析，OCR 可能漏项）",
+   "26": "UU 19/2016 和/或 UU 1/2024（据修正案文本解析，OCR 可能漏项）",
+   "27": "UU 19/2016 和/或 UU 1/2024（据修正案文本解析，OCR 可能漏项）",
+   "28": "UU 19/2016 和/或 UU 1/2024（据修正案文本解析，OCR 可能漏项）",
+   "29": "UU 19/2016 和/或 UU 1/2024（据修正案文本解析，OCR 可能漏项）",
+   "31": "UU 19/2016 和/或 UU 1/2024（据修正案文本解析，OCR 可能漏项）",
+   "36": "UU 19/2016 和/或 UU 1/2024（据修正案文本解析，OCR 可能漏项）",
+   "40": "UU 19/2016 和/或 UU 1/2024（据修正案文本解析，OCR 可能漏项）",
+   "43": "UU 19/2016 和/或 UU 1/2024（据修正案文本解析，OCR 可能漏项）",
+   "45": "UU 19/2016 和/或 UU 1/2024（据修正案文本解析，OCR 可能漏项）"
+  },
+  "content_current": "partial",
+  "translation": false,
+  "source_page": "https://peraturan.bpk.go.id/Details/37589/uu-no-11-tahun-2008",
+  "source_pdf": "https://peraturan.bpk.go.id/Download/26683/UU%20Nomor%2011%20Tahun%202008.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 54,
+  "missing_articles": [],
+  "article_count": 54
+ },
+ {
+  "law_id": "ID-UU-13-2003",
+  "country": "ID",
+  "lang": "id",
+  "title": "UU Nomor 13 Tahun 2003 tentang Ketenagakerjaan",
+  "number": "UU 13/2003",
+  "aliases": [
+   "UU No. 13 Tahun 2003",
+   "UU Nomor 13 Tahun 2003",
+   "UU 13/2003",
+   "UU Ketenagakerjaan",
+   "Undang-Undang Ketenagakerjaan"
+  ],
+  "chinese_aliases": [
+   "劳动法",
+   "人力法",
+   "劳工法",
+   "人力资源法"
+  ],
+  "issued": "2003-03-25",
+  "effective": "2003-03-25",
+  "content_current": false,
+  "version_note": "原始文本；多条经 UU 6/2023（Cipta Kerja）修改/删除，修改文本未缓存 → 内容比对一律降级为无法核实",
+  "translation": false,
+  "source_page": "https://peraturan.bpk.go.id/Details/43013/uu-no-13-tahun-2003",
+  "source_pdf": "https://peraturan.bpk.go.id/Download/31128/UU%20Nomor%2013%20Tahun%202003.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 193,
+  "missing_articles": [
+   47,
+   52,
+   59,
+   62,
+   142,
+   156,
+   177
+  ],
+  "article_count": 186
+ },
+ {
+  "law_id": "ID-UU-25-2007-PM",
+  "country": "ID",
+  "lang": "id",
+  "title": "UU Nomor 25 Tahun 2007 tentang Penanaman Modal",
+  "number": "UU 25/2007",
+  "aliases": [
+   "UU No. 25 Tahun 2007",
+   "UU Nomor 25 Tahun 2007",
+   "UU 25/2007",
+   "UU Penanaman Modal",
+   "Undang-Undang Penanaman Modal"
+  ],
+  "chinese_aliases": [
+   "投资法",
+   "资本投资法",
+   "投资法（印尼）"
+  ],
+  "issued": "2007-04-26",
+  "effective": "2007-04-26",
+  "content_current": false,
+  "version_note": "原始文本；已被 Cipta Kerja 修改 → 内容比对降级为无法核实",
+  "translation": false,
+  "source_page": "https://peraturan.bpk.go.id/Details/39903/uu-no-25-tahun-2007",
+  "source_pdf": "https://peraturan.bpk.go.id/Download/29494/UU%20Nomor%2025%20Tahun%202007.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 40,
+  "missing_articles": [],
+  "article_count": 40
+ },
+ {
+  "law_id": "ID-UU-27-2022",
+  "country": "ID",
+  "lang": "id",
+  "title": "Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi",
+  "number": "UU 27/2022",
+  "aliases": [
+   "UU No. 27 Tahun 2022",
+   "UU Nomor 27 Tahun 2022",
+   "UU 27/2022",
+   "UU PDP",
+   "Undang-Undang Pelindungan Data Pribadi"
+  ],
+  "chinese_aliases": [
+   "个人数据保护法",
+   "个人资料保护法"
+  ],
+  "issued": "2022-10-17",
+  "effective": "2022-10-17",
+  "content_current": true,
+  "translation": false,
+  "source_page": "https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022",
+  "source_pdf": "https://peraturan.bpk.go.id/Download/224884/UU%20Nomor%2027%20Tahun%202022.pdf",
+  "fetched_at": "2026-10-15 (PT)",
+  "max_article": 76,
+  "missing_articles": [
+   1,
+   22,
+   23,
+   27,
+   29,
+   70,
+   72
+  ],
+  "article_count": 69
+ },
+ {
+  "law_id": "ID-UU-40-2007-PT",
+  "country": "ID",
+  "lang": "id",
+  "title": "UU Nomor 40 Tahun 2007 tentang Perseroan Terbatas",
+  "number": "UU 40/2007",
+  "aliases": [
+   "UU No. 40 Tahun 2007",
+   "UU Nomor 40 Tahun 2007",
+   "UU 40/2007",
+   "UU Perseroan Terbatas",
+   "UUPT",
+   "Undang-Undang Perseroan Terbatas"
+  ],
+  "chinese_aliases": [
+   "有限责任公司法",
+   "公司法"
+  ],
+  "issued": "2007-08-16",
+  "effective": "2007-08-16",
+  "content_current": false,
+  "version_note": "原始文本；已被 Cipta Kerja 修改 → 内容比对降级为无法核实",
+  "translation": false,
+  "source_page": "https://peraturan.bpk.go.id/Details/39965/uu-no-40-tahun-2007",
+  "source_pdf": "https://peraturan.bpk.go.id/Download/29563/UU%20Nomor%2040%20Tahun%202007.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 161,
+  "missing_articles": [],
+  "article_count": 161
+ },
+ {
+  "law_id": "ID-UU-8-1999",
+  "country": "ID",
+  "lang": "id",
+  "title": "UU Nomor 8 Tahun 1999 tentang Perlindungan Konsumen",
+  "number": "UU 8/1999",
+  "aliases": [
+   "UU No. 8 Tahun 1999",
+   "UU Nomor 8 Tahun 1999",
+   "UU 8/1999",
+   "Undang-Undang Perlindungan Konsumen",
+   "UU Perlindungan Konsumen",
+   "UUPK"
+  ],
+  "chinese_aliases": [
+   "消费者保护法"
+  ],
+  "issued": "1999-04-20",
+  "effective": "2000-04-20",
+  "content_current": true,
+  "translation": false,
+  "source_page": "https://peraturan.bpk.go.id/Details/45288/uu-no-8-tahun-1999",
+  "source_pdf": "https://peraturan.bpk.go.id/Download/33784/UU%20Nomor%208%20Tahun%201999.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 65,
+  "missing_articles": [],
+  "article_count": 65
+ },
+ {
+  "law_id": "TH-CCA-2550",
+  "country": "TH",
+  "lang": "th",
+  "title": "พระราชบัญญัติว่าด้วยการกระทำความผิดเกี่ยวกับคอมพิวเตอร์ พ.ศ. ๒๕๕๐",
+  "number": "B.E. 2550",
+  "aliases": [
+   "พระราชบัญญัติว่าด้วยการกระทำความผิดเกี่ยวกับคอมพิวเตอร์",
+   "พ.ร.บ.คอมพิวเตอร์",
+   "พรบ.คอมพิวเตอร์",
+   "พ.ร.บ.ว่าด้วยการกระทำความผิดเกี่ยวกับคอมพิวเตอร์",
+   "Computer Crime Act",
+   "Computer-Related Crime Act"
+  ],
+  "chinese_aliases": [
+   "计算机犯罪法",
+   "计算机相关犯罪法",
+   "电脑犯罪法"
+  ],
+  "issued": "2007-06-10",
+  "effective": "2007-07-18",
+  "content_current": false,
+  "translation": false,
+  "source_page": "https://law.dit.go.th/",
+  "source_pdf": "https://law.dit.go.th/Upload/Document/a283d96f-3d38-4844-8b44-f146ced68e25.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 30,
+  "missing_articles": [],
+  "article_count": 30
+ },
+ {
+  "law_id": "TH-ETA-2544",
+  "country": "TH",
+  "lang": "th",
+  "title": "พระราชบัญญัติว่าด้วยธุรกรรมทางอิเล็กทรอนิกส์ พ.ศ. ๒๕๔๔",
+  "number": "B.E. 2544",
+  "aliases": [
+   "พระราชบัญญัติว่าด้วยธุรกรรมทางอิเล็กทรอนิกส์",
+   "พ.ร.บ.ว่าด้วยธุรกรรมทางอิเล็กทรอนิกส์",
+   "พ.ร.บ.ธุรกรรมทางอิเล็กทรอนิกส์",
+   "พรบ.ธุรกรรมทางอิเล็กทรอนิกส์",
+   "Electronic Transactions Act"
+  ],
+  "chinese_aliases": [
+   "电子交易法"
+  ],
+  "issued": "2001-12-02",
+  "effective": "2002-04-03",
+  "content_current": true,
+  "translation": false,
+  "source_page": "https://law.dit.go.th/",
+  "source_pdf": "https://law.dit.go.th/Upload/Document/b54cba7b-6c22-4808-80f0-69650a5b837f.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 46,
+  "missing_articles": [],
+  "article_count": 46
+ },
+ {
+  "law_id": "TH-FBA-2542",
+  "country": "TH",
+  "lang": "th",
+  "title": "พระราชบัญญัติการประกอบธุรกิจของคนต่างด้าว พ.ศ. ๒๕๔๒",
+  "number": "B.E. 2542",
+  "aliases": [
+   "พระราชบัญญัติการประกอบธุรกิจของคนต่างด้าว",
+   "พ.ร.บ.การประกอบธุรกิจของคนต่างด้าว",
+   "พรบ.การประกอบธุรกิจของคนต่างด้าว",
+   "พ.ร.บ.ประกอบธุรกิจของคนต่างด้าว",
+   "Foreign Business Act"
+  ],
+  "chinese_aliases": [
+   "外国人经营企业法",
+   "外国人经营法",
+   "外国人商业法",
+   "外商经营法",
+   "外国人营业法"
+  ],
+  "issued": "1999-11-24",
+  "effective": "2000-03-03",
+  "content_current": true,
+  "translation": false,
+  "source_page": "https://law.dit.go.th/SearchResultUI.aspx?DocID=2568",
+  "source_pdf": "https://law.dit.go.th/Upload/Document/026257ff-21f5-4f37-8431-1c192c5766fd.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 46,
+  "missing_articles": [
+   18,
+   19
+  ],
+  "article_count": 44
+ },
+ {
+  "law_id": "TH-LPA-2541",
+  "country": "TH",
+  "lang": "th",
+  "title": "พระราชบัญญัติคุ้มครองแรงงาน พ.ศ. ๒๕๔๑",
+  "number": "B.E. 2541",
+  "aliases": [
+   "พระราชบัญญัติคุ้มครองแรงงาน",
+   "พ.ร.บ.คุ้มครองแรงงาน",
+   "พรบ.คุ้มครองแรงงาน",
+   "พ.ร.บ. คุ้มครองแรงงาน",
+   "Labour Protection Act"
+  ],
+  "chinese_aliases": [
+   "劳动保护法",
+   "劳工保护法"
+  ],
+  "issued": "1998-02-12",
+  "effective": "1998-08-19",
+  "content_current": false,
+  "version_note": "OCS 合并文本约截至 2015-11-19（劳动部 ccpl 站托管）；此后的修正（含 (ฉบับที่ ๗) พ.ศ. ๒๕๖๒）未合并 → 内容比对一律降级为无法核实。更新版 mol.go.th 合并本被 Incapsula WAF 拦截，ratchakitcha 403",
+  "translation": false,
+  "source_page": "https://ccpl.mol.go.th/",
+  "source_pdf": "https://ccpl.mol.go.th/wp-content/uploads/sites/4/2018/11/02-2labour_2541_for19nov2015_001.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 166,
+  "missing_articles": [
+   106
+  ],
+  "article_count": 165
+ },
+ {
+  "law_id": "TH-PDPA-2562-EN",
+  "country": "TH",
+  "lang": "en",
+  "title": "Personal Data Protection Act, B.E. 2562 (2019)",
+  "number": "B.E. 2562",
+  "aliases": [
+   "Personal Data Protection Act, B.E. 2562 (English)"
+  ],
+  "issued": "2019-05-24",
+  "effective": "见官方文本 Section 2（公布次日施行，部分章节延后一年）；全面施行日期【待核实】",
+  "content_current": true,
+  "translation": true,
+  "source_page": "https://www.pdpc.or.th/en/pdpc-act/",
+  "source_pdf": "https://www.dol.go.th/media/813280155698073600/2026/01/5TMF1n9au27Gqoxmf4e8JXZL.pdf",
+  "fetched_at": "2026-10-15 (PT)",
+  "max_article": 96,
+  "missing_articles": [],
+  "article_count": 96
+ },
+ {
+  "law_id": "TH-PDPA-2562-TH",
+  "country": "TH",
+  "lang": "th",
+  "title": "พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. ๒๕๖๒",
+  "number": "B.E. 2562",
+  "aliases": [
+   "พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล",
+   "พ.ร.บ.คุ้มครองข้อมูลส่วนบุคคล",
+   "พรบ.คุ้มครองข้อมูลส่วนบุคคล",
+   "พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล",
+   "Personal Data Protection Act",
+   "PDPA"
+  ],
+  "chinese_aliases": [
+   "个人数据保护法",
+   "个人资料保护法"
+  ],
+  "issued": "2019-05-24",
+  "effective": "2019-05-28",
+  "content_current": true,
+  "translation": false,
+  "source_page": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RnVUTE4zOWxlNzExbDlEQjRwRCtrUT09",
+  "source_pdf": "https://www.ocs.go.th/searchlaw/indexs/download/eyJ1dWlkIjoiMTc5NmU0ZjQtZTgxNi00ODgxLTg1ZWEtYTU4OWI2NjRjZTdhIiwiZmlsZW5hbWUiOiLguIQwMTM2IOC4nuC4o-C4sOC4o-C4suC4iuC4muC4seC4jeC4jeC4seC4leC4tCAyNTYyLTY54LiBLTUyLlBERiJ9.jZ8Egjp9J2zvIyWGwH-Ybn87GnkibJawbe4dDpKCfls",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 96,
+  "missing_articles": [],
+  "article_count": 96
+ },
+ {
+  "law_id": "VN-91-2025-QH15",
+  "country": "VN",
+  "lang": "vi",
+  "title": "Luật Bảo vệ dữ liệu cá nhân",
+  "number": "91/2025/QH15",
+  "aliases": [
+   "Luật Bảo vệ dữ liệu cá nhân",
+   "Luật số 91/2025/QH15",
+   "91/2025/QH15",
+   "Luật BVDLCN"
+  ],
+  "chinese_aliases": [
+   "个人数据保护法",
+   "个人资料保护法"
+  ],
+  "issued": "2025-06-26",
+  "effective": "2026-01-01",
+  "content_current": true,
+  "translation": false,
+  "source_page": "https://congbao.chinhphu.vn/van-ban/luat-so-91-2025-qh15-45578.htm",
+  "source_pdf": "https://congbaocdn.chinhphu.vn/CongBaoCP/VanBan/2025/6/45578/57730-1-2025971-97291-2025-qh15.pdf",
+  "fetched_at": "2026-10-15 (PT)",
+  "max_article": 39,
+  "missing_articles": [],
+  "article_count": 39
+ },
+ {
+  "law_id": "VN-ANM-116-2025-QH15",
+  "country": "VN",
+  "lang": "vi",
+  "title": "Luật An ninh mạng (2025)",
+  "number": "116/2025/QH15",
+  "aliases": [
+   "Luật An ninh mạng số 116/2025/QH15",
+   "Luật An ninh mạng 2025",
+   "Luật An ninh mạng năm 2025",
+   "116/2025/QH15",
+   "Luật An ninh mạng"
+  ],
+  "chinese_aliases": [
+   "网络安全法",
+   "2025年网络安全法"
+  ],
+  "issued": "2025-12-10",
+  "effective": "2026-07-01",
+  "content_current": true,
+  "translation": false,
+  "source_page": "https://congbao.chinhphu.vn/van-ban/luat-so-116-2025-qh15-468678.htm",
+  "source_pdf": "https://congbaocdn.chinhphu.vn/180507251028987904/2026/1/23/116signed-1769163678477753319408.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 45,
+  "missing_articles": [],
+  "article_count": 45
+ },
+ {
+  "law_id": "VN-ANM-24-2018-QH14",
+  "country": "VN",
+  "lang": "vi",
+  "title": "Luật An ninh mạng (2018)",
+  "number": "24/2018/QH14",
+  "aliases": [
+   "Luật An ninh mạng số 24/2018/QH14",
+   "Luật An ninh mạng 2018",
+   "Luật An ninh mạng năm 2018",
+   "24/2018/QH14"
+  ],
+  "chinese_aliases": [
+   "2018年网络安全法"
+  ],
+  "issued": "2018-06-12",
+  "effective": "2019-01-01",
+  "repealed": "2026-07-01",
+  "repealed_by": "116/2025/QH15 Điều 44 khoản 2",
+  "content_current": true,
+  "translation": false,
+  "source_page": "https://congbao.chinhphu.vn/van-ban/luat-so-24-2018-qh14-26894.htm",
+  "source_pdf": "https://congbaocdn.chinhphu.vn/CongBaoCP/VanBan/2018/6/26894/23075-1-2018775-77624-2018-qh14.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 43,
+  "missing_articles": [],
+  "article_count": 43
+ },
+ {
+  "law_id": "VN-ATTTM-86-2015-QH13",
+  "country": "VN",
+  "lang": "vi",
+  "title": "Luật An toàn thông tin mạng",
+  "number": "86/2015/QH13",
+  "aliases": [
+   "Luật An toàn thông tin mạng số 86/2015/QH13",
+   "Luật An toàn thông tin mạng",
+   "86/2015/QH13"
+  ],
+  "chinese_aliases": [
+   "网络信息安全法"
+  ],
+  "repealed": "2026-07-01",
+  "repealed_by": "VN-ANM-116-2025-QH15 Điều 44",
+  "content_current": false,
+  "translation": false,
+  "stub": true,
+  "evidence_law": "VN-ANM-116-2025-QH15",
+  "evidence_article": "44",
+  "fetched_at": "2026-10-18 (PT)",
+  "missing_articles": [],
+  "article_count": 0
+ },
+ {
+  "law_id": "VN-BLDS-91-2015-QH13",
+  "country": "VN",
+  "lang": "vi",
+  "title": "Bộ luật Dân sự",
+  "number": "91/2015/QH13",
+  "aliases": [
+   "Bộ luật Dân sự 2015",
+   "Bộ luật Dân sự năm 2015",
+   "Bộ luật Dân sự số 91/2015/QH13",
+   "91/2015/QH13",
+   "BLDS 2015",
+   "Bộ luật Dân sự"
+  ],
+  "chinese_aliases": [
+   "民法典",
+   "越南民法典",
+   "民法"
+  ],
+  "issued": "2015-11-24",
+  "effective": "2017-01-01",
+  "content_current": true,
+  "translation": false,
+  "source_page": "https://congbao.chinhphu.vn/van-ban/luat-so-91-2015-qh13-18397.htm",
+  "source_pdf": "https://congbao.chinhphu.vn/van-ban/luat-so-91-2015-qh13-18397.htm（公报页两份PDF，经 g7.cdnchinhphu.vn 下载）",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 689,
+  "missing_articles": [],
+  "article_count": 689
+ },
+ {
+  "law_id": "VN-BLLD-10-2012-QH13",
+  "country": "VN",
+  "lang": "vi",
+  "title": "Bộ luật Lao động (2012)",
+  "number": "10/2012/QH13",
+  "aliases": [
+   "Bộ luật Lao động số 10/2012/QH13",
+   "Bộ luật Lao động 2012",
+   "Bộ luật Lao động năm 2012",
+   "10/2012/QH13"
+  ],
+  "chinese_aliases": [
+   "2012年劳动法典",
+   "2012年劳动法"
+  ],
+  "issued": "2012-06-18",
+  "repealed": "2021-01-01",
+  "repealed_by": "VN-BLLD-45-2019-QH14 Điều 220",
+  "content_current": false,
+  "translation": false,
+  "stub": true,
+  "evidence_law": "VN-BLLD-45-2019-QH14",
+  "evidence_article": "220",
+  "fetched_at": "2026-10-18 (PT)",
+  "missing_articles": [],
+  "article_count": 0
+ },
+ {
+  "law_id": "VN-BLLD-45-2019-QH14",
+  "country": "VN",
+  "lang": "vi",
+  "title": "Bộ luật Lao động (văn bản hợp nhất 18/VBHN-VPQH)",
+  "number": "45/2019/QH14",
+  "aliases": [
+   "Bộ luật Lao động 2019",
+   "Bộ luật Lao động năm 2019",
+   "Bộ luật Lao động số 45/2019/QH14",
+   "45/2019/QH14",
+   "BLLĐ 2019",
+   "Bộ luật Lao động"
+  ],
+  "chinese_aliases": [
+   "劳动法典",
+   "劳动法",
+   "劳工法"
+  ],
+  "issued": "2019-11-20",
+  "effective": "2021-01-01",
+  "content_current": true,
+  "version_note": "国会办公厅合并文本 18/VBHN-VPQH，版本日 2026-02-12",
+  "translation": false,
+  "source_page": "https://congbao.chinhphu.vn/van-ban/van-ban-hop-nhat-so-18-vbhn-vpqh-468971.htm",
+  "source_pdf": "https://congbaocdn.chinhphu.vn/180507251028987904/2026/3/5/468971-1772684381_v1_1772690833_signed.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 220,
+  "missing_articles": [],
+  "article_count": 220
+ },
+ {
+  "law_id": "VN-DN-59-2020-QH14",
+  "country": "VN",
+  "lang": "vi",
+  "title": "Luật Doanh nghiệp (2020)",
+  "number": "59/2020/QH14",
+  "aliases": [
+   "Luật Doanh nghiệp số 59/2020/QH14",
+   "Luật Doanh nghiệp 2020",
+   "Luật Doanh nghiệp năm 2020",
+   "59/2020/QH14",
+   "Luật Doanh nghiệp"
+  ],
+  "chinese_aliases": [
+   "企业法",
+   "2020年企业法"
+  ],
+  "issued": "2020-06-17",
+  "effective": "2021-01-01",
+  "content_current": false,
+  "version_note": "原始公布文本（公报 713+714、715+716）；已被修改，修改文本未缓存 → 内容比对降级为无法核实",
+  "translation": false,
+  "source_page": "https://congbao.chinhphu.vn/van-ban/luat-so-59-2020-qh14-31674.htm",
+  "source_pdf": [
+   "https://congbaocdn.chinhphu.vn/CongBaoCP/VanBan/2020/6/31674/31830-1-2020713-71459-2020-qh14.pdf",
+   "https://congbaocdn.chinhphu.vn/CongBaoCP/VanBan/2020/6/31674/31833-1-2020715-71659-2020-qh14.pdf"
+  ],
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 218,
+  "missing_articles": [],
+  "article_count": 218
+ },
+ {
+  "law_id": "VN-DN-68-2014-QH13",
+  "country": "VN",
+  "lang": "vi",
+  "title": "Luật Doanh nghiệp (2014)",
+  "number": "68/2014/QH13",
+  "aliases": [
+   "Luật Doanh nghiệp số 68/2014/QH13",
+   "Luật Doanh nghiệp 2014",
+   "Luật Doanh nghiệp năm 2014",
+   "68/2014/QH13"
+  ],
+  "chinese_aliases": [
+   "2014年企业法"
+  ],
+  "repealed": "2021-01-01",
+  "repealed_by": "VN-DN-59-2020-QH14 Điều 217",
+  "content_current": false,
+  "translation": false,
+  "stub": true,
+  "evidence_law": "VN-DN-59-2020-QH14",
+  "evidence_article": "217",
+  "fetched_at": "2026-10-18 (PT)",
+  "missing_articles": [],
+  "article_count": 0
+ },
+ {
+  "law_id": "VN-DT-143-2025-QH15",
+  "country": "VN",
+  "lang": "vi",
+  "title": "Luật Đầu tư (2025)",
+  "number": "143/2025/QH15",
+  "aliases": [
+   "Luật Đầu tư số 143/2025/QH15",
+   "Luật Đầu tư 2025",
+   "Luật Đầu tư năm 2025",
+   "143/2025/QH15",
+   "Luật Đầu tư"
+  ],
+  "chinese_aliases": [
+   "投资法",
+   "2025年投资法"
+  ],
+  "issued": "2025-12-11",
+  "effective": "2026-03-01",
+  "content_current": true,
+  "translation": false,
+  "source_page": "https://congbao.chinhphu.vn/van-ban/luat-so-143-2025-qh15-468703/61729.htm",
+  "source_pdf": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/01/luat143-2025.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 52,
+  "missing_articles": [],
+  "article_count": 52
+ },
+ {
+  "law_id": "VN-DT-61-2020-QH14",
+  "country": "VN",
+  "lang": "vi",
+  "title": "Luật Đầu tư (2020)",
+  "number": "61/2020/QH14",
+  "aliases": [
+   "Luật Đầu tư số 61/2020/QH14",
+   "Luật Đầu tư 2020",
+   "Luật Đầu tư năm 2020",
+   "61/2020/QH14"
+  ],
+  "chinese_aliases": [
+   "2020年投资法"
+  ],
+  "issued": "2020-06-17",
+  "effective": "2021-01-01",
+  "repealed": "2026-03-01",
+  "repealed_by": "143/2025/QH15 Điều 51 khoản 4（整体自2026-03-01失效，第7条及附录IV至2026-07-01失效）",
+  "repealed_exceptions": {
+   "7": "2026-07-01"
+  },
+  "content_current": true,
+  "translation": false,
+  "source_page": "https://congbao.chinhphu.vn/van-ban/luat-so-61-2020-qh14-31682.htm",
+  "source_pdf": "https://congbaocdn.chinhphu.vn/CongBaoCP/VanBan/2020/6/31682/31846-1-2020717-71861-2020-qh14.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 77,
+  "missing_articles": [],
+  "article_count": 77
+ },
+ {
+  "law_id": "VN-DT-67-2014-QH13",
+  "country": "VN",
+  "lang": "vi",
+  "title": "Luật Đầu tư (2014)",
+  "number": "67/2014/QH13",
+  "aliases": [
+   "Luật Đầu tư số 67/2014/QH13",
+   "Luật Đầu tư 2014",
+   "Luật Đầu tư năm 2014",
+   "67/2014/QH13",
+   "67/2014/QH14"
+  ],
+  "chinese_aliases": [
+   "2014年投资法"
+  ],
+  "repealed": "2021-01-01",
+  "repealed_by": "VN-DT-61-2020-QH14 Điều 76",
+  "content_current": false,
+  "translation": false,
+  "stub": true,
+  "evidence_law": "VN-DT-61-2020-QH14",
+  "evidence_article": "76",
+  "fetched_at": "2026-10-18 (PT)",
+  "missing_articles": [],
+  "article_count": 0
+ },
+ {
+  "law_id": "VN-GDDT-20-2023-QH15",
+  "country": "VN",
+  "lang": "vi",
+  "title": "Luật Giao dịch điện tử",
+  "number": "20/2023/QH15",
+  "aliases": [
+   "Luật Giao dịch điện tử số 20/2023/QH15",
+   "Luật Giao dịch điện tử 2023",
+   "Luật Giao dịch điện tử năm 2023",
+   "20/2023/QH15",
+   "Luật Giao dịch điện tử"
+  ],
+  "chinese_aliases": [
+   "电子交易法",
+   "电子交易法（2023）"
+  ],
+  "issued": "2023-06-22",
+  "effective": "2024-07-01",
+  "content_current": true,
+  "translation": false,
+  "source_page": "https://congbao.chinhphu.vn/van-ban/luat-so-20-2023-qh15-39848.htm",
+  "source_pdf": "https://congbaocdn.chinhphu.vn/CongBaoCP/VanBan/2023/6/39848/45939-1-2023867-86820-2023-qh15.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 53,
+  "missing_articles": [],
+  "article_count": 53
+ },
+ {
+  "law_id": "VN-GDDT-51-2005-QH11",
+  "country": "VN",
+  "lang": "vi",
+  "title": "Luật Giao dịch điện tử (2005)",
+  "number": "51/2005/QH11",
+  "aliases": [
+   "Luật Giao dịch điện tử số 51/2005/QH11",
+   "Luật Giao dịch điện tử 2005",
+   "Luật Giao dịch điện tử năm 2005",
+   "51/2005/QH11"
+  ],
+  "chinese_aliases": [
+   "2005年电子交易法"
+  ],
+  "repealed": "2024-07-01",
+  "repealed_by": "VN-GDDT-20-2023-QH15 Điều 52",
+  "content_current": false,
+  "translation": false,
+  "stub": true,
+  "evidence_law": "VN-GDDT-20-2023-QH15",
+  "evidence_article": "52",
+  "fetched_at": "2026-10-18 (PT)",
+  "missing_articles": [],
+  "article_count": 0
+ },
+ {
+  "law_id": "VN-ND-13-2023-CP",
+  "country": "VN",
+  "lang": "vi",
+  "title": "Nghị định về bảo vệ dữ liệu cá nhân",
+  "number": "13/2023/NĐ-CP",
+  "aliases": [
+   "Nghị định 13/2023/NĐ-CP",
+   "Nghị định số 13/2023/NĐ-CP",
+   "13/2023/NĐ-CP",
+   "13/2023/ND-CP",
+   "Nghị định 13"
+  ],
+  "chinese_aliases": [
+   "第13/2023号法令",
+   "13号法令"
+  ],
+  "issued": "2023-04-17",
+  "repealed": "2026-01-01",
+  "repealed_by": "VN-ND-356-2025-CP Điều 42",
+  "content_current": false,
+  "translation": false,
+  "stub": true,
+  "evidence_law": "VN-ND-356-2025-CP",
+  "evidence_article": "42",
+  "fetched_at": "2026-10-18 (PT)",
+  "missing_articles": [],
+  "article_count": 0
+ },
+ {
+  "law_id": "VN-ND-356-2025-CP",
+  "country": "VN",
+  "lang": "vi",
+  "title": "Nghị định quy định chi tiết một số điều và biện pháp thi hành Luật Bảo vệ dữ liệu cá nhân",
+  "number": "356/2025/NĐ-CP",
+  "aliases": [
+   "Nghị định 356/2025/NĐ-CP",
+   "Nghị định số 356/2025/NĐ-CP",
+   "356/2025/NĐ-CP",
+   "356/2025/ND-CP"
+  ],
+  "chinese_aliases": [
+   "第356/2025号法令"
+  ],
+  "issued": "2025-12-31",
+  "effective": "2026-01-01",
+  "content_current": true,
+  "translation": false,
+  "source_page": "https://vanban.chinhphu.vn/?docid=216387&pageid=27160",
+  "source_pdf": "https://congbaocdn.chinhphu.vn/180507251028987904/2026/1/17/356signed-1768638052103952849513.pdf",
+  "fetched_at": "2026-10-18 (PT)",
+  "max_article": 42,
+  "missing_articles": [],
+  "article_count": 42
+ }
+]

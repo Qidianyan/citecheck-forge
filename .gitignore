@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+*.env
+secrets/
+../secrets/
+.dsh-runs/
+.forge/
+coverage/
+dist/
+*.log
+.DS_Store
