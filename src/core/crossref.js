@@ -3,6 +3,7 @@
 // `{ crossref: true }`; legacy behaviour is untouched.
 import { ART_RE, LAWNUM_RE } from './extract.js';
 import { cpSlice } from './normalize.js';
+import { anchorsFor } from './glossary.js';
 
 // Function words and citation vocabulary for the corpus languages (lower case). Kept small on purpose:
 // IDF weighting does the rest.
@@ -114,7 +115,8 @@ export function claimWindows(text, results, { maxLines = 4, maxChars = 700 } = {
   return windows;
 }
 
-export const CROSSREF_DEFAULTS = { minBest: 0.2, ratio: 3, minTokens: 6, skipMulti: 'range', skipCjk: true, unsupportedMaxCited: 0.06, unsupportedMinTokens: 30 };
+export const CROSSREF_DEFAULTS = { minBest: 0.2, ratio: 3, minTokens: 6, skipMulti: 'range', skipCjk: true, unsupportedMaxCited: 0.06, unsupportedMinTokens: 30,
+  anchors: true, anchorMinConcepts: 2, anchorMinBest: 0.5, anchorRatio: 4 }; // frozen on the 70% dev split (phase 3)
 
 const RANGE_RE = /(?:\d\s*(?:[-–—~]|sampai(?:\s+dengan)?|s\.d\.|đến|tới|ถึง|至|到)\s*(?:Pasal|Điều|มาตรา|Article|Section|第)?\s*\d)/iu;
 const countArticleRefs = (line) => { ART_RE.lastIndex = 0; const n = [...String(line).matchAll(ART_RE)].length; ART_RE.lastIndex = 0; return n; };
@@ -134,21 +136,31 @@ export function crossCheck(r, claim, law, ix, opts = CROSSREF_DEFAULTS) {
   const line = r.sentence || '';
   // A line that cites several articles or a range does not describe one article.
   if (opts.skipMulti === 'range' ? RANGE_RE.test(line) : opts.skipMulti && (countArticleRefs(line) > 1 || RANGE_RE.test(line))) return null;
-  // Chinese paraphrases only carry a few embedded local-language words: too little evidence.
-  if (opts.skipCjk && cjkShare(claim) > 0.3) return null;
-  const { n, ranked } = rankArticles(claim, ix);
-  if (n < opts.minTokens || !ranked.length) return null;
+  // Chinese paraphrases: compare on curated bilingual concept anchors (glossary.js) instead of words.
+  let probe = claim, minBest = opts.minBest, ratio = opts.ratio, minTokens = opts.minTokens, anchored = null;
+  if (cjkShare(claim) > 0.3) {
+    if (!opts.anchors) { if (opts.skipCjk) return null; }
+    else {
+      const a = anchorsFor(claim, law.country);
+      if (a.concepts.length < opts.anchorMinConcepts) return null;
+      probe = a.text; anchored = a.concepts.length;
+      minBest = opts.anchorMinBest; ratio = opts.anchorRatio; minTokens = 1;
+    }
+  }
+  const { n, ranked } = rankArticles(probe, ix);
+  if (n < minTokens || !ranked.length) return null;
   const [bestArt, best] = ranked[0];
   const cited = (ranked.find(([k]) => k === String(r.article)) || [null, 0])[1];
-  const base = { score_cited: Number(cited.toFixed(3)), tokens: n };
-  const misattributed = bestArt !== String(r.article) && best >= opts.minBest && best >= opts.ratio * Math.max(cited, 0.01);
+  const base = { score_cited: Number(cited.toFixed(3)), tokens: n, ...(anchored ? { anchors: anchored } : {}) };
+  const misattributed = bestArt !== String(r.article) && best >= minBest && best >= ratio * Math.max(cited, 0.01);
   if (!misattributed) {
+    if (anchored) return null; // concept anchors are too coarse for the "unsupported" rule
     // H4: a long, specific statement that shares almost nothing with the cited article.
     if (opts.unsupportedMaxCited != null && n >= opts.unsupportedMinTokens && cited <= opts.unsupportedMaxCited) {
       return { kind: 'unsupported', ...base, score_best: Number(best.toFixed(3)) };
     }
     return null;
   }
-  return { kind: 'misattributed', suggested_article: bestArt, suggested_law: law.law_id, score_cited: Number(cited.toFixed(3)),
+  return { kind: 'misattributed', ...(anchored ? { anchors: anchored } : {}), suggested_article: bestArt, suggested_law: law.law_id, score_cited: Number(cited.toFixed(3)),
     score_best: Number(best.toFixed(3)), tokens: n, excerpt: cpSlice(law.articles[bestArt] || '', 0, 600) };
 }

@@ -76,6 +76,38 @@ export function resolveByNumber(law, line, corpus) {
   return law;
 }
 
+// Enhanced mode: document-level version pinning for same-title law families (Investment Law 2014/2020/2025,
+// Cybersecurity Law 2018/2025, ...). Markers that name one specific version: its number, or an alias with a year.
+const familyKey = (l) => `${l.country}|${stripYear(l.title)}`;
+function versionMarkers(l) {
+  const out = [];
+  if (l.number) out.push(l.number.toLowerCase());
+  for (const a of l.aliases || []) if (/\d{4}/u.test(a)) out.push(a.normalize('NFC').toLowerCase());
+  return out;
+}
+/** family → the single version the document names explicitly (no entry when 0 or ≥ 2 versions are named). */
+export function pinnedVersions(text, corpus) {
+  const t = thaiDigits(text).normalize('NFC').toLowerCase();
+  const named = new Map();
+  for (const l of corpus.laws) {
+    if (!versionMarkers(l).some((m) => t.includes(m))) continue;
+    const k = familyKey(l);
+    if (!named.has(k)) named.set(k, new Set());
+    named.get(k).add(l);
+  }
+  const pins = new Map();
+  for (const [k, set] of named) if (set.size === 1) pins.set(k, [...set][0]);
+  return pins;
+}
+/** The cached law mentioned most often in the document (ties: first mentioned). */
+function dominantLaw(text, corpus, country) {
+  const counts = new Map();
+  for (const line of text.split(/\n+/u)) for (const h of aliasHits(thaiDigits(line), country, corpus)) counts.set(h.law, (counts.get(h.law) || 0) + 1);
+  let best = null, n = 0;
+  for (const [l, c] of counts) if (c > n) { best = l; n = c; }
+  return best;
+}
+
 const dist = (p, pos, zh) => Math.abs(p - pos) + (zh ? (p > pos ? 30 : 0) : (p > pos ? 0 : 15));
 
 /** Extract citations: [{citation,type,article,clause,law,law_hint,inferred,sentence,quote,quote_lang}] */
@@ -83,6 +115,15 @@ export function extract(text, corpus, country = null) {
   country = country || detectCountry(text, corpus.enhanced ? COUNTRY_WORDS_EN : COUNTRY_WORDS);
   const out = [];
   let ctx = null; // last mentioned law (object) or uncached law reference (string)
+  const pins = corpus.enhanced ? pinnedVersions(text, corpus) : null;
+  const docLaw = corpus.enhanced ? dominantLaw(text, corpus, country) : null;
+  const pin = (law, line) => {
+    if (!pins || !law) return law;
+    const p = pins.get(familyKey(law));
+    if (!p || p === law) return law;
+    const l = line.normalize('NFC').toLowerCase();
+    return versionMarkers(law).some((m) => l.includes(m)) ? law : p; // the line itself names this version: keep it
+  };
   for (const line of text.split(/\n+/u)) {
     if (!strip(line)) continue;
     const lineT = thaiDigits(line);
@@ -115,8 +156,10 @@ export function extract(text, corpus, country = null) {
         let best = cands[0];
         for (const c of cands) if (c[0] < best[0]) best = c;
         if (best[1] === 'law') law = resolveByNumber(best[2], lineT, corpus); else hint = best[2];
-      } else if (ctx && typeof ctx === 'object') { law = ctx; inferred = true; }
+      } else if (docLaw && /^\s*#{1,6}\s/u.test(line)) { law = docLaw; inferred = true; } // section heading: the document's main law
+      else if (ctx && typeof ctx === 'object') { law = ctx; inferred = true; }
       else if (typeof ctx === 'string') { hint = ctx; inferred = true; }
+      law = pin(law, lineT);
       let q = null;
       if (quotes.length) {
         const after = quotes.filter((x) => x[0] >= pos);
