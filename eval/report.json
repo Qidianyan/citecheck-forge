@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-10T19:42:14.991Z",
+    "generated_at": "2026-11-10T21:06:38.282Z",
     "dataset_sha256": "1329fd83864cb66a2585fbfdc37886da796ef32f3babdd7cb8e5236f4037cee5",
     "answers": 123,
     "citations": 809,
@@ -881,23 +881,23 @@
       "splits": {
         "dev": {
           "n_rows": 563,
-          "extraction_recall": 0.8117229129662522,
+          "extraction_recall": 0.866785079928952,
           "detection": {
             "n_verifiable": 364,
             "n_positive": 286,
-            "tp": 99,
-            "fp": 1,
-            "fn": 187,
-            "precision": 0.99,
-            "recall": 0.34615384615384615,
-            "f1": 0.5129533678756477,
+            "tp": 113,
+            "fp": 4,
+            "fn": 173,
+            "precision": 0.9658119658119658,
+            "recall": 0.3951048951048951,
+            "f1": 0.5607940446650124,
             "precision_ci95": [
-              0.9455124752390653,
-              0.9982326134344526
+              0.9153808812238059,
+              0.9866263745556608
             ],
             "recall_ci95": [
-              0.29338432633766914,
-              0.4030015616784058
+              0.3401957051167744,
+              0.452794673076004
             ]
           },
           "by_country": [
@@ -905,28 +905,28 @@
               "key": "ID",
               "n": 228,
               "n_verifiable": 119,
-              "tp": 2,
+              "tp": 9,
               "fp": 1,
-              "fn": 78,
-              "recall": 0.025
+              "fn": 71,
+              "recall": 0.1125
             },
             {
               "key": "TH",
               "n": 109,
               "n_verifiable": 67,
-              "tp": 1,
-              "fp": 0,
-              "fn": 44,
-              "recall": 0.022222222222222223
+              "tp": 5,
+              "fp": 2,
+              "fn": 40,
+              "recall": 0.1111111111111111
             },
             {
               "key": "VN",
               "n": 226,
               "n_verifiable": 178,
-              "tp": 96,
-              "fp": 0,
-              "fn": 65,
-              "recall": 0.5962732919254659
+              "tp": 99,
+              "fp": 1,
+              "fn": 62,
+              "recall": 0.6149068322981367
             }
           ],
           "by_lang": [
@@ -934,19 +934,19 @@
               "key": "local",
               "n": 238,
               "n_verifiable": 165,
-              "tp": 37,
-              "fp": 1,
-              "fn": 91,
-              "recall": 0.2890625
+              "tp": 48,
+              "fp": 4,
+              "fn": 80,
+              "recall": 0.375
             },
             {
               "key": "zh",
               "n": 325,
               "n_verifiable": 199,
-              "tp": 62,
+              "tp": 65,
               "fp": 0,
-              "fn": 96,
-              "recall": 0.3924050632911392
+              "fn": 93,
+              "recall": 0.41139240506329117
             }
           ],
           "by_h_type": [
@@ -959,20 +959,20 @@
             {
               "h_type": "H3",
               "n": 155,
-              "caught": 2,
-              "recall": 0.012903225806451613
+              "caught": 10,
+              "recall": 0.06451612903225806
             },
             {
               "h_type": "H4",
               "n": 9,
-              "caught": 0,
-              "recall": 0
+              "caught": 3,
+              "recall": 0.3333333333333333
             },
             {
               "h_type": "H5",
               "n": 107,
-              "caught": 94,
-              "recall": 0.8785046728971962
+              "caught": 96,
+              "recall": 0.897196261682243
             },
             {
               "h_type": "H6",
@@ -983,31 +983,30 @@
             {
               "h_type": "H7",
               "n": 8,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.125
             }
           ],
           "confusion": {
             "NOT_IN_FORCE": {
-              "NOT_IN_FORCE": 94,
-              "MISSED": 13
+              "NOT_IN_FORCE": 96,
+              "MISSED": 11
             },
             "CONTENT_MISMATCH": {
-              "EXISTS_UNQUOTED": 141,
-              "MISSED": 31,
-              "UNVERIFIABLE": 1,
-              "EXISTS_CONSISTENT": 1,
-              "CONTENT_MISMATCH": 2
+              "EXISTS_UNQUOTED": 142,
+              "CONTENT_MISMATCH": 14,
+              "MISSED": 19,
+              "EXISTS_CONSISTENT": 1
             },
             "EXISTS_CONSISTENT": {
-              "EXISTS_UNQUOTED": 63,
-              "CONTENT_MISMATCH": 1,
-              "MISSED": 13,
+              "EXISTS_UNQUOTED": 67,
+              "CONTENT_MISMATCH": 4,
+              "MISSED": 6,
               "UNVERIFIABLE": 1
             },
             "UNVERIFIABLE": {
-              "MISSED": 49,
-              "UNVERIFIABLE": 150
+              "UNVERIFIABLE": 160,
+              "MISSED": 39
             },
             "ARTICLE_NOT_FOUND": {
               "ARTICLE_NOT_FOUND": 3
@@ -1018,7 +1017,7 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "EXISTS_UNQUOTED",
               "kind": "fn",
-              "count": 141,
+              "count": 142,
               "ids": [
                 {
                   "aid": "QVNZH01-mimo-v2.6-flash",
@@ -1066,32 +1065,8 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 31,
+              "count": 19,
               "ids": [
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C05"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C06"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C07"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C09"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C11"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C12"
-                },
                 {
                   "aid": "QIDID01-qwen3.8-flash",
                   "cid": "C11"
@@ -1101,12 +1076,36 @@
                   "cid": "C08"
                 },
                 {
-                  "aid": "QTHZH03-glm-5.3-flash",
-                  "cid": "C03"
+                  "aid": "QVNZH04-glm-5.3-flash",
+                  "cid": "C10"
                 },
                 {
-                  "aid": "QTHZH03-qwen3.8-flash",
-                  "cid": "C03"
+                  "aid": "QVNZH04-glm-5.3-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QIDZH05-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C06"
                 }
               ]
             },
@@ -1114,7 +1113,7 @@
               "gold": "NOT_IN_FORCE",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 13,
+              "count": 11,
               "ids": [
                 {
                   "aid": "QVNZH01-deepseek-v4.1-flash",
@@ -1145,16 +1144,16 @@
                   "cid": "C04"
                 },
                 {
-                  "aid": "QVNZH06-deepseek-v4.1-flash",
-                  "cid": "C09"
-                },
-                {
-                  "aid": "QVNZH06-qwen3.8-flash",
-                  "cid": "C07"
+                  "aid": "QVNVI06-glm-5.3-flash",
+                  "cid": "C08"
                 },
                 {
                   "aid": "QVNVI06-glm-5.3-flash",
-                  "cid": "C08"
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QVNVI06-glm-5.3-flash",
+                  "cid": "C10"
                 }
               ]
             },
@@ -1162,23 +1161,35 @@
               "gold": "EXISTS_CONSISTENT",
               "pred": "CONTENT_MISMATCH",
               "kind": "fp",
-              "count": 1,
+              "count": 4,
               "ids": [
                 {
                   "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QTHTH03-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QTHTH03-glm-5.3-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI04-qwen3.8-flash",
                   "cid": "C01"
                 }
               ]
             },
             {
               "gold": "CONTENT_MISMATCH",
-              "pred": "UNVERIFIABLE",
+              "pred": "EXISTS_CONSISTENT",
               "kind": "fn",
               "count": 1,
               "ids": [
                 {
-                  "aid": "QIDID01-deepseek-v4.1-flash",
-                  "cid": "C09"
+                  "aid": "QVNVI05-deepseek-v4.1-flash",
+                  "cid": "C02"
                 }
               ]
             }
@@ -1186,23 +1197,23 @@
         },
         "test": {
           "n_rows": 246,
-          "extraction_recall": 0.9308943089430894,
+          "extraction_recall": 0.943089430894309,
           "detection": {
             "n_verifiable": 165,
             "n_positive": 115,
-            "tp": 39,
-            "fp": 0,
-            "fn": 76,
-            "precision": 1,
-            "recall": 0.3391304347826087,
-            "f1": 0.5064935064935064,
+            "tp": 43,
+            "fp": 1,
+            "fn": 72,
+            "precision": 0.9772727272727273,
+            "recall": 0.3739130434782609,
+            "f1": 0.5408805031446541,
             "precision_ci95": [
-              0.9103301463997611,
-              1
+              0.8819202086846235,
+              0.9959768516143629
             ],
             "recall_ci95": [
-              0.2590555325896545,
-              0.4296056769531317
+              0.29090239459918776,
+              0.46507531017759063
             ]
           },
           "by_country": [
@@ -1210,10 +1221,10 @@
               "key": "ID",
               "n": 52,
               "n_verifiable": 19,
-              "tp": 0,
-              "fp": 0,
-              "fn": 11,
-              "recall": 0
+              "tp": 2,
+              "fp": 1,
+              "fn": 9,
+              "recall": 0.18181818181818182
             },
             {
               "key": "TH",
@@ -1228,10 +1239,10 @@
               "key": "VN",
               "n": 94,
               "n_verifiable": 78,
-              "tp": 39,
+              "tp": 41,
               "fp": 0,
-              "fn": 22,
-              "recall": 0.639344262295082
+              "fn": 20,
+              "recall": 0.6721311475409836
             }
           ],
           "by_lang": [
@@ -1239,10 +1250,10 @@
               "key": "local",
               "n": 149,
               "n_verifiable": 105,
-              "tp": 39,
-              "fp": 0,
-              "fn": 41,
-              "recall": 0.4875
+              "tp": 43,
+              "fp": 1,
+              "fn": 37,
+              "recall": 0.5375
             },
             {
               "key": "zh",
@@ -1270,20 +1281,20 @@
             {
               "h_type": "H4",
               "n": 9,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.1111111111111111
             },
             {
               "h_type": "H5",
               "n": 41,
-              "caught": 38,
-              "recall": 0.926829268292683
+              "caught": 40,
+              "recall": 0.975609756097561
             },
             {
               "h_type": "H6",
               "n": 5,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.2
             },
             {
               "h_type": "H7",
@@ -1295,15 +1306,17 @@
           "confusion": {
             "EXISTS_CONSISTENT": {
               "EXISTS_UNQUOTED": 47,
-              "MISSED": 3
+              "CONTENT_MISMATCH": 1,
+              "MISSED": 2
             },
             "CONTENT_MISMATCH": {
-              "EXISTS_UNQUOTED": 67,
-              "MISSED": 6
+              "EXISTS_UNQUOTED": 65,
+              "MISSED": 6,
+              "CONTENT_MISMATCH": 2
             },
             "NOT_IN_FORCE": {
-              "NOT_IN_FORCE": 38,
-              "MISSED": 3
+              "NOT_IN_FORCE": 40,
+              "MISSED": 1
             },
             "UNVERIFIABLE": {
               "EXISTS_UNQUOTED": 1,
@@ -1319,7 +1332,7 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "EXISTS_UNQUOTED",
               "kind": "fn",
-              "count": 67,
+              "count": 65,
               "ids": [
                 {
                   "aid": "QVNVI01-deepseek-v4.1-flash",
@@ -1396,19 +1409,23 @@
               ]
             },
             {
+              "gold": "EXISTS_CONSISTENT",
+              "pred": "CONTENT_MISMATCH",
+              "kind": "fp",
+              "count": 1,
+              "ids": [
+                {
+                  "aid": "QIDID02-glm-5.3-flash",
+                  "cid": "C01"
+                }
+              ]
+            },
+            {
               "gold": "NOT_IN_FORCE",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 3,
+              "count": 1,
               "ids": [
-                {
-                  "aid": "QVNVI02-qwen3.8-flash",
-                  "cid": "C12"
-                },
-                {
-                  "aid": "QVNVI02-qwen3.8-flash",
-                  "cid": "C13"
-                },
                 {
                   "aid": "QVNZH05-glm-5.3-flash",
                   "cid": "C04"
@@ -1419,23 +1436,23 @@
         },
         "all": {
           "n_rows": 809,
-          "extraction_recall": 0.8479604449938195,
+          "extraction_recall": 0.8899876390605687,
           "detection": {
             "n_verifiable": 529,
             "n_positive": 401,
-            "tp": 138,
-            "fp": 1,
-            "fn": 263,
-            "precision": 0.9928057553956835,
-            "recall": 0.34413965087281795,
-            "f1": 0.5111111111111111,
+            "tp": 156,
+            "fp": 5,
+            "fn": 245,
+            "precision": 0.968944099378882,
+            "recall": 0.38902743142144636,
+            "f1": 0.5551601423487544,
             "precision_ci95": [
-              0.9603754095443335,
-              0.9987289410090068
+              0.929367415370867,
+              0.9866634894492757
             ],
             "recall_ci95": [
-              0.2993157303263502,
-              0.39192153382832157
+              0.34257744742304613,
+              0.43758348465508007
             ]
           },
           "by_country": [
@@ -1443,28 +1460,28 @@
               "key": "ID",
               "n": 280,
               "n_verifiable": 138,
-              "tp": 2,
-              "fp": 1,
-              "fn": 89,
-              "recall": 0.02197802197802198
+              "tp": 11,
+              "fp": 2,
+              "fn": 80,
+              "recall": 0.12087912087912088
             },
             {
               "key": "TH",
               "n": 209,
               "n_verifiable": 135,
-              "tp": 1,
-              "fp": 0,
-              "fn": 87,
-              "recall": 0.011363636363636364
+              "tp": 5,
+              "fp": 2,
+              "fn": 83,
+              "recall": 0.056818181818181816
             },
             {
               "key": "VN",
               "n": 320,
               "n_verifiable": 256,
-              "tp": 135,
-              "fp": 0,
-              "fn": 87,
-              "recall": 0.6081081081081081
+              "tp": 140,
+              "fp": 1,
+              "fn": 82,
+              "recall": 0.6306306306306306
             }
           ],
           "by_lang": [
@@ -1472,19 +1489,19 @@
               "key": "local",
               "n": 387,
               "n_verifiable": 270,
-              "tp": 76,
-              "fp": 1,
-              "fn": 132,
-              "recall": 0.36538461538461536
+              "tp": 91,
+              "fp": 5,
+              "fn": 117,
+              "recall": 0.4375
             },
             {
               "key": "zh",
               "n": 422,
               "n_verifiable": 259,
-              "tp": 62,
+              "tp": 65,
               "fp": 0,
-              "fn": 131,
-              "recall": 0.32124352331606215
+              "fn": 128,
+              "recall": 0.33678756476683935
             }
           ],
           "by_h_type": [
@@ -1497,56 +1514,55 @@
             {
               "h_type": "H3",
               "n": 207,
-              "caught": 2,
-              "recall": 0.00966183574879227
+              "caught": 10,
+              "recall": 0.04830917874396135
             },
             {
               "h_type": "H4",
               "n": 18,
-              "caught": 0,
-              "recall": 0
+              "caught": 4,
+              "recall": 0.2222222222222222
             },
             {
               "h_type": "H5",
               "n": 148,
-              "caught": 132,
-              "recall": 0.8918918918918919
+              "caught": 136,
+              "recall": 0.918918918918919
             },
             {
               "h_type": "H6",
               "n": 9,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.1111111111111111
             },
             {
               "h_type": "H7",
               "n": 15,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.06666666666666667
             }
           ],
           "confusion": {
             "NOT_IN_FORCE": {
-              "NOT_IN_FORCE": 132,
-              "MISSED": 16
+              "NOT_IN_FORCE": 136,
+              "MISSED": 12
             },
             "CONTENT_MISMATCH": {
-              "EXISTS_UNQUOTED": 208,
-              "MISSED": 37,
-              "UNVERIFIABLE": 1,
-              "EXISTS_CONSISTENT": 1,
-              "CONTENT_MISMATCH": 2
+              "EXISTS_UNQUOTED": 207,
+              "MISSED": 25,
+              "CONTENT_MISMATCH": 16,
+              "EXISTS_CONSISTENT": 1
             },
             "EXISTS_CONSISTENT": {
-              "EXISTS_UNQUOTED": 110,
-              "CONTENT_MISMATCH": 1,
-              "MISSED": 16,
+              "EXISTS_UNQUOTED": 114,
+              "CONTENT_MISMATCH": 5,
+              "MISSED": 8,
               "UNVERIFIABLE": 1
             },
             "UNVERIFIABLE": {
-              "MISSED": 54,
+              "UNVERIFIABLE": 235,
               "EXISTS_UNQUOTED": 1,
-              "UNVERIFIABLE": 225
+              "MISSED": 44
             },
             "ARTICLE_NOT_FOUND": {
               "ARTICLE_NOT_FOUND": 4
@@ -1557,7 +1573,7 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "EXISTS_UNQUOTED",
               "kind": "fn",
-              "count": 208,
+              "count": 207,
               "ids": [
                 {
                   "aid": "QVNZH01-mimo-v2.6-flash",
@@ -1605,35 +1621,11 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 37,
+              "count": 25,
               "ids": [
                 {
                   "aid": "QVNVI01-glm-5.3-flash",
                   "cid": "C10"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C05"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C06"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C07"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C09"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C11"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C12"
                 },
                 {
                   "aid": "QIDID01-qwen3.8-flash",
@@ -1646,6 +1638,30 @@
                 {
                   "aid": "QIDZH02-qwen3.8-flash",
                   "cid": "C08"
+                },
+                {
+                  "aid": "QIDID02-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C08"
+                },
+                {
+                  "aid": "QVNZH04-glm-5.3-flash",
+                  "cid": "C10"
+                },
+                {
+                  "aid": "QVNZH04-glm-5.3-flash",
+                  "cid": "C11"
                 }
               ]
             },
@@ -1653,7 +1669,7 @@
               "gold": "NOT_IN_FORCE",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 16,
+              "count": 12,
               "ids": [
                 {
                   "aid": "QVNZH01-deepseek-v4.1-flash",
@@ -1666,14 +1682,6 @@
                 {
                   "aid": "QVNZH01-deepseek-v4.1-flash",
                   "cid": "C04"
-                },
-                {
-                  "aid": "QVNVI02-qwen3.8-flash",
-                  "cid": "C12"
-                },
-                {
-                  "aid": "QVNVI02-qwen3.8-flash",
-                  "cid": "C13"
                 },
                 {
                   "aid": "QVNVI04-glm-5.3-flash",
@@ -1694,6 +1702,14 @@
                 {
                   "aid": "QVNZH05-glm-5.3-flash",
                   "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI06-glm-5.3-flash",
+                  "cid": "C08"
+                },
+                {
+                  "aid": "QVNVI06-glm-5.3-flash",
+                  "cid": "C09"
                 }
               ]
             },
@@ -1701,23 +1717,39 @@
               "gold": "EXISTS_CONSISTENT",
               "pred": "CONTENT_MISMATCH",
               "kind": "fp",
-              "count": 1,
+              "count": 5,
               "ids": [
                 {
                   "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID02-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QTHTH03-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QTHTH03-glm-5.3-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI04-qwen3.8-flash",
                   "cid": "C01"
                 }
               ]
             },
             {
               "gold": "CONTENT_MISMATCH",
-              "pred": "UNVERIFIABLE",
+              "pred": "EXISTS_CONSISTENT",
               "kind": "fn",
               "count": 1,
               "ids": [
                 {
-                  "aid": "QIDID01-deepseek-v4.1-flash",
-                  "cid": "C09"
+                  "aid": "QVNVI05-deepseek-v4.1-flash",
+                  "cid": "C02"
                 }
               ]
             }
@@ -1735,23 +1767,23 @@
       "splits": {
         "dev": {
           "n_rows": 563,
-          "extraction_recall": 0.8117229129662522,
+          "extraction_recall": 0.866785079928952,
           "detection": {
             "n_verifiable": 364,
             "n_positive": 286,
-            "tp": 157,
-            "fp": 7,
-            "fn": 129,
-            "precision": 0.9573170731707317,
-            "recall": 0.548951048951049,
-            "f1": 0.6977777777777778,
+            "tp": 166,
+            "fp": 9,
+            "fn": 120,
+            "precision": 0.9485714285714286,
+            "recall": 0.5804195804195804,
+            "f1": 0.7201735357917571,
             "precision_ci95": [
-              0.914526508318689,
-              0.9791732657540081
+              0.9051610787757354,
+              0.9727107362829535
             ],
             "recall_ci95": [
-              0.4910117979800365,
-              0.6055926921966668
+              0.5225298241235758,
+              0.636177552595294
             ]
           },
           "by_country": [
@@ -1759,28 +1791,28 @@
               "key": "ID",
               "n": 228,
               "n_verifiable": 119,
-              "tp": 41,
+              "tp": 44,
               "fp": 5,
-              "fn": 39,
-              "recall": 0.5125
+              "fn": 36,
+              "recall": 0.55
             },
             {
               "key": "TH",
               "n": 109,
               "n_verifiable": 67,
-              "tp": 8,
-              "fp": 0,
-              "fn": 37,
-              "recall": 0.17777777777777778
+              "tp": 12,
+              "fp": 2,
+              "fn": 33,
+              "recall": 0.26666666666666666
             },
             {
               "key": "VN",
               "n": 226,
               "n_verifiable": 178,
-              "tp": 108,
+              "tp": 110,
               "fp": 2,
-              "fn": 53,
-              "recall": 0.6708074534161491
+              "fn": 51,
+              "recall": 0.6832298136645962
             }
           ],
           "by_lang": [
@@ -1788,19 +1820,19 @@
               "key": "local",
               "n": 238,
               "n_verifiable": 165,
-              "tp": 86,
-              "fp": 7,
-              "fn": 42,
-              "recall": 0.671875
+              "tp": 92,
+              "fp": 9,
+              "fn": 36,
+              "recall": 0.71875
             },
             {
               "key": "zh",
               "n": 325,
               "n_verifiable": 199,
-              "tp": 71,
+              "tp": 74,
               "fp": 0,
-              "fn": 87,
-              "recall": 0.44936708860759494
+              "fn": 84,
+              "recall": 0.46835443037974683
             }
           ],
           "by_h_type": [
@@ -1813,20 +1845,20 @@
             {
               "h_type": "H3",
               "n": 155,
-              "caught": 58,
-              "recall": 0.3741935483870968
+              "caught": 61,
+              "recall": 0.3935483870967742
             },
             {
               "h_type": "H4",
               "n": 9,
-              "caught": 0,
-              "recall": 0
+              "caught": 3,
+              "recall": 0.3333333333333333
             },
             {
               "h_type": "H5",
               "n": 107,
-              "caught": 94,
-              "recall": 0.8785046728971962
+              "caught": 96,
+              "recall": 0.897196261682243
             },
             {
               "h_type": "H6",
@@ -1837,31 +1869,30 @@
             {
               "h_type": "H7",
               "n": 8,
-              "caught": 2,
-              "recall": 0.25
+              "caught": 3,
+              "recall": 0.375
             }
           ],
           "confusion": {
             "NOT_IN_FORCE": {
-              "NOT_IN_FORCE": 94,
-              "MISSED": 13
+              "NOT_IN_FORCE": 96,
+              "MISSED": 11
             },
             "CONTENT_MISMATCH": {
-              "EXISTS_UNQUOTED": 83,
-              "CONTENT_MISMATCH": 60,
-              "MISSED": 31,
-              "UNVERIFIABLE": 1,
+              "EXISTS_UNQUOTED": 89,
+              "CONTENT_MISMATCH": 67,
+              "MISSED": 19,
               "EXISTS_CONSISTENT": 1
             },
             "EXISTS_CONSISTENT": {
-              "EXISTS_UNQUOTED": 57,
-              "CONTENT_MISMATCH": 7,
-              "MISSED": 13,
+              "EXISTS_UNQUOTED": 62,
+              "CONTENT_MISMATCH": 9,
+              "MISSED": 6,
               "UNVERIFIABLE": 1
             },
             "UNVERIFIABLE": {
-              "MISSED": 49,
-              "UNVERIFIABLE": 150
+              "UNVERIFIABLE": 160,
+              "MISSED": 39
             },
             "ARTICLE_NOT_FOUND": {
               "ARTICLE_NOT_FOUND": 3
@@ -1872,7 +1903,7 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "EXISTS_UNQUOTED",
               "kind": "fn",
-              "count": 83,
+              "count": 89,
               "ids": [
                 {
                   "aid": "QVNZH01-mimo-v2.6-flash",
@@ -1911,8 +1942,8 @@
                   "cid": "C04"
                 },
                 {
-                  "aid": "QIDID01-deepseek-v4.1-flash",
-                  "cid": "C02"
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C05"
                 }
               ]
             },
@@ -1920,32 +1951,8 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 31,
+              "count": 19,
               "ids": [
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C05"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C06"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C07"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C09"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C11"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C12"
-                },
                 {
                   "aid": "QIDID01-qwen3.8-flash",
                   "cid": "C11"
@@ -1955,12 +1962,36 @@
                   "cid": "C08"
                 },
                 {
-                  "aid": "QTHZH03-glm-5.3-flash",
-                  "cid": "C03"
+                  "aid": "QVNZH04-glm-5.3-flash",
+                  "cid": "C10"
                 },
                 {
-                  "aid": "QTHZH03-qwen3.8-flash",
-                  "cid": "C03"
+                  "aid": "QVNZH04-glm-5.3-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QIDZH05-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C06"
                 }
               ]
             },
@@ -1968,7 +1999,7 @@
               "gold": "NOT_IN_FORCE",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 13,
+              "count": 11,
               "ids": [
                 {
                   "aid": "QVNZH01-deepseek-v4.1-flash",
@@ -1999,16 +2030,16 @@
                   "cid": "C04"
                 },
                 {
-                  "aid": "QVNZH06-deepseek-v4.1-flash",
-                  "cid": "C09"
-                },
-                {
-                  "aid": "QVNZH06-qwen3.8-flash",
-                  "cid": "C07"
+                  "aid": "QVNVI06-glm-5.3-flash",
+                  "cid": "C08"
                 },
                 {
                   "aid": "QVNVI06-glm-5.3-flash",
-                  "cid": "C08"
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QVNVI06-glm-5.3-flash",
+                  "cid": "C10"
                 }
               ]
             },
@@ -2016,7 +2047,7 @@
               "gold": "EXISTS_CONSISTENT",
               "pred": "CONTENT_MISMATCH",
               "kind": "fp",
-              "count": 7,
+              "count": 9,
               "ids": [
                 {
                   "aid": "QIDID01-deepseek-v4.1-flash",
@@ -2029,6 +2060,14 @@
                 {
                   "aid": "QIDID01-qwen3.8-flash",
                   "cid": "C02"
+                },
+                {
+                  "aid": "QTHTH03-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QTHTH03-glm-5.3-flash",
+                  "cid": "C03"
                 },
                 {
                   "aid": "QVNVI04-qwen3.8-flash",
@@ -2050,13 +2089,13 @@
             },
             {
               "gold": "CONTENT_MISMATCH",
-              "pred": "UNVERIFIABLE",
+              "pred": "EXISTS_CONSISTENT",
               "kind": "fn",
               "count": 1,
               "ids": [
                 {
-                  "aid": "QIDID01-deepseek-v4.1-flash",
-                  "cid": "C09"
+                  "aid": "QVNVI05-deepseek-v4.1-flash",
+                  "cid": "C02"
                 }
               ]
             }
@@ -2064,23 +2103,23 @@
         },
         "test": {
           "n_rows": 246,
-          "extraction_recall": 0.9308943089430894,
+          "extraction_recall": 0.943089430894309,
           "detection": {
             "n_verifiable": 165,
             "n_positive": 115,
-            "tp": 51,
-            "fp": 7,
-            "fn": 64,
-            "precision": 0.8793103448275862,
-            "recall": 0.4434782608695652,
-            "f1": 0.5895953757225434,
+            "tp": 58,
+            "fp": 8,
+            "fn": 57,
+            "precision": 0.8787878787878788,
+            "recall": 0.5043478260869565,
+            "f1": 0.6408839779005525,
             "precision_ci95": [
-              0.7712040772176841,
-              0.9402910975514033
+              0.7786234136612515,
+              0.9372822929663172
             ],
             "recall_ci95": [
-              0.35596659131789876,
-              0.5346441039268639
+              0.4143142670969196,
+              0.5941002948073295
             ]
           },
           "by_country": [
@@ -2088,28 +2127,28 @@
               "key": "ID",
               "n": 52,
               "n_verifiable": 19,
-              "tp": 0,
-              "fp": 2,
-              "fn": 11,
-              "recall": 0
+              "tp": 2,
+              "fp": 3,
+              "fn": 9,
+              "recall": 0.18181818181818182
             },
             {
               "key": "TH",
               "n": 100,
               "n_verifiable": 68,
-              "tp": 8,
+              "tp": 11,
               "fp": 0,
-              "fn": 35,
-              "recall": 0.18604651162790697
+              "fn": 32,
+              "recall": 0.2558139534883721
             },
             {
               "key": "VN",
               "n": 94,
               "n_verifiable": 78,
-              "tp": 43,
+              "tp": 45,
               "fp": 5,
-              "fn": 18,
-              "recall": 0.7049180327868853
+              "fn": 16,
+              "recall": 0.7377049180327869
             }
           ],
           "by_lang": [
@@ -2117,19 +2156,19 @@
               "key": "local",
               "n": 149,
               "n_verifiable": 105,
-              "tp": 49,
-              "fp": 6,
-              "fn": 31,
-              "recall": 0.6125
+              "tp": 53,
+              "fp": 7,
+              "fn": 27,
+              "recall": 0.6625
             },
             {
               "key": "zh",
               "n": 97,
               "n_verifiable": 60,
-              "tp": 2,
+              "tp": 5,
               "fp": 1,
-              "fn": 33,
-              "recall": 0.05714285714285714
+              "fn": 30,
+              "recall": 0.14285714285714285
             }
           ],
           "by_h_type": [
@@ -2142,48 +2181,48 @@
             {
               "h_type": "H3",
               "n": 52,
-              "caught": 11,
-              "recall": 0.21153846153846154
+              "caught": 13,
+              "recall": 0.25
             },
             {
               "h_type": "H4",
               "n": 9,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.1111111111111111
             },
             {
               "h_type": "H5",
               "n": 41,
-              "caught": 38,
-              "recall": 0.926829268292683
+              "caught": 40,
+              "recall": 0.975609756097561
             },
             {
               "h_type": "H6",
               "n": 5,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.2
             },
             {
               "h_type": "H7",
               "n": 7,
-              "caught": 1,
-              "recall": 0.14285714285714285
+              "caught": 2,
+              "recall": 0.2857142857142857
             }
           ],
           "confusion": {
             "EXISTS_CONSISTENT": {
-              "CONTENT_MISMATCH": 7,
+              "CONTENT_MISMATCH": 8,
               "EXISTS_UNQUOTED": 40,
-              "MISSED": 3
+              "MISSED": 2
             },
             "CONTENT_MISMATCH": {
-              "CONTENT_MISMATCH": 12,
-              "EXISTS_UNQUOTED": 55,
+              "CONTENT_MISMATCH": 17,
+              "EXISTS_UNQUOTED": 50,
               "MISSED": 6
             },
             "NOT_IN_FORCE": {
-              "NOT_IN_FORCE": 38,
-              "MISSED": 3
+              "NOT_IN_FORCE": 40,
+              "MISSED": 1
             },
             "UNVERIFIABLE": {
               "EXISTS_UNQUOTED": 1,
@@ -2199,7 +2238,7 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "EXISTS_UNQUOTED",
               "kind": "fn",
-              "count": 55,
+              "count": 50,
               "ids": [
                 {
                   "aid": "QVNVI01-glm-5.3-flash",
@@ -2247,7 +2286,7 @@
               "gold": "EXISTS_CONSISTENT",
               "pred": "CONTENT_MISMATCH",
               "kind": "fp",
-              "count": 7,
+              "count": 8,
               "ids": [
                 {
                   "aid": "QVNVI01-deepseek-v4.1-flash",
@@ -2268,6 +2307,10 @@
                 {
                   "aid": "QVNVI01-qwen3.8-flash",
                   "cid": "C06"
+                },
+                {
+                  "aid": "QIDID02-glm-5.3-flash",
+                  "cid": "C01"
                 },
                 {
                   "aid": "QIDID02-mimo-v2.6-flash",
@@ -2315,16 +2358,8 @@
               "gold": "NOT_IN_FORCE",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 3,
+              "count": 1,
               "ids": [
-                {
-                  "aid": "QVNVI02-qwen3.8-flash",
-                  "cid": "C12"
-                },
-                {
-                  "aid": "QVNVI02-qwen3.8-flash",
-                  "cid": "C13"
-                },
                 {
                   "aid": "QVNZH05-glm-5.3-flash",
                   "cid": "C04"
@@ -2335,23 +2370,23 @@
         },
         "all": {
           "n_rows": 809,
-          "extraction_recall": 0.8479604449938195,
+          "extraction_recall": 0.8899876390605687,
           "detection": {
             "n_verifiable": 529,
             "n_positive": 401,
-            "tp": 208,
-            "fp": 14,
-            "fn": 193,
-            "precision": 0.9369369369369369,
-            "recall": 0.5187032418952618,
-            "f1": 0.6677367576243981,
+            "tp": 224,
+            "fp": 17,
+            "fn": 177,
+            "precision": 0.9294605809128631,
+            "recall": 0.5586034912718204,
+            "f1": 0.6978193146417444,
             "precision_ci95": [
-              0.8969422664995648,
-              0.9620668797339014
+              0.8899487085394062,
+              0.9554958564364802
             ],
             "recall_ci95": [
-              0.46985341120565,
-              0.5671981170957894
+              0.5096737871332131,
+              0.6064210015446303
             ]
           },
           "by_country": [
@@ -2359,28 +2394,28 @@
               "key": "ID",
               "n": 280,
               "n_verifiable": 138,
-              "tp": 41,
-              "fp": 7,
-              "fn": 50,
-              "recall": 0.45054945054945056
+              "tp": 46,
+              "fp": 8,
+              "fn": 45,
+              "recall": 0.5054945054945055
             },
             {
               "key": "TH",
               "n": 209,
               "n_verifiable": 135,
-              "tp": 16,
-              "fp": 0,
-              "fn": 72,
-              "recall": 0.18181818181818182
+              "tp": 23,
+              "fp": 2,
+              "fn": 65,
+              "recall": 0.26136363636363635
             },
             {
               "key": "VN",
               "n": 320,
               "n_verifiable": 256,
-              "tp": 151,
+              "tp": 155,
               "fp": 7,
-              "fn": 71,
-              "recall": 0.6801801801801802
+              "fn": 67,
+              "recall": 0.6981981981981982
             }
           ],
           "by_lang": [
@@ -2388,19 +2423,19 @@
               "key": "local",
               "n": 387,
               "n_verifiable": 270,
-              "tp": 135,
-              "fp": 13,
-              "fn": 73,
-              "recall": 0.6490384615384616
+              "tp": 145,
+              "fp": 16,
+              "fn": 63,
+              "recall": 0.6971153846153846
             },
             {
               "key": "zh",
               "n": 422,
               "n_verifiable": 259,
-              "tp": 73,
+              "tp": 79,
               "fp": 1,
-              "fn": 120,
-              "recall": 0.37823834196891193
+              "fn": 114,
+              "recall": 0.40932642487046633
             }
           ],
           "by_h_type": [
@@ -2413,56 +2448,55 @@
             {
               "h_type": "H3",
               "n": 207,
-              "caught": 69,
-              "recall": 0.3333333333333333
+              "caught": 74,
+              "recall": 0.357487922705314
             },
             {
               "h_type": "H4",
               "n": 18,
-              "caught": 0,
-              "recall": 0
+              "caught": 4,
+              "recall": 0.2222222222222222
             },
             {
               "h_type": "H5",
               "n": 148,
-              "caught": 132,
-              "recall": 0.8918918918918919
+              "caught": 136,
+              "recall": 0.918918918918919
             },
             {
               "h_type": "H6",
               "n": 9,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.1111111111111111
             },
             {
               "h_type": "H7",
               "n": 15,
-              "caught": 3,
-              "recall": 0.2
+              "caught": 5,
+              "recall": 0.3333333333333333
             }
           ],
           "confusion": {
             "NOT_IN_FORCE": {
-              "NOT_IN_FORCE": 132,
-              "MISSED": 16
+              "NOT_IN_FORCE": 136,
+              "MISSED": 12
             },
             "CONTENT_MISMATCH": {
-              "EXISTS_UNQUOTED": 138,
-              "CONTENT_MISMATCH": 72,
-              "MISSED": 37,
-              "UNVERIFIABLE": 1,
+              "EXISTS_UNQUOTED": 139,
+              "CONTENT_MISMATCH": 84,
+              "MISSED": 25,
               "EXISTS_CONSISTENT": 1
             },
             "EXISTS_CONSISTENT": {
-              "CONTENT_MISMATCH": 14,
-              "EXISTS_UNQUOTED": 97,
-              "MISSED": 16,
+              "CONTENT_MISMATCH": 17,
+              "EXISTS_UNQUOTED": 102,
+              "MISSED": 8,
               "UNVERIFIABLE": 1
             },
             "UNVERIFIABLE": {
-              "MISSED": 54,
+              "UNVERIFIABLE": 235,
               "EXISTS_UNQUOTED": 1,
-              "UNVERIFIABLE": 225
+              "MISSED": 44
             },
             "ARTICLE_NOT_FOUND": {
               "ARTICLE_NOT_FOUND": 4
@@ -2473,7 +2507,7 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "EXISTS_UNQUOTED",
               "kind": "fn",
-              "count": 138,
+              "count": 139,
               "ids": [
                 {
                   "aid": "QVNZH01-mimo-v2.6-flash",
@@ -2521,35 +2555,11 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 37,
+              "count": 25,
               "ids": [
                 {
                   "aid": "QVNVI01-glm-5.3-flash",
                   "cid": "C10"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C05"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C06"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C07"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C09"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C11"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C12"
                 },
                 {
                   "aid": "QIDID01-qwen3.8-flash",
@@ -2562,6 +2572,78 @@
                 {
                   "aid": "QIDZH02-qwen3.8-flash",
                   "cid": "C08"
+                },
+                {
+                  "aid": "QIDID02-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C08"
+                },
+                {
+                  "aid": "QVNZH04-glm-5.3-flash",
+                  "cid": "C10"
+                },
+                {
+                  "aid": "QVNZH04-glm-5.3-flash",
+                  "cid": "C11"
+                }
+              ]
+            },
+            {
+              "gold": "EXISTS_CONSISTENT",
+              "pred": "CONTENT_MISMATCH",
+              "kind": "fp",
+              "count": 17,
+              "ids": [
+                {
+                  "aid": "QVNVI01-deepseek-v4.1-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNVI01-deepseek-v4.1-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-deepseek-v4.1-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDID02-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID02-mimo-v2.6-flash",
+                  "cid": "C01"
                 }
               ]
             },
@@ -2569,7 +2651,7 @@
               "gold": "NOT_IN_FORCE",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 16,
+              "count": 12,
               "ids": [
                 {
                   "aid": "QVNZH01-deepseek-v4.1-flash",
@@ -2582,14 +2664,6 @@
                 {
                   "aid": "QVNZH01-deepseek-v4.1-flash",
                   "cid": "C04"
-                },
-                {
-                  "aid": "QVNVI02-qwen3.8-flash",
-                  "cid": "C12"
-                },
-                {
-                  "aid": "QVNVI02-qwen3.8-flash",
-                  "cid": "C13"
                 },
                 {
                   "aid": "QVNVI04-glm-5.3-flash",
@@ -2610,66 +2684,26 @@
                 {
                   "aid": "QVNZH05-glm-5.3-flash",
                   "cid": "C04"
-                }
-              ]
-            },
-            {
-              "gold": "EXISTS_CONSISTENT",
-              "pred": "CONTENT_MISMATCH",
-              "kind": "fp",
-              "count": 14,
-              "ids": [
-                {
-                  "aid": "QVNVI01-deepseek-v4.1-flash",
-                  "cid": "C01"
                 },
                 {
-                  "aid": "QVNVI01-deepseek-v4.1-flash",
-                  "cid": "C02"
+                  "aid": "QVNVI06-glm-5.3-flash",
+                  "cid": "C08"
                 },
                 {
-                  "aid": "QVNVI01-deepseek-v4.1-flash",
-                  "cid": "C03"
-                },
-                {
-                  "aid": "QVNVI01-mimo-v2.6-flash",
-                  "cid": "C06"
-                },
-                {
-                  "aid": "QVNVI01-qwen3.8-flash",
-                  "cid": "C06"
-                },
-                {
-                  "aid": "QIDID01-deepseek-v4.1-flash",
-                  "cid": "C01"
-                },
-                {
-                  "aid": "QIDID01-qwen3.8-flash",
-                  "cid": "C01"
-                },
-                {
-                  "aid": "QIDID01-qwen3.8-flash",
-                  "cid": "C02"
-                },
-                {
-                  "aid": "QIDID02-mimo-v2.6-flash",
-                  "cid": "C01"
-                },
-                {
-                  "aid": "QIDZH03-mimo-v2.6-flash",
-                  "cid": "C04"
+                  "aid": "QVNVI06-glm-5.3-flash",
+                  "cid": "C09"
                 }
               ]
             },
             {
               "gold": "CONTENT_MISMATCH",
-              "pred": "UNVERIFIABLE",
+              "pred": "EXISTS_CONSISTENT",
               "kind": "fn",
               "count": 1,
               "ids": [
                 {
-                  "aid": "QIDID01-deepseek-v4.1-flash",
-                  "cid": "C09"
+                  "aid": "QVNVI05-deepseek-v4.1-flash",
+                  "cid": "C02"
                 }
               ]
             }
@@ -2687,23 +2721,23 @@
       "splits": {
         "dev": {
           "n_rows": 563,
-          "extraction_recall": 0.8117229129662522,
+          "extraction_recall": 0.866785079928952,
           "detection": {
             "n_verifiable": 364,
             "n_positive": 286,
-            "tp": 147,
-            "fp": 6,
-            "fn": 139,
-            "precision": 0.9607843137254902,
-            "recall": 0.513986013986014,
-            "f1": 0.6697038724373576,
+            "tp": 156,
+            "fp": 8,
+            "fn": 130,
+            "precision": 0.9512195121951219,
+            "recall": 0.5454545454545454,
+            "f1": 0.6933333333333334,
             "precision_ci95": [
-              0.917090678842982,
-              0.9819055058427137
+              0.9067056887374152,
+              0.975078088347646
             ],
             "recall_ci95": [
-              0.45625956262130885,
-              0.5713417202863207
+              0.48752397300498035,
+              0.6021801964448156
             ]
           },
           "by_country": [
@@ -2711,28 +2745,28 @@
               "key": "ID",
               "n": 228,
               "n_verifiable": 119,
-              "tp": 38,
+              "tp": 41,
               "fp": 5,
-              "fn": 42,
-              "recall": 0.475
+              "fn": 39,
+              "recall": 0.5125
             },
             {
               "key": "TH",
               "n": 109,
               "n_verifiable": 67,
-              "tp": 4,
-              "fp": 0,
-              "fn": 41,
-              "recall": 0.08888888888888889
+              "tp": 8,
+              "fp": 2,
+              "fn": 37,
+              "recall": 0.17777777777777778
             },
             {
               "key": "VN",
               "n": 226,
               "n_verifiable": 178,
-              "tp": 105,
+              "tp": 107,
               "fp": 1,
-              "fn": 56,
-              "recall": 0.6521739130434783
+              "fn": 54,
+              "recall": 0.6645962732919255
             }
           ],
           "by_lang": [
@@ -2740,19 +2774,19 @@
               "key": "local",
               "n": 238,
               "n_verifiable": 165,
-              "tp": 85,
-              "fp": 6,
-              "fn": 43,
-              "recall": 0.6640625
+              "tp": 91,
+              "fp": 8,
+              "fn": 37,
+              "recall": 0.7109375
             },
             {
               "key": "zh",
               "n": 325,
               "n_verifiable": 199,
-              "tp": 62,
+              "tp": 65,
               "fp": 0,
-              "fn": 96,
-              "recall": 0.3924050632911392
+              "fn": 93,
+              "recall": 0.41139240506329117
             }
           ],
           "by_h_type": [
@@ -2765,20 +2799,20 @@
             {
               "h_type": "H3",
               "n": 155,
-              "caught": 50,
-              "recall": 0.3225806451612903
+              "caught": 53,
+              "recall": 0.3419354838709677
             },
             {
               "h_type": "H4",
               "n": 9,
-              "caught": 0,
-              "recall": 0
+              "caught": 3,
+              "recall": 0.3333333333333333
             },
             {
               "h_type": "H5",
               "n": 107,
-              "caught": 94,
-              "recall": 0.8785046728971962
+              "caught": 96,
+              "recall": 0.897196261682243
             },
             {
               "h_type": "H6",
@@ -2789,31 +2823,30 @@
             {
               "h_type": "H7",
               "n": 8,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.125
             }
           ],
           "confusion": {
             "NOT_IN_FORCE": {
-              "NOT_IN_FORCE": 94,
-              "MISSED": 13
+              "NOT_IN_FORCE": 96,
+              "MISSED": 11
             },
             "CONTENT_MISMATCH": {
-              "EXISTS_UNQUOTED": 93,
-              "MISSED": 31,
-              "CONTENT_MISMATCH": 50,
-              "UNVERIFIABLE": 1,
+              "EXISTS_UNQUOTED": 99,
+              "CONTENT_MISMATCH": 57,
+              "MISSED": 19,
               "EXISTS_CONSISTENT": 1
             },
             "EXISTS_CONSISTENT": {
-              "EXISTS_UNQUOTED": 58,
-              "CONTENT_MISMATCH": 6,
-              "MISSED": 13,
+              "EXISTS_UNQUOTED": 63,
+              "CONTENT_MISMATCH": 8,
+              "MISSED": 6,
               "UNVERIFIABLE": 1
             },
             "UNVERIFIABLE": {
-              "MISSED": 49,
-              "UNVERIFIABLE": 150
+              "UNVERIFIABLE": 160,
+              "MISSED": 39
             },
             "ARTICLE_NOT_FOUND": {
               "ARTICLE_NOT_FOUND": 3
@@ -2824,7 +2857,7 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "EXISTS_UNQUOTED",
               "kind": "fn",
-              "count": 93,
+              "count": 99,
               "ids": [
                 {
                   "aid": "QVNZH01-mimo-v2.6-flash",
@@ -2872,32 +2905,8 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 31,
+              "count": 19,
               "ids": [
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C05"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C06"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C07"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C09"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C11"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C12"
-                },
                 {
                   "aid": "QIDID01-qwen3.8-flash",
                   "cid": "C11"
@@ -2907,12 +2916,36 @@
                   "cid": "C08"
                 },
                 {
-                  "aid": "QTHZH03-glm-5.3-flash",
-                  "cid": "C03"
+                  "aid": "QVNZH04-glm-5.3-flash",
+                  "cid": "C10"
                 },
                 {
-                  "aid": "QTHZH03-qwen3.8-flash",
-                  "cid": "C03"
+                  "aid": "QVNZH04-glm-5.3-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QIDZH05-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C06"
                 }
               ]
             },
@@ -2920,7 +2953,7 @@
               "gold": "NOT_IN_FORCE",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 13,
+              "count": 11,
               "ids": [
                 {
                   "aid": "QVNZH01-deepseek-v4.1-flash",
@@ -2951,16 +2984,16 @@
                   "cid": "C04"
                 },
                 {
-                  "aid": "QVNZH06-deepseek-v4.1-flash",
-                  "cid": "C09"
-                },
-                {
-                  "aid": "QVNZH06-qwen3.8-flash",
-                  "cid": "C07"
+                  "aid": "QVNVI06-glm-5.3-flash",
+                  "cid": "C08"
                 },
                 {
                   "aid": "QVNVI06-glm-5.3-flash",
-                  "cid": "C08"
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QVNVI06-glm-5.3-flash",
+                  "cid": "C10"
                 }
               ]
             },
@@ -2968,7 +3001,7 @@
               "gold": "EXISTS_CONSISTENT",
               "pred": "CONTENT_MISMATCH",
               "kind": "fp",
-              "count": 6,
+              "count": 8,
               "ids": [
                 {
                   "aid": "QIDID01-deepseek-v4.1-flash",
@@ -2981,6 +3014,14 @@
                 {
                   "aid": "QIDID01-qwen3.8-flash",
                   "cid": "C02"
+                },
+                {
+                  "aid": "QTHTH03-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QTHTH03-glm-5.3-flash",
+                  "cid": "C03"
                 },
                 {
                   "aid": "QVNVI04-qwen3.8-flash",
@@ -2998,13 +3039,13 @@
             },
             {
               "gold": "CONTENT_MISMATCH",
-              "pred": "UNVERIFIABLE",
+              "pred": "EXISTS_CONSISTENT",
               "kind": "fn",
               "count": 1,
               "ids": [
                 {
-                  "aid": "QIDID01-deepseek-v4.1-flash",
-                  "cid": "C09"
+                  "aid": "QVNVI05-deepseek-v4.1-flash",
+                  "cid": "C02"
                 }
               ]
             }
@@ -3012,23 +3053,23 @@
         },
         "test": {
           "n_rows": 246,
-          "extraction_recall": 0.9308943089430894,
+          "extraction_recall": 0.943089430894309,
           "detection": {
             "n_verifiable": 165,
             "n_positive": 115,
-            "tp": 47,
-            "fp": 2,
-            "fn": 68,
-            "precision": 0.9591836734693877,
-            "recall": 0.40869565217391307,
-            "f1": 0.5731707317073171,
+            "tp": 51,
+            "fp": 3,
+            "fn": 64,
+            "precision": 0.9444444444444444,
+            "recall": 0.4434782608695652,
+            "f1": 0.6035502958579883,
             "precision_ci95": [
-              0.8628671652316889,
-              0.9887346030720717
+              0.8489254853651705,
+              0.980927077496161
             ],
             "recall_ci95": [
-              0.3232130778320873,
-              0.5000811221786833
+              0.35596659131789876,
+              0.5346441039268639
             ]
           },
           "by_country": [
@@ -3036,10 +3077,10 @@
               "key": "ID",
               "n": 52,
               "n_verifiable": 19,
-              "tp": 0,
-              "fp": 1,
-              "fn": 11,
-              "recall": 0
+              "tp": 2,
+              "fp": 2,
+              "fn": 9,
+              "recall": 0.18181818181818182
             },
             {
               "key": "TH",
@@ -3054,10 +3095,10 @@
               "key": "VN",
               "n": 94,
               "n_verifiable": 78,
-              "tp": 40,
+              "tp": 42,
               "fp": 1,
-              "fn": 21,
-              "recall": 0.6557377049180327
+              "fn": 19,
+              "recall": 0.6885245901639344
             }
           ],
           "by_lang": [
@@ -3065,10 +3106,10 @@
               "key": "local",
               "n": 149,
               "n_verifiable": 105,
-              "tp": 47,
-              "fp": 2,
-              "fn": 33,
-              "recall": 0.5875
+              "tp": 51,
+              "fp": 3,
+              "fn": 29,
+              "recall": 0.6375
             },
             {
               "key": "zh",
@@ -3096,20 +3137,20 @@
             {
               "h_type": "H4",
               "n": 9,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.1111111111111111
             },
             {
               "h_type": "H5",
               "n": 41,
-              "caught": 38,
-              "recall": 0.926829268292683
+              "caught": 40,
+              "recall": 0.975609756097561
             },
             {
               "h_type": "H6",
               "n": 5,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.2
             },
             {
               "h_type": "H7",
@@ -3121,17 +3162,17 @@
           "confusion": {
             "EXISTS_CONSISTENT": {
               "EXISTS_UNQUOTED": 45,
-              "CONTENT_MISMATCH": 2,
-              "MISSED": 3
+              "CONTENT_MISMATCH": 3,
+              "MISSED": 2
             },
             "CONTENT_MISMATCH": {
-              "EXISTS_UNQUOTED": 59,
+              "EXISTS_UNQUOTED": 57,
               "MISSED": 6,
-              "CONTENT_MISMATCH": 8
+              "CONTENT_MISMATCH": 10
             },
             "NOT_IN_FORCE": {
-              "NOT_IN_FORCE": 38,
-              "MISSED": 3
+              "NOT_IN_FORCE": 40,
+              "MISSED": 1
             },
             "UNVERIFIABLE": {
               "EXISTS_UNQUOTED": 1,
@@ -3147,7 +3188,7 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "EXISTS_UNQUOTED",
               "kind": "fn",
-              "count": 59,
+              "count": 57,
               "ids": [
                 {
                   "aid": "QVNVI01-deepseek-v4.1-flash",
@@ -3224,38 +3265,34 @@
               ]
             },
             {
-              "gold": "NOT_IN_FORCE",
-              "pred": "MISSED",
-              "kind": "fn",
-              "count": 3,
-              "ids": [
-                {
-                  "aid": "QVNVI02-qwen3.8-flash",
-                  "cid": "C12"
-                },
-                {
-                  "aid": "QVNVI02-qwen3.8-flash",
-                  "cid": "C13"
-                },
-                {
-                  "aid": "QVNZH05-glm-5.3-flash",
-                  "cid": "C04"
-                }
-              ]
-            },
-            {
               "gold": "EXISTS_CONSISTENT",
               "pred": "CONTENT_MISMATCH",
               "kind": "fp",
-              "count": 2,
+              "count": 3,
               "ids": [
                 {
                   "aid": "QVNVI01-qwen3.8-flash",
                   "cid": "C06"
                 },
                 {
+                  "aid": "QIDID02-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
                   "aid": "QIDID02-mimo-v2.6-flash",
                   "cid": "C01"
+                }
+              ]
+            },
+            {
+              "gold": "NOT_IN_FORCE",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 1,
+              "ids": [
+                {
+                  "aid": "QVNZH05-glm-5.3-flash",
+                  "cid": "C04"
                 }
               ]
             }
@@ -3263,23 +3300,23 @@
         },
         "all": {
           "n_rows": 809,
-          "extraction_recall": 0.8479604449938195,
+          "extraction_recall": 0.8899876390605687,
           "detection": {
             "n_verifiable": 529,
             "n_positive": 401,
-            "tp": 194,
-            "fp": 8,
-            "fn": 207,
-            "precision": 0.9603960396039604,
-            "recall": 0.4837905236907731,
-            "f1": 0.6434494195688225,
+            "tp": 207,
+            "fp": 11,
+            "fn": 194,
+            "precision": 0.9495412844036697,
+            "recall": 0.516209476309227,
+            "f1": 0.668820678513732,
             "precision_ci95": [
-              0.9238094270597672,
-              0.9797980070060388
+              0.9119187946680589,
+              0.9715944868805777
             ],
             "recall_ci95": [
-              0.4352635790557951,
-              0.5326250964162906
+              0.46737490358370937,
+              0.564736420944205
             ]
           },
           "by_country": [
@@ -3287,28 +3324,28 @@
               "key": "ID",
               "n": 280,
               "n_verifiable": 138,
-              "tp": 38,
-              "fp": 6,
-              "fn": 53,
-              "recall": 0.4175824175824176
+              "tp": 43,
+              "fp": 7,
+              "fn": 48,
+              "recall": 0.4725274725274725
             },
             {
               "key": "TH",
               "n": 209,
               "n_verifiable": 135,
-              "tp": 11,
-              "fp": 0,
-              "fn": 77,
-              "recall": 0.125
+              "tp": 15,
+              "fp": 2,
+              "fn": 73,
+              "recall": 0.17045454545454544
             },
             {
               "key": "VN",
               "n": 320,
               "n_verifiable": 256,
-              "tp": 145,
+              "tp": 149,
               "fp": 2,
-              "fn": 77,
-              "recall": 0.6531531531531531
+              "fn": 73,
+              "recall": 0.6711711711711712
             }
           ],
           "by_lang": [
@@ -3316,19 +3353,19 @@
               "key": "local",
               "n": 387,
               "n_verifiable": 270,
-              "tp": 132,
-              "fp": 8,
-              "fn": 76,
-              "recall": 0.6346153846153846
+              "tp": 142,
+              "fp": 11,
+              "fn": 66,
+              "recall": 0.6826923076923077
             },
             {
               "key": "zh",
               "n": 422,
               "n_verifiable": 259,
-              "tp": 62,
+              "tp": 65,
               "fp": 0,
-              "fn": 131,
-              "recall": 0.32124352331606215
+              "fn": 128,
+              "recall": 0.33678756476683935
             }
           ],
           "by_h_type": [
@@ -3341,56 +3378,55 @@
             {
               "h_type": "H3",
               "n": 207,
-              "caught": 58,
-              "recall": 0.28019323671497587
+              "caught": 61,
+              "recall": 0.2946859903381642
             },
             {
               "h_type": "H4",
               "n": 18,
-              "caught": 0,
-              "recall": 0
+              "caught": 4,
+              "recall": 0.2222222222222222
             },
             {
               "h_type": "H5",
               "n": 148,
-              "caught": 132,
-              "recall": 0.8918918918918919
+              "caught": 136,
+              "recall": 0.918918918918919
             },
             {
               "h_type": "H6",
               "n": 9,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.1111111111111111
             },
             {
               "h_type": "H7",
               "n": 15,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.06666666666666667
             }
           ],
           "confusion": {
             "NOT_IN_FORCE": {
-              "NOT_IN_FORCE": 132,
-              "MISSED": 16
+              "NOT_IN_FORCE": 136,
+              "MISSED": 12
             },
             "CONTENT_MISMATCH": {
-              "EXISTS_UNQUOTED": 152,
-              "MISSED": 37,
-              "CONTENT_MISMATCH": 58,
-              "UNVERIFIABLE": 1,
+              "EXISTS_UNQUOTED": 156,
+              "MISSED": 25,
+              "CONTENT_MISMATCH": 67,
               "EXISTS_CONSISTENT": 1
             },
             "EXISTS_CONSISTENT": {
-              "EXISTS_UNQUOTED": 103,
-              "CONTENT_MISMATCH": 8,
-              "MISSED": 16,
+              "EXISTS_UNQUOTED": 108,
+              "CONTENT_MISMATCH": 11,
+              "MISSED": 8,
               "UNVERIFIABLE": 1
             },
             "UNVERIFIABLE": {
-              "MISSED": 54,
+              "UNVERIFIABLE": 235,
               "EXISTS_UNQUOTED": 1,
-              "UNVERIFIABLE": 225
+              "MISSED": 44
             },
             "ARTICLE_NOT_FOUND": {
               "ARTICLE_NOT_FOUND": 4
@@ -3401,7 +3437,7 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "EXISTS_UNQUOTED",
               "kind": "fn",
-              "count": 152,
+              "count": 156,
               "ids": [
                 {
                   "aid": "QVNZH01-mimo-v2.6-flash",
@@ -3449,35 +3485,11 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 37,
+              "count": 25,
               "ids": [
                 {
                   "aid": "QVNVI01-glm-5.3-flash",
                   "cid": "C10"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C05"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C06"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C07"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C09"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C11"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C12"
                 },
                 {
                   "aid": "QIDID01-qwen3.8-flash",
@@ -3490,6 +3502,30 @@
                 {
                   "aid": "QIDZH02-qwen3.8-flash",
                   "cid": "C08"
+                },
+                {
+                  "aid": "QIDID02-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C08"
+                },
+                {
+                  "aid": "QVNZH04-glm-5.3-flash",
+                  "cid": "C10"
+                },
+                {
+                  "aid": "QVNZH04-glm-5.3-flash",
+                  "cid": "C11"
                 }
               ]
             },
@@ -3497,7 +3533,7 @@
               "gold": "NOT_IN_FORCE",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 16,
+              "count": 12,
               "ids": [
                 {
                   "aid": "QVNZH01-deepseek-v4.1-flash",
@@ -3510,14 +3546,6 @@
                 {
                   "aid": "QVNZH01-deepseek-v4.1-flash",
                   "cid": "C04"
-                },
-                {
-                  "aid": "QVNVI02-qwen3.8-flash",
-                  "cid": "C12"
-                },
-                {
-                  "aid": "QVNVI02-qwen3.8-flash",
-                  "cid": "C13"
                 },
                 {
                   "aid": "QVNVI04-glm-5.3-flash",
@@ -3538,6 +3566,14 @@
                 {
                   "aid": "QVNZH05-glm-5.3-flash",
                   "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI06-glm-5.3-flash",
+                  "cid": "C08"
+                },
+                {
+                  "aid": "QVNVI06-glm-5.3-flash",
+                  "cid": "C09"
                 }
               ]
             },
@@ -3545,7 +3581,7 @@
               "gold": "EXISTS_CONSISTENT",
               "pred": "CONTENT_MISMATCH",
               "kind": "fp",
-              "count": 8,
+              "count": 11,
               "ids": [
                 {
                   "aid": "QVNVI01-qwen3.8-flash",
@@ -3564,8 +3600,20 @@
                   "cid": "C02"
                 },
                 {
+                  "aid": "QIDID02-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
                   "aid": "QIDID02-mimo-v2.6-flash",
                   "cid": "C01"
+                },
+                {
+                  "aid": "QTHTH03-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QTHTH03-glm-5.3-flash",
+                  "cid": "C03"
                 },
                 {
                   "aid": "QVNVI04-qwen3.8-flash",
@@ -3574,22 +3622,18 @@
                 {
                   "aid": "QIDID05-deepseek-v4.1-flash",
                   "cid": "C01"
-                },
-                {
-                  "aid": "QIDID05-deepseek-v4.1-flash",
-                  "cid": "C02"
                 }
               ]
             },
             {
               "gold": "CONTENT_MISMATCH",
-              "pred": "UNVERIFIABLE",
+              "pred": "EXISTS_CONSISTENT",
               "kind": "fn",
               "count": 1,
               "ids": [
                 {
-                  "aid": "QIDID01-deepseek-v4.1-flash",
-                  "cid": "C09"
+                  "aid": "QVNVI05-deepseek-v4.1-flash",
+                  "cid": "C02"
                 }
               ]
             }
@@ -3604,23 +3648,23 @@
       "splits": {
         "dev": {
           "n_rows": 563,
-          "extraction_recall": 0.8117229129662522,
+          "extraction_recall": 0.866785079928952,
           "detection": {
             "n_verifiable": 364,
             "n_positive": 286,
-            "tp": 156,
-            "fp": 6,
-            "fn": 130,
-            "precision": 0.9629629629629629,
-            "recall": 0.5454545454545454,
-            "f1": 0.6964285714285714,
+            "tp": 165,
+            "fp": 8,
+            "fn": 121,
+            "precision": 0.953757225433526,
+            "recall": 0.5769230769230769,
+            "f1": 0.7189542483660131,
             "precision_ci95": [
-              0.9215602837164159,
-              0.9829172418260295
+              0.9114153082574423,
+              0.97638484736205
             ],
             "recall_ci95": [
-              0.48752397300498035,
-              0.6021801964448156
+              0.5190163883901806,
+              0.6327906676017818
             ]
           },
           "by_country": [
@@ -3628,28 +3672,28 @@
               "key": "ID",
               "n": 228,
               "n_verifiable": 119,
-              "tp": 41,
+              "tp": 44,
               "fp": 5,
-              "fn": 39,
-              "recall": 0.5125
+              "fn": 36,
+              "recall": 0.55
             },
             {
               "key": "TH",
               "n": 109,
               "n_verifiable": 67,
-              "tp": 8,
-              "fp": 0,
-              "fn": 37,
-              "recall": 0.17777777777777778
+              "tp": 12,
+              "fp": 2,
+              "fn": 33,
+              "recall": 0.26666666666666666
             },
             {
               "key": "VN",
               "n": 226,
               "n_verifiable": 178,
-              "tp": 107,
+              "tp": 109,
               "fp": 1,
-              "fn": 54,
-              "recall": 0.6645962732919255
+              "fn": 52,
+              "recall": 0.6770186335403726
             }
           ],
           "by_lang": [
@@ -3657,19 +3701,19 @@
               "key": "local",
               "n": 238,
               "n_verifiable": 165,
-              "tp": 85,
-              "fp": 6,
-              "fn": 43,
-              "recall": 0.6640625
+              "tp": 91,
+              "fp": 8,
+              "fn": 37,
+              "recall": 0.7109375
             },
             {
               "key": "zh",
               "n": 325,
               "n_verifiable": 199,
-              "tp": 71,
+              "tp": 74,
               "fp": 0,
-              "fn": 87,
-              "recall": 0.44936708860759494
+              "fn": 84,
+              "recall": 0.46835443037974683
             }
           ],
           "by_h_type": [
@@ -3682,20 +3726,20 @@
             {
               "h_type": "H3",
               "n": 155,
-              "caught": 58,
-              "recall": 0.3741935483870968
+              "caught": 61,
+              "recall": 0.3935483870967742
             },
             {
               "h_type": "H4",
               "n": 9,
-              "caught": 0,
-              "recall": 0
+              "caught": 3,
+              "recall": 0.3333333333333333
             },
             {
               "h_type": "H5",
               "n": 107,
-              "caught": 94,
-              "recall": 0.8785046728971962
+              "caught": 96,
+              "recall": 0.897196261682243
             },
             {
               "h_type": "H6",
@@ -3706,31 +3750,30 @@
             {
               "h_type": "H7",
               "n": 8,
-              "caught": 1,
-              "recall": 0.125
+              "caught": 2,
+              "recall": 0.25
             }
           ],
           "confusion": {
             "NOT_IN_FORCE": {
-              "NOT_IN_FORCE": 94,
-              "MISSED": 13
+              "NOT_IN_FORCE": 96,
+              "MISSED": 11
             },
             "CONTENT_MISMATCH": {
-              "EXISTS_UNQUOTED": 84,
-              "CONTENT_MISMATCH": 59,
-              "MISSED": 31,
-              "UNVERIFIABLE": 1,
+              "EXISTS_UNQUOTED": 90,
+              "CONTENT_MISMATCH": 66,
+              "MISSED": 19,
               "EXISTS_CONSISTENT": 1
             },
             "EXISTS_CONSISTENT": {
-              "EXISTS_UNQUOTED": 58,
-              "CONTENT_MISMATCH": 6,
-              "MISSED": 13,
+              "EXISTS_UNQUOTED": 63,
+              "CONTENT_MISMATCH": 8,
+              "MISSED": 6,
               "UNVERIFIABLE": 1
             },
             "UNVERIFIABLE": {
-              "MISSED": 49,
-              "UNVERIFIABLE": 150
+              "UNVERIFIABLE": 160,
+              "MISSED": 39
             },
             "ARTICLE_NOT_FOUND": {
               "ARTICLE_NOT_FOUND": 3
@@ -3741,7 +3784,7 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "EXISTS_UNQUOTED",
               "kind": "fn",
-              "count": 84,
+              "count": 90,
               "ids": [
                 {
                   "aid": "QVNZH01-mimo-v2.6-flash",
@@ -3780,8 +3823,8 @@
                   "cid": "C04"
                 },
                 {
-                  "aid": "QIDID01-deepseek-v4.1-flash",
-                  "cid": "C02"
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C05"
                 }
               ]
             },
@@ -3789,32 +3832,8 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 31,
+              "count": 19,
               "ids": [
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C05"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C06"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C07"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C09"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C11"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C12"
-                },
                 {
                   "aid": "QIDID01-qwen3.8-flash",
                   "cid": "C11"
@@ -3824,12 +3843,36 @@
                   "cid": "C08"
                 },
                 {
-                  "aid": "QTHZH03-glm-5.3-flash",
-                  "cid": "C03"
+                  "aid": "QVNZH04-glm-5.3-flash",
+                  "cid": "C10"
                 },
                 {
-                  "aid": "QTHZH03-qwen3.8-flash",
-                  "cid": "C03"
+                  "aid": "QVNZH04-glm-5.3-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QIDZH05-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNZH06-glm-5.3-flash",
+                  "cid": "C06"
                 }
               ]
             },
@@ -3837,7 +3880,7 @@
               "gold": "NOT_IN_FORCE",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 13,
+              "count": 11,
               "ids": [
                 {
                   "aid": "QVNZH01-deepseek-v4.1-flash",
@@ -3868,16 +3911,16 @@
                   "cid": "C04"
                 },
                 {
-                  "aid": "QVNZH06-deepseek-v4.1-flash",
-                  "cid": "C09"
-                },
-                {
-                  "aid": "QVNZH06-qwen3.8-flash",
-                  "cid": "C07"
+                  "aid": "QVNVI06-glm-5.3-flash",
+                  "cid": "C08"
                 },
                 {
                   "aid": "QVNVI06-glm-5.3-flash",
-                  "cid": "C08"
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QVNVI06-glm-5.3-flash",
+                  "cid": "C10"
                 }
               ]
             },
@@ -3885,7 +3928,7 @@
               "gold": "EXISTS_CONSISTENT",
               "pred": "CONTENT_MISMATCH",
               "kind": "fp",
-              "count": 6,
+              "count": 8,
               "ids": [
                 {
                   "aid": "QIDID01-deepseek-v4.1-flash",
@@ -3898,6 +3941,14 @@
                 {
                   "aid": "QIDID01-qwen3.8-flash",
                   "cid": "C02"
+                },
+                {
+                  "aid": "QTHTH03-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QTHTH03-glm-5.3-flash",
+                  "cid": "C03"
                 },
                 {
                   "aid": "QVNVI04-qwen3.8-flash",
@@ -3915,13 +3966,13 @@
             },
             {
               "gold": "CONTENT_MISMATCH",
-              "pred": "UNVERIFIABLE",
+              "pred": "EXISTS_CONSISTENT",
               "kind": "fn",
               "count": 1,
               "ids": [
                 {
-                  "aid": "QIDID01-deepseek-v4.1-flash",
-                  "cid": "C09"
+                  "aid": "QVNVI05-deepseek-v4.1-flash",
+                  "cid": "C02"
                 }
               ]
             }
@@ -3929,23 +3980,23 @@
         },
         "test": {
           "n_rows": 246,
-          "extraction_recall": 0.9308943089430894,
+          "extraction_recall": 0.943089430894309,
           "detection": {
             "n_verifiable": 165,
             "n_positive": 115,
-            "tp": 48,
-            "fp": 3,
-            "fn": 67,
-            "precision": 0.9411764705882353,
-            "recall": 0.41739130434782606,
-            "f1": 0.5783132530120482,
+            "tp": 55,
+            "fp": 4,
+            "fn": 60,
+            "precision": 0.9322033898305084,
+            "recall": 0.4782608695652174,
+            "f1": 0.632183908045977,
             "precision_ci95": [
-              0.8407512606105803,
-              0.9797937271359478
+              0.8382425011833289,
+              0.9733218129016085
             ],
             "recall_ci95": [
-              0.3313605835213601,
-              0.5087627402979085
+              0.38914955162077935,
+              0.5687776388579755
             ]
           },
           "by_country": [
@@ -3953,28 +4004,28 @@
               "key": "ID",
               "n": 52,
               "n_verifiable": 19,
-              "tp": 0,
-              "fp": 2,
-              "fn": 11,
-              "recall": 0
+              "tp": 2,
+              "fp": 3,
+              "fn": 9,
+              "recall": 0.18181818181818182
             },
             {
               "key": "TH",
               "n": 100,
               "n_verifiable": 68,
-              "tp": 8,
+              "tp": 11,
               "fp": 0,
-              "fn": 35,
-              "recall": 0.18604651162790697
+              "fn": 32,
+              "recall": 0.2558139534883721
             },
             {
               "key": "VN",
               "n": 94,
               "n_verifiable": 78,
-              "tp": 40,
+              "tp": 42,
               "fp": 1,
-              "fn": 21,
-              "recall": 0.6557377049180327
+              "fn": 19,
+              "recall": 0.6885245901639344
             }
           ],
           "by_lang": [
@@ -3982,19 +4033,19 @@
               "key": "local",
               "n": 149,
               "n_verifiable": 105,
-              "tp": 47,
-              "fp": 2,
-              "fn": 33,
-              "recall": 0.5875
+              "tp": 51,
+              "fp": 3,
+              "fn": 29,
+              "recall": 0.6375
             },
             {
               "key": "zh",
               "n": 97,
               "n_verifiable": 60,
-              "tp": 1,
+              "tp": 4,
               "fp": 1,
-              "fn": 34,
-              "recall": 0.02857142857142857
+              "fn": 31,
+              "recall": 0.11428571428571428
             }
           ],
           "by_h_type": [
@@ -4007,48 +4058,48 @@
             {
               "h_type": "H3",
               "n": 52,
-              "caught": 9,
-              "recall": 0.17307692307692307
+              "caught": 11,
+              "recall": 0.21153846153846154
             },
             {
               "h_type": "H4",
               "n": 9,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.1111111111111111
             },
             {
               "h_type": "H5",
               "n": 41,
-              "caught": 38,
-              "recall": 0.926829268292683
+              "caught": 40,
+              "recall": 0.975609756097561
             },
             {
               "h_type": "H6",
               "n": 5,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.2
             },
             {
               "h_type": "H7",
               "n": 7,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.14285714285714285
             }
           ],
           "confusion": {
             "EXISTS_CONSISTENT": {
               "EXISTS_UNQUOTED": 44,
-              "CONTENT_MISMATCH": 3,
-              "MISSED": 3
+              "CONTENT_MISMATCH": 4,
+              "MISSED": 2
             },
             "CONTENT_MISMATCH": {
-              "EXISTS_UNQUOTED": 58,
+              "EXISTS_UNQUOTED": 53,
               "MISSED": 6,
-              "CONTENT_MISMATCH": 9
+              "CONTENT_MISMATCH": 14
             },
             "NOT_IN_FORCE": {
-              "NOT_IN_FORCE": 38,
-              "MISSED": 3
+              "NOT_IN_FORCE": 40,
+              "MISSED": 1
             },
             "UNVERIFIABLE": {
               "EXISTS_UNQUOTED": 1,
@@ -4064,7 +4115,7 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "EXISTS_UNQUOTED",
               "kind": "fn",
-              "count": 58,
+              "count": 53,
               "ids": [
                 {
                   "aid": "QVNVI01-deepseek-v4.1-flash",
@@ -4144,11 +4195,15 @@
               "gold": "EXISTS_CONSISTENT",
               "pred": "CONTENT_MISMATCH",
               "kind": "fp",
-              "count": 3,
+              "count": 4,
               "ids": [
                 {
                   "aid": "QVNVI01-qwen3.8-flash",
                   "cid": "C06"
+                },
+                {
+                  "aid": "QIDID02-glm-5.3-flash",
+                  "cid": "C01"
                 },
                 {
                   "aid": "QIDID02-mimo-v2.6-flash",
@@ -4164,16 +4219,8 @@
               "gold": "NOT_IN_FORCE",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 3,
+              "count": 1,
               "ids": [
-                {
-                  "aid": "QVNVI02-qwen3.8-flash",
-                  "cid": "C12"
-                },
-                {
-                  "aid": "QVNVI02-qwen3.8-flash",
-                  "cid": "C13"
-                },
                 {
                   "aid": "QVNZH05-glm-5.3-flash",
                   "cid": "C04"
@@ -4184,23 +4231,23 @@
         },
         "all": {
           "n_rows": 809,
-          "extraction_recall": 0.8479604449938195,
+          "extraction_recall": 0.8899876390605687,
           "detection": {
             "n_verifiable": 529,
             "n_positive": 401,
-            "tp": 204,
-            "fp": 9,
-            "fn": 197,
-            "precision": 0.9577464788732394,
-            "recall": 0.5087281795511222,
-            "f1": 0.6644951140065146,
+            "tp": 220,
+            "fp": 12,
+            "fn": 181,
+            "precision": 0.9482758620689655,
+            "recall": 0.5486284289276808,
+            "f1": 0.6951026856240126,
             "precision_ci95": [
-              0.9216601142240523,
-              0.9776138258317303
+              0.9117803090043699,
+              0.9701675746599201
             ],
             "recall_ci95": [
-              0.4599465905193922,
-              0.5573441226879462
+              0.4996895737546013,
+              0.5966443998291412
             ]
           },
           "by_country": [
@@ -4208,28 +4255,28 @@
               "key": "ID",
               "n": 280,
               "n_verifiable": 138,
-              "tp": 41,
-              "fp": 7,
-              "fn": 50,
-              "recall": 0.45054945054945056
+              "tp": 46,
+              "fp": 8,
+              "fn": 45,
+              "recall": 0.5054945054945055
             },
             {
               "key": "TH",
               "n": 209,
               "n_verifiable": 135,
-              "tp": 16,
-              "fp": 0,
-              "fn": 72,
-              "recall": 0.18181818181818182
+              "tp": 23,
+              "fp": 2,
+              "fn": 65,
+              "recall": 0.26136363636363635
             },
             {
               "key": "VN",
               "n": 320,
               "n_verifiable": 256,
-              "tp": 147,
+              "tp": 151,
               "fp": 2,
-              "fn": 75,
-              "recall": 0.6621621621621622
+              "fn": 71,
+              "recall": 0.6801801801801802
             }
           ],
           "by_lang": [
@@ -4237,19 +4284,19 @@
               "key": "local",
               "n": 387,
               "n_verifiable": 270,
-              "tp": 132,
-              "fp": 8,
-              "fn": 76,
-              "recall": 0.6346153846153846
+              "tp": 142,
+              "fp": 11,
+              "fn": 66,
+              "recall": 0.6826923076923077
             },
             {
               "key": "zh",
               "n": 422,
               "n_verifiable": 259,
-              "tp": 72,
+              "tp": 78,
               "fp": 1,
-              "fn": 121,
-              "recall": 0.37305699481865284
+              "fn": 115,
+              "recall": 0.40414507772020725
             }
           ],
           "by_h_type": [
@@ -4262,56 +4309,55 @@
             {
               "h_type": "H3",
               "n": 207,
-              "caught": 67,
-              "recall": 0.32367149758454106
+              "caught": 72,
+              "recall": 0.34782608695652173
             },
             {
               "h_type": "H4",
               "n": 18,
-              "caught": 0,
-              "recall": 0
+              "caught": 4,
+              "recall": 0.2222222222222222
             },
             {
               "h_type": "H5",
               "n": 148,
-              "caught": 132,
-              "recall": 0.8918918918918919
+              "caught": 136,
+              "recall": 0.918918918918919
             },
             {
               "h_type": "H6",
               "n": 9,
-              "caught": 0,
-              "recall": 0
+              "caught": 1,
+              "recall": 0.1111111111111111
             },
             {
               "h_type": "H7",
               "n": 15,
-              "caught": 1,
-              "recall": 0.06666666666666667
+              "caught": 3,
+              "recall": 0.2
             }
           ],
           "confusion": {
             "NOT_IN_FORCE": {
-              "NOT_IN_FORCE": 132,
-              "MISSED": 16
+              "NOT_IN_FORCE": 136,
+              "MISSED": 12
             },
             "CONTENT_MISMATCH": {
-              "EXISTS_UNQUOTED": 142,
-              "MISSED": 37,
-              "CONTENT_MISMATCH": 68,
-              "UNVERIFIABLE": 1,
+              "EXISTS_UNQUOTED": 143,
+              "MISSED": 25,
+              "CONTENT_MISMATCH": 80,
               "EXISTS_CONSISTENT": 1
             },
             "EXISTS_CONSISTENT": {
-              "EXISTS_UNQUOTED": 102,
-              "CONTENT_MISMATCH": 9,
-              "MISSED": 16,
+              "EXISTS_UNQUOTED": 107,
+              "CONTENT_MISMATCH": 12,
+              "MISSED": 8,
               "UNVERIFIABLE": 1
             },
             "UNVERIFIABLE": {
-              "MISSED": 54,
+              "UNVERIFIABLE": 235,
               "EXISTS_UNQUOTED": 1,
-              "UNVERIFIABLE": 225
+              "MISSED": 44
             },
             "ARTICLE_NOT_FOUND": {
               "ARTICLE_NOT_FOUND": 4
@@ -4322,7 +4368,7 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "EXISTS_UNQUOTED",
               "kind": "fn",
-              "count": 142,
+              "count": 143,
               "ids": [
                 {
                   "aid": "QVNZH01-mimo-v2.6-flash",
@@ -4370,35 +4416,11 @@
               "gold": "CONTENT_MISMATCH",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 37,
+              "count": 25,
               "ids": [
                 {
                   "aid": "QVNVI01-glm-5.3-flash",
                   "cid": "C10"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C05"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C06"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C07"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C09"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C11"
-                },
-                {
-                  "aid": "QIDZH01-qwen3.8-flash",
-                  "cid": "C12"
                 },
                 {
                   "aid": "QIDID01-qwen3.8-flash",
@@ -4411,6 +4433,30 @@
                 {
                   "aid": "QIDZH02-qwen3.8-flash",
                   "cid": "C08"
+                },
+                {
+                  "aid": "QIDID02-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C08"
+                },
+                {
+                  "aid": "QVNZH04-glm-5.3-flash",
+                  "cid": "C10"
+                },
+                {
+                  "aid": "QVNZH04-glm-5.3-flash",
+                  "cid": "C11"
                 }
               ]
             },
@@ -4418,7 +4464,7 @@
               "gold": "NOT_IN_FORCE",
               "pred": "MISSED",
               "kind": "fn",
-              "count": 16,
+              "count": 12,
               "ids": [
                 {
                   "aid": "QVNZH01-deepseek-v4.1-flash",
@@ -4431,14 +4477,6 @@
                 {
                   "aid": "QVNZH01-deepseek-v4.1-flash",
                   "cid": "C04"
-                },
-                {
-                  "aid": "QVNVI02-qwen3.8-flash",
-                  "cid": "C12"
-                },
-                {
-                  "aid": "QVNVI02-qwen3.8-flash",
-                  "cid": "C13"
                 },
                 {
                   "aid": "QVNVI04-glm-5.3-flash",
@@ -4459,6 +4497,14 @@
                 {
                   "aid": "QVNZH05-glm-5.3-flash",
                   "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI06-glm-5.3-flash",
+                  "cid": "C08"
+                },
+                {
+                  "aid": "QVNVI06-glm-5.3-flash",
+                  "cid": "C09"
                 }
               ]
             },
@@ -4466,7 +4512,7 @@
               "gold": "EXISTS_CONSISTENT",
               "pred": "CONTENT_MISMATCH",
               "kind": "fp",
-              "count": 9,
+              "count": 12,
               "ids": [
                 {
                   "aid": "QVNVI01-qwen3.8-flash",
@@ -4485,6 +4531,10 @@
                   "cid": "C02"
                 },
                 {
+                  "aid": "QIDID02-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
                   "aid": "QIDID02-mimo-v2.6-flash",
                   "cid": "C01"
                 },
@@ -4493,28 +4543,28 @@
                   "cid": "C04"
                 },
                 {
+                  "aid": "QTHTH03-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QTHTH03-glm-5.3-flash",
+                  "cid": "C03"
+                },
+                {
                   "aid": "QVNVI04-qwen3.8-flash",
                   "cid": "C01"
-                },
-                {
-                  "aid": "QIDID05-deepseek-v4.1-flash",
-                  "cid": "C01"
-                },
-                {
-                  "aid": "QIDID05-deepseek-v4.1-flash",
-                  "cid": "C02"
                 }
               ]
             },
             {
               "gold": "CONTENT_MISMATCH",
-              "pred": "UNVERIFIABLE",
+              "pred": "EXISTS_CONSISTENT",
               "kind": "fn",
               "count": 1,
               "ids": [
                 {
-                  "aid": "QIDID01-deepseek-v4.1-flash",
-                  "cid": "C09"
+                  "aid": "QVNVI05-deepseek-v4.1-flash",
+                  "cid": "C02"
                 }
               ]
             }

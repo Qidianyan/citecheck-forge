@@ -24,7 +24,7 @@ export const MODE_NOTES = {
   enhanced: 'Rule checks + English law names, per-line country cues, translation fallback.',
   crossref_prereg: 'Phase-2 pre-registered variant (H7 numbers flag), now on the phase-3 linking + anchors code.',
   crossref_noanchor: 'Ablation: shipped default without the zh→local glossary anchors (phase-3 linking rules only).',
-  crossref: 'Shipped default (phase 3): content checks with H7 advisory, same-name-law version pinning + heading inheritance, and zh→local glossary anchors for Chinese claims. All phase-3 parameters frozen on the 70% dev split before the 30% test split was scored once. (Phase-2 history: shipped crossref test P 95.9 / R 40.9, post-hoc; crossref_prereg test P 89.3 / R 43.5.)',
+  crossref: 'Shipped default (phase 3): content checks with H7 advisory, same-name-law version pinning + heading inheritance, and zh→local glossary anchors for Chinese claims. Phase 4 adds block-quote quotes and article range/list expansion (frozen at 4485595). The 30% test split has been SEEN since phase 3, so its numbers are no longer a clean held-out estimate; see eval/fresh/FRESH_REPORT.md for the fresh held-out set. (Phase-2 history: shipped crossref test P 95.9 / R 40.9, post-hoc; crossref_prereg test P 89.3 / R 43.5.)',
 };
 
 export const SILVER_NOTE = 'Labels are silver standard (rule facts + LLM judge), not yet human-audited.';

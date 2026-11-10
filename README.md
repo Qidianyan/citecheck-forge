@@ -28,20 +28,26 @@ npm run eval                      # offline eval on eval/data → eval/report.js
 `eval/run-eval.mjs` scores the verifier on 123 LLM answers / 809 citations with a fixed 70/30 split by question
 (stratified by country; thresholds were tuned on the 70% dev split only). Held-out (30%) results — see `eval/REPORT.md`:
 
-| mode | dev (70%) P / R | held-out (30%) P / R |
+| mode | dev (70%) P / R | old held-out 30% (**seen**) P / R |
 |---|---|---|
-| rule checks only (`enhanced`) | 99.0% / 34.6% | 100.0% / 33.9% (39 TP / 0 FP of 115) |
-| + content checks, H7 numbers flag (`crossref_prereg`) | 95.7% / 54.9% | 87.9% / 44.3% |
-| + content checks + version pinning, no glossary (`crossref_noanchor`, ablation) | 96.1% / 51.4% | 95.9% / 40.9% |
-| **shipped default (`crossref`)**: + zh→local glossary anchors | 96.3% / 54.5% | **94.1% / 41.7%** (48 TP / 3 FP; P 95% CI 84–98%) |
+| rule checks only (`legacy`) | 98.9% / 30.1% | 100.0% / 33.9% |
+| + content checks, H7 numbers flag (`crossref_prereg`) | 94.9% / 58.0% | 87.9% / 50.4% |
+| **shipped default (`crossref`)** | 95.4% / 57.7% | 93.2% / 47.8% (55 TP / 4 FP; ID 2/11, TH 11/43, VN 42/61) |
 
-Phase 3 added same-name-law version pinning, section-heading inheritance and a curated Chinese→Vietnamese/
-Indonesian/Thai legal-term glossary (`src/core/glossary.js`, deterministic, no LLM). All parameters were frozen on
-the dev split and committed before the held-out split was scored once. They lift dev recall from 45.8% to 54.5%,
-but on held-out data the gain is only +1 TP (+1 FP); the version-pinning rules find no extra cases there.
-The project target (recall ≥ 45% at precision ≥ 95% on held-out data) is **still not reached** — the dev gains did
-not generalise. Remaining misses: cross-language paraphrases with few glossary concepts, Thai/Indonesian
-answers (held-out recall TH 19%, ID 0%, VN 66%), and silver labels that a human review (`eval/review/`) may revise.
+The old 30% split was looked at in phase 3, so its phase-4 numbers are labelled **seen**: they no longer
+estimate performance on new data. Phase-3 clean held-out result: P 94.1% / R 41.7%.
+
+**Fresh held-out set** (`eval/fresh/`, see `METHOD.md`): 301 items built by construction from 60+ articles that
+never appear in the eval set. The verifier config was frozen (4485595) and the set committed (8b08200) before it
+was scored once (`FRESH_REPORT.md`): **P 100% / R 72.2%** overall (0 FP on 103 negatives). By type: H1 / H3 / H4 / H5
+100%; Chinese paraphrase misattribution (ZH_H3) 27.8%; single-number edits inside long quotes (H7) 0%, because
+numeric findings are advisory by design. These items are cleaner and easier than real LLM answers, so this is
+an upper bound for the local-language types, not a replacement for the silver-label benchmark.
+
+Phase 4 (dev-only error analysis, `eval/analysis/DEV_ERROR_ANALYSIS.md`): Indonesian and Thai answers often put
+the quote in a block-quote under the citation line and cite article ranges (`第67–74条`, `Pasal 5 sampai dengan
+13`). Both are now parsed. Most remaining ID/TH misses are paraphrases that are subtly wrong about the right
+article, which lexical checks cannot judge.
 
 ## Deploy (needs an Atlassian developer account)
 ```bash
