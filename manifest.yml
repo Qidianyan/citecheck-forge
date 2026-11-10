@@ -12,9 +12,9 @@ modules:
     - key: citecheck-agent
       name: CiteCheck Legal Citations
       description: >-
-        Checks every legal citation in a Confluence page, Jira work item or pasted AI answer against
-        bundled official statute texts (Vietnam, Indonesia, Thailand). Flags articles that do not exist,
-        repealed laws, misquoted text, and citations it cannot verify, with links to the official source.
+        Verifies legal citations in Confluence pages, Jira work items or AI answers against official
+        statute texts (Vietnam, Indonesia, Thailand): flags non-existent articles, repealed laws and
+        misquotes, with source links.
       icon: resource:agent-assets;icon.svg
       prompt: resource:agent-assets;prompt.txt
       conversationStarters:
@@ -83,10 +83,8 @@ modules:
       function: verify-citation-fn
       actionVerb: GET
       description: >-
-        Verify a single citation, e.g. "Article 13 of Indonesia's Law 27 of 2022" or "Điều 9 Luật 91/2025/QH15",
-        optionally with the quoted text. Returns whether the law and article exist in the official text,
-        whether they are in force on the given date, how closely the quote matches, the hallucination type,
-        and the official source link and excerpt.
+        Verify one citation (e.g. "Pasal 13 UU 27/2022", "Điều 9 Luật 91/2025/QH15") and optional quote:
+        law and article exist, in force on a date, quote match, hallucination type, official source.
       inputs:
         citation:
           title: Citation
@@ -108,9 +106,8 @@ modules:
       function: verify-content-fn
       actionVerb: GET
       description: >-
-        Verify every legal citation in the current Confluence page or Jira work item (or in supplied text)
-        and return a per-citation verdict table with hallucination types, reasons, evidence links and a summary.
-        Results are saved so the page byline / issue panel shows the status.
+        Verify every legal citation in the current Confluence page or Jira work item (or supplied text).
+        Returns a verdict per citation with hallucination type, reason and official source, plus a summary.
       inputs:
         text:
           title: Text
@@ -147,7 +144,7 @@ modules:
           description: Optional filter, one of VN, ID, TH.
     - key: post-confluence-report
       name: Post citation report to Confluence page
-      function: post-confluence-report-fn
+      function: post-conf-report-fn
       actionVerb: CREATE
       description: >-
         Verify the citations on a Confluence page and post the verification report as a footer comment,
@@ -198,7 +195,7 @@ modules:
       handler: index.verifyContent
     - key: list-sources-fn
       handler: index.listSources
-    - key: post-confluence-report-fn
+    - key: post-conf-report-fn
       handler: index.postConfluenceReport
     - key: post-jira-report-fn
       handler: index.postJiraReport
