@@ -1,0 +1,16 @@
+Compliance memo (AI-drafted): personal data rules for our Vietnam, Indonesia and Thailand launch
+
+Vietnam
+Under Article 9 of Vietnam's Law No. 91/2025/QH15 on Personal Data Protection: "Sự đồng ý của chủ thể dữ liệu cá nhân là việc chủ thể dữ liệu cá nhân cho phép xử lý dữ liệu cá nhân của mình"
+Article 45 of Law No. 91/2025/QH15 requires every company with more than 50 employees to appoint a data protection officer.
+Consent records must also follow Article 11 of Decree 13/2023/ND-CP.
+Article 26 of the Law on Cyber Security No. 24/2018/QH14 requires foreign platforms to store user data in Vietnam.
+
+Indonesia
+Pasal 5 UU No. 27 Tahun 2022: "Subjek Data Pribadi berhak mendapatkan Informasi tentang kejelasan identitas, dasar kepentingan hukum, tujuan permintaan dan penggunaan Data Pribadi"
+Pasal 90 UU No. 27 Tahun 2022 provides a prison sentence of up to 20 years for any data leak.
+
+Thailand
+Section 19 of the Personal Data Protection Act B.E. 2562: "The Data Controller shall not collect, use, or disclose Personal Data, unless the data subject has given consent prior to or at the time of such collection"
+Section 26 of the Personal Data Protection Act B.E. 2562: "The Data Controller may freely collect religious and health data without consent when it is used for marketing purposes"
+See also Supreme Court judgment คำพิพากษาศาลฎีกาที่ 1234/2560.

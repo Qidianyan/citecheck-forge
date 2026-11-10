@@ -30,9 +30,16 @@ function countOcc(text, w) {
   return n;
 }
 
-export function detectCountry(text) {
+// Enhanced mode: extra English cues so a line about another country is linked to that country's laws.
+export const COUNTRY_WORDS_EN = {
+  VN: [...COUNTRY_WORDS.VN, 'Vietnamese', 'Decree ', '/QH1'],
+  ID: [...COUNTRY_WORDS.ID, 'Indonesian', 'Tahun '],
+  TH: [...COUNTRY_WORDS.TH, 'Thai ', 'Thai\u2019', "Thai'"],
+};
+
+export function detectCountry(text, words = COUNTRY_WORDS) {
   let best = null, bestScore = -1;
-  for (const [c, ws] of Object.entries(COUNTRY_WORDS)) {
+  for (const [c, ws] of Object.entries(words)) {
     const s = ws.reduce((acc, w) => acc + countOcc(text, w), 0);
     if (s > bestScore) { best = c; bestScore = s; }
   }
@@ -73,13 +80,15 @@ const dist = (p, pos, zh) => Math.abs(p - pos) + (zh ? (p > pos ? 30 : 0) : (p >
 
 /** Extract citations: [{citation,type,article,clause,law,law_hint,inferred,sentence,quote,quote_lang}] */
 export function extract(text, corpus, country = null) {
-  country = country || detectCountry(text);
+  country = country || detectCountry(text, corpus.enhanced ? COUNTRY_WORDS_EN : COUNTRY_WORDS);
   const out = [];
   let ctx = null; // last mentioned law (object) or uncached law reference (string)
   for (const line of text.split(/\n+/u)) {
     if (!strip(line)) continue;
     const lineT = thaiDigits(line);
-    const lc = ['越南', '印尼', '印度尼西亚', '泰国'].some((w) => lineT.includes(w)) ? detectCountry(lineT) : country;
+    let lc;
+    if (corpus.enhanced) lc = detectCountry(lineT, COUNTRY_WORDS_EN) || country;
+    else lc = ['越南', '印尼', '印度尼西亚', '泰国'].some((w) => lineT.includes(w)) ? detectCountry(lineT) : country;
     const hits = aliasHits(lineT, lc, corpus);
     const spans = hits.map((h) => [h.start, h.end]);
     const unknown = [];

@@ -11,7 +11,7 @@ const docs = fs.readFileSync(new URL('./fixtures/golden.jsonl', import.meta.url)
 test('golden parity: citations, laws, verdicts and quote scores match the reference', () => {
   let total = 0, same = 0; const diffs = [];
   for (const d of docs) {
-    const got = verify(d.text, { asOf: d.as_of });
+    const got = verify(d.text, { asOf: d.as_of, legacy: true });
     const n = Math.max(got.length, d.results.length);
     for (let i = 0; i < n; i++) {
       total++;

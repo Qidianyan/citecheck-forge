@@ -93,14 +93,25 @@ export function ruleVerdict(c, asOf, corpus) {
     Object.assign(r, { verdict: 'UNVERIFIABLE', reason: '条文存在且法律现行，但' + whyCc + '，内容无法核实' + (notes.length ? '；' + notes.join('；') : '') });
     return [r, null];
   }
-  const srcScript = scriptOf(cpSlice(arts[art], 0, 400));
+  let srcText = arts[art];
+  let srcScript = scriptOf(cpSlice(srcText, 0, 400));
+  // Enhanced mode: a quote in another script than the official text is compared with an official-number
+  // translation of the same law when one is bundled (e.g. English quote vs Thai PDPA → unofficial English text).
+  if (corpus.enhanced && c.quote && c.quote_lang !== srcScript) {
+    const sib = corpus.laws.find((l) => l !== law && l.translation && l.country === law.country && l.number === law.number && (l.articles || {})[art]);
+    if (sib && scriptOf(cpSlice(sib.articles[art], 0, 400)) === c.quote_lang) {
+      srcText = sib.articles[art]; srcScript = c.quote_lang;
+      r.compared_with = sib.law_id; r.translation_excerpt = cpSlice(srcText, 0, 1200);
+      notes.push('引文与非官方英译本比对');
+    }
+  }
   if (c.quote && cpLen(c.quote) < MIN_QUOTE_CHARS) {
     notes.push(`引号内文字过短（<${MIN_QUOTE_CHARS}字符），视为术语而非引文`);
     c = { ...c, quote: null };
   }
   let v, w;
   if (c.quote && c.quote_lang === srcScript) {
-    const sc = quoteScore(c.quote, arts[art]);
+    const sc = quoteScore(c.quote, srcText);
     Object.assign(r, { quote: c.quote, quote_score: sc });
     r.checks.quote_score = sc;
     if (sc >= 0.8) [v, w] = ['EXISTS_CONSISTENT', `引文与原文字面匹配率 ${sc}`];
