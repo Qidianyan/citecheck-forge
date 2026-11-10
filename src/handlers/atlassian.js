@@ -44,7 +44,7 @@ export function createAtlassianClient({ api } = {}) {
 
   async function request(product, method, url, init) {
     const a = await resolveApi();
-    const res = await (product === 'confluence' ? a.asUser().requestConfluence : a.asUser().requestJira)(url, { method, ...init });
+    const res = await (product === 'confluence' ? a.asUser().requestConfluence : a.asUser().requestJira)(await url, { method, ...init });
     return assertOk(res);
   }
 

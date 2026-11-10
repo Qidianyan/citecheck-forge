@@ -59,17 +59,33 @@ export function buildReport(results, { source = null, asOf = null, verifiedAt = 
   return report;
 }
 
+/** Render the report source (object or string) as a short readable label, never `[object Object]`. */
+function sourceLabel(source) {
+  if (source == null) return '';
+  if (typeof source === 'string') return source;
+  if (typeof source !== 'object') return String(source);
+  if (source.type === 'confluence') return source.title || (source.id ? `Confluence page ${source.id}` : 'Confluence page');
+  if (source.type === 'jira') return source.key || source.summary || 'Jira work item';
+  if (source.type === 'text') return 'pasted text';
+  return source.title || source.name || source.summary || 'pasted text';
+}
+
 /** One-line human summary shared by all renderers. */
 export function summaryLine(report) {
   const s = report?.summary ?? {};
   let line = `CiteCheck citation report — ${s.total ?? 0} citation(s): ${s.flagged ?? 0} flagged, ${s.verified ?? 0} verified, ${s.unverifiable ?? 0} unverifiable.`;
-  if (report?.source) line += ` Source: ${report.source}.`;
+  const src = sourceLabel(report?.source);
+  if (src) line += ` Source: ${src}.`;
   if (report?.asOf) line += ` As of ${report.asOf}.`;
   if (report?.verifiedAt) line += ` Verified at ${report.verifiedAt}.`;
   return line;
 }
 
 const lawCell = (r) => r.law_title || r.law || r.law_hint || '—';
+
+/** "Type" column: hallucination types (H1, H4, H7, …) or an em dash when the citation passed. */
+const typeCell = (r) => (Array.isArray(r.hallucination_types) && r.hallucination_types.length
+  ? r.hallucination_types.join(', ') : '—');
 
 /** Report → Markdown: summary line + `| # | Citation | Law | Verdict | Type | Why | Source |` table. */
 export function toMarkdown(report) {
@@ -81,10 +97,10 @@ export function toMarkdown(report) {
     '| --- | --- | --- | --- | --- | --- | --- |',
   ];
   for (const r of report.rows || []) {
-    lines.push([
-      r.n, esc(r.citation), esc(lawCell(r)), esc(`${r.icon} ${r.verdict_label}`), esc(r.type), esc(r.reason_en),
+    lines.push(`| ${[
+      r.n, esc(r.citation), esc(lawCell(r)), esc(`${r.icon} ${r.verdict_label}`), esc(typeCell(r)), esc(r.reason_en),
       r.evidence ? `[official text](${r.evidence})` : '—',
-    ].join(' | '));
+    ].join(' | ')} |`);
   }
   if (report.truncated) lines.push('', `_(first ${MAX_ROWS} rows; flagged citations listed first)_`);
   return lines.join('\n');
@@ -98,7 +114,7 @@ const escHtml = (v) => String(v ?? '')
 export function toConfluenceStorage(report) {
   const cell = (v) => `<td>${escHtml(v)}</td>`;
   const rows = (report.rows || []).map((r) => `<tr><td>${r.n}</td><td>${escHtml(r.citation)}</td>`
-    + `<td>${escHtml(lawCell(r))}</td><td>${escHtml(`${r.icon} ${r.verdict_label}`)}</td><td>${escHtml(r.type)}</td>`
+    + `<td>${escHtml(lawCell(r))}</td><td>${escHtml(`${r.icon} ${r.verdict_label}`)}</td><td>${escHtml(typeCell(r))}</td>`
     + `<td>${escHtml(r.reason_en)}</td>`
     + `<td>${r.evidence ? `<a href="${escHtml(r.evidence)}">official text</a>` : '—'}</td></tr>`);
   return [
@@ -126,7 +142,7 @@ export function toJiraAdf(report) {
     { type: 'tableCell', content: [para(r.citation ?? '')] },
     { type: 'tableCell', content: [para(lawCell(r))] },
     { type: 'tableCell', content: [para(`${r.icon} ${r.verdict_label}`)] },
-    { type: 'tableCell', content: [para(r.type ?? '')] },
+    { type: 'tableCell', content: [para(typeCell(r))] },
     { type: 'tableCell', content: [para(r.reason_en ?? '')] },
     r.evidence
       ? { type: 'tableCell', content: [{ type: 'paragraph', content: [linkText(r.evidence)] }] }

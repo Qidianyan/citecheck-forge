@@ -95,7 +95,9 @@ function App() {
 
       {posted ? (
         <SectionMessage title={`Posted: ${posted.label ?? 'report'}`} appearance="success">
-          <Text>{posted.summary ?? 'The verification report has been posted.'}</Text>
+          <Text>{posted.summary && typeof posted.summary === 'object'
+            ? `${posted.summary.flagged ?? 0} flagged · ${posted.summary.verified ?? 0} verified · ${posted.summary.unverifiable ?? 0} unverifiable`
+            : (posted.summary ?? 'The verification report has been posted.')}</Text>
         </SectionMessage>
       ) : null}
 
