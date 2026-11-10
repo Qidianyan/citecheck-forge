@@ -85,5 +85,7 @@ export function reasonEn(r) {
 export function enrich(r) {
   const v = VERDICTS[r.verdict] || VERDICTS.UNVERIFIABLE;
   return { ...r, icon: v.icon, verdict_label: v.label, severity: v.severity, flagged: v.flagged,
-    hallucination_types: hallucinationTypes(r), reason_en: reasonEn(r) };
+    // Rows that already carry their own types / English reason (e.g. organisation sources) keep them.
+    hallucination_types: Array.isArray(r.hallucination_types) ? r.hallucination_types : hallucinationTypes(r),
+    reason_en: r.reason_en ?? reasonEn(r) };
 }

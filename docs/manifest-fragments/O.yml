@@ -1,0 +1,25 @@
+# Task O — organisation-specific law sources (Confluence pages as extra authoritative sources).
+# Merge into manifest.yml: custom entity storage for "orgsource" + the admin global-settings panel.
+app:
+  storage:
+    entities:
+      - key: orgsource
+        attributes:
+          - key: sourceKey
+            type: string
+        indexes:
+          - key: by-key
+            attributes:
+              - sourceKey
+
+modules:
+  confluence:globalSettings:
+    - key: citecheck-admin
+      title: CiteCheck admin
+      resource: ui-admin
+      resolver:
+        function: ui-resolver-fn
+
+resources:
+  - key: ui-admin
+    path: src/frontend/admin.jsx
