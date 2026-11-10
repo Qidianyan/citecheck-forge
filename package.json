@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build:corpus": "node scripts/build-corpus.mjs",
-    "test": "node --test test/",
+    "test": "node --test \"test/*.test.js\"",
     "eval": "node eval/run-eval.mjs",
     "lint:forge": "forge lint"
   },

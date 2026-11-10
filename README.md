@@ -14,7 +14,7 @@ Built for the Atlassian Codegeist 2026 hackathon (category: Apps for Business Te
 
 ## Run the tests (no Atlassian account needed)
 ```bash
-node --test test/                 # golden parity vs reference verifier + unit/handler tests
+node --test "test/*.test.js"                 # golden parity vs reference verifier + unit/handler tests
 node tools/validate-manifest.cjs  # offline manifest validation with the Forge CLI's validator
 node scripts/build-corpus.mjs     # rebuild src/corpus from the statute cache
 ```
