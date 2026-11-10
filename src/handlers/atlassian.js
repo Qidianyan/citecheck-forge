@@ -80,11 +80,25 @@ export function createAtlassianClient({ api } = {}) {
       };
     },
 
+    /** GET /rest/api/3/issue/{key}?fields=labels → string[] of label names. */
+    async getJiraLabels(issueKey) {
+      const res = await request('jira', 'GET', route`/rest/api/3/issue/${issueKey}?fields=labels`);
+      const issue = await asJson(res);
+      return issue?.fields?.labels ?? [];
+    },
+
     /** POST /wiki/api/v2/footer-comments */
     async postConfluenceFooterComment(contentId, storageHtml) {
       return request('confluence', 'POST', route`/wiki/api/v2/footer-comments`, {
         body: { pageId: String(contentId), body: { representation: 'storage', value: storageHtml } },
       });
+    },
+
+    /** GET /wiki/api/v2/pages/{id}/labels → string[] of label names (e.g. ['legal-review']). */
+    async getConfluenceLabels(contentId) {
+      const res = await request('confluence', 'GET', route`/wiki/api/v2/pages/${contentId}/labels`);
+      const body = await asJson(res);
+      return (body?.results ?? []).map((l) => l?.name).filter(Boolean);
     },
 
     /** POST /wiki/rest/api/content/{id}/label */

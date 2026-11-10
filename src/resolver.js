@@ -6,10 +6,14 @@ import { Resolver } from '@forge/resolver';
 import { createAtlassianClient } from './handlers/atlassian.js';
 import { createStore } from './handlers/store.js';
 import { createActions } from './handlers/actions.js';
+import { createAuditStore } from './audit/auditStore.js';
+import { createAuditResolvers } from './audit/resolvers.js';
 
 const client = createAtlassianClient();
 const store = createStore();
 const actions = createActions({ client, store });
+const audit = createAuditStore();
+const { auditList, auditCsv } = createAuditResolvers({ audit });
 
 const resolver = new Resolver();
 
@@ -33,5 +37,8 @@ resolver.define('postReport', async (req) => {
   if (ext?.issue?.key) return actions.postJiraReport(req?.payload ?? {}, req?.context ?? {});
   return { error: 'NO_TARGET', message: 'Open this panel on a Confluence page or Jira work item.' };
 });
+
+resolver.define('auditList', auditList);
+resolver.define('auditCsv', auditCsv);
 
 export const handler = resolver.getDefinitions();

@@ -1,0 +1,71 @@
+# Manifest fragment for task T — event-triggered re-check, queue, audit + CSV.
+# Reviewer: merge into manifest.yml (modules + permissions). Nothing here exists in manifest.yml yet.
+#
+# src/index.js handler names the functions below must be exported as (do NOT edit src/index.js here):
+#   onConfluenceUpdated  → confluence page updated trigger handler
+#   onJiraUpdated        → Jira issue updated trigger handler
+#   recheckConsumer      → queue consumer for citecheck-recheck
+#
+# Function keys are ≤ 23 chars: conf-updated-fn, jira-updated-fn, recheck-fn.
+
+modules:
+  trigger:
+    - key: conf-updated-trigger
+      name: CiteCheck re-check on Confluence page update
+      description: >-
+        Re-verify legal citations when a Confluence page carrying the legal-review label (or a page
+        CiteCheck has already verified) is updated.
+      event: avi:confluence:updated:page
+      function: conf-updated-fn
+    - key: jira-updated-trigger
+      name: CiteCheck re-check on Jira issue update
+      description: >-
+        Re-verify legal citations when a Jira issue carrying the legal-review label (or an issue
+        CiteCheck has already verified) is updated, skipping our own label/comment writes.
+      event: avi:jira:updated:issue
+      function: jira-updated-fn
+
+  function:
+    - key: conf-updated-fn
+      handler: index.onConfluenceUpdated
+    - key: jira-updated-fn
+      handler: index.onJiraUpdated
+    - key: recheck-fn
+      handler: index.recheckConsumer
+
+  # Queue + consumer for the re-check work (src/triggers/events.js consumer()).
+  queue:
+    - key: citecheck-recheck
+      name: CiteCheck re-check queue
+  consumer:
+    - key: recheck-consumer
+      name: CiteCheck re-check consumer
+      queue: citecheck-recheck
+      function: recheck-fn
+
+  # Custom Entity Store entity backing src/audit/auditStore.js.
+  entity:
+    - key: audit
+      name: audit
+      description: CiteCheck verification audit trail
+      attributes:
+        - key: product
+          type: string
+        - key: id
+          type: string
+        - key: verifiedAt
+          type: string
+        - key: flagged
+          type: integer
+      indexes:
+        - key: by-time
+          attributes:
+            - verifiedAt
+
+permissions:
+  scopes:
+    # Labels API used by the triggers to detect the legal-review label:
+    - read:label:confluence
+    # Content read for the re-check itself (summary scope is enough for citation verification):
+    - read:confluence-content.summary
+    # storage:app is already declared for the KVS result/audit stores.
