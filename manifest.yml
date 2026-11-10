@@ -7,6 +7,22 @@ app:
     memoryMB: 512
     architecture: arm64
 
+  storage:
+    entities:
+      - name: audit
+        attributes:
+          product:
+            type: string
+          id:
+            type: string
+          verifiedAt:
+            type: string
+          flagged:
+            type: integer
+        indexes:
+          - name: by-time
+            range:
+              - verifiedAt
 modules:
   rovo:agent:
     - key: citecheck-agent
@@ -186,7 +202,26 @@ modules:
       resolver:
         function: ui-resolver-fn
 
+  trigger:
+    - key: conf-updated-trigger
+      function: conf-updated-fn
+      events:
+        - avi:confluence:updated:page
+    - key: jira-updated-trigger
+      function: jira-updated-fn
+      events:
+        - avi:jira:updated:issue
+  consumer:
+    - key: recheck-consumer
+      queue: citecheck-recheck
+      function: recheck-fn
   function:
+    - key: conf-updated-fn
+      handler: index.onConfluenceUpdated
+    - key: jira-updated-fn
+      handler: index.onJiraUpdated
+    - key: recheck-fn
+      handler: index.recheckConsumer
     - key: extract-citations-fn
       handler: index.extractCitations
     - key: verify-citation-fn
@@ -217,3 +252,5 @@ permissions:
     - write:comment:confluence
     - read:jira-work
     - write:jira-work
+    - read:label:confluence
+    - read:confluence-content.summary

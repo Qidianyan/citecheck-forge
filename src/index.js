@@ -6,10 +6,14 @@
 import { createAtlassianClient } from './handlers/atlassian.js';
 import { createStore } from './handlers/store.js';
 import { createActions } from './handlers/actions.js';
+import { createEventHandlers } from './triggers/events.js';
+import { createAuditStore } from './audit/auditStore.js';
 
 const client = createAtlassianClient();
 const store = createStore();
 const actions = createActions({ client, store });
+const audit = createAuditStore();
+const events = createEventHandlers({ actions, store, client, audit });
 
 export const extractCitations = actions.extractCitations;
 export const verifyCitation = actions.verifyCitation;
@@ -17,5 +21,10 @@ export const verifyContent = actions.verifyContent;
 export const listSources = actions.listSources;
 export const postConfluenceReport = actions.postConfluenceReport;
 export const postJiraReport = actions.postJiraReport;
+
+// Forge events: product triggers and the async re-check consumer.
+export const onConfluenceUpdated = (event, context) => events.onConfluenceUpdated(event, context);
+export const onJiraUpdated = (event, context) => events.onJiraUpdated(event, context);
+export const recheckConsumer = (event, context) => events.consumer(event, context);
 
 export { handler as uiResolver } from './resolver.js';
