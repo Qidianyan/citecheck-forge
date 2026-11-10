@@ -1,0 +1,532 @@
+{
+ "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH": [
+  {
+   "aid": "QTHZH01-deepseek-v4.1-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "24",
+   "cl": "(1)至(6)",
+   "written": "Personal Data Protection Act B.E. 2562 (2019)",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "列举了六类合法处理依据：同意、履行合同或订立合同前的请求、履行法定义务、保护重大利益、履行公共任务或行使官方职权、合法利益。",
+   "quote": "",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "24"
+   }
+  },
+  {
+   "aid": "QTHZH01-deepseek-v4.1-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "24",
+   "cl": "(1)",
+   "written": "Personal Data Protection Act B.E. 2562 (2019)",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "同意（Consent）：数据主体已就其个人数据处理给予同意。",
+   "quote": "",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "24"
+   }
+  },
+  {
+   "aid": "QTHZH01-deepseek-v4.1-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "24",
+   "cl": "(2)",
+   "written": "Personal Data Protection Act B.E. 2562 (2019)",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "履行合同或订立合同前的请求（Contract）：为履行合同所必需，或为应数据主体请求在订立合同前采取必要步骤。",
+   "quote": "",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "24"
+   }
+  },
+  {
+   "aid": "QTHZH01-deepseek-v4.1-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "24",
+   "cl": "(3)",
+   "written": "Personal Data Protection Act B.E. 2562 (2019)",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "履行法定义务（Legal obligation）：为履行数据控制者所承担的法律义务所必需。",
+   "quote": "",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "24"
+   }
+  },
+  {
+   "aid": "QTHZH01-deepseek-v4.1-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "24",
+   "cl": "(4)",
+   "written": "Personal Data Protection Act B.E. 2562 (2019)",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "保护重大利益（Vital interests）：为防止或抑制对生命、身体或健康的危险所必需。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "24"
+   }
+  },
+  {
+   "aid": "QTHZH01-deepseek-v4.1-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "24",
+   "cl": "(5)",
+   "written": "Personal Data Protection Act B.E. 2562 (2019)",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "履行公共任务或行使官方职权（Public task / official authority）：为履行公共利益任务或行使赋予数据控制者的官方职权所必需。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "24"
+   }
+  },
+  {
+   "aid": "QTHZH01-deepseek-v4.1-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "24",
+   "cl": "(6)",
+   "written": "Personal Data Protection Act B.E. 2562 (2019)",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "合法利益（Legitimate interests）：为数据控制者或第三方追求的合法利益所必需，但不得凌驾于数据主体的基本权利和自由之上；通常不适用于公共机关依职权处理数据的情形。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "24"
+   }
+  },
+  {
+   "aid": "QTHZH01-deepseek-v4.1-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "25",
+   "cl": null,
+   "written": "Personal Data Protection Act B.E. 2562 (2019)",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "对种族、民族、政治观点、宗教、健康、性取向、犯罪记录、生物识别等特殊类别个人数据，原则上禁止处理，仅在更严格的条件下允许。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "25"
+   }
+  },
+  {
+   "aid": "QTHZH01-glm-5.3-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "24",
+   "cl": "1",
+   "written": "PDPA",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "数据主体已知情同意（即取得同意）",
+   "quote": "在数据主体被告知后，为数据主体已被告知的目的而收集、使用或披露个人数据。",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "24"
+   }
+  },
+  {
+   "aid": "QTHZH01-glm-5.3-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "24",
+   "cl": "2",
+   "written": "PDPA",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "履行合同之必要",
+   "quote": "为履行数据主体作为合同一方的合同而收集、使用或披露个人数据是必要的，或为了在订立合同前应数据主体的要求采取措施。",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "24"
+   }
+  },
+  {
+   "aid": "QTHZH01-glm-5.3-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "24",
+   "cl": "3",
+   "written": "PDPA",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "履行法律义务",
+   "quote": "为控制者履行法律规定的义务而收集、使用或披露个人数据是必要的。",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "24"
+   }
+  },
+  {
+   "aid": "QTHZH01-glm-5.3-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "24",
+   "cl": "4",
+   "written": "PDPA",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "保护 vital interests / 重大利益",
+   "quote": "为在数据主体或他人生命、身体或健康面临紧急情况时防止或抑制对数据主体或他人的危险，而收集、使用或披露个人数据是必要的。",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "24"
+   }
+  },
+  {
+   "aid": "QTHZH01-glm-5.3-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "24",
+   "cl": "5",
+   "written": "PDPA",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "公共利益/公权力行使",
+   "quote": "为公共利益执行任务，或为行使国家授予控制者权力的官方职权而收集、使用或披露个人数据是必要的。",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "24"
+   }
+  },
+  {
+   "aid": "QTHZH01-glm-5.3-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "24",
+   "cl": "6",
+   "written": "PDPA",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "合法利益",
+   "quote": "为控制者或第三人或法人的合法利益进行收集、使用或披露个人数据是必要的，但该利益须不超过数据主体对其个人数据的基本权利的合理预期。",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "24"
+   }
+  },
+  {
+   "aid": "QTHZH01-glm-5.3-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "20",
+   "cl": null,
+   "written": "PDPA",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "规定数据主体有权随时撤回同意；同意不得成为合同的先决条件（除非处理为履行合同所必需）。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "20"
+   }
+  },
+  {
+   "aid": "QTHZH03-deepseek-v4.1-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "83",
+   "cl": null,
+   "written": "Personal Data Protection Act B.E. 2562 (2019)",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "行政罚款的上限规定在第83条。第83条规定，数据控制者或数据处理者违反本法规定的，专家委员会有权处以行政罚款，罚款金额每次不超过500万泰铢。该条同时规定，在确定罚款金额时，应考虑违法行为的严重性、违法者因违法获得的利益、违法者的经营规模、配合调查的态度以及此前是否受到过处罚等因",
+   "quote": "",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "83"
+   }
+  },
+  {
+   "aid": "QTHZH03-glm-5.3-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "83",
+   "cl": null,
+   "written": "《个人数据保护法》",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "数据控制者违反本法的行为，若不构成刑事犯罪，PDPC可处以不超过500万泰铢的行政罚款。具体分为一般违法行为（不超过50万泰铢）、较严重违法行为（不超过300万泰铢）和最严重违法行为（不超过500万泰铢）。",
+   "quote": "",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "83"
+   }
+  },
+  {
+   "aid": "QTHZH03-glm-5.3-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "84",
+   "cl": null,
+   "written": "《个人数据保护法》",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "若违法行为是因故意实施、为牟取不法利益或导致重大损害，且第83条罚款不足以制止，PDPC可处以不超过违法行为所获利益或造成的损害金额2倍的行政罚款。",
+   "quote": "",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "84"
+   }
+  },
+  {
+   "aid": "QTHZH03-glm-5.3-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "78-82",
+   "cl": null,
+   "written": "《个人数据保护法》",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "规定了刑事处罚，如监禁和罚金。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "78"
+   }
+  },
+  {
+   "aid": "QTHZH03-mimo-v2.6-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "79",
+   "cl": null,
+   "written": "《个人数据保护法》",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "涉及PDPC委员会发出命令的依据条款。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "79"
+   }
+  },
+  {
+   "aid": "QTHZH03-qwen3.8-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "83",
+   "cl": null,
+   "written": "《个人数据保护法》",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "如果任何数据控制者或数据处理者违反了本法的规定，且该违规行为不属于第84条至第87条规定的更严重违规情形（即不适用刑事处罚的情形），则其可被处以不超过500万泰铢的行政罚款。",
+   "quote": "",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "83"
+   }
+  },
+  {
+   "aid": "QTHZH03-qwen3.8-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "84",
+   "cl": null,
+   "written": "《个人数据保护法》",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "规定了更严重的违规行为（如故意违反导致重大损害、非法获取/出售/提供个人数据等），这些情形可能涉及刑事处罚（监禁和/或更高额度的罚金）。",
+   "quote": "",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "84"
+   }
+  },
+  {
+   "aid": "QTHZH03-qwen3.8-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "85",
+   "cl": null,
+   "written": "《个人数据保护法》",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "规定了更严重的违规行为（如故意违反导致重大损害、非法获取/出售/提供个人数据等），这些情形可能涉及刑事处罚（监禁和/或更高额度的罚金）。",
+   "quote": "",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "85"
+   }
+  },
+  {
+   "aid": "QTHZH03-qwen3.8-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "86",
+   "cl": null,
+   "written": "《个人数据保护法》",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "规定了更严重的违规行为（如故意违反导致重大损害、非法获取/出售/提供个人数据等），这些情形可能涉及刑事处罚（监禁和/或更高额度的罚金）。",
+   "quote": "",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "86"
+   }
+  },
+  {
+   "aid": "QTHZH03-qwen3.8-flash",
+   "lang": "zh",
+   "law": "TH-PDPA-2562-TH",
+   "art": "87",
+   "cl": null,
+   "written": "《个人数据保护法》",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "规定了更严重的违规行为（如故意违反导致重大损害、非法获取/出售/提供个人数据等），这些情形可能涉及刑事处罚（监禁和/或更高额度的罚金）。",
+   "quote": "",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "87"
+   }
+  },
+  {
+   "aid": "QTHTH03-deepseek-v4.1-flash",
+   "lang": "th",
+   "law": "TH-PDPA-2562-TH",
+   "art": "28",
+   "cl": null,
+   "written": "พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล (ฉบับที่ 2)",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "แก้ไขเพิ่มเติมมาตรา 28 ให้ยืดหยุ่นขึ้น โดยปรับแก้รายละเอียดข้อยกเว้นหลายข้อ",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "28"
+   }
+  },
+  {
+   "aid": "QTHTH03-glm-5.3-flash",
+   "lang": "th",
+   "law": "TH-PDPA-2562-TH",
+   "art": "25",
+   "cl": "2",
+   "written": "พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "ความรับผิดชอบในการบันทึกหลักฐานการปฏิบัติตามกฎหมาย (อ้างถึงในสรุปขั้นตอนข้อ 3)",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "25"
+   }
+  },
+  {
+   "aid": "QTHTH03-glm-5.3-flash",
+   "lang": "th",
+   "law": "TH-PDPA-2562-TH",
+   "art": "29",
+   "cl": null,
+   "written": "พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "ข้อยกเว้นสำหรับหน่วยงานของรัฐในการโอนข้อมูลข้ามพรมแดนเมื่อจำเป็นตามหน้าที่ (อ้างถึงในหมายเหตุท้ายคำตอบ)",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "29"
+   }
+  },
+  {
+   "aid": "QTHTH03-mimo-v2.6-flash",
+   "lang": "th",
+   "law": "TH-PDPA-2562-TH",
+   "art": "28",
+   "cl": null,
+   "written": "พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "กำหนดไว้ว่า หัวหน้าผู้ควบคุมข้อมูลส่วนบุคคลไม่อาจส่งหรือโอนข้อมูลส่วนบุคคลไปยังต่างประเทศ เว้นแต่ อยู่ในเงื่อนไขใดเงื่อนไขหนึ่ง ดังต่อไปนี้:",
+   "quote": "",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "28"
+   }
+  },
+  {
+   "aid": "QTHTH03-qwen3.8-flash",
+   "lang": "th",
+   "law": "TH-PDPA-2562-TH",
+   "art": "28",
+   "cl": null,
+   "written": "พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "หลักเกณฑ์พื้นฐานในการโอนข้อมูลไปต่างประเทศ โดยผู้ควบคุมข้อมูลจะกระทำการโอนได้ก็ต่อเมื่อประเทศปลายทางมีมาตรฐานในการคุ้มครองข้อมูลส่วนบุคคลที่",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "28"
+   }
+  },
+  {
+   "aid": "QTHTH03-qwen3.8-flash",
+   "lang": "th",
+   "law": "TH-PDPA-2562-TH",
+   "art": "28",
+   "cl": "วรรคสอง (1)",
+   "written": "พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "ผู้ควบคุมข้อมูลต้องได้รับ ความยินยอม จากเจ้าของข้อมูลส่วนบุคคลสำหรับการโอนข้อมูลไปต่างประเทศดังกล่าว และต้องแจ้งให้ทราบถึงความเสี่ยง",
+   "quote": "",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "28"
+   }
+  },
+  {
+   "aid": "QTHTH03-qwen3.8-flash",
+   "lang": "th",
+   "law": "TH-PDPA-2562-TH",
+   "art": "28",
+   "cl": "วรรคสอง (2)",
+   "written": "พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "มีการจัดให้มี มาตรการคุ้มครองข้อมูลส่วนบุคคลที่มีประสิทธิภาพ ตามที่คณะกรรมการประกาศกำหนด ซึ่งมักหมายถึงการทำสัญญา (SCCs)",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "28"
+   }
+  },
+  {
+   "aid": "QTHTH03-qwen3.8-flash",
+   "lang": "th",
+   "law": "TH-PDPA-2562-TH",
+   "art": "28",
+   "cl": "วรรคสอง (3)",
+   "written": "พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "เป็นการจำเป็นเพื่อการปฏิบัติตามกฎหมาย หรือเพื่อประโยชน์สาธารณะที่สำคัญ หรือเพื่อป้องกันหรือระงับอันตรายต่อชีวิต ร่างกาย หรือสุขภาพของบุคคล",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "TH-PDPA-2562-TH",
+    "art": "28"
+   }
+  }
+ ]
+}

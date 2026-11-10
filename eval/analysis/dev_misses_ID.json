@@ -1,0 +1,576 @@
+{
+ "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH": [
+  {
+   "aid": "QIDZH01-glm-5.3-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "46",
+   "cl": null,
+   "written": "UU No. 27 Tahun 2022",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "书面通知必须至少包含：泄露的个人数据内容/类型、泄露发生的时间和日期、数据主体可以采取的措施、数据控制者为处理和补救泄露所作的努力、数据控制者/机构可以向数据主体提供的联系方式。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "46"
+   }
+  },
+  {
+   "aid": "QIDZH01-glm-5.3-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "46",
+   "cl": null,
+   "written": "UU No. 27 Tahun 2022",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "若委托受托人处理数据，由受托人在知悉泄露后立即（最迟3×24小时内）通知数据控制者，再由控制者履行上述通知义务。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "46"
+   }
+  },
+  {
+   "aid": "QIDZH01-mimo-v2.6-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "46",
+   "cl": "1",
+   "written": "UU PDP",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "数据控制者必须在数据泄露事件发生/知悉之日起的3个工作日内，将个人数据保护失败的情况通知数据主体。",
+   "quote": "数据控制者**必须**在数据泄露事件发生/知悉之日起的 **3个工作日（3 hari kerja）内**，将个人数据保护失败的情况通知**数据主体（subjek data）**。",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "46"
+   }
+  },
+  {
+   "aid": "QIDZH01-mimo-v2.6-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "67",
+   "cl": null,
+   "written": "UU PDP",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "该法对违反第46条规定的行为设有行政处罚（以行政罚款为主）。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "67"
+   }
+  },
+  {
+   "aid": "QIDZH01-qwen3.8-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "46",
+   "cl": "1",
+   "written": "Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "发生“个人数据保护失效”时，必须同时通知个人数据主体以及印尼通信与信息部（作为监管机构）。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "46"
+   }
+  },
+  {
+   "aid": "QIDZH01-qwen3.8-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "46",
+   "cl": "1",
+   "written": "Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "上述第(1)款规定的通知，必须在知悉发生个人数据保护失效后最迟不超过3×24小时（即72小时）内进行。",
+   "quote": "Penyampaian pemberitahuan sebagaimana dimaksud pada ayat (1) dilakukan paling lambat 3 x 24 jam sete",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "46"
+   }
+  },
+  {
+   "aid": "QIDZH01-qwen3.8-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "46",
+   "cl": "2",
+   "written": "Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "通知内容至少应包括：被泄露的个人数据的具体种类；数据泄露的原因、经过及影响范围；已采取或拟采取的补救措施；控制者的联系方式。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "46"
+   }
+  },
+  {
+   "aid": "QIDZH01-qwen3.8-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "67",
+   "cl": null,
+   "written": "UU PDP",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "若未按时通知，个人数据控制者可能面临行政处罚甚至刑事责任。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "67"
+   }
+  },
+  {
+   "aid": "QIDZH01-qwen3.8-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "68",
+   "cl": null,
+   "written": "UU PDP",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "若未按时通知，个人数据控制者可能面临行政处罚甚至刑事责任。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "68"
+   }
+  },
+  {
+   "aid": "QIDZH01-qwen3.8-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "69",
+   "cl": null,
+   "written": "UU PDP",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "若未按时通知，个人数据控制者可能面临行政处罚甚至刑事责任。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "69"
+   }
+  },
+  {
+   "aid": "QIDZH01-qwen3.8-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "71",
+   "cl": null,
+   "written": "UU PDP",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "若未按时通知，个人数据控制者可能面临行政处罚甚至刑事责任。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "71"
+   }
+  },
+  {
+   "aid": "QIDZH01-qwen3.8-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "73",
+   "cl": null,
+   "written": "UU PDP",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "若未按时通知，个人数据控制者可能面临行政处罚甚至刑事责任。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "73"
+   }
+  },
+  {
+   "aid": "QIDZH01-qwen3.8-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "74",
+   "cl": null,
+   "written": "UU PDP",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "若未按时通知，个人数据控制者可能面临行政处罚甚至刑事责任。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "74"
+   }
+  },
+  {
+   "aid": "QIDID01-deepseek-v4.1-flash",
+   "lang": "id",
+   "law": "ID-UU-27-2022",
+   "art": "6",
+   "cl": null,
+   "written": "Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "Hak melengkapi/memperbarui dan mengakhiri pemrosesan serta menghapus/memusnahkan",
+   "quote": "Subjek Data Pribadi berhak untuk melengkapi atau memperbarui Data Pribadi tentang dirinya, dan/atau ",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "6"
+   }
+  },
+  {
+   "aid": "QIDID01-deepseek-v4.1-flash",
+   "lang": "id",
+   "law": "ID-UU-27-2022",
+   "art": "8",
+   "cl": null,
+   "written": "Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "Hak mengakhiri pemrosesan, menghapus/memusnahkan, dan/atau menarik kembali persetujuan",
+   "quote": "Subjek Data Pribadi berhak mengakhiri pemrosesan, menghapus, dan/atau memusnahkan Data Pribadi tenta",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "8"
+   }
+  },
+  {
+   "aid": "QIDID01-deepseek-v4.1-flash",
+   "lang": "id",
+   "law": "ID-UU-27-2022",
+   "art": "14",
+   "cl": null,
+   "written": "Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "Ketentuan lebih lanjut mengenai tata cara pelaksanaan hak diatur dalam Peraturan Pemerintah",
+   "quote": "Ketentuan lebih lanjut mengenai tata cara pelaksanaan hak Subjek Data Pribadi sebagaimana dimaksud d",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "14",
+    "score": 0.5
+   }
+  },
+  {
+   "aid": "QIDID01-glm-5.3-flash",
+   "lang": "id",
+   "law": "ID-UU-27-2022",
+   "art": "5",
+   "cl": null,
+   "written": "Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP)",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "Dasar hukum hak subjek data pribadi, khususnya Pasal 5 sampai dengan Pasal 13.",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "5"
+   }
+  },
+  {
+   "aid": "QIDID01-glm-5.3-flash",
+   "lang": "id",
+   "law": "ID-UU-27-2022",
+   "art": "5",
+   "cl": null,
+   "written": "UU PDP",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "Subjek data pribadi berhak atas pelindungan data pribadinya sesuai dengan ketentuan peraturan perundang-undangan.",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "5"
+   }
+  },
+  {
+   "aid": "QIDID01-glm-5.3-flash",
+   "lang": "id",
+   "law": "ID-UU-27-2022",
+   "art": "6",
+   "cl": null,
+   "written": "UU PDP",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "Penegasan bahwa hak-hak subjektif berlaku sepanjang tidak diatur lain oleh peraturan perundang-undangan.",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "6"
+   }
+  },
+  {
+   "aid": "QIDID01-glm-5.3-flash",
+   "lang": "id",
+   "law": "ID-UU-27-2022",
+   "art": "5",
+   "cl": null,
+   "written": "UU PDP",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "Penyebutan ulang Pasal 5 sebagai dasar hak atas pelindungan data pribadi sesuai ketentuan peraturan perundang-undangan.",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "5"
+   }
+  },
+  {
+   "aid": "QIDID01-glm-5.3-flash",
+   "lang": "id",
+   "law": "ID-UU-27-2022",
+   "art": "6",
+   "cl": null,
+   "written": "UU PDP",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "Penyebutan ulang Pasal 6 dalam catatan tambahan mengenai berlakunya hak sepanjang tidak diatur lain.",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "6"
+   }
+  },
+  {
+   "aid": "QIDID01-glm-5.3-flash",
+   "lang": "id",
+   "law": "ID-UU-27-2022",
+   "art": "5",
+   "cl": null,
+   "written": "UU PDP",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "Pasal 5 menyatakan subjek data pribadi berhak atas pelindungan data pribadinya sesuai dengan ketentuan peraturan perundang-undangan.",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "5"
+   }
+  },
+  {
+   "aid": "QIDID01-glm-5.3-flash",
+   "lang": "id",
+   "law": "ID-UU-27-2022",
+   "art": "6",
+   "cl": null,
+   "written": "UU PDP",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "Pasal 6 menegaskan bahwa hak-hak tersebut berlaku sepanjang tidak diatur lain oleh peraturan perundang-undangan.",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "6"
+   }
+  },
+  {
+   "aid": "QIDID01-glm-5.3-flash",
+   "lang": "id",
+   "law": "ID-UU-27-2022",
+   "art": "5",
+   "cl": null,
+   "written": "UU PDP",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "Dasar hukum umum hak subjek data pribadi.",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "5"
+   }
+  },
+  {
+   "aid": "QIDID01-glm-5.3-flash",
+   "lang": "id",
+   "law": "ID-UU-27-2022",
+   "art": "13",
+   "cl": null,
+   "written": "UU PDP",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "Rentang pasal dasar hukum disebutkan 'khususnya Pasal 5 sampai dengan Pasal 13'.",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "13"
+   }
+  },
+  {
+   "aid": "QIDZH02-deepseek-v4.1-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "71",
+   "cl": null,
+   "written": "《个人数据保护法》（Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi，简称 UU PDP，2022年第27号法律）",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "上述犯罪中，若涉及未经授权收集用于自身或他人利益的，属告诉才处理的犯罪（delik aduan），须数据主体报案方可追诉。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "71"
+   }
+  },
+  {
+   "aid": "QIDZH02-deepseek-v4.1-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "73",
+   "cl": null,
+   "written": "《个人数据保护法》（Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi，简称 UU PDP，2022年第27号法律）",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "规定犯罪未遂（percobaan）与共犯（penyertaan）依《刑法典》处罚。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "73"
+   }
+  },
+  {
+   "aid": "QIDZH02-mimo-v2.6-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "68",
+   "cl": null,
+   "written": "《个人数据保护法》",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "非法披露个人数据",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "68"
+   }
+  },
+  {
+   "aid": "QIDZH02-qwen3.8-flash",
+   "lang": "zh",
+   "law": "ID-UU-27-2022",
+   "art": "58",
+   "cl": null,
+   "written": "《个人数据保护法》（Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi，简称 UU PDP）",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "民事赔偿：数据主体可提起民事诉讼要求赔偿损失。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-27-2022",
+    "art": "58"
+   }
+  },
+  {
+   "aid": "QIDID05-deepseek-v4.1-flash",
+   "lang": "id",
+   "law": "ID-UU-1-1974",
+   "art": "12",
+   "cl": null,
+   "written": "Undang-Undang Nomor 1 Tahun 1974 tentang Perkawinan",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "Perkawinan berdasarkan Pasal 6 ayat (2) sampai ayat (5) hanya dapat dilangsungkan bila ada izin dari orang tua/wali/pengadilan.",
+   "quote": "Perkawinan berdasarkan ketentuan Pasal 6 ayat (2) sampai ayat (5) hanya dapat dilangsungkan bila ada",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-1-1974",
+    "art": "12"
+   }
+  },
+  {
+   "aid": "QIDID05-glm-5.3-flash",
+   "lang": "id",
+   "law": "ID-UU-1-1974",
+   "art": "6",
+   "cl": null,
+   "written": "Pasal 6 UU No. 1 Tahun 1974",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "Perkawinan didasarkan pada persetujuan kedua calon mempelai, dan bagi calon yang berusia kurang dari 21 tahun memerlukan izin dari: orang tu",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-1-1974",
+    "art": "6"
+   }
+  },
+  {
+   "aid": "QIDID05-glm-5.3-flash",
+   "lang": "id",
+   "law": "ID-UU-1-1974",
+   "art": "4",
+   "cl": null,
+   "written": "Pasal 6 UU No. 1 Tahun 1974",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "Tidak ada halangan untuk kawin (misalnya masih terikat perkawinan lain)",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-1-1974",
+    "art": "4"
+   }
+  },
+  {
+   "aid": "QIDID05-glm-5.3-flash",
+   "lang": "id",
+   "law": "ID-UU-1-1974",
+   "art": "5",
+   "cl": null,
+   "written": "Pasal 6 UU No. 1 Tahun 1974",
+   "cat": "pred_EXISTS_UNQUOTED_gold_CONTENT_MISMATCH",
+   "claim": "Tidak ada halangan untuk kawin (misalnya masih terikat perkawinan lain)",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": {
+    "law": "ID-UU-1-1974",
+    "art": "5"
+   }
+  }
+ ],
+ "not_extracted": [
+  {
+   "aid": "QIDID01-qwen3.8-flash",
+   "lang": "id",
+   "law": "ID-UU-27-2022",
+   "art": "20",
+   "cl": null,
+   "written": "UU PDP",
+   "cat": "not_extracted",
+   "claim": "Beberapa hak dapat dibatasi oleh alasan hukum tertentu (seperti keamanan negara, pertahanan, atau penyelidikan pidana).",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": null
+  }
+ ],
+ "extracted_wrong_law": [
+  {
+   "aid": "QIDZH02-qwen3.8-flash",
+   "lang": "zh",
+   "law": "ID-UU-11-2008-ITE",
+   "art": "51",
+   "cl": "1",
+   "written": "《信息电子交易法》（UU ITE）",
+   "cat": "extracted_wrong_law:null",
+   "claim": "违反第 35 条者，可处最高 6 年监禁或最高 6 亿印尼盾罚金。",
+   "quote": "",
+   "basis": "claim 与原文不符（CONTRADICTED，LLM 辅助标注）",
+   "v": null
+  },
+  {
+   "aid": "QIDZH05-qwen3.8-flash",
+   "lang": "zh",
+   "law": "ID-UU-11-2008-ITE",
+   "art": "11",
+   "cl": null,
+   "written": "UU No. 1 Tahun 2024",
+   "cat": "extracted_wrong_law:ID-UU-40-2007-PT/null",
+   "claim": "公司名称必须使用拉丁字母，不得与其他已注册公司名称相同或相似造成混淆，且应包含“PT”字样。公司名称需在司法部进行预先核准。",
+   "quote": "",
+   "basis": "claim 与原文不符（NOT_SUPPORTED，LLM 辅助标注）",
+   "v": null
+  }
+ ]
+}

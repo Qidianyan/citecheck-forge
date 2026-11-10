@@ -68,7 +68,7 @@ New in this project (not in the prototype): the misattribution / unsupported-sta
 Each law record carries its source URL and fetch date (see `src/corpus/index.json`).
 
 ## Limitations
-Coverage is limited to the bundled laws; case-law databases are not connected; paraphrases in another language than the official text are not compared (the agent may add an advisory semantic note); the misattribution check is lexical and can be wrong — it suggests, a reviewer decides. CiteCheck does not give legal advice.
+Coverage is limited to the bundled laws; case-law databases are not connected; paraphrases in another language than the official text are compared only through a small curated legal-term glossary (Chinese → Vietnamese/Indonesian/Thai) and are otherwise left to a reviewer (the agent may add an advisory semantic note); the misattribution check is lexical and can be wrong — it suggests, a reviewer decides. CiteCheck does not give legal advice.
 
 ## License
 MIT (see LICENSE). Statute texts are official government publications; see Data sources.

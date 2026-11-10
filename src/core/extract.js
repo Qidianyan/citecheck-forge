@@ -24,6 +24,49 @@ export const QUOTE_RE = /["“«「『]([^"”»」』]{15,})["”»」』]/gu;
 export const BOOK_RE = /《([^《》]{2,60})》/gu;
 const CLAUSE_RE = new RegExp(`(?:khoản|ayat|วรรค|第)\\s*\\(?(${D}+|[一二三四五六七八九十]+)\\)?\\s*(?:款)?`, 'u');
 
+// Task K (enhanced mode only): article ranges and lists, e.g. "第67–74条", "Pasal 5 sampai dengan Pasal 13",
+// "Điều 5, 6 và 7", "มาตรา 78 ถึง 82", "Articles 5 to 10". One statute row per article.
+const SEP = String.raw`(?:[-–—~]|sampai\s+dengan|sampai|s\.d\.|s/d|đến|tới|ถึง|(?<![A-Za-z])to(?![A-Za-z])|(?<![A-Za-z])through(?![A-Za-z])|至|到)`;
+const MARK = String.raw`(Pasal|Điều|Dieu|มาตรา|Articles|Sections|Article|Section|Art\.|Sec\.)`;
+const NUM = String.raw`(${D}+|[${CN_DIG}]+)`;
+const RANGE_RE = new RegExp(String.raw`${MARK}\s*(${D}+)\s*${SEP}\s*(?:${MARK}\s*)?(${D}+)`, 'giu');
+const ZH_RANGE_RE = new RegExp(String.raw`第\s*${NUM}\s*条?\s*(?:[-–—~]|至|到)\s*(?:第\s*)?${NUM}\s*条?`, 'giu');
+const LIST_RE = new RegExp(String.raw`${MARK}\s*(${D}+)(?:(?:\s*,\s*|\s+)(?:dan|và|และ|and)?\s*(?:${MARK}\s*)?(${D}+))+`, 'giu');
+const ZH_LIST_RE = new RegExp(String.raw`第\s*${NUM}\s*条?(?:(?:\s*(?:、|，|和|与)\s*)(?:第\s*)?${NUM}\s*条?)+`, 'giu');
+const digitsOf = (s) => [...s.matchAll(new RegExp(`${D}+|[${CN_DIG}]+`, 'gu'))].map((x) => cn2int(x[0])).filter((n) => Number.isFinite(n) && n > 0);
+
+/** Group candidates on one line: {start,end,kind,zh,marker,nums,firstEnd}. Overlaps dropped, order kept. */
+function findGroups(lineT) {
+  const cand = [];
+  const add = (m, kind, zh) => {
+    if (zh && !/条\s*$/u.test(m[0])) return; // "第2、3句" (sentences) is not an article group: the last number needs 条
+    let nums = digitsOf(m[0]);
+    if (kind === 'range') {
+      const a = nums[0], b = nums[nums.length - 1];
+      if (!(b > a) || b - a + 1 > 15) return; // cap: invalid or oversized ranges keep current behaviour
+      nums = []; for (let n = a; n <= b; n++) nums.push(n);
+    }
+    const numStr = zh ? m[1] : (m[2] || m[1]);
+    const numEnd = m[0].indexOf(numStr) + numStr.length;
+    const zhTail = zh ? (/^\s*条/u.exec(m[0].slice(numEnd)) || [''])[0] : '';
+    const firstLocal = numEnd + zhTail.length;
+    const firstEnd = m.index + firstLocal;
+    const firstText = m[0].slice(0, firstLocal);
+    if (!nums.length) return;
+    const seen = new Set(); const uniq = [];
+    for (const n of nums) if (!seen.has(n)) { seen.add(n); uniq.push(n); }
+    cand.push({ start: m.index, end: m.index + m[0].length, kind, zh, marker: zh ? null : m[1], nums: uniq, firstEnd, firstText });
+  };
+  for (const m of lineT.matchAll(RANGE_RE)) add(m, 'range', false);
+  for (const m of lineT.matchAll(ZH_RANGE_RE)) add(m, 'range', true);
+  for (const m of lineT.matchAll(LIST_RE)) add(m, 'list', false);
+  for (const m of lineT.matchAll(ZH_LIST_RE)) add(m, 'list', true);
+  cand.sort((a, b) => a.start - b.start || (b.end - b.start) - (a.end - a.start));
+  const out = []; let lastEnd = -1;
+  for (const g of cand) if (g.start >= lastEnd) { out.push(g); lastEnd = g.end; }
+  return out;
+}
+
 function countOcc(text, w) {
   let n = 0, i = 0;
   while ((i = text.indexOf(w, i)) !== -1) { n++; i += w.length; }
@@ -161,11 +204,7 @@ export function extract(text, corpus, country = null, opts = {}) {
     const sentence600 = cpSlice(strip(line), 0, 600), sentence800 = cpSlice(strip(line), 0, 800);
     for (const c of lineT.matchAll(CASE_RE)) out.push({ citation: strip(c[0]), type: 'case', sentence: sentence600 });
     const quotes = [...lineT.matchAll(QUOTE_RE)].map((m) => [m.index, m[1]]);
-    for (const m of lineT.matchAll(ART_RE)) {
-      const g = m.groups;
-      const art = String(cn2int(g.n1 || g.n2 || g.n3));
-      const pos = m.index;
-      const zh = Boolean(g.zh);
+    const resolveAt = (pos, zh) => {
       const cands = [];
       for (const h of hits) cands.push([dist(h.start, pos, zh), 'law', h.law]);
       for (const [p, u] of unknown) cands.push([dist(p, pos, zh), 'hint', u]);
@@ -178,6 +217,14 @@ export function extract(text, corpus, country = null, opts = {}) {
       else if (ctx && typeof ctx === 'object') { law = ctx; inferred = true; }
       else if (typeof ctx === 'string') { hint = ctx; inferred = true; }
       law = pin(law, lineT);
+      return { law, hint, inferred };
+    };
+    const statuteRow = (m) => {
+      const g = m.groups;
+      const art = String(cn2int(g.n1 || g.n2 || g.n3));
+      const pos = m.index;
+      const zh = Boolean(g.zh);
+      const { law, hint, inferred } = resolveAt(pos, zh);
       let q = null;
       if (quotes.length) {
         const after = quotes.filter((x) => x[0] >= pos);
@@ -185,8 +232,41 @@ export function extract(text, corpus, country = null, opts = {}) {
       }
       const end = m.index + m[0].length;
       const cm = CLAUSE_RE.exec(lineT.slice(end, end + 25));
-      out.push({ citation: strip(m[0]), type: 'statute', article: art, clause: cm ? cm[1] : null, law, law_hint: hint,
-        inferred, sentence: sentence800, quote: q, quote_lang: q ? scriptOf(q) : null });
+      const row = { citation: strip(m[0]), type: 'statute', article: art, clause: cm ? cm[1] : null, law, law_hint: hint,
+        inferred, sentence: sentence800, quote: q, quote_lang: q ? scriptOf(q) : null };
+      if (corpus.enhanced) row.multi = null;
+      return row;
+    };
+    /** Enhanced: expand a range/list group into one row per article, inheriting the first article's resolution. */
+    const groupRows = (g) => {
+      const r0 = resolveAt(g.start, g.zh);
+      const cm0 = CLAUSE_RE.exec(lineT.slice(g.firstEnd, g.firstEnd + 25));
+      let q = null;
+      if (quotes.length) {
+        const after = quotes.filter((x) => x[0] >= g.start);
+        q = (after.length ? after[0] : quotes[quotes.length - 1])[1];
+      }
+      const rows = [];
+      for (const n of g.nums) {
+        const first = rows.length === 0;
+        const citation = first
+          ? (g.zh ? (g.firstText.endsWith('条') ? strip(g.firstText) : `第${n}条`) : `${g.marker} ${n}`)
+          : (g.zh ? `第${n}条` : `${g.marker} ${n}`);
+        rows.push({ citation, type: 'statute', article: String(n),
+          clause: first && cm0 ? cm0[1] : null, law: r0.law, law_hint: r0.hint, inferred: r0.inferred,
+          sentence: sentence800, quote: first ? q : null, quote_lang: first && q ? scriptOf(q) : null, multi: g.kind });
+      }
+      return rows;
+    };
+    const groups = corpus.enhanced ? findGroups(lineT) : [];
+    if (groups.length) {
+      const covered = (pos, len) => groups.some((gr) => pos < gr.end && gr.start < pos + len);
+      const items = groups.map((gr) => ({ pos: gr.start, gr }));
+      for (const m of lineT.matchAll(ART_RE)) if (!covered(m.index, m[0].length)) items.push({ pos: m.index, m });
+      items.sort((a, b) => a.pos - b.pos);
+      for (const it of items) if (it.gr) out.push(...groupRows(it.gr)); else out.push(statuteRow(it.m));
+    } else {
+      for (const m of lineT.matchAll(ART_RE)) out.push(statuteRow(m));
     }
     if (corpus.enhanced && opts.followQuotes !== false) {
       const added = out.slice(before).filter((r) => r.type === 'statute');

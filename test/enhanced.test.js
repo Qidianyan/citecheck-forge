@@ -39,12 +39,16 @@ test('enhanced mode changes < 10% of legacy verdicts and never downgrades a deci
   let total = 0, changed = 0;
   for (const d of docs) {
     const E = verify(d.text, { asOf: d.as_of });
-    assert.equal(E.length, d.results.length, `citation count changed in ${d.id}`);
+    // Enhanced extraction may ADD rows (expanded article ranges/lists); every legacy row must still be there, in order.
+    let j = 0;
     d.results.forEach((L, i) => {
+      while (j < E.length && !(E[j].type === L.type && String(E[j].article ?? '') === String(L.article ?? ''))) j++;
+      assert.ok(j < E.length, `${d.id} #${i} (${L.citation}) missing in enhanced output`);
+      const e = E[j++];
       total++;
-      if (L.law !== (E[i].law ?? null) || L.verdict !== E[i].verdict) {
+      if (L.law !== (e.law ?? null) || L.verdict !== e.verdict) {
         changed++;
-        assert.ok(!(L.verdict !== 'UNVERIFIABLE' && E[i].verdict === 'UNVERIFIABLE'), `${d.id} #${i} downgraded`);
+        assert.ok(!(L.verdict !== 'UNVERIFIABLE' && e.verdict === 'UNVERIFIABLE'), `${d.id} #${i} downgraded`);
       }
     });
   }
