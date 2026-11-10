@@ -4,6 +4,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createEventHandlers } from '../src/triggers/events.js';
+import { createActions } from '../src/handlers/actions.js';
 
 const T0 = new Date('2026-11-10T12:00:00.000Z');
 const now = () => new Date(T0);
@@ -168,13 +169,13 @@ test('consumer: verifyContent + audit.record for confluence and jira bodies (pay
 
   const out = await h.consumer({ body: { product: 'confluence', id: '101', version: 3, reason: 'legal-review-label', accountId: 'u-9' } });
   assert.equal(out.ok, true);
-  assert.deepEqual(calls[0], [{ contentId: '101' }, {}]);
+  assert.deepEqual(calls[0], [{ contentId: '101' }, { trigger: 'event' }]);
 
   await h.consumer({ body: { product: 'jira', id: 'LEGAL-2', reason: 'previous-result' } });
-  assert.deepEqual(calls[1], [{ issueKey: 'LEGAL-2' }, {}]);
+  assert.deepEqual(calls[1], [{ issueKey: 'LEGAL-2' }, { trigger: 'event' }]);
 
   await h.consumer({ payload: { product: 'confluence', id: '5', version: 1 } });
-  assert.deepEqual(calls[2], [{ contentId: '5' }, {}]);
+  assert.deepEqual(calls[2], [{ contentId: '5' }, { trigger: 'event' }]);
 
   assert.equal(audit.recorded.length, 3);
   assert.deepEqual(audit.recorded[0], {
@@ -199,4 +200,38 @@ test('consumer: 4xx → { ok:false, error }; 5xx → rethrown so the platform re
   const err503 = Object.assign(new Error('HTTP 503 down'), { status: 503 });
   const h503 = handlers({ actions: { verifyContent: async () => { throw err503; } } });
   await assert.rejects(() => h503.consumer({ body: { product: 'jira', id: 'L-1' } }), /HTTP 503/);
+});
+
+// ── exactly-once audit (Task H) ──────────────────────────────────
+
+test('consumer: real actions with an audit store record exactly one entry with trigger event', async () => {
+  const recorded = [];
+  const audit = { async record(rec) { recorded.push(rec); return rec; } };
+  const client = {
+    async getConfluencePage(id) { return { id, title: 'T', version: 3, text: 'Điều 45 Luật 91/2025/QH15.', url: '/u' }; },
+    async getJiraIssue() { return {}; },
+    async postConfluenceFooterComment() {},
+    async addConfluenceLabels() {},
+    async postJiraComment() {},
+    async addJiraLabels() {},
+  };
+  const realActions = createActions({ client, store: fakeStore(), now, audit });
+  assert.equal(realActions.recordsAudit, true);
+  const h = handlers({ actions: realActions, audit, store: fakeStore() });
+  const out = await h.consumer({ body: { product: 'confluence', id: '101', version: 3, accountId: 'u-9' } });
+  assert.equal(out.ok, true);
+  assert.equal(recorded.length, 1, 'exactly one audit entry across the whole consumer run');
+  assert.equal(recorded[0].trigger, 'event');
+  assert.equal(recorded[0].product, 'confluence');
+  assert.equal(recorded[0].id, '101');
+  assert.equal(recorded[0].summary.total, 1);
+});
+
+test('consumer: fake actions without an audit store still get their entry from the consumer fallback', async () => {
+  const recorded = [];
+  const audit = { async record(rec) { recorded.push(rec); return rec; } };
+  const h = handlers({ actions: { async verifyContent() { return { verifiedAt: now().toISOString(), summary: { total: 1, flagged: 0, verified: 1, unverifiable: 0 } }; } }, audit });
+  await h.consumer({ body: { product: 'confluence', id: '7' } });
+  assert.equal(recorded.length, 1);
+  assert.equal(recorded[0].trigger, 'event');
 });

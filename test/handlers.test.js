@@ -1,11 +1,12 @@
 // SPEC B handlers tests — Node built-ins only, fakes for api/kvs/client/store.
 // Deliberately does NOT import src/index.js or src/resolver.js (they pull in @forge/*).
 
+import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { storageToText, adfToText } from '../src/handlers/text.js';
 import { createAtlassianClient } from '../src/handlers/atlassian.js';
-import { buildReport, toMarkdown, toConfluenceStorage, toJiraAdf, labelFor, summaryLine } from '../src/handlers/report.js';
+import { buildReport, toMarkdown, toConfluenceStorage, toJiraAdf, labelFor, summaryLine, byteSize, fitPayload, MAX_ROWS } from '../src/handlers/report.js';
 import { createStore } from '../src/handlers/store.js';
 import { createActions, resolveTarget } from '../src/handlers/actions.js';
 import { verify } from '../src/core/index.js';
@@ -334,17 +335,14 @@ test('verifyContent: accountId comes from context, never from inputs', async () 
 
 // ── store.js ─────────────────────────────────────────────────────────────
 
-test('store: sanitised keys, result payload and audit record', async () => {
+test('store: sanitised keys, result payload only (no legacy audit:* KVS keys)', async () => {
   const kvs = fakeKvs();
   const store = createStore({ kvs });
   const report = buildReport(verify('Điều 45 Luật 91/2025/QH15.', { asOf: '2026-11-10' }), { verifiedAt: '2026-11-10T00:00:00Z' });
   await store.saveResult('confluence', '42;DROP', report, 'u-1');
   const keys = [...kvs.map.keys()];
   assert.ok(keys.some((k) => /^result:confluence:[a-zA-Z0-9:._-]+$/.test(k) && k.startsWith('result:confluence:42')));
-  assert.ok(keys.some((k) => /^audit:\d{14}:confluence:/.test(k)));
-  const audit = kvs.map.get(keys.find((k) => k.startsWith('audit:')));
-  assert.deepEqual([audit.product, audit.accountId, audit.verifiedAt], ['confluence', 'u-1', '2026-11-10T00:00:00Z']);
-  assert.equal(audit.summary.total, report.summary.total);
+  assert.ok(!keys.some((k) => k.startsWith('audit:')), 'saveResult must not write legacy audit:* keys');
   assert.deepEqual(await store.getResult('confluence', '42;DROP'), report);
 });
 
@@ -360,4 +358,166 @@ test('store: trims original_excerpt to keep JSON under 200 KB', async () => {
 
 test('store: getResult returns null when nothing saved', async () => {
   assert.equal(await createStore({ kvs: fakeKvs() }).getResult('confluence', '1'), null);
+});
+
+// ── Task H hardening ────────────────────────────────────────────────
+
+const MISATTRIBUTED = 'Pasal 10 UU PDP menyatakan bahwa Subjek Data Pribadi berhak menarik kembali persetujuan pemrosesan Data Pribadi tentang dirinya yang telah diberikan kepada Pengendali Data Pribadi.';
+const NUMERIC_CLAIM = 'Pasal 67 UU No. 27 Tahun 2022 mengancam pidana denda maksimal 1 miliar rupiah.';
+const CJK_RE = /[\u3400-\u9fff]/u;
+const ALLOWED_CJK_FIELDS = new Set(['citation', 'sentence', 'original_excerpt', 'quote']);
+
+/** Recursively assert no CJK character survives anywhere except the whitelisted source-text fields. */
+function assertNoCjk(value, path = '$') {
+  if (typeof value === 'string') {
+    const m = value.match(CJK_RE);
+    assert.equal(m, null, `CJK leak at ${path}: ${m?.[0]}`);
+    return;
+  }
+  if (Array.isArray(value)) { value.forEach((v, i) => assertNoCjk(v, `${path}[${i}]`)); return; }
+  if (value && typeof value === 'object') {
+    for (const [k, v] of Object.entries(value)) {
+      if (ALLOWED_CJK_FIELDS.has(k)) continue;
+      assertNoCjk(v, `${path}.${k}`);
+    }
+  }
+}
+
+/** A synthetic page with 2,000 citations (one per line). */
+function bigPage(n = 2000) {
+  const lines = [];
+  for (let i = 0; i < n; i++) lines.push(`Điều ${(i % 45) + 1} Luật 91/2025/QH15 được quy định tại đây.`);
+  return lines.join('\n');
+}
+
+test('content checks: verifyContent flags the misattributed Pasal 10 paraphrase (crossref on)', async () => {
+  const out = await actions().verifyContent({ text: MISATTRIBUTED }, {});
+  const row = out.rows[0];
+  assert.equal(row.verdict, 'CONTENT_MISMATCH');
+  assert.ok(row.hallucination_types.includes('H3'));
+  assert.equal(row.suggested_article, '9');
+  assert.equal(row.crossref.kind, 'misattributed');
+  assert.ok(row.crossref.excerpt.length <= 300);
+  assert.ok(row.reason_en.includes('article 9'));
+  assert.ok(!('reason' in row), 'the legacy Chinese reason field must not leak into rows');
+});
+
+test('content checks: verifyCitation runs with crossref on and stays English-only', async () => {
+  const out = await actions().verifyCitation({
+    citation: 'Pasal 10 UU No. 27 Tahun 2022',
+    quote: 'Subjek Data Pribadi berhak menarik kembali persetujuan pemrosesan Data Pribadi tentang dirinya yang telah diberikan kepada Pengendali Data Pribadi.',
+  }, {});
+  assert.equal(out.results[0].verdict, 'CONTENT_MISMATCH');
+  assertNoCjk(out);
+});
+
+test('content checks: numeric findings surface as English advisories, verdict unchanged', async () => {
+  const out = await actions().verifyContent({ text: NUMERIC_CLAIM }, {});
+  const row = out.rows[0];
+  assert.equal(row.verdict, 'EXISTS_UNQUOTED');
+  assert.ok(Array.isArray(row.advisories));
+  assert.ok(row.advisories.length >= 1 && row.advisories.length <= 3);
+  assert.ok(row.advisories.every((a) => typeof a === 'string' && !CJK_RE.test(a)));
+  assert.match(row.advisories[0], /^Check the figures:/);
+  assert.equal(row.suggested_article, null);
+  assert.ok(row.sentence.length <= 300);
+  assert.ok(!('translation_excerpt' in row));
+});
+
+test('buildReport: advisories capped at 3 message_en strings', () => {
+  const r = buildReport([{ citation: 'x', verdict: 'EXISTS_UNQUOTED', law: 'L', advisories: [1, 2, 3, 4, 5].map((i) => ({ message_en: `note ${i}` })) }], {});
+  assert.deepEqual(r.rows[0].advisories, ['note 1', 'note 2', 'note 3']);
+});
+
+test('renderers append advisories to the Why cell as "Note: …"', async () => {
+  const out = await actions().verifyContent({ text: NUMERIC_CLAIM }, {});
+  assert.ok(toMarkdown(out).includes('Note: Check the figures:'));
+  assert.ok(toConfluenceStorage(out).includes('Note: Check the figures:'));
+  assert.ok(JSON.stringify(toJiraAdf(out)).includes('Note: Check the figures:'));
+});
+
+test('payload limits: all six actions serialise under 200 KB on a 2,000-citation page', async () => {
+  const big = bigPage();
+  const client = fakeClient({ pageText: big, issueText: big });
+  const a = actions({ client });
+  const outs = [
+    await a.extractCitations({ text: big }, {}),
+    await a.verifyCitation({ citation: 'Điều 45 Luật 91/2025/QH15', quote: 'quy định tại đây' }, {}),
+    await a.verifyContent({ text: big }, {}),
+    await a.listSources({}),
+    await a.postConfluenceReport({ contentId: '42' }, {}),
+    await a.postJiraReport({ issueKey: 'LEGAL-1' }, {}),
+  ];
+  for (const [i, o] of outs.entries()) assert.ok(byteSize(o) < 200 * 1024, `action #${i} must stay < 200 KB`);
+  assert.equal(outs[0].citations.length, 300);
+  assert.equal(outs[0].truncated, true);
+  assert.equal(outs[0].total, 2000);
+  assert.equal(outs[2].rows.length, MAX_ROWS);
+  assert.equal(outs[2].truncated, true);
+  assert.equal(outs[2].summary.total, 2000);
+});
+
+test('payload limits: the stored KVS result behind getStatus stays under the 240 KiB cap', async () => {
+  const client = fakeClient({ pageText: bigPage() });
+  const kvs = fakeKvs();
+  const store = createStore({ kvs });
+  const out = await actions({ client, store }).verifyContent({ contentId: '42' }, { accountId: 'u-1' });
+  assert.ok(byteSize(out) < 200 * 1024);
+  const stored = await store.getResult('confluence', '42');
+  assert.ok(stored, 'result must be stored');
+  assert.ok(byteSize(stored) <= 240 * 1024);
+  assert.equal(stored.truncated, true);
+  assert.equal(stored.summary.total, 2000);
+  assert.ok(![...kvs.map.keys()].some((k) => k.startsWith('audit:')), 'no legacy audit:* keys may be written');
+});
+
+test('store: trims a giant report under the 240 KiB KVS cap and writes no audit keys', async () => {
+  const kvs = fakeKvs();
+  const store = createStore({ kvs });
+  const huge = { summary: { total: 1 }, rows: [{ original_excerpt: 'x'.repeat(250 * 1024), sentence: 'y'.repeat(250 * 1024) }] };
+  await store.saveResult('jira', 'K-1', huge, null);
+  const stored = kvs.map.get([...kvs.map.keys()].find((k) => k.startsWith('result:')));
+  assert.ok(byteSize(stored) <= 240 * 1024);
+  assert.equal([...kvs.map.keys()].some((k) => k.startsWith('audit:')), false);
+});
+
+test('fitPayload: trims oversized results below the 200 KB action cap', () => {
+  const big = { summary: { total: 1 }, rows: [{ original_excerpt: 'x'.repeat(250 * 1024) }] };
+  const out = fitPayload(big);
+  assert.ok(byteSize(out) < 200 * 1024);
+});
+
+test('English only: no CJK in any action output on demo_memo_en.txt', async () => {
+  const memo = readFileSync(new URL('./fixtures/demo_memo_en.txt', import.meta.url), 'utf8');
+  const client = fakeClient({ pageText: memo, issueText: memo });
+  const a = actions({ client });
+  const outs = [
+    await a.extractCitations({ text: memo }, {}),
+    await a.verifyCitation({ citation: 'Điều 9 Luật 91/2025/QH15', quote: memo.slice(0, 80) }, {}),
+    await a.verifyContent({ text: memo }, {}),
+    await a.listSources({}),
+    await a.postConfluenceReport({ contentId: '42' }, {}),
+    await a.postJiraReport({ issueKey: 'LEGAL-1' }, {}),
+  ];
+  for (const o of outs) assertNoCjk(o);
+});
+
+test('audit: verifyContent records exactly one entry per call (rovo default, manual override)', async () => {
+  const recorded = [];
+  const audit = { async record(rec) { recorded.push(rec); } };
+  const a = actions({ client: fakeClient({ pageText: 'Điều 45 Luật 91/2025/QH15.' }), audit });
+  assert.equal(a.recordsAudit, true);
+  await a.verifyContent({ contentId: '42' }, {});
+  assert.equal(recorded.length, 1);
+  assert.equal(recorded[0].trigger, 'rovo');
+  assert.equal(recorded[0].product, 'confluence');
+  assert.equal(recorded[0].id, '42');
+  assert.equal(recorded[0].summary.total, 1);
+  await a.verifyContent({ contentId: '42' }, { trigger: 'manual', accountId: 'u-1' });
+  assert.equal(recorded.length, 2);
+  assert.equal(recorded[1].trigger, 'manual');
+  assert.equal(recorded[1].accountId, 'u-1');
+  // text targets are never persisted, so they leave no audit entry
+  await a.verifyContent({ text: 'Điều 45 Luật 91/2025/QH15.' }, {});
+  assert.equal(recorded.length, 2);
 });

@@ -1,7 +1,8 @@
-// Result + audit persistence on top of @forge/kvs (injectable so tests run without @forge/* installed).
+// Result persistence on top of @forge/kvs (injectable so tests run without @forge/* installed).
 // Key layout:
 //   result:${product}:${id}                      → the report JSON (kept < 200 KB by dropping original_excerpt)
-//   audit:${YYYYMMDDHHmmss}:${product}:${id}     → { product, id, accountId, verifiedAt, summary }
+// Audit records live in the separate `audit` entity store (src/audit/auditStore.js); this module no
+// longer writes the legacy `audit:*` KVS keys.
 // Keys must match /^(?!\s+$)[a-zA-Z0-9:._\s-#]+$/ — every id/product is sanitised before use.
 
 const KEY_RE = /^(?!\s+$)[a-zA-Z0-9:._\s-#]+$/;
@@ -15,11 +16,6 @@ function byteLen(v) {
 export function sanitiseKeyPart(part) {
   const clean = String(part ?? '').replace(/[^a-zA-Z0-9:._\s-#]/g, '_').trim();
   return KEY_RE.test(clean) && clean ? clean : 'unknown';
-}
-
-function stamp(d = new Date()) {
-  const p = (n) => String(n).padStart(2, '0');
-  return `${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}`;
 }
 
 /** Drop per-row original_excerpt until the JSON form of the value fits under the size cap. */
@@ -50,19 +46,13 @@ export function createStore({ kvs } = {}) {
   };
 
   return {
-    /** Persist the report under result:${product}:${id} + an audit record; returns the stored value. */
+    /** Persist the report under result:${product}:${id}; returns the stored value. */
     async saveResult(product, id, report, accountId) {
       const db = await resolveKvs();
       const p = sanitiseKeyPart(product);
       const i = sanitiseKeyPart(id);
       const value = trimToSize(report);
       await db.set(`result:${p}:${i}`, value);
-      await db.set(`audit:${stamp()}:${p}:${i}`, {
-        product: p, id: i,
-        accountId: accountId ?? null,
-        verifiedAt: report?.verifiedAt ?? null,
-        summary: report?.summary ?? null,
-      });
       return value;
     },
 

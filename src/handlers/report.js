@@ -6,10 +6,15 @@ import { cpSlice } from '../core/normalize.js';
 
 export const MAX_ROWS = 60;
 export const MAX_EXCERPT_CP = 600;
+export const MAX_SENTENCE_CP = 300;
+export const MAX_CROSSREF_EXCERPT_CP = 300;
+export const MAX_ADVISORIES = 3;
+export const MAX_PAYLOAD_BYTES = 200 * 1024; // every action / resolver result must serialise under 200 KB
 
 const ROW_FIELDS = ['n', 'citation', 'type', 'law', 'law_title', 'article', 'clause', 'verdict',
   'verdict_label', 'icon', 'flagged', 'hallucination_types', 'reason_en', 'quote_score', 'evidence',
-  'original_excerpt', 'law_inferred_from_context', 'translation'];
+  'original_excerpt', 'law_inferred_from_context', 'translation', 'sentence', 'advisories',
+  'suggested_article', 'crossref'];
 
 const VERIFIED = new Set(['EXISTS_CONSISTENT', 'EXISTS_UNQUOTED']);
 
@@ -20,6 +25,14 @@ function rowOf(r, n) {
     switch (f) {
       case 'n': out.n = n; break;
       case 'original_excerpt': out.original_excerpt = e.original_excerpt == null ? null : cpSlice(String(e.original_excerpt), 0, MAX_EXCERPT_CP); break;
+      case 'sentence': out.sentence = e.sentence == null ? null : cpSlice(String(e.sentence), 0, MAX_SENTENCE_CP); break;
+      // Content-check extras: English advisory notes + the article the statement actually matches.
+      case 'advisories': out.advisories = Array.isArray(e.advisories)
+        ? e.advisories.slice(0, MAX_ADVISORIES).map((a) => String(a?.message_en ?? a)).filter(Boolean) : []; break;
+      case 'suggested_article': out.suggested_article = e.crossref?.kind === 'misattributed' ? (e.crossref.suggested_article ?? null) : null; break;
+      case 'crossref': out.crossref = e.crossref
+        ? { ...e.crossref, excerpt: e.crossref.excerpt == null ? null : cpSlice(String(e.crossref.excerpt), 0, MAX_CROSSREF_EXCERPT_CP) }
+        : null; break;
       case 'hallucination_types': out.hallucination_types = e.hallucination_types || []; break;
       case 'flagged': out.flagged = Boolean(e.flagged); break;
       case 'law_inferred_from_context': out.law_inferred_from_context = Boolean(e.law_inferred_from_context); break;
@@ -70,6 +83,27 @@ function sourceLabel(source) {
   return source.title || source.name || source.summary || 'pasted text';
 }
 
+/** Serialised size of a value in bytes. */
+export function byteSize(v) {
+  return Buffer.byteLength(JSON.stringify(v ?? null), 'utf8');
+}
+
+/** Belt-and-braces size guard: drop the heaviest per-row fields, then rows, until under the cap. */
+export function fitPayload(x) {
+  if (byteSize(x) < MAX_PAYLOAD_BYTES) return x;
+  let out = x;
+  if (Array.isArray(out?.rows)) {
+    out = { ...out, rows: out.rows.map(({ original_excerpt, sentence, evidence, crossref, ...rest }) => rest) };
+  }
+  if (byteSize(out) >= MAX_PAYLOAD_BYTES && Array.isArray(out?.rows)) {
+    out = { ...out, rows: out.rows.slice(0, Math.floor(MAX_ROWS / 2)), truncated: true };
+  }
+  if (byteSize(out) >= MAX_PAYLOAD_BYTES && Array.isArray(out?.citations)) {
+    out = { ...out, citations: out.citations.slice(0, 150), truncated: true, total: out.total ?? out.citations.length };
+  }
+  return out;
+}
+
 /** One-line human summary shared by all renderers. */
 export function summaryLine(report) {
   const s = report?.summary ?? {};
@@ -82,6 +116,13 @@ export function summaryLine(report) {
 }
 
 const lawCell = (r) => r.law_title || r.law || r.law_hint || '—';
+
+/** "Why" cell: the English reason plus any content-check advisories as "Note: …" lines. */
+function whyCell(r) {
+  const parts = [r.reason_en ?? ''];
+  for (const a of r.advisories || []) parts.push(`Note: ${a}`);
+  return parts.filter(Boolean).join(' ');
+}
 
 /** "Type" column: hallucination types (H1, H4, H7, …) or an em dash when the citation passed. */
 const typeCell = (r) => (Array.isArray(r.hallucination_types) && r.hallucination_types.length
@@ -98,7 +139,7 @@ export function toMarkdown(report) {
   ];
   for (const r of report.rows || []) {
     lines.push(`| ${[
-      r.n, esc(r.citation), esc(lawCell(r)), esc(`${r.icon} ${r.verdict_label}`), esc(typeCell(r)), esc(r.reason_en),
+      r.n, esc(r.citation), esc(lawCell(r)), esc(`${r.icon} ${r.verdict_label}`), esc(typeCell(r)), esc(whyCell(r)),
       r.evidence ? `[official text](${r.evidence})` : '—',
     ].join(' | ')} |`);
   }
@@ -115,7 +156,7 @@ export function toConfluenceStorage(report) {
   const cell = (v) => `<td>${escHtml(v)}</td>`;
   const rows = (report.rows || []).map((r) => `<tr><td>${r.n}</td><td>${escHtml(r.citation)}</td>`
     + `<td>${escHtml(lawCell(r))}</td><td>${escHtml(`${r.icon} ${r.verdict_label}`)}</td><td>${escHtml(typeCell(r))}</td>`
-    + `<td>${escHtml(r.reason_en)}</td>`
+    + `<td>${escHtml(whyCell(r))}</td>`
     + `<td>${r.evidence ? `<a href="${escHtml(r.evidence)}">official text</a>` : '—'}</td></tr>`);
   return [
     '<h3>CiteCheck citation report</h3>',
@@ -143,7 +184,7 @@ export function toJiraAdf(report) {
     { type: 'tableCell', content: [para(lawCell(r))] },
     { type: 'tableCell', content: [para(`${r.icon} ${r.verdict_label}`)] },
     { type: 'tableCell', content: [para(typeCell(r))] },
-    { type: 'tableCell', content: [para(r.reason_en ?? '')] },
+    { type: 'tableCell', content: [para(whyCell(r))] },
     r.evidence
       ? { type: 'tableCell', content: [{ type: 'paragraph', content: [linkText(r.evidence)] }] }
       : { type: 'tableCell', content: [para('—')] },

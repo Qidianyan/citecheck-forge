@@ -70,6 +70,8 @@ export function toViewModel(report, { product } = {}) {
       verdictLabel: r.verdict_label ?? '',
       types: (r.hallucination_types || []).join(', '),
       reason: r.reason_en ?? '',
+      advisories: Array.isArray(r.advisories) ? r.advisories : [],
+      suggestedArticle: r.suggested_article ?? null,
       sourceUrl: r.evidence ?? null,
       excerpt: truncateExcerpt(r.original_excerpt),
     })),

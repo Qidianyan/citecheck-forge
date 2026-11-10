@@ -16,6 +16,16 @@ import { toViewModel } from './viewModel.js';
 
 const HEAD = ['#', 'Citation', 'Law', 'Verdict', 'Type', 'Why', 'Source'];
 
+function reasonCell(r) {
+  return (
+    <Stack space="xSmall">
+      <Text>{r.reason || '—'}</Text>
+      {(r.advisories ?? []).map((a, i) => <Text key={i} size="small">{`Note: ${a}`}</Text>)}
+      {r.suggestedArticle ? <Text size="small">{`Suggested article: ${r.suggestedArticle}`}</Text> : null}
+    </Stack>
+  );
+}
+
 function rowCells(r) {
   return [
     String(r.n ?? ''),
@@ -23,7 +33,7 @@ function rowCells(r) {
     r.lawLabel,
     `${r.icon ?? ''} ${r.verdictLabel}`.trim(),
     r.types || '—',
-    r.reason || '—',
+    reasonCell(r),
     r.sourceUrl ? <Link href={r.sourceUrl}>official text</Link> : '—',
   ];
 }

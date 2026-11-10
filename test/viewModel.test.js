@@ -134,4 +134,15 @@ describe('toViewModel', () => {
     const vm = toViewModel(report([]), { product: 'jira' });
     assert.equal(vm.product, 'jira');
   });
+
+  it('exposes advisories and suggestedArticle per row', () => {
+    const vm = toViewModel(report([
+      row({ n: 1, flagged: true, advisories: ['Check the figures: 24 hour vs 72 hour in the cited article.'], suggested_article: '9' }),
+    ]));
+    assert.deepEqual(vm.rows[0].advisories, ['Check the figures: 24 hour vs 72 hour in the cited article.']);
+    assert.equal(vm.rows[0].suggestedArticle, '9');
+    const vm2 = toViewModel(report([row({ n: 1 })]));
+    assert.deepEqual(vm2.rows[0].advisories, []);
+    assert.equal(vm2.rows[0].suggestedArticle, null);
+  });
 });

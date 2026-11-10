@@ -7,13 +7,12 @@ import { createAtlassianClient } from './handlers/atlassian.js';
 import { createStore } from './handlers/store.js';
 import { createActions } from './handlers/actions.js';
 import { createAuditStore } from './audit/auditStore.js';
-import { createAuditResolvers } from './audit/resolvers.js';
+import { createOrgSourceStore } from './orgsources/store.js';
 
 const client = createAtlassianClient();
 const store = createStore();
-const actions = createActions({ client, store });
 const audit = createAuditStore();
-const { auditList, auditCsv } = createAuditResolvers({ audit });
+const actions = createActions({ client, store, audit, orgStore: createOrgSourceStore() });
 
 const resolver = new Resolver();
 
@@ -27,8 +26,8 @@ resolver.define('getStatus', async (req) => {
   return null;
 });
 
-/** Re-run verification for the item in context. */
-resolver.define('verifyNow', async (req) => actions.verifyContent(req?.payload ?? {}, req?.context ?? {}));
+/** Re-run verification for the item in context (manual trigger: recorded as 'manual' in the audit trail). */
+resolver.define('verifyNow', async (req) => actions.verifyContent(req?.payload ?? {}, { ...req?.context ?? {}, trigger: 'manual' }));
 
 /** Post the report back to the item in context (Confluence comment or Jira comment + label). */
 resolver.define('postReport', async (req) => {
@@ -38,7 +37,5 @@ resolver.define('postReport', async (req) => {
   return { error: 'NO_TARGET', message: 'Open this panel on a Confluence page or Jira work item.' };
 });
 
-resolver.define('auditList', auditList);
-resolver.define('auditCsv', auditCsv);
-
+// Audit list / CSV export live on the admin-only resolver (src/adminResolver.js).
 export const handler = resolver.getDefinitions();

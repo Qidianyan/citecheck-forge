@@ -143,19 +143,22 @@ export function createEventHandlers(opts = {}) {
       const audit = await resolveAudit();
       try {
         const payload = product === 'jira' ? { issueKey: id } : { contentId: id };
-        const result = await actions.verifyContent(payload, {});
+        // the actions record the audit entry themselves when they own an audit store
+        const result = await actions.verifyContent(payload, { trigger: 'event' });
         if (body.version != null) {
           // store version on the result so later triggers can dedup on it
           await store.saveResult(product, id, { ...result, version: body.version }, str(body.accountId));
         }
-        await audit.record({
-          product,
-          id,
-          accountId: str(body.accountId),
-          verifiedAt: result?.verifiedAt ?? nowFn().toISOString(),
-          summary: result?.summary ?? { total: 0, flagged: 0, verified: 0, unverifiable: 0 },
-          trigger: 'event',
-        });
+        if (actions.recordsAudit !== true) {
+          await audit.record({
+            product,
+            id,
+            accountId: str(body.accountId),
+            verifiedAt: result?.verifiedAt ?? nowFn().toISOString(),
+            summary: result?.summary ?? { total: 0, flagged: 0, verified: 0, unverifiable: 0 },
+            trigger: 'event',
+          });
+        }
         return { ok: true, result };
       } catch (err) {
         if (statusOf(err) >= 500) throw err; // platform retries 5xx

@@ -8,11 +8,12 @@ import { createStore } from './handlers/store.js';
 import { createActions } from './handlers/actions.js';
 import { createEventHandlers } from './triggers/events.js';
 import { createAuditStore } from './audit/auditStore.js';
+import { createOrgSourceStore } from './orgsources/store.js';
 
 const client = createAtlassianClient();
 const store = createStore();
-const actions = createActions({ client, store });
 const audit = createAuditStore();
+const actions = createActions({ client, store, audit, orgStore: createOrgSourceStore() });
 const events = createEventHandlers({ actions, store, client, audit });
 
 export const extractCitations = actions.extractCitations;
