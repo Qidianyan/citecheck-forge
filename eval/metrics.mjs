@@ -90,3 +90,22 @@ export function wilson(k, n, z = 1.96) {
   const h = (z * Math.sqrt((p * (1 - p)) / n + (z * z) / (4 * n * n))) / d;
   return [Math.max(0, c - h), Math.min(1, c + h)];
 }
+
+// --- Task E additions: new exports only; existing functions above are unchanged. ---
+
+/** Share of gold citations the verifier managed to link to a law article (pred !== 'MISSED'). */
+export function extractionRecall(rows) {
+  if (!rows.length) return null;
+  return rows.filter((r) => r.pred !== 'MISSED').length / rows.length;
+}
+
+/** Group rows by a key; preserves first-seen key order. */
+export function groupBy(rows, keyFn) {
+  const m = new Map();
+  for (const r of rows) {
+    const k = keyFn(r);
+    if (!m.has(k)) m.set(k, []);
+    m.get(k).push(r);
+  }
+  return m;
+}

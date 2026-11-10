@@ -1,0 +1,3612 @@
+{
+  "meta": {
+    "generated_at": "2026-11-10T19:07:56.230Z",
+    "dataset_sha256": "1329fd83864cb66a2585fbfdc37886da796ef32f3babdd7cb8e5236f4037cee5",
+    "answers": 123,
+    "citations": 809,
+    "test_qids": [
+      "QIDID02",
+      "QIDID04",
+      "QIDZH03",
+      "QTHTH01",
+      "QTHZH02",
+      "QTHZH05",
+      "QVNVI01",
+      "QVNVI02",
+      "QVNVI03",
+      "QVNZH05"
+    ],
+    "note": "Labels are silver standard (rule facts + LLM judge), not yet human-audited."
+  },
+  "modes": {
+    "legacy": {
+      "options": {
+        "legacy": true
+      },
+      "splits": {
+        "dev": {
+          "n_rows": 563,
+          "extraction_recall": 0.8028419182948491,
+          "detection": {
+            "n_verifiable": 364,
+            "n_positive": 286,
+            "tp": 86,
+            "fp": 1,
+            "fn": 200,
+            "precision": 0.9885057471264368,
+            "recall": 0.3006993006993007,
+            "f1": 0.46112600536193027,
+            "precision_ci95": [
+              0.937726515139851,
+              0.9979681445755221
+            ],
+            "recall_ci95": [
+              0.2504821100375326,
+              0.3561996085287463
+            ]
+          },
+          "by_country": [
+            {
+              "key": "ID",
+              "n": 228,
+              "n_verifiable": 119,
+              "tp": 2,
+              "fp": 1,
+              "fn": 78,
+              "recall": 0.025
+            },
+            {
+              "key": "TH",
+              "n": 109,
+              "n_verifiable": 67,
+              "tp": 1,
+              "fp": 0,
+              "fn": 44,
+              "recall": 0.022222222222222223
+            },
+            {
+              "key": "VN",
+              "n": 226,
+              "n_verifiable": 178,
+              "tp": 83,
+              "fp": 0,
+              "fn": 78,
+              "recall": 0.515527950310559
+            }
+          ],
+          "by_lang": [
+            {
+              "key": "local",
+              "n": 238,
+              "n_verifiable": 165,
+              "tp": 33,
+              "fp": 1,
+              "fn": 95,
+              "recall": 0.2578125
+            },
+            {
+              "key": "zh",
+              "n": 325,
+              "n_verifiable": 199,
+              "tp": 53,
+              "fp": 0,
+              "fn": 105,
+              "recall": 0.33544303797468356
+            }
+          ],
+          "by_h_type": [
+            {
+              "h_type": "H1",
+              "n": 3,
+              "caught": 2,
+              "recall": 0.6666666666666666
+            },
+            {
+              "h_type": "H3",
+              "n": 155,
+              "caught": 2,
+              "recall": 0.012903225806451613
+            },
+            {
+              "h_type": "H4",
+              "n": 9,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H5",
+              "n": 107,
+              "caught": 82,
+              "recall": 0.7663551401869159
+            },
+            {
+              "h_type": "H6",
+              "n": 4,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H7",
+              "n": 8,
+              "caught": 0,
+              "recall": 0
+            }
+          ],
+          "confusion": {
+            "NOT_IN_FORCE": {
+              "NOT_IN_FORCE": 82,
+              "MISSED": 25
+            },
+            "CONTENT_MISMATCH": {
+              "EXISTS_UNQUOTED": 149,
+              "MISSED": 23,
+              "UNVERIFIABLE": 1,
+              "EXISTS_CONSISTENT": 1,
+              "CONTENT_MISMATCH": 2
+            },
+            "EXISTS_CONSISTENT": {
+              "EXISTS_UNQUOTED": 62,
+              "CONTENT_MISMATCH": 1,
+              "MISSED": 14,
+              "UNVERIFIABLE": 1
+            },
+            "UNVERIFIABLE": {
+              "MISSED": 48,
+              "UNVERIFIABLE": 151
+            },
+            "ARTICLE_NOT_FOUND": {
+              "MISSED": 1,
+              "ARTICLE_NOT_FOUND": 2
+            }
+          },
+          "top_errors": [
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "EXISTS_UNQUOTED",
+              "kind": "fn",
+              "count": 149,
+              "ids": [
+                {
+                  "aid": "QVNZH01-mimo-v2.6-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH01-glm-5.3-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH01-glm-5.3-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QIDZH01-glm-5.3-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QIDZH01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH01-mimo-v2.6-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C04"
+                }
+              ]
+            },
+            {
+              "gold": "NOT_IN_FORCE",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 25,
+              "ids": [
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNZH03-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH03-glm-5.3-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNZH06-deepseek-v4.1-flash",
+                  "cid": "C09"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 23,
+              "ids": [
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QIDZH02-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH02-qwen3.8-flash",
+                  "cid": "C08"
+                },
+                {
+                  "aid": "QTHZH03-glm-5.3-flash",
+                  "cid": "C03"
+                }
+              ]
+            },
+            {
+              "gold": "EXISTS_CONSISTENT",
+              "pred": "CONTENT_MISMATCH",
+              "kind": "fp",
+              "count": 1,
+              "ids": [
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C01"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "UNVERIFIABLE",
+              "kind": "fn",
+              "count": 1,
+              "ids": [
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C09"
+                }
+              ]
+            }
+          ]
+        },
+        "test": {
+          "n_rows": 246,
+          "extraction_recall": 0.9227642276422764,
+          "detection": {
+            "n_verifiable": 165,
+            "n_positive": 115,
+            "tp": 39,
+            "fp": 0,
+            "fn": 76,
+            "precision": 1,
+            "recall": 0.3391304347826087,
+            "f1": 0.5064935064935064,
+            "precision_ci95": [
+              0.9103301463997611,
+              1
+            ],
+            "recall_ci95": [
+              0.2590555325896545,
+              0.4296056769531317
+            ]
+          },
+          "by_country": [
+            {
+              "key": "ID",
+              "n": 52,
+              "n_verifiable": 19,
+              "tp": 0,
+              "fp": 0,
+              "fn": 11,
+              "recall": 0
+            },
+            {
+              "key": "TH",
+              "n": 100,
+              "n_verifiable": 68,
+              "tp": 0,
+              "fp": 0,
+              "fn": 43,
+              "recall": 0
+            },
+            {
+              "key": "VN",
+              "n": 94,
+              "n_verifiable": 78,
+              "tp": 39,
+              "fp": 0,
+              "fn": 22,
+              "recall": 0.639344262295082
+            }
+          ],
+          "by_lang": [
+            {
+              "key": "local",
+              "n": 149,
+              "n_verifiable": 105,
+              "tp": 39,
+              "fp": 0,
+              "fn": 41,
+              "recall": 0.4875
+            },
+            {
+              "key": "zh",
+              "n": 97,
+              "n_verifiable": 60,
+              "tp": 0,
+              "fp": 0,
+              "fn": 35,
+              "recall": 0
+            }
+          ],
+          "by_h_type": [
+            {
+              "h_type": "H1",
+              "n": 1,
+              "caught": 1,
+              "recall": 1
+            },
+            {
+              "h_type": "H3",
+              "n": 52,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H4",
+              "n": 9,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H5",
+              "n": 41,
+              "caught": 38,
+              "recall": 0.926829268292683
+            },
+            {
+              "h_type": "H6",
+              "n": 5,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H7",
+              "n": 7,
+              "caught": 0,
+              "recall": 0
+            }
+          ],
+          "confusion": {
+            "EXISTS_CONSISTENT": {
+              "EXISTS_UNQUOTED": 46,
+              "MISSED": 4
+            },
+            "CONTENT_MISMATCH": {
+              "EXISTS_UNQUOTED": 66,
+              "MISSED": 7
+            },
+            "NOT_IN_FORCE": {
+              "NOT_IN_FORCE": 38,
+              "MISSED": 3
+            },
+            "UNVERIFIABLE": {
+              "EXISTS_UNQUOTED": 1,
+              "UNVERIFIABLE": 75,
+              "MISSED": 5
+            },
+            "ARTICLE_NOT_FOUND": {
+              "ARTICLE_NOT_FOUND": 1
+            }
+          },
+          "top_errors": [
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "EXISTS_UNQUOTED",
+              "kind": "fn",
+              "count": 66,
+              "ids": [
+                {
+                  "aid": "QVNVI01-deepseek-v4.1-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI01-glm-5.3-flash",
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C04"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 7,
+              "ids": [
+                {
+                  "aid": "QVNVI01-glm-5.3-flash",
+                  "cid": "C10"
+                },
+                {
+                  "aid": "QVNVI02-glm-5.3-flash",
+                  "cid": "C14"
+                },
+                {
+                  "aid": "QIDID02-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C08"
+                },
+                {
+                  "aid": "QIDZH03-qwen3.8-flash",
+                  "cid": "C06"
+                }
+              ]
+            },
+            {
+              "gold": "NOT_IN_FORCE",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 3,
+              "ids": [
+                {
+                  "aid": "QVNVI02-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QVNVI02-qwen3.8-flash",
+                  "cid": "C13"
+                },
+                {
+                  "aid": "QVNZH05-glm-5.3-flash",
+                  "cid": "C04"
+                }
+              ]
+            }
+          ]
+        },
+        "all": {
+          "n_rows": 809,
+          "extraction_recall": 0.8393077873918418,
+          "detection": {
+            "n_verifiable": 529,
+            "n_positive": 401,
+            "tp": 125,
+            "fp": 1,
+            "fn": 276,
+            "precision": 0.9920634920634921,
+            "recall": 0.3117206982543641,
+            "f1": 0.4743833017077799,
+            "precision_ci95": [
+              0.9564121255180473,
+              0.9985976710340594
+            ],
+            "recall_ci95": [
+              0.26835095390727876,
+              0.35866366119156484
+            ]
+          },
+          "by_country": [
+            {
+              "key": "ID",
+              "n": 280,
+              "n_verifiable": 138,
+              "tp": 2,
+              "fp": 1,
+              "fn": 89,
+              "recall": 0.02197802197802198
+            },
+            {
+              "key": "TH",
+              "n": 209,
+              "n_verifiable": 135,
+              "tp": 1,
+              "fp": 0,
+              "fn": 87,
+              "recall": 0.011363636363636364
+            },
+            {
+              "key": "VN",
+              "n": 320,
+              "n_verifiable": 256,
+              "tp": 122,
+              "fp": 0,
+              "fn": 100,
+              "recall": 0.5495495495495496
+            }
+          ],
+          "by_lang": [
+            {
+              "key": "local",
+              "n": 387,
+              "n_verifiable": 270,
+              "tp": 72,
+              "fp": 1,
+              "fn": 136,
+              "recall": 0.34615384615384615
+            },
+            {
+              "key": "zh",
+              "n": 422,
+              "n_verifiable": 259,
+              "tp": 53,
+              "fp": 0,
+              "fn": 140,
+              "recall": 0.27461139896373055
+            }
+          ],
+          "by_h_type": [
+            {
+              "h_type": "H1",
+              "n": 4,
+              "caught": 3,
+              "recall": 0.75
+            },
+            {
+              "h_type": "H3",
+              "n": 207,
+              "caught": 2,
+              "recall": 0.00966183574879227
+            },
+            {
+              "h_type": "H4",
+              "n": 18,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H5",
+              "n": 148,
+              "caught": 120,
+              "recall": 0.8108108108108109
+            },
+            {
+              "h_type": "H6",
+              "n": 9,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H7",
+              "n": 15,
+              "caught": 0,
+              "recall": 0
+            }
+          ],
+          "confusion": {
+            "NOT_IN_FORCE": {
+              "NOT_IN_FORCE": 120,
+              "MISSED": 28
+            },
+            "CONTENT_MISMATCH": {
+              "EXISTS_UNQUOTED": 215,
+              "MISSED": 30,
+              "UNVERIFIABLE": 1,
+              "EXISTS_CONSISTENT": 1,
+              "CONTENT_MISMATCH": 2
+            },
+            "EXISTS_CONSISTENT": {
+              "EXISTS_UNQUOTED": 108,
+              "CONTENT_MISMATCH": 1,
+              "MISSED": 18,
+              "UNVERIFIABLE": 1
+            },
+            "UNVERIFIABLE": {
+              "MISSED": 53,
+              "EXISTS_UNQUOTED": 1,
+              "UNVERIFIABLE": 226
+            },
+            "ARTICLE_NOT_FOUND": {
+              "MISSED": 1,
+              "ARTICLE_NOT_FOUND": 3
+            }
+          },
+          "top_errors": [
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "EXISTS_UNQUOTED",
+              "kind": "fn",
+              "count": 215,
+              "ids": [
+                {
+                  "aid": "QVNZH01-mimo-v2.6-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-deepseek-v4.1-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI01-glm-5.3-flash",
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C02"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 30,
+              "ids": [
+                {
+                  "aid": "QVNVI01-glm-5.3-flash",
+                  "cid": "C10"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QVNVI02-glm-5.3-flash",
+                  "cid": "C14"
+                },
+                {
+                  "aid": "QIDZH02-mimo-v2.6-flash",
+                  "cid": "C02"
+                }
+              ]
+            },
+            {
+              "gold": "NOT_IN_FORCE",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 28,
+              "ids": [
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI02-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QVNVI02-qwen3.8-flash",
+                  "cid": "C13"
+                },
+                {
+                  "aid": "QVNZH03-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH03-glm-5.3-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C03"
+                }
+              ]
+            },
+            {
+              "gold": "EXISTS_CONSISTENT",
+              "pred": "CONTENT_MISMATCH",
+              "kind": "fp",
+              "count": 1,
+              "ids": [
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C01"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "UNVERIFIABLE",
+              "kind": "fn",
+              "count": 1,
+              "ids": [
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C09"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "enhanced": {
+      "options": {},
+      "splits": {
+        "dev": {
+          "n_rows": 563,
+          "extraction_recall": 0.8010657193605684,
+          "detection": {
+            "n_verifiable": 364,
+            "n_positive": 286,
+            "tp": 86,
+            "fp": 1,
+            "fn": 200,
+            "precision": 0.9885057471264368,
+            "recall": 0.3006993006993007,
+            "f1": 0.46112600536193027,
+            "precision_ci95": [
+              0.937726515139851,
+              0.9979681445755221
+            ],
+            "recall_ci95": [
+              0.2504821100375326,
+              0.3561996085287463
+            ]
+          },
+          "by_country": [
+            {
+              "key": "ID",
+              "n": 228,
+              "n_verifiable": 119,
+              "tp": 2,
+              "fp": 1,
+              "fn": 78,
+              "recall": 0.025
+            },
+            {
+              "key": "TH",
+              "n": 109,
+              "n_verifiable": 67,
+              "tp": 1,
+              "fp": 0,
+              "fn": 44,
+              "recall": 0.022222222222222223
+            },
+            {
+              "key": "VN",
+              "n": 226,
+              "n_verifiable": 178,
+              "tp": 83,
+              "fp": 0,
+              "fn": 78,
+              "recall": 0.515527950310559
+            }
+          ],
+          "by_lang": [
+            {
+              "key": "local",
+              "n": 238,
+              "n_verifiable": 165,
+              "tp": 33,
+              "fp": 1,
+              "fn": 95,
+              "recall": 0.2578125
+            },
+            {
+              "key": "zh",
+              "n": 325,
+              "n_verifiable": 199,
+              "tp": 53,
+              "fp": 0,
+              "fn": 105,
+              "recall": 0.33544303797468356
+            }
+          ],
+          "by_h_type": [
+            {
+              "h_type": "H1",
+              "n": 3,
+              "caught": 2,
+              "recall": 0.6666666666666666
+            },
+            {
+              "h_type": "H3",
+              "n": 155,
+              "caught": 2,
+              "recall": 0.012903225806451613
+            },
+            {
+              "h_type": "H4",
+              "n": 9,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H5",
+              "n": 107,
+              "caught": 82,
+              "recall": 0.7663551401869159
+            },
+            {
+              "h_type": "H6",
+              "n": 4,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H7",
+              "n": 8,
+              "caught": 0,
+              "recall": 0
+            }
+          ],
+          "confusion": {
+            "NOT_IN_FORCE": {
+              "NOT_IN_FORCE": 82,
+              "MISSED": 25
+            },
+            "CONTENT_MISMATCH": {
+              "EXISTS_UNQUOTED": 150,
+              "MISSED": 22,
+              "UNVERIFIABLE": 1,
+              "EXISTS_CONSISTENT": 1,
+              "CONTENT_MISMATCH": 2
+            },
+            "EXISTS_CONSISTENT": {
+              "EXISTS_UNQUOTED": 63,
+              "CONTENT_MISMATCH": 1,
+              "MISSED": 13,
+              "UNVERIFIABLE": 1
+            },
+            "UNVERIFIABLE": {
+              "MISSED": 51,
+              "UNVERIFIABLE": 148
+            },
+            "ARTICLE_NOT_FOUND": {
+              "MISSED": 1,
+              "ARTICLE_NOT_FOUND": 2
+            }
+          },
+          "top_errors": [
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "EXISTS_UNQUOTED",
+              "kind": "fn",
+              "count": 150,
+              "ids": [
+                {
+                  "aid": "QVNZH01-mimo-v2.6-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH01-glm-5.3-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH01-glm-5.3-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QIDZH01-glm-5.3-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QIDZH01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH01-mimo-v2.6-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C04"
+                }
+              ]
+            },
+            {
+              "gold": "NOT_IN_FORCE",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 25,
+              "ids": [
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNZH03-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH03-glm-5.3-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNZH06-deepseek-v4.1-flash",
+                  "cid": "C09"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 22,
+              "ids": [
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QIDZH02-qwen3.8-flash",
+                  "cid": "C08"
+                },
+                {
+                  "aid": "QTHZH03-glm-5.3-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QTHZH03-qwen3.8-flash",
+                  "cid": "C03"
+                }
+              ]
+            },
+            {
+              "gold": "EXISTS_CONSISTENT",
+              "pred": "CONTENT_MISMATCH",
+              "kind": "fp",
+              "count": 1,
+              "ids": [
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C01"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "UNVERIFIABLE",
+              "kind": "fn",
+              "count": 1,
+              "ids": [
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C09"
+                }
+              ]
+            }
+          ]
+        },
+        "test": {
+          "n_rows": 246,
+          "extraction_recall": 0.9227642276422764,
+          "detection": {
+            "n_verifiable": 165,
+            "n_positive": 115,
+            "tp": 39,
+            "fp": 0,
+            "fn": 76,
+            "precision": 1,
+            "recall": 0.3391304347826087,
+            "f1": 0.5064935064935064,
+            "precision_ci95": [
+              0.9103301463997611,
+              1
+            ],
+            "recall_ci95": [
+              0.2590555325896545,
+              0.4296056769531317
+            ]
+          },
+          "by_country": [
+            {
+              "key": "ID",
+              "n": 52,
+              "n_verifiable": 19,
+              "tp": 0,
+              "fp": 0,
+              "fn": 11,
+              "recall": 0
+            },
+            {
+              "key": "TH",
+              "n": 100,
+              "n_verifiable": 68,
+              "tp": 0,
+              "fp": 0,
+              "fn": 43,
+              "recall": 0
+            },
+            {
+              "key": "VN",
+              "n": 94,
+              "n_verifiable": 78,
+              "tp": 39,
+              "fp": 0,
+              "fn": 22,
+              "recall": 0.639344262295082
+            }
+          ],
+          "by_lang": [
+            {
+              "key": "local",
+              "n": 149,
+              "n_verifiable": 105,
+              "tp": 39,
+              "fp": 0,
+              "fn": 41,
+              "recall": 0.4875
+            },
+            {
+              "key": "zh",
+              "n": 97,
+              "n_verifiable": 60,
+              "tp": 0,
+              "fp": 0,
+              "fn": 35,
+              "recall": 0
+            }
+          ],
+          "by_h_type": [
+            {
+              "h_type": "H1",
+              "n": 1,
+              "caught": 1,
+              "recall": 1
+            },
+            {
+              "h_type": "H3",
+              "n": 52,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H4",
+              "n": 9,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H5",
+              "n": 41,
+              "caught": 38,
+              "recall": 0.926829268292683
+            },
+            {
+              "h_type": "H6",
+              "n": 5,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H7",
+              "n": 7,
+              "caught": 0,
+              "recall": 0
+            }
+          ],
+          "confusion": {
+            "EXISTS_CONSISTENT": {
+              "EXISTS_UNQUOTED": 46,
+              "MISSED": 4
+            },
+            "CONTENT_MISMATCH": {
+              "EXISTS_UNQUOTED": 66,
+              "MISSED": 7
+            },
+            "NOT_IN_FORCE": {
+              "NOT_IN_FORCE": 38,
+              "MISSED": 3
+            },
+            "UNVERIFIABLE": {
+              "EXISTS_UNQUOTED": 1,
+              "UNVERIFIABLE": 75,
+              "MISSED": 5
+            },
+            "ARTICLE_NOT_FOUND": {
+              "ARTICLE_NOT_FOUND": 1
+            }
+          },
+          "top_errors": [
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "EXISTS_UNQUOTED",
+              "kind": "fn",
+              "count": 66,
+              "ids": [
+                {
+                  "aid": "QVNVI01-deepseek-v4.1-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI01-glm-5.3-flash",
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C04"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 7,
+              "ids": [
+                {
+                  "aid": "QVNVI01-glm-5.3-flash",
+                  "cid": "C10"
+                },
+                {
+                  "aid": "QVNVI02-glm-5.3-flash",
+                  "cid": "C14"
+                },
+                {
+                  "aid": "QIDID02-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C08"
+                },
+                {
+                  "aid": "QIDZH03-qwen3.8-flash",
+                  "cid": "C06"
+                }
+              ]
+            },
+            {
+              "gold": "NOT_IN_FORCE",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 3,
+              "ids": [
+                {
+                  "aid": "QVNVI02-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QVNVI02-qwen3.8-flash",
+                  "cid": "C13"
+                },
+                {
+                  "aid": "QVNZH05-glm-5.3-flash",
+                  "cid": "C04"
+                }
+              ]
+            }
+          ]
+        },
+        "all": {
+          "n_rows": 809,
+          "extraction_recall": 0.8380716934487021,
+          "detection": {
+            "n_verifiable": 529,
+            "n_positive": 401,
+            "tp": 125,
+            "fp": 1,
+            "fn": 276,
+            "precision": 0.9920634920634921,
+            "recall": 0.3117206982543641,
+            "f1": 0.4743833017077799,
+            "precision_ci95": [
+              0.9564121255180473,
+              0.9985976710340594
+            ],
+            "recall_ci95": [
+              0.26835095390727876,
+              0.35866366119156484
+            ]
+          },
+          "by_country": [
+            {
+              "key": "ID",
+              "n": 280,
+              "n_verifiable": 138,
+              "tp": 2,
+              "fp": 1,
+              "fn": 89,
+              "recall": 0.02197802197802198
+            },
+            {
+              "key": "TH",
+              "n": 209,
+              "n_verifiable": 135,
+              "tp": 1,
+              "fp": 0,
+              "fn": 87,
+              "recall": 0.011363636363636364
+            },
+            {
+              "key": "VN",
+              "n": 320,
+              "n_verifiable": 256,
+              "tp": 122,
+              "fp": 0,
+              "fn": 100,
+              "recall": 0.5495495495495496
+            }
+          ],
+          "by_lang": [
+            {
+              "key": "local",
+              "n": 387,
+              "n_verifiable": 270,
+              "tp": 72,
+              "fp": 1,
+              "fn": 136,
+              "recall": 0.34615384615384615
+            },
+            {
+              "key": "zh",
+              "n": 422,
+              "n_verifiable": 259,
+              "tp": 53,
+              "fp": 0,
+              "fn": 140,
+              "recall": 0.27461139896373055
+            }
+          ],
+          "by_h_type": [
+            {
+              "h_type": "H1",
+              "n": 4,
+              "caught": 3,
+              "recall": 0.75
+            },
+            {
+              "h_type": "H3",
+              "n": 207,
+              "caught": 2,
+              "recall": 0.00966183574879227
+            },
+            {
+              "h_type": "H4",
+              "n": 18,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H5",
+              "n": 148,
+              "caught": 120,
+              "recall": 0.8108108108108109
+            },
+            {
+              "h_type": "H6",
+              "n": 9,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H7",
+              "n": 15,
+              "caught": 0,
+              "recall": 0
+            }
+          ],
+          "confusion": {
+            "NOT_IN_FORCE": {
+              "NOT_IN_FORCE": 120,
+              "MISSED": 28
+            },
+            "CONTENT_MISMATCH": {
+              "EXISTS_UNQUOTED": 216,
+              "MISSED": 29,
+              "UNVERIFIABLE": 1,
+              "EXISTS_CONSISTENT": 1,
+              "CONTENT_MISMATCH": 2
+            },
+            "EXISTS_CONSISTENT": {
+              "EXISTS_UNQUOTED": 109,
+              "CONTENT_MISMATCH": 1,
+              "MISSED": 17,
+              "UNVERIFIABLE": 1
+            },
+            "UNVERIFIABLE": {
+              "MISSED": 56,
+              "EXISTS_UNQUOTED": 1,
+              "UNVERIFIABLE": 223
+            },
+            "ARTICLE_NOT_FOUND": {
+              "MISSED": 1,
+              "ARTICLE_NOT_FOUND": 3
+            }
+          },
+          "top_errors": [
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "EXISTS_UNQUOTED",
+              "kind": "fn",
+              "count": 216,
+              "ids": [
+                {
+                  "aid": "QVNZH01-mimo-v2.6-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-deepseek-v4.1-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI01-glm-5.3-flash",
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C02"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 29,
+              "ids": [
+                {
+                  "aid": "QVNVI01-glm-5.3-flash",
+                  "cid": "C10"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QVNVI02-glm-5.3-flash",
+                  "cid": "C14"
+                },
+                {
+                  "aid": "QIDZH02-qwen3.8-flash",
+                  "cid": "C08"
+                }
+              ]
+            },
+            {
+              "gold": "NOT_IN_FORCE",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 28,
+              "ids": [
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI02-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QVNVI02-qwen3.8-flash",
+                  "cid": "C13"
+                },
+                {
+                  "aid": "QVNZH03-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH03-glm-5.3-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C03"
+                }
+              ]
+            },
+            {
+              "gold": "EXISTS_CONSISTENT",
+              "pred": "CONTENT_MISMATCH",
+              "kind": "fp",
+              "count": 1,
+              "ids": [
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C01"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "UNVERIFIABLE",
+              "kind": "fn",
+              "count": 1,
+              "ids": [
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C09"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "crossref_prereg": {
+      "options": {
+        "crossref": true,
+        "crossrefOptions": {
+          "numbers": "flag"
+        }
+      },
+      "splits": {
+        "dev": {
+          "n_rows": 563,
+          "extraction_recall": 0.8010657193605684,
+          "detection": {
+            "n_verifiable": 364,
+            "n_positive": 286,
+            "tp": 134,
+            "fp": 7,
+            "fn": 152,
+            "precision": 0.950354609929078,
+            "recall": 0.46853146853146854,
+            "f1": 0.6276346604215457,
+            "precision_ci95": [
+              0.9010731405592894,
+              0.9757467785799635
+            ],
+            "recall_ci95": [
+              0.41149785766825414,
+              0.5263992557895795
+            ]
+          },
+          "by_country": [
+            {
+              "key": "ID",
+              "n": 228,
+              "n_verifiable": 119,
+              "tp": 38,
+              "fp": 5,
+              "fn": 42,
+              "recall": 0.475
+            },
+            {
+              "key": "TH",
+              "n": 109,
+              "n_verifiable": 67,
+              "tp": 4,
+              "fp": 0,
+              "fn": 41,
+              "recall": 0.08888888888888889
+            },
+            {
+              "key": "VN",
+              "n": 226,
+              "n_verifiable": 178,
+              "tp": 92,
+              "fp": 2,
+              "fn": 69,
+              "recall": 0.5714285714285714
+            }
+          ],
+          "by_lang": [
+            {
+              "key": "local",
+              "n": 238,
+              "n_verifiable": 165,
+              "tp": 79,
+              "fp": 7,
+              "fn": 49,
+              "recall": 0.6171875
+            },
+            {
+              "key": "zh",
+              "n": 325,
+              "n_verifiable": 199,
+              "tp": 55,
+              "fp": 0,
+              "fn": 103,
+              "recall": 0.34810126582278483
+            }
+          ],
+          "by_h_type": [
+            {
+              "h_type": "H1",
+              "n": 3,
+              "caught": 2,
+              "recall": 0.6666666666666666
+            },
+            {
+              "h_type": "H3",
+              "n": 155,
+              "caught": 48,
+              "recall": 0.3096774193548387
+            },
+            {
+              "h_type": "H4",
+              "n": 9,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H5",
+              "n": 107,
+              "caught": 82,
+              "recall": 0.7663551401869159
+            },
+            {
+              "h_type": "H6",
+              "n": 4,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H7",
+              "n": 8,
+              "caught": 2,
+              "recall": 0.25
+            }
+          ],
+          "confusion": {
+            "NOT_IN_FORCE": {
+              "NOT_IN_FORCE": 82,
+              "MISSED": 25
+            },
+            "CONTENT_MISMATCH": {
+              "EXISTS_UNQUOTED": 102,
+              "MISSED": 22,
+              "CONTENT_MISMATCH": 50,
+              "UNVERIFIABLE": 1,
+              "EXISTS_CONSISTENT": 1
+            },
+            "EXISTS_CONSISTENT": {
+              "EXISTS_UNQUOTED": 57,
+              "CONTENT_MISMATCH": 7,
+              "MISSED": 13,
+              "UNVERIFIABLE": 1
+            },
+            "UNVERIFIABLE": {
+              "MISSED": 51,
+              "UNVERIFIABLE": 148
+            },
+            "ARTICLE_NOT_FOUND": {
+              "MISSED": 1,
+              "ARTICLE_NOT_FOUND": 2
+            }
+          },
+          "top_errors": [
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "EXISTS_UNQUOTED",
+              "kind": "fn",
+              "count": 102,
+              "ids": [
+                {
+                  "aid": "QVNZH01-mimo-v2.6-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH01-glm-5.3-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH01-glm-5.3-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QIDZH01-glm-5.3-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QIDZH01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH01-mimo-v2.6-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C04"
+                }
+              ]
+            },
+            {
+              "gold": "NOT_IN_FORCE",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 25,
+              "ids": [
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNZH03-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH03-glm-5.3-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNZH06-deepseek-v4.1-flash",
+                  "cid": "C09"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 22,
+              "ids": [
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QIDZH02-qwen3.8-flash",
+                  "cid": "C08"
+                },
+                {
+                  "aid": "QTHZH03-glm-5.3-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QTHZH03-qwen3.8-flash",
+                  "cid": "C03"
+                }
+              ]
+            },
+            {
+              "gold": "EXISTS_CONSISTENT",
+              "pred": "CONTENT_MISMATCH",
+              "kind": "fp",
+              "count": 7,
+              "ids": [
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI04-qwen3.8-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNVI05-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID05-deepseek-v4.1-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID05-deepseek-v4.1-flash",
+                  "cid": "C02"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "UNVERIFIABLE",
+              "kind": "fn",
+              "count": 1,
+              "ids": [
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C09"
+                }
+              ]
+            }
+          ]
+        },
+        "test": {
+          "n_rows": 246,
+          "extraction_recall": 0.9227642276422764,
+          "detection": {
+            "n_verifiable": 165,
+            "n_positive": 115,
+            "tp": 50,
+            "fp": 6,
+            "fn": 65,
+            "precision": 0.8928571428571429,
+            "recall": 0.43478260869565216,
+            "f1": 0.5847953216374269,
+            "precision_ci95": [
+              0.7853131324833861,
+              0.9499613254188092
+            ],
+            "recall_ci95": [
+              0.34773754765363496,
+              0.5260440237826297
+            ]
+          },
+          "by_country": [
+            {
+              "key": "ID",
+              "n": 52,
+              "n_verifiable": 19,
+              "tp": 0,
+              "fp": 1,
+              "fn": 11,
+              "recall": 0
+            },
+            {
+              "key": "TH",
+              "n": 100,
+              "n_verifiable": 68,
+              "tp": 7,
+              "fp": 0,
+              "fn": 36,
+              "recall": 0.16279069767441862
+            },
+            {
+              "key": "VN",
+              "n": 94,
+              "n_verifiable": 78,
+              "tp": 43,
+              "fp": 5,
+              "fn": 18,
+              "recall": 0.7049180327868853
+            }
+          ],
+          "by_lang": [
+            {
+              "key": "local",
+              "n": 149,
+              "n_verifiable": 105,
+              "tp": 49,
+              "fp": 6,
+              "fn": 31,
+              "recall": 0.6125
+            },
+            {
+              "key": "zh",
+              "n": 97,
+              "n_verifiable": 60,
+              "tp": 1,
+              "fp": 0,
+              "fn": 34,
+              "recall": 0.02857142857142857
+            }
+          ],
+          "by_h_type": [
+            {
+              "h_type": "H1",
+              "n": 1,
+              "caught": 1,
+              "recall": 1
+            },
+            {
+              "h_type": "H3",
+              "n": 52,
+              "caught": 10,
+              "recall": 0.19230769230769232
+            },
+            {
+              "h_type": "H4",
+              "n": 9,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H5",
+              "n": 41,
+              "caught": 38,
+              "recall": 0.926829268292683
+            },
+            {
+              "h_type": "H6",
+              "n": 5,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H7",
+              "n": 7,
+              "caught": 1,
+              "recall": 0.14285714285714285
+            }
+          ],
+          "confusion": {
+            "EXISTS_CONSISTENT": {
+              "CONTENT_MISMATCH": 6,
+              "EXISTS_UNQUOTED": 40,
+              "MISSED": 4
+            },
+            "CONTENT_MISMATCH": {
+              "CONTENT_MISMATCH": 11,
+              "EXISTS_UNQUOTED": 55,
+              "MISSED": 7
+            },
+            "NOT_IN_FORCE": {
+              "NOT_IN_FORCE": 38,
+              "MISSED": 3
+            },
+            "UNVERIFIABLE": {
+              "EXISTS_UNQUOTED": 1,
+              "UNVERIFIABLE": 75,
+              "MISSED": 5
+            },
+            "ARTICLE_NOT_FOUND": {
+              "ARTICLE_NOT_FOUND": 1
+            }
+          },
+          "top_errors": [
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "EXISTS_UNQUOTED",
+              "kind": "fn",
+              "count": 55,
+              "ids": [
+                {
+                  "aid": "QVNVI01-glm-5.3-flash",
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C07"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 7,
+              "ids": [
+                {
+                  "aid": "QVNVI01-glm-5.3-flash",
+                  "cid": "C10"
+                },
+                {
+                  "aid": "QVNVI02-glm-5.3-flash",
+                  "cid": "C14"
+                },
+                {
+                  "aid": "QIDID02-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C08"
+                },
+                {
+                  "aid": "QIDZH03-qwen3.8-flash",
+                  "cid": "C06"
+                }
+              ]
+            },
+            {
+              "gold": "EXISTS_CONSISTENT",
+              "pred": "CONTENT_MISMATCH",
+              "kind": "fp",
+              "count": 6,
+              "ids": [
+                {
+                  "aid": "QVNVI01-deepseek-v4.1-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNVI01-deepseek-v4.1-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-deepseek-v4.1-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDID02-mimo-v2.6-flash",
+                  "cid": "C01"
+                }
+              ]
+            },
+            {
+              "gold": "NOT_IN_FORCE",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 3,
+              "ids": [
+                {
+                  "aid": "QVNVI02-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QVNVI02-qwen3.8-flash",
+                  "cid": "C13"
+                },
+                {
+                  "aid": "QVNZH05-glm-5.3-flash",
+                  "cid": "C04"
+                }
+              ]
+            }
+          ]
+        },
+        "all": {
+          "n_rows": 809,
+          "extraction_recall": 0.8380716934487021,
+          "detection": {
+            "n_verifiable": 529,
+            "n_positive": 401,
+            "tp": 184,
+            "fp": 13,
+            "fn": 217,
+            "precision": 0.934010152284264,
+            "recall": 0.45885286783042395,
+            "f1": 0.6153846153846154,
+            "precision_ci95": [
+              0.8903837936223252,
+              0.9610334426474517
+            ],
+            "recall_ci95": [
+              0.41070083887826925,
+              0.507785798858564
+            ]
+          },
+          "by_country": [
+            {
+              "key": "ID",
+              "n": 280,
+              "n_verifiable": 138,
+              "tp": 38,
+              "fp": 6,
+              "fn": 53,
+              "recall": 0.4175824175824176
+            },
+            {
+              "key": "TH",
+              "n": 209,
+              "n_verifiable": 135,
+              "tp": 11,
+              "fp": 0,
+              "fn": 77,
+              "recall": 0.125
+            },
+            {
+              "key": "VN",
+              "n": 320,
+              "n_verifiable": 256,
+              "tp": 135,
+              "fp": 7,
+              "fn": 87,
+              "recall": 0.6081081081081081
+            }
+          ],
+          "by_lang": [
+            {
+              "key": "local",
+              "n": 387,
+              "n_verifiable": 270,
+              "tp": 128,
+              "fp": 13,
+              "fn": 80,
+              "recall": 0.6153846153846154
+            },
+            {
+              "key": "zh",
+              "n": 422,
+              "n_verifiable": 259,
+              "tp": 56,
+              "fp": 0,
+              "fn": 137,
+              "recall": 0.29015544041450775
+            }
+          ],
+          "by_h_type": [
+            {
+              "h_type": "H1",
+              "n": 4,
+              "caught": 3,
+              "recall": 0.75
+            },
+            {
+              "h_type": "H3",
+              "n": 207,
+              "caught": 58,
+              "recall": 0.28019323671497587
+            },
+            {
+              "h_type": "H4",
+              "n": 18,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H5",
+              "n": 148,
+              "caught": 120,
+              "recall": 0.8108108108108109
+            },
+            {
+              "h_type": "H6",
+              "n": 9,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H7",
+              "n": 15,
+              "caught": 3,
+              "recall": 0.2
+            }
+          ],
+          "confusion": {
+            "NOT_IN_FORCE": {
+              "NOT_IN_FORCE": 120,
+              "MISSED": 28
+            },
+            "CONTENT_MISMATCH": {
+              "EXISTS_UNQUOTED": 157,
+              "CONTENT_MISMATCH": 61,
+              "MISSED": 29,
+              "UNVERIFIABLE": 1,
+              "EXISTS_CONSISTENT": 1
+            },
+            "EXISTS_CONSISTENT": {
+              "CONTENT_MISMATCH": 13,
+              "EXISTS_UNQUOTED": 97,
+              "MISSED": 17,
+              "UNVERIFIABLE": 1
+            },
+            "UNVERIFIABLE": {
+              "MISSED": 56,
+              "EXISTS_UNQUOTED": 1,
+              "UNVERIFIABLE": 223
+            },
+            "ARTICLE_NOT_FOUND": {
+              "MISSED": 1,
+              "ARTICLE_NOT_FOUND": 3
+            }
+          },
+          "top_errors": [
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "EXISTS_UNQUOTED",
+              "kind": "fn",
+              "count": 157,
+              "ids": [
+                {
+                  "aid": "QVNZH01-mimo-v2.6-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-glm-5.3-flash",
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C04"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 29,
+              "ids": [
+                {
+                  "aid": "QVNVI01-glm-5.3-flash",
+                  "cid": "C10"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QVNVI02-glm-5.3-flash",
+                  "cid": "C14"
+                },
+                {
+                  "aid": "QIDZH02-qwen3.8-flash",
+                  "cid": "C08"
+                }
+              ]
+            },
+            {
+              "gold": "NOT_IN_FORCE",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 28,
+              "ids": [
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI02-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QVNVI02-qwen3.8-flash",
+                  "cid": "C13"
+                },
+                {
+                  "aid": "QVNZH03-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH03-glm-5.3-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C03"
+                }
+              ]
+            },
+            {
+              "gold": "EXISTS_CONSISTENT",
+              "pred": "CONTENT_MISMATCH",
+              "kind": "fp",
+              "count": 13,
+              "ids": [
+                {
+                  "aid": "QVNVI01-deepseek-v4.1-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNVI01-deepseek-v4.1-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-deepseek-v4.1-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDID02-mimo-v2.6-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNVI04-qwen3.8-flash",
+                  "cid": "C01"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "UNVERIFIABLE",
+              "kind": "fn",
+              "count": 1,
+              "ids": [
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C09"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "crossref": {
+      "options": {
+        "crossref": true
+      },
+      "splits": {
+        "dev": {
+          "n_rows": 563,
+          "extraction_recall": 0.8010657193605684,
+          "detection": {
+            "n_verifiable": 364,
+            "n_positive": 286,
+            "tp": 131,
+            "fp": 6,
+            "fn": 155,
+            "precision": 0.9562043795620438,
+            "recall": 0.458041958041958,
+            "f1": 0.619385342789598,
+            "precision_ci95": [
+              0.9077457553614567,
+              0.9797761131773843
+            ],
+            "recall_ci95": [
+              0.40123511132890266,
+              0.5159610399482086
+            ]
+          },
+          "by_country": [
+            {
+              "key": "ID",
+              "n": 228,
+              "n_verifiable": 119,
+              "tp": 38,
+              "fp": 5,
+              "fn": 42,
+              "recall": 0.475
+            },
+            {
+              "key": "TH",
+              "n": 109,
+              "n_verifiable": 67,
+              "tp": 4,
+              "fp": 0,
+              "fn": 41,
+              "recall": 0.08888888888888889
+            },
+            {
+              "key": "VN",
+              "n": 226,
+              "n_verifiable": 178,
+              "tp": 89,
+              "fp": 1,
+              "fn": 72,
+              "recall": 0.5527950310559007
+            }
+          ],
+          "by_lang": [
+            {
+              "key": "local",
+              "n": 238,
+              "n_verifiable": 165,
+              "tp": 78,
+              "fp": 6,
+              "fn": 50,
+              "recall": 0.609375
+            },
+            {
+              "key": "zh",
+              "n": 325,
+              "n_verifiable": 199,
+              "tp": 53,
+              "fp": 0,
+              "fn": 105,
+              "recall": 0.33544303797468356
+            }
+          ],
+          "by_h_type": [
+            {
+              "h_type": "H1",
+              "n": 3,
+              "caught": 2,
+              "recall": 0.6666666666666666
+            },
+            {
+              "h_type": "H3",
+              "n": 155,
+              "caught": 47,
+              "recall": 0.3032258064516129
+            },
+            {
+              "h_type": "H4",
+              "n": 9,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H5",
+              "n": 107,
+              "caught": 82,
+              "recall": 0.7663551401869159
+            },
+            {
+              "h_type": "H6",
+              "n": 4,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H7",
+              "n": 8,
+              "caught": 0,
+              "recall": 0
+            }
+          ],
+          "confusion": {
+            "NOT_IN_FORCE": {
+              "NOT_IN_FORCE": 82,
+              "MISSED": 25
+            },
+            "CONTENT_MISMATCH": {
+              "EXISTS_UNQUOTED": 105,
+              "MISSED": 22,
+              "CONTENT_MISMATCH": 47,
+              "UNVERIFIABLE": 1,
+              "EXISTS_CONSISTENT": 1
+            },
+            "EXISTS_CONSISTENT": {
+              "EXISTS_UNQUOTED": 58,
+              "CONTENT_MISMATCH": 6,
+              "MISSED": 13,
+              "UNVERIFIABLE": 1
+            },
+            "UNVERIFIABLE": {
+              "MISSED": 51,
+              "UNVERIFIABLE": 148
+            },
+            "ARTICLE_NOT_FOUND": {
+              "MISSED": 1,
+              "ARTICLE_NOT_FOUND": 2
+            }
+          },
+          "top_errors": [
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "EXISTS_UNQUOTED",
+              "kind": "fn",
+              "count": 105,
+              "ids": [
+                {
+                  "aid": "QVNZH01-mimo-v2.6-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH01-glm-5.3-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH01-glm-5.3-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QIDZH01-glm-5.3-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QIDZH01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH01-mimo-v2.6-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C04"
+                }
+              ]
+            },
+            {
+              "gold": "NOT_IN_FORCE",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 25,
+              "ids": [
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNZH03-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH03-glm-5.3-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNZH06-deepseek-v4.1-flash",
+                  "cid": "C09"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 22,
+              "ids": [
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QIDZH02-qwen3.8-flash",
+                  "cid": "C08"
+                },
+                {
+                  "aid": "QTHZH03-glm-5.3-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QTHZH03-qwen3.8-flash",
+                  "cid": "C03"
+                }
+              ]
+            },
+            {
+              "gold": "EXISTS_CONSISTENT",
+              "pred": "CONTENT_MISMATCH",
+              "kind": "fp",
+              "count": 6,
+              "ids": [
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI04-qwen3.8-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID05-deepseek-v4.1-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID05-deepseek-v4.1-flash",
+                  "cid": "C02"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "UNVERIFIABLE",
+              "kind": "fn",
+              "count": 1,
+              "ids": [
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C09"
+                }
+              ]
+            }
+          ]
+        },
+        "test": {
+          "n_rows": 246,
+          "extraction_recall": 0.9227642276422764,
+          "detection": {
+            "n_verifiable": 165,
+            "n_positive": 115,
+            "tp": 47,
+            "fp": 2,
+            "fn": 68,
+            "precision": 0.9591836734693877,
+            "recall": 0.40869565217391307,
+            "f1": 0.5731707317073171,
+            "precision_ci95": [
+              0.8628671652316889,
+              0.9887346030720717
+            ],
+            "recall_ci95": [
+              0.3232130778320873,
+              0.5000811221786833
+            ]
+          },
+          "by_country": [
+            {
+              "key": "ID",
+              "n": 52,
+              "n_verifiable": 19,
+              "tp": 0,
+              "fp": 1,
+              "fn": 11,
+              "recall": 0
+            },
+            {
+              "key": "TH",
+              "n": 100,
+              "n_verifiable": 68,
+              "tp": 7,
+              "fp": 0,
+              "fn": 36,
+              "recall": 0.16279069767441862
+            },
+            {
+              "key": "VN",
+              "n": 94,
+              "n_verifiable": 78,
+              "tp": 40,
+              "fp": 1,
+              "fn": 21,
+              "recall": 0.6557377049180327
+            }
+          ],
+          "by_lang": [
+            {
+              "key": "local",
+              "n": 149,
+              "n_verifiable": 105,
+              "tp": 47,
+              "fp": 2,
+              "fn": 33,
+              "recall": 0.5875
+            },
+            {
+              "key": "zh",
+              "n": 97,
+              "n_verifiable": 60,
+              "tp": 0,
+              "fp": 0,
+              "fn": 35,
+              "recall": 0
+            }
+          ],
+          "by_h_type": [
+            {
+              "h_type": "H1",
+              "n": 1,
+              "caught": 1,
+              "recall": 1
+            },
+            {
+              "h_type": "H3",
+              "n": 52,
+              "caught": 8,
+              "recall": 0.15384615384615385
+            },
+            {
+              "h_type": "H4",
+              "n": 9,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H5",
+              "n": 41,
+              "caught": 38,
+              "recall": 0.926829268292683
+            },
+            {
+              "h_type": "H6",
+              "n": 5,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H7",
+              "n": 7,
+              "caught": 0,
+              "recall": 0
+            }
+          ],
+          "confusion": {
+            "EXISTS_CONSISTENT": {
+              "EXISTS_UNQUOTED": 44,
+              "CONTENT_MISMATCH": 2,
+              "MISSED": 4
+            },
+            "CONTENT_MISMATCH": {
+              "EXISTS_UNQUOTED": 58,
+              "MISSED": 7,
+              "CONTENT_MISMATCH": 8
+            },
+            "NOT_IN_FORCE": {
+              "NOT_IN_FORCE": 38,
+              "MISSED": 3
+            },
+            "UNVERIFIABLE": {
+              "EXISTS_UNQUOTED": 1,
+              "UNVERIFIABLE": 75,
+              "MISSED": 5
+            },
+            "ARTICLE_NOT_FOUND": {
+              "ARTICLE_NOT_FOUND": 1
+            }
+          },
+          "top_errors": [
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "EXISTS_UNQUOTED",
+              "kind": "fn",
+              "count": 58,
+              "ids": [
+                {
+                  "aid": "QVNVI01-deepseek-v4.1-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI01-glm-5.3-flash",
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C04"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 7,
+              "ids": [
+                {
+                  "aid": "QVNVI01-glm-5.3-flash",
+                  "cid": "C10"
+                },
+                {
+                  "aid": "QVNVI02-glm-5.3-flash",
+                  "cid": "C14"
+                },
+                {
+                  "aid": "QIDID02-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QIDZH03-deepseek-v4.1-flash",
+                  "cid": "C08"
+                },
+                {
+                  "aid": "QIDZH03-qwen3.8-flash",
+                  "cid": "C06"
+                }
+              ]
+            },
+            {
+              "gold": "NOT_IN_FORCE",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 3,
+              "ids": [
+                {
+                  "aid": "QVNVI02-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QVNVI02-qwen3.8-flash",
+                  "cid": "C13"
+                },
+                {
+                  "aid": "QVNZH05-glm-5.3-flash",
+                  "cid": "C04"
+                }
+              ]
+            },
+            {
+              "gold": "EXISTS_CONSISTENT",
+              "pred": "CONTENT_MISMATCH",
+              "kind": "fp",
+              "count": 2,
+              "ids": [
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDID02-mimo-v2.6-flash",
+                  "cid": "C01"
+                }
+              ]
+            }
+          ]
+        },
+        "all": {
+          "n_rows": 809,
+          "extraction_recall": 0.8380716934487021,
+          "detection": {
+            "n_verifiable": 529,
+            "n_positive": 401,
+            "tp": 178,
+            "fp": 8,
+            "fn": 223,
+            "precision": 0.956989247311828,
+            "recall": 0.44389027431421446,
+            "f1": 0.6064735945485519,
+            "precision_ci95": [
+              0.9174359177855207,
+              0.9780474746848338
+            ],
+            "recall_ci95": [
+              0.39602131650883954,
+              0.4928240985868422
+            ]
+          },
+          "by_country": [
+            {
+              "key": "ID",
+              "n": 280,
+              "n_verifiable": 138,
+              "tp": 38,
+              "fp": 6,
+              "fn": 53,
+              "recall": 0.4175824175824176
+            },
+            {
+              "key": "TH",
+              "n": 209,
+              "n_verifiable": 135,
+              "tp": 11,
+              "fp": 0,
+              "fn": 77,
+              "recall": 0.125
+            },
+            {
+              "key": "VN",
+              "n": 320,
+              "n_verifiable": 256,
+              "tp": 129,
+              "fp": 2,
+              "fn": 93,
+              "recall": 0.581081081081081
+            }
+          ],
+          "by_lang": [
+            {
+              "key": "local",
+              "n": 387,
+              "n_verifiable": 270,
+              "tp": 125,
+              "fp": 8,
+              "fn": 83,
+              "recall": 0.6009615384615384
+            },
+            {
+              "key": "zh",
+              "n": 422,
+              "n_verifiable": 259,
+              "tp": 53,
+              "fp": 0,
+              "fn": 140,
+              "recall": 0.27461139896373055
+            }
+          ],
+          "by_h_type": [
+            {
+              "h_type": "H1",
+              "n": 4,
+              "caught": 3,
+              "recall": 0.75
+            },
+            {
+              "h_type": "H3",
+              "n": 207,
+              "caught": 55,
+              "recall": 0.26570048309178745
+            },
+            {
+              "h_type": "H4",
+              "n": 18,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H5",
+              "n": 148,
+              "caught": 120,
+              "recall": 0.8108108108108109
+            },
+            {
+              "h_type": "H6",
+              "n": 9,
+              "caught": 0,
+              "recall": 0
+            },
+            {
+              "h_type": "H7",
+              "n": 15,
+              "caught": 0,
+              "recall": 0
+            }
+          ],
+          "confusion": {
+            "NOT_IN_FORCE": {
+              "NOT_IN_FORCE": 120,
+              "MISSED": 28
+            },
+            "CONTENT_MISMATCH": {
+              "EXISTS_UNQUOTED": 163,
+              "MISSED": 29,
+              "CONTENT_MISMATCH": 55,
+              "UNVERIFIABLE": 1,
+              "EXISTS_CONSISTENT": 1
+            },
+            "EXISTS_CONSISTENT": {
+              "EXISTS_UNQUOTED": 102,
+              "CONTENT_MISMATCH": 8,
+              "MISSED": 17,
+              "UNVERIFIABLE": 1
+            },
+            "UNVERIFIABLE": {
+              "MISSED": 56,
+              "EXISTS_UNQUOTED": 1,
+              "UNVERIFIABLE": 223
+            },
+            "ARTICLE_NOT_FOUND": {
+              "MISSED": 1,
+              "ARTICLE_NOT_FOUND": 3
+            }
+          },
+          "top_errors": [
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "EXISTS_UNQUOTED",
+              "kind": "fn",
+              "count": 163,
+              "ids": [
+                {
+                  "aid": "QVNZH01-mimo-v2.6-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-deepseek-v4.1-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI01-glm-5.3-flash",
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI01-mimo-v2.6-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C02"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 29,
+              "ids": [
+                {
+                  "aid": "QVNVI01-glm-5.3-flash",
+                  "cid": "C10"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C07"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C09"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QIDZH01-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C11"
+                },
+                {
+                  "aid": "QVNVI02-glm-5.3-flash",
+                  "cid": "C14"
+                },
+                {
+                  "aid": "QIDZH02-qwen3.8-flash",
+                  "cid": "C08"
+                }
+              ]
+            },
+            {
+              "gold": "NOT_IN_FORCE",
+              "pred": "MISSED",
+              "kind": "fn",
+              "count": 28,
+              "ids": [
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C03"
+                },
+                {
+                  "aid": "QVNZH01-deepseek-v4.1-flash",
+                  "cid": "C04"
+                },
+                {
+                  "aid": "QVNVI02-qwen3.8-flash",
+                  "cid": "C12"
+                },
+                {
+                  "aid": "QVNVI02-qwen3.8-flash",
+                  "cid": "C13"
+                },
+                {
+                  "aid": "QVNZH03-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNZH03-glm-5.3-flash",
+                  "cid": "C05"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QVNVI04-glm-5.3-flash",
+                  "cid": "C03"
+                }
+              ]
+            },
+            {
+              "gold": "EXISTS_CONSISTENT",
+              "pred": "CONTENT_MISMATCH",
+              "kind": "fp",
+              "count": 8,
+              "ids": [
+                {
+                  "aid": "QVNVI01-qwen3.8-flash",
+                  "cid": "C06"
+                },
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID01-qwen3.8-flash",
+                  "cid": "C02"
+                },
+                {
+                  "aid": "QIDID02-mimo-v2.6-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QVNVI04-qwen3.8-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID05-deepseek-v4.1-flash",
+                  "cid": "C01"
+                },
+                {
+                  "aid": "QIDID05-deepseek-v4.1-flash",
+                  "cid": "C02"
+                }
+              ]
+            },
+            {
+              "gold": "CONTENT_MISMATCH",
+              "pred": "UNVERIFIABLE",
+              "kind": "fn",
+              "count": 1,
+              "ids": [
+                {
+                  "aid": "QIDID01-deepseek-v4.1-flash",
+                  "cid": "C09"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -83,6 +83,8 @@ export function rankArticles(claim, ix) {
   return { n: toks.length, ranked };
 }
 
+// The shared regexes are global (/g): never leave lastIndex behind, extract() clones them via matchAll.
+const namesNumberedLaw = (line) => { LAWNUM_RE.lastIndex = 0; const ok = LAWNUM_RE.test(line); LAWNUM_RE.lastIndex = 0; return ok; };
 const hasArticleRef = (line) => { ART_RE.lastIndex = 0; const ok = ART_RE.test(line); ART_RE.lastIndex = 0; return ok; };
 
 /**
@@ -103,8 +105,7 @@ export function claimWindows(text, results, { maxLines = 4, maxChars = 700 } = {
     let w = lines[j];
     for (let k = j + 1; k < lines.length && k <= j + maxLines; k++) {
       // Stop at the next article reference, heading, or a line about another numbered law.
-      LAWNUM_RE.lastIndex = 0;
-      if (hasArticleRef(lines[k]) || /^#{1,6}\s/u.test(lines[k]) || LAWNUM_RE.test(lines[k])) break;
+      if (hasArticleRef(lines[k]) || /^#{1,6}\s/u.test(lines[k]) || namesNumberedLaw(lines[k])) break;
       w += '\n' + lines[k];
       if (w.length >= maxChars) break;
     }
