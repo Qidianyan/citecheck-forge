@@ -1,0 +1,1 @@
+@forge/react 12.5.0 / @atlaskit/forge-react-types 2.13.0 — extracted 2026-11-10 for offline validation only
