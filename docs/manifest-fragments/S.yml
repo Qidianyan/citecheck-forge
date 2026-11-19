@@ -1,0 +1,7 @@
+# Share / forward (phase 5). MERGED into manifest.yml on 2026-11-10; kept as a record of the delta.
+permissions.scopes: [write:page:confluence]   # POST /wiki/api/v2/pages (publish report page)
+modules.action: [share-report (CREATE: mode page|forward), export-report (GET)]
+modules.function: [share-report-fn -> index.shareReport, export-report-fn -> index.exportReport]
+rovo:agent citecheck-agent actions += [share-report, export-report]
+resolver (ui-resolver-fn) += [exportReport, getShareLink, publishReportPage, forwardReport]
+# Assign uses write:jira-work (already granted). Mentions use the existing comment scopes.

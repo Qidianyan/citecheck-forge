@@ -36,16 +36,16 @@ modules:
     - key: citecheck-agent
       name: CiteCheck Legal Citations
       description: >-
-        Verifies legal citations in Confluence pages, Jira work items or AI answers against official
-        statute texts (Vietnam, Indonesia, Thailand): flags non-existent articles, repealed laws and
-        misquotes, with source links.
+        Verifies legal and corporate-policy citations in Confluence, Jira or AI drafts against official
+        statutes (EU GDPR, EU AI Act, US FRCP, VN, ID, TH) and Confluence policies: flags missing articles,
+        repealed rules and misattributions.
       icon: resource:agent-assets;icon.svg
       prompt: resource:agent-assets;prompt.txt
       conversationStarters:
-        - Check the legal citations on this page
-        - Verify the citations in this work item and post a report
-        - Is Article 45 of Vietnam's Law 91/2025/QH15 real?
-        - Which laws can you verify against?
+        - Check the legal and policy citations on this page
+        - Verify GDPR Article 33 and EU AI Act Article 5 in this draft
+        - List our registered Confluence policies
+        - Which statutes and jurisdictions can you verify against?
       followUpPrompt: >-
         Suggest one or two next steps, such as posting the verification report as a comment,
         labelling the content for legal review, or opening the official source of a flagged citation.
@@ -54,8 +54,11 @@ modules:
         - verify-citation
         - verify-content
         - list-sources
+        - list-registered-org-policies
         - post-confluence-report
         - post-jira-report
+        - share-report
+        - export-report
       skills:
         - citation-audit
 
@@ -67,6 +70,7 @@ modules:
         tools:
           - verify-content
           - verify-citation
+          - list-registered-org-policies
           - post-confluence-report
           - post-jira-report
 
@@ -77,6 +81,7 @@ modules:
         - verify-citation
         - verify-content
         - list-sources
+        - list-registered-org-policies
 
   action:
     - key: extract-citations
@@ -158,14 +163,32 @@ modules:
       function: list-sources-fn
       actionVerb: GET
       description: >-
-        List the laws CiteCheck can verify against (country, number, title, in-force status, number of
-        articles, official source URL and fetch date).
+        List the official statutes CiteCheck can verify against (jurisdiction, number, title, in-force status,
+        article count, official source URL and fetch date).
       inputs:
         country:
-          title: Country
+          title: Jurisdiction
           type: string
           required: false
-          description: Optional filter, one of VN, ID, TH.
+          description: Optional filter, one of EU, US, VN, ID, TH.
+    - key: list-registered-org-policies
+      name: List registered organisation policies
+      function: list-org-policies-fn
+      actionVerb: GET
+      description: >-
+        List and search the company's authoritative Confluence policy pages registered in CiteCheck (source key,
+        title, active vs archived status, clause count, Confluence URL and matching clauses).
+      inputs:
+        query:
+          title: Search query
+          type: string
+          required: false
+          description: Optional keyword to search by policy key, title or clause wording.
+        status:
+          title: Lifecycle status
+          type: string
+          required: false
+          description: Optional filter — "all" (default), "active" or "archived".
     - key: post-confluence-report
       name: Post citation report to Confluence page
       function: post-conf-report-fn
@@ -187,6 +210,63 @@ modules:
         Verify the citations in a Jira work item and post the verification report as a comment, and add the
         label citecheck-flagged or citecheck-verified. Only call after the user confirms.
       inputs:
+        issueKey:
+          title: Jira work item key
+          type: string
+          required: false
+          description: Key of the work item. Leave empty to use the work item in context.
+
+    - key: share-report
+      name: Share citation report
+      function: share-report-fn
+      actionVerb: CREATE
+      description: >-
+        Share a stored citation report: mode "page" publishes a child page (Confluence), mode "forward"
+        mentions a teammate in a comment and can assign the Jira work item. Only call after the user confirms.
+      inputs:
+        mode:
+          title: Mode
+          type: string
+          required: true
+          description: '"page" to publish a report page, "forward" to mention a teammate.'
+        contentId:
+          title: Confluence page ID
+          type: string
+          required: false
+          description: ID of the page. Leave empty to use the page in context.
+        issueKey:
+          title: Jira work item key
+          type: string
+          required: false
+          description: Key of the work item. Leave empty to use the work item in context.
+        accountId:
+          title: Teammate account ID
+          type: string
+          required: false
+          description: Atlassian account ID of the teammate to mention (forward mode).
+        note:
+          title: Note
+          type: string
+          required: false
+          description: Optional plain-text note for the teammate, at most 500 characters. Not stored.
+        assign:
+          title: Also assign
+          type: boolean
+          required: false
+          description: Jira only. Also assign the work item to the teammate.
+    - key: export-report
+      name: Export citation report
+      function: export-report-fn
+      actionVerb: GET
+      description: >-
+        Return the stored citation report of a Confluence page or Jira work item as Markdown with a file name
+        and a link to the item, so the user can paste it into e-mail, chat or a ticket. Does not change content.
+      inputs:
+        contentId:
+          title: Confluence page ID
+          type: string
+          required: false
+          description: ID of the page. Leave empty to use the page in context.
         issueKey:
           title: Jira work item key
           type: string
@@ -246,10 +326,16 @@ modules:
       handler: index.verifyContent
     - key: list-sources-fn
       handler: index.listSources
+    - key: list-org-policies-fn
+      handler: index.listRegisteredOrgPolicies
     - key: post-conf-report-fn
       handler: index.postConfluenceReport
     - key: post-jira-report-fn
       handler: index.postJiraReport
+    - key: share-report-fn
+      handler: index.shareReport
+    - key: export-report-fn
+      handler: index.exportReport
     - key: ui-resolver-fn
       handler: index.uiResolver
     - key: admin-resolver-fn
@@ -270,6 +356,7 @@ permissions:
     - read:confluence-content.all
     - write:confluence-content
     - write:comment:confluence
+    - write:page:confluence
     - read:jira-work
     - write:jira-work
     - read:label:confluence

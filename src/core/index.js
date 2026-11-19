@@ -6,10 +6,10 @@ import { applyCrossChecks } from './contentChecks.js';
 import { extract as extractWith, detectCountry } from './extract.js';
 import { verify as verifyWith, summarize, quoteScore, lawStatus, contentCheckable, ruleVerdict, FLAGGED, PASSED, MIN_QUOTE_CHARS } from './verify.js';
 
-/** Default: enhanced corpus (English names, per-line country cues, translation fallback). */
+/** Default: enhanced corpus (33 laws: EU GDPR, EU AI Act, US FRCP + VN/ID/TH official gazettes). */
 export const corpus = createCorpus(laws, { extraAliases: aliasesEn });
-/** Legacy corpus: exact behaviour of the reference Python verifier (used by the golden parity test). */
-export const legacyCorpus = createCorpus(laws);
+/** Legacy corpus: exact 30-law behaviour of the reference Python verifier (used by the golden parity test). */
+export const legacyCorpus = createCorpus(laws.filter((l) => !l.global_pack));
 export const today = () => new Date().toISOString().slice(0, 10);
 
 export function verify(text, opts = {}) {

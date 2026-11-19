@@ -2,9 +2,9 @@
   "name": "citecheck-rovo",
   "version": "0.1.0",
   "private": true,
-  "description": "CiteCheck: a Rovo Agent for Confluence and Jira that verifies legal citations in AI-generated text against official statute texts (Vietnam, Indonesia, Thailand).",
+  "description": "CiteCheck: a Forge + Rovo + Atlassian MCP app for Confluence and Jira that deterministically verifies legal citations (EU GDPR, EU AI Act, US FRCP Rule 11, VN, ID, TH) and corporate Confluence policies.",
   "type": "module",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "scripts": {
     "build:corpus": "node scripts/build-corpus.mjs",
     "test": "node --test \"test/*.test.js\"",
@@ -13,11 +13,17 @@
   },
   "dependencies": {
     "@forge/api": "^8.5.0",
+    "@forge/bridge": "^7.3.0",
     "@forge/kvs": "^2.1.2",
     "@forge/react": "^12.5.0",
     "@forge/resolver": "^2.0.2",
-    "@forge/bridge": "^7.3.0",
     "react": "^18.3.1"
   },
-  "engines": { "node": ">=22" }
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@forge/manifest": "^13.9.0",
+    "typescript": "^5.8.3"
+  }
 }

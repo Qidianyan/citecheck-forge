@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Try CiteCheck: in-browser citation check</title>
+<link rel="icon" href="assets/icons/seal-check.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <div class="mast__top"><span>Playground · runs in your browser</span><span>Nothing is uploaded</span></div>
+    <div class="mast__title">
+      <a class="brand" href="index.html">CiteCheck</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Front page</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#numbers">Numbers</a>
+        <a href="playground.html" aria-current="page">Try it</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<main id="main" class="wrap pg">
+  <section class="pg__input" aria-labelledby="h-in">
+    <div class="sticky">
+      <p class="kicker">Playground</p>
+      <h1 id="h-in" style="font-size:36px">Check a paragraph.</h1>
+      <p class="note"><i data-icon="shield-check"></i>Runs in your browser. Nothing is uploaded.</p>
+      <div class="samples" role="group" aria-label="Samples" id="samples"></div>
+      <form id="form">
+        <div class="field">
+          <label for="text">Text with legal citations</label>
+          <textarea id="text" name="text" spellcheck="false"></textarea>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="country">Jurisdiction</label>
+            <select id="country" name="country">
+              <option value="">Detect automatically</option>
+              <option value="EU">European Union (GDPR / AI Act)</option>
+              <option value="US">United States (FRCP)</option>
+              <option value="VN">Vietnam</option>
+              <option value="ID">Indonesia</option>
+              <option value="TH">Thailand</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="asof">Check law in force on</label>
+            <input type="date" id="asof" name="asof" value="2026-11-10">
+          </div>
+        </div>
+        <div class="adv-toggle">
+          <input type="checkbox" id="adv" disabled>
+          <label for="adv">LLM paraphrase re-check <span class="adv__tag">Advisory only</span></label>
+          <p class="hint" id="adv-note">Off by default. Checking server…</p>
+        </div>
+        <button class="btn" type="submit" id="run"><i data-icon="seal-check"></i>Check citations</button>
+      </form>
+    </div>
+  </section>
+  <section class="pg__output" aria-labelledby="h-out">
+    <div class="pg__bar">
+      <h2 id="h-out" style="margin:0">Report</h2>
+      <button class="btn btn--ghost btn--sm" type="button" id="copy" disabled><i data-icon="markdown-logo"></i>Copy Markdown</button>
+    </div>
+    <p class="status" id="status" role="status"></p>
+    <div id="out" aria-live="polite"><p class="empty">Loading the statute corpus…</p></div>
+  </section>
+</main>
+<footer class="wrap foot">
+  <span>CiteCheck · Codegeist 2026 entry · MIT licence</span>
+  <span>Not legal advice.</span>
+</footer>
+</body>
+</html>

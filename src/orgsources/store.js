@@ -56,6 +56,12 @@ export function createOrgSourceStore({ kvs } = {}) {
       registeredBy: source.registeredBy ?? null,
       registeredAt: source.registeredAt ?? null,
     };
+    if (source.status !== undefined) head.status = source.status;
+    if (source.archived !== undefined) head.archived = Boolean(source.archived);
+    if (source.archivedAt !== undefined) head.archivedAt = source.archivedAt;
+    if (source.supersededBy !== undefined) head.supersededBy = source.supersededBy;
+    if (source.repealed !== undefined) head.repealed = source.repealed;
+    if (source.labels !== undefined) head.labels = Array.isArray(source.labels) ? [...source.labels] : [];
     const clauses = Array.isArray(source.clauses) ? source.clauses : [];
     const old = await e.get(key);
     const oldHead = old && typeof old === 'object' ? old : null;

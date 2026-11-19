@@ -8,6 +8,14 @@ function asJson(res) {
   return res && typeof res.json === 'function' ? res.json() : res;
 }
 
+/** Parsed JSON body when the response has one; otherwise the raw response (keeps old callers working). */
+async function parsed(res) {
+  if (res && typeof res.json === 'function') {
+    try { return await res.json(); } catch { return res; }
+  }
+  return res;
+}
+
 async function assertOk(res) {
   const status = res?.status ?? res?.statusCode ?? 0;
   const ok = res?.ok !== undefined ? res.ok : status >= 200 && status < 300;
@@ -19,7 +27,9 @@ async function assertOk(res) {
     body = '';
   }
   const short = String(body).slice(0, 200).trim();
-  throw new Error(`Atlassian API request failed: HTTP ${status}${short ? ` ${short}` : ''}`);
+  const err = new Error(`Atlassian API request failed: HTTP ${status}${short ? ` ${short}` : ''}`);
+  err.status = status;
+  throw err;
 }
 
 /**
@@ -44,7 +54,13 @@ export function createAtlassianClient({ api } = {}) {
 
   async function request(product, method, url, init) {
     const a = await resolveApi();
-    const res = await (product === 'confluence' ? a.asUser().requestConfluence : a.asUser().requestJira)(await url, { method, ...init });
+    // Forge's requestConfluence/requestJira take a fetch-style init: the body must be a JSON string.
+    const opts = { method, headers: { Accept: 'application/json' } };
+    if (init?.body !== undefined) {
+      opts.headers['Content-Type'] = 'application/json';
+      opts.body = typeof init.body === 'string' ? init.body : JSON.stringify(init.body);
+    }
+    const res = await (product === 'confluence' ? a.asUser().requestConfluence : a.asUser().requestJira)(await url, opts);
     return assertOk(res);
   }
 
@@ -58,7 +74,9 @@ export function createAtlassianClient({ api } = {}) {
       return {
         id: String(page?.id ?? contentId),
         title: page?.title ?? '',
+        status: page?.status ?? 'current',
         version: page?.version?.number ?? page?.versionNumber ?? null,
+        spaceId: page?.spaceId != null ? String(page.spaceId) : null,
         text: storageToText(storage),
         url: links.webui ? `${links.base ?? ''}${links.webui}` : `/wiki/pages/${page?.id ?? contentId}`,
       };
@@ -89,9 +107,20 @@ export function createAtlassianClient({ api } = {}) {
 
     /** POST /wiki/api/v2/footer-comments */
     async postConfluenceFooterComment(contentId, storageHtml) {
-      return request('confluence', 'POST', route`/wiki/api/v2/footer-comments`, {
+      const res = await request('confluence', 'POST', route`/wiki/api/v2/footer-comments`, {
         body: { pageId: String(contentId), body: { representation: 'storage', value: storageHtml } },
       });
+      return parsed(res);
+    },
+
+    /** POST /wiki/api/v2/pages → { id, url } (child page in the same space, storage body). */
+    async createConfluencePage({ spaceId, parentId, title, storage }) {
+      const res = await request('confluence', 'POST', route`/wiki/api/v2/pages`, {
+        body: { spaceId: String(spaceId), status: 'current', title, parentId: String(parentId), body: { representation: 'storage', value: storage } },
+      });
+      const page = (await parsed(res)) ?? {};
+      const links = page._links ?? {};
+      return { id: String(page.id ?? ''), url: links.webui ? `${links.base ?? ''}${links.webui}` : `/wiki/pages/${page.id ?? ''}` };
     },
 
     /** GET /wiki/api/v2/pages/{id}/labels → string[] of label names (e.g. ['legal-review']). */
@@ -110,9 +139,15 @@ export function createAtlassianClient({ api } = {}) {
 
     /** POST /rest/api/3/issue/{key}/comment */
     async postJiraComment(issueKey, adfDoc) {
-      return request('jira', 'POST', route`/rest/api/3/issue/${issueKey}/comment`, {
+      const res = await request('jira', 'POST', route`/rest/api/3/issue/${issueKey}/comment`, {
         body: { body: adfDoc },
       });
+      return parsed(res);
+    },
+
+    /** PUT /rest/api/3/issue/{key}/assignee */
+    async assignJiraIssue(issueKey, accountId) {
+      return request('jira', 'PUT', route`/rest/api/3/issue/${issueKey}/assignee`, { body: { accountId } });
     },
 
     /** PUT /rest/api/3/issue/{key} */

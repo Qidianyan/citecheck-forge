@@ -1,19 +1,29 @@
 // Citation extraction for organisation-specific sources. Only registered keys are returned
 // (case-insensitive, word boundaries); the marker may come before or after the key.
+// Supports both English ("Policy POL-7 §3", "Section 3 of POL-7", "MSA-2025 cl. 12.4")
+// and Chinese/bilingual corporate policy forms ("PROC-2026 第3条", "《采购制度》(PROC-2026) 第 7 条").
+import { cn2int } from '../core/normalize.js';
 
 const NUM = '(\\d+(?:\\.\\d+)*)';
+const CN_DIG = '零〇一二三四五六七八九十百千两';
+const ZH_NUM = `(\\d+(?:\\.\\d+)*|[${CN_DIG}]+)`;
 // "cl." must come before the bare-word markers: alternation is ordered, and "clause" would
 // otherwise never match against "cl.".
 const MARKER = '(?:section|clause|article|cl\\.|§)';
-const QUOTE_RE = /["“]([^"”]{1,})["”]/u;
+const QUOTE_RE = /["“«「『]([^"”»」』]{1,})["”»」』]/u;
 // Sentence boundaries; never split after the "cl." abbreviation (it would break "MSA-2025 cl. 12.4").
-const SENTENCE_SPLIT_RE = /(?<=[.!?])(?<!\bcl\.)\s+|\n+/u;
+const SENTENCE_SPLIT_RE = /(?<=[.!?])(?<!\bcl\.)\s+|[。！？]+\s*|\n+/u;
 
 function escapeRegEx(s) {
   return String(s).replace(/[.*+?^${}()|[\]\\]/gu, '\\$&');
 }
 
-/** First straight- or curly-quoted span in the sentence (>= 1 char), else null. */
+function normClauseId(raw) {
+  const s = String(raw ?? '').trim();
+  return /^\d+(?:\.\d+)*$/u.test(s) ? s : String(cn2int(s));
+}
+
+/** First straight-, curly-, or CJK-quoted span in the sentence (>= 1 char), else null. */
 function firstQuote(sentence) {
   const m = QUOTE_RE.exec(sentence);
   if (!m) return null;
@@ -34,23 +44,33 @@ export function extractOrgCitations(text, sourceKeys) {
     for (const key of keys) {
       const esc = escapeRegEx(key);
       const patterns = [
-        // Key first: "Policy POL-7 §3", "POL-7 § 3.1", "POL-7 section 3", "MSA-2025 cl. 12.4", "MSA-2025, clause 12.4".
+        // Key first (English): "Policy POL-7 §3", "POL-7 § 3.1", "POL-7 section 3", "MSA-2025 cl. 12.4", "MSA-2025, clause 12.4".
         {
-          re: new RegExp(`(?:policy[ \\t]+)?\\b(${esc})\\b[ \\t]*,?[ \\t]*(?:\\b${MARKER}|§)[ \\t]*${NUM}`, 'giu'),
-          keyG: 1, numG: 2,
+          re: new RegExp(`(?:policy[ \\t]+)?(?<![A-Za-z0-9-])(${esc})(?![A-Za-z0-9-])[ \\t]*,?[ \\t]*(?:\\b${MARKER}|§)[ \\t]*${NUM}`, 'giu'),
+          numG: 2,
         },
-        // Number first: "Section 3 of POL-7", "Clause 12.4 of MSA-2025", "Article 5 of the MSA-2025".
+        // Number first (English): "Section 3 of POL-7", "Clause 12.4 of MSA-2025", "Article 5 of the MSA-2025".
         {
-          re: new RegExp(`(?:\\b${MARKER}|§)[ \\t]+${NUM}[ \\t]+of[ \\t]+(?:the[ \\t]+)?${esc}(?![\\w-])`, 'giu'),
-          keyG: 2, numG: 1,
+          re: new RegExp(`(?:\\b${MARKER}|§)[ \\t]+${NUM}[ \\t]+of[ \\t]+(?:the[ \\t]+)?${esc}(?![A-Za-z0-9-])`, 'giu'),
+          numG: 1,
+        },
+        // Chinese / bilingual corporate policy citation: "PROC-2026 第3条", "《采购制度》（PROC-2026）第 7 条", "POL-7第三条".
+        {
+          re: new RegExp(`(?:《[^《》]{1,40}》[ \\t]*[（(]?[ \\t]*)?(?<![A-Za-z0-9-])(${esc})(?![A-Za-z0-9-])[ \\t]*[)）]?[ \\t]*,?[ \\t]*第[ \\t]*${ZH_NUM}[ \\t]*条`, 'giu'),
+          numG: 2,
         },
       ];
-      for (const { re, keyG, numG } of patterns) {
+      const seenSpans = [];
+      for (const { re, numG } of patterns) {
         for (const m of sentence.matchAll(re)) {
+          const start = m.index;
+          const end = start + m[0].length;
+          if (seenSpans.some(([s, e]) => start < e && s < end)) continue;
+          seenSpans.push([start, end]);
           out.push({
             citation: m[0].replace(/\s+/gu, ' ').trim(),
             sourceKey: key,
-            clause: m[numG],
+            clause: normClauseId(m[numG]),
             quote: firstQuote(sentence),
             sentence,
           });

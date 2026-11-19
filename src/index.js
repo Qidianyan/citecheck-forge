@@ -9,19 +9,25 @@ import { createActions } from './handlers/actions.js';
 import { createEventHandlers } from './triggers/events.js';
 import { createAuditStore } from './audit/auditStore.js';
 import { createOrgSourceStore } from './orgsources/store.js';
+import { createShareActions } from './share/shareActions.js';
+import { createRovoShareActions } from './share/rovo.js';
 
 const client = createAtlassianClient();
 const store = createStore();
 const audit = createAuditStore();
 const actions = createActions({ client, store, audit, orgStore: createOrgSourceStore() });
 const events = createEventHandlers({ actions, store, client, audit });
+const rovoShare = createRovoShareActions(createShareActions({ client, store, audit }));
 
 export const extractCitations = actions.extractCitations;
 export const verifyCitation = actions.verifyCitation;
 export const verifyContent = actions.verifyContent;
 export const listSources = actions.listSources;
+export const listRegisteredOrgPolicies = actions.listRegisteredOrgPolicies;
 export const postConfluenceReport = actions.postConfluenceReport;
 export const postJiraReport = actions.postJiraReport;
+export const shareReport = (payload, context) => rovoShare.shareReport(payload, context);
+export const exportReport = (payload, context) => rovoShare.exportReport(payload, context);
 
 // Forge events: product triggers and the async re-check consumer.
 export const onConfluenceUpdated = (event, context) => events.onConfluenceUpdated(event, context);

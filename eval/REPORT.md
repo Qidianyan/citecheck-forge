@@ -1,6 +1,6 @@
 # CiteCheck eval report
 
-Generated: 2026-11-10T21:06:38.282Z
+Generated: 2026-11-11T05:08:27.485Z
 Dataset sha256: `1329fd83864cb66a2585fbfdc37886da796ef32f3babdd7cb8e5236f4037cee5`
 123 answers, 809 citations, 10 held-out test questions.
 

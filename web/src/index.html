@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CiteCheck: deterministic legal &amp; policy citation verification for Atlassian Rovo</title>
+<meta name="description" content="A Forge &amp; Rovo agent for Confluence, Jira and Atlassian MCP that deterministically verifies legal citations (EU GDPR, EU AI Act, US FRCP Rule 11, Vietnam, Indonesia, Thailand) and corporate Confluence policies.">
+<link rel="icon" href="assets/icons/seal-check.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <div class="mast__top"><span>Codegeist 2026 · Apps for Business Teams · Best Agents &amp; MCP</span><span>EU · US · Vietnam · Indonesia · Thailand + Org Policies</span></div>
+    <div class="mast__title">
+      <a class="brand" href="index.html">CiteCheck</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Front page</a>
+        <a href="#how">How it works</a>
+        <a href="#numbers">Numbers</a>
+        <a href="playground.html">Try it</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <section class="front" aria-labelledby="h-front">
+    <div class="front__lede">
+      <p class="kicker">Deterministic guardrails for Confluence, Jira &amp; Rovo MCP</p>
+      <h1 id="h-front">Every statute &amp; policy citation, checked against the authoritative text.</h1>
+      <p class="lede">AI drafts fluent compliance memos — and routinely cites non-existent articles, repealed rules or the wrong clause. CiteCheck pairs deterministic code with official statutes (EU GDPR, EU AI Act, US FRCP Rule 11, ASEAN data laws) and your company's Confluence policies so legal teams can ship with confidence.</p>
+      <div class="actions">
+        <a class="btn" href="playground.html"><i data-icon="play"></i>Try live verifier in your browser</a>
+        <a class="btn btn--ghost" href="#how">How it works<i data-icon="arrow-right"></i></a>
+      </div>
+      <p class="note" style="margin-top:16px"><i data-icon="shield-check"></i>Zero external AI calls. Zero keys. Zero data egress. Verdicts are deterministic and cite their source.</p>
+    </div>
+    <div class="front__case">
+      <article class="clip" aria-labelledby="h-clip">
+        <div class="clip__meta"><span>Live output on AI-drafted memo</span><span>Checked {{AS_OF}}</span></div>
+        <h2 id="h-clip" class="visually-hidden" style="position:absolute;left:-9999px">Example result</h2>
+        {{HERO}}
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="how" aria-labelledby="h-how">
+    <div class="sec__mark"><b>§ 1</b>How it works</div>
+    <div class="sec__body">
+      <h2 id="h-how">Three deterministic steps, every time a page or issue changes.</h2>
+      <ol class="steps">
+        <li><span class="ico"><i data-icon="magnifying-glass"></i></span><h3>Extract</h3><p>Parses citations in English, Vietnamese, Indonesian, Thai and Chinese — including EU articles, US FRCP rules, corporate policy keys ("Policy POL-7 §3") and ranges ("Articles 5–7").</p></li>
+        <li><span class="ico"><i data-icon="book-open"></i></span><h3>Link to authoritative text</h3><p>Resolves the exact statute and version from {{LAWS}} bundled official texts plus registered Confluence organisation policies.</p></li>
+        <li><span class="ico"><i data-icon="stamp"></i></span><h3>Verdict, H3 redirect &amp; evidence</h3><p>Checks existence, in-force/archived status, quote fidelity and IDF clause misattribution ("did you mean Article 33?"), attaching official excerpts for human sign-off.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-catch">
+    <div class="sec__mark"><b>§ 2</b>What it catches</div>
+    <div class="sec__body">
+      <h2 id="h-catch">The citation hallucinations AI drafts actually make.</h2>
+      <ul class="catch">{{CATCHES}}</ul>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-where">
+    <div class="sec__mark"><b>§ 3</b>Where it lives</div>
+    <div class="sec__body">
+      <h2 id="h-where">Inside Atlassian context — and exposed via Atlassian MCP.</h2>
+      <div class="places">
+        <div><h3><i data-icon="file-text"></i> Confluence byline</h3><p>A live status chip on every page, marking edits as stale until background events re-verify.</p></div>
+        <div><h3><i data-icon="list-checks"></i> Jira issue panel</h3><p>Instant citation audit on legal-review work items, ready for Jira Automation gating.</p></div>
+        <div><h3><i data-icon="chat-circle-text"></i> Rovo agent, skill &amp; MCP</h3><p>Invoke in Rovo Chat or connect Claude Desktop / Cursor / Rovo Studio via <code>rovo:mcp</code>.</p></div>
+        <div><h3><i data-icon="share-network"></i> Permission-aware share</h3><p>Post a comment, publish a sign-off child page, @mention and assign a Jira ticket, or copy Markdown — always with click-through confirmation.</p></div>
+        <div><h3><i data-icon="buildings"></i> Confluence policy graph</h3><p>Register internal policies (e.g. <code>POL-7</code>, <code>PROC-2026</code>) with full H1/H3/H4/H5 checks, including archived-page blocking and <code>list-registered-org-policies</code>.</p></div>
+        <div><h3><i data-icon="clock-counter-clockwise"></i> Compliance audit CSV</h3><p>Every check and share action is logged in Forge Custom Entity Store with formula-safe CSV export.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="numbers" aria-labelledby="h-num">
+    <div class="sec__mark"><b>§ 4</b>Verified metrics</div>
+    <div class="sec__body">
+      <h2 id="h-num">Two-layer verification: high-precision hard blocks + source-grounded review.</h2>
+      <div class="table-scroll">
+      <table class="num">
+        <thead><tr><th scope="col">Benchmark slice</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">Engineering role</th></tr></thead>
+        <tbody>
+          <tr><td>Non-existent articles (H1) &amp; repealed laws (H5), clean held-out</td><td class="n">100%</td><td class="n">100% / 97.6%</td><td>Deterministic structural &amp; temporal hard block</td></tr>
+          <tr><td>Fresh untouched-article benchmark (301 items, frozen config, 0 FP)</td><td class="n">100%</td><td class="n">72.2%</td><td>Zero false alarms across 103 valid citations; H1/H3/H4/H5 100%</td></tr>
+          <tr><td>Real 4-LLM legal answers (809 citations, 75.8% flawed), clean held-out</td><td class="n">94.1%</td><td class="n">41.7%</td><td>100% precision in pure rule mode; remaining unquoted paraphrases routed with official excerpts to Rovo &amp; human review</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="fine">Layer 1 flags objective errors deterministically without guessing; Layer 2 attaches the official statutory excerpt (<code>original_excerpt</code>) to every unquoted cross-language paraphrase (<code>EXISTS_UNQUOTED</code>) so Rovo and legal reviewers can compare side by side. Silver-standard benchmark labels combine deterministic gazette checks with an independent LLM judge; a 100-item dual-blind human review pack ships in <code>eval/review/</code>.</p>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-cov">
+    <div class="sec__mark"><b>§ 5</b>Coverage</div>
+    <div class="sec__body">
+      <h2 id="h-cov">{{LAWS}} official statutes across {{JURISDICTIONS}} jurisdictions + unlimited Confluence policies.</h2>
+      <div class="coverage">{{COVERAGE}}</div>
+      <p class="fine">Includes EU GDPR (Articles 1–99), EU AI Act (Articles 1–113), US Federal Rules of Civil Procedure (Rules 1–86 incl. Rule 11), plus official gazette laws for Vietnam, Indonesia and Thailand. Not legal advice.</p>
+    </div>
+  </section>
+</main>
+<footer class="wrap foot">
+  <span>CiteCheck · Codegeist 2026 entry · MIT licence</span>
+  <span>Icons: Phosphor (MIT). Not legal advice.</span>
+</footer>
+</body>
+</html>

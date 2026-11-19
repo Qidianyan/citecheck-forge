@@ -1,8 +1,10 @@
 // Clause parsing for organisation-specific sources (Confluence pages registered as extra authorities).
 // Pure: plain text in (callers convert Confluence storage/ADF via src/handlers/text.js), clauses out.
+import { cn2int } from '../core/normalize.js';
 
 // A clause id is the number string: "3", "3.1", "12.4".
 const NUM = '(\\d+(?:\\.\\d+)*)';
+const CN_DIG = '零〇一二三四五六七八九十百千两';
 
 // Labelled clause starts at line begin: "§ 3", "§3.1", "Section 3", "Clause 12.4", "Article 5".
 const LABELLED_RE = new RegExp(
@@ -10,9 +12,15 @@ const LABELLED_RE = new RegExp(
   'iu',
 );
 
+// Chinese corporate policy clause starts: "第3条 供应商准入", "第 7 条：审批限额", "第三条 采购红线".
+const ZH_LABELLED_RE = new RegExp(
+  `^[ \\t]*(?:#{1,6}[ \\t]+)?第[ \\t]*(\\d+(?:\\.\\d+)*|[${CN_DIG}]+)[ \\t]*条(?:[ \\t]*[.:：、—-]?[ \\t]*(.*))?$`,
+  'u',
+);
+
 // Bare numbered headings at line begin: "12.4", "12.4.", "3)", "3.", "3:", "3. Data retention", "12.4 Title".
 const BARE_RE = new RegExp(
-  `^[ \\t]*(?:#{1,6}[ \\t]+)?${NUM}(?:[ \\t]*[.):][ \\t]*(.*)|[ \\t]+(?=[A-Z])(.*)|[ \\t]*$)`,
+  `^[ \\t]*(?:#{1,6}[ \\t]+)?${NUM}(?:[ \\t]*[.):][ \\t]*(.*)|[ \\t]+(?=[A-Z\\u3400-\\u9fff])(.*)|[ \\t]*$)`,
   'u',
 );
 
@@ -20,6 +28,12 @@ const BARE_RE = new RegExp(
 function clauseStartOf(line) {
   let m = LABELLED_RE.exec(line);
   if (m) return { id: m[1], heading: (m[2] ?? '').trim() };
+  m = ZH_LABELLED_RE.exec(line);
+  if (m) {
+    const rawId = m[1];
+    const id = /^\d+(?:\.\d+)*$/u.test(rawId) ? rawId : String(cn2int(rawId));
+    return { id, heading: (m[2] ?? '').trim() };
+  }
   m = BARE_RE.exec(line);
   if (m) return { id: m[1], heading: (m[2] ?? m[3] ?? '').trim() };
   return null;

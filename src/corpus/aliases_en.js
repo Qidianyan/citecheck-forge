@@ -31,4 +31,7 @@ export default {
   'TH-FBA-2542': ['Foreign Business Act B.E. 2542'],
   'TH-LPA-2541': ['Labour Protection Act B.E. 2541', 'Labor Protection Act B.E. 2541', 'Labor Protection Act'],
   'TH-PDPA-2562-TH': ['Personal Data Protection Act B.E. 2562', 'Personal Data Protection Act, B.E. 2562', 'PDPA B.E. 2562', 'Thai PDPA'],
+  'EU-GDPR-2016-679': ['Data Protection Regulation 2016/679', 'Regulation (EU) No 2016/679'],
+  'EU-AI-ACT-2024-1689': ['Regulation (EU) No 2024/1689', 'EU Artificial Intelligence Act'],
+  'US-FRCP': ['Civil Rule', 'Federal Civil Rule'],
 };

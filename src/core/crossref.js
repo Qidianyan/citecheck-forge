@@ -1,7 +1,7 @@
 // Deterministic misattribution check (H3): does the claim around a citation match another article of the
 // same law clearly better than the cited one? No LLM, no network. Only used in enhanced mode with
 // `{ crossref: true }`; legacy behaviour is untouched.
-import { ART_RE, LAWNUM_RE } from './extract.js';
+import { ART_RE_EN, LAWNUM_RE_EN } from './extract.js';
 import { cpSlice } from './normalize.js';
 import { anchorsFor } from './glossary.js';
 
@@ -85,8 +85,8 @@ export function rankArticles(claim, ix) {
 }
 
 // The shared regexes are global (/g): never leave lastIndex behind, extract() clones them via matchAll.
-const namesNumberedLaw = (line) => { LAWNUM_RE.lastIndex = 0; const ok = LAWNUM_RE.test(line); LAWNUM_RE.lastIndex = 0; return ok; };
-const hasArticleRef = (line) => { ART_RE.lastIndex = 0; const ok = ART_RE.test(line); ART_RE.lastIndex = 0; return ok; };
+const namesNumberedLaw = (line) => { LAWNUM_RE_EN.lastIndex = 0; const ok = LAWNUM_RE_EN.test(line); LAWNUM_RE_EN.lastIndex = 0; return ok; };
+const hasArticleRef = (line) => { ART_RE_EN.lastIndex = 0; const ok = ART_RE_EN.test(line); ART_RE_EN.lastIndex = 0; return ok; };
 
 /**
  * Claim window per result: its own line plus following lines (bullets, explanations) until the next line
@@ -118,8 +118,8 @@ export function claimWindows(text, results, { maxLines = 4, maxChars = 700 } = {
 export const CROSSREF_DEFAULTS = { minBest: 0.2, ratio: 3, minTokens: 6, skipMulti: 'range', skipCjk: true, unsupportedMaxCited: 0.06, unsupportedMinTokens: 30,
   anchors: true, anchorMinConcepts: 2, anchorMinBest: 0.5, anchorRatio: 4 }; // frozen on the 70% dev split (phase 3)
 
-const RANGE_RE = /(?:\d\s*(?:[-–—~]|sampai(?:\s+dengan)?|s\.d\.|đến|tới|ถึง|至|到)\s*(?:Pasal|Điều|มาตรา|Article|Section|第)?\s*\d)/iu;
-const countArticleRefs = (line) => { ART_RE.lastIndex = 0; const n = [...String(line).matchAll(ART_RE)].length; ART_RE.lastIndex = 0; return n; };
+const RANGE_RE = /(?:\d\s*(?:[-–—~]|sampai(?:\s+dengan)?|s\.d\.|đến|tới|ถึง|至|到)\s*(?:Pasal|Điều|มาตรา|Article|Section|Rule|第)?\s*\d)/iu;
+const countArticleRefs = (line) => { ART_RE_EN.lastIndex = 0; const n = [...String(line).matchAll(ART_RE_EN)].length; ART_RE_EN.lastIndex = 0; return n; };
 /** Share of CJK characters among letters. */
 export function cjkShare(s) {
   const cjk = (String(s).match(/[\u3400-\u9fff]/gu) || []).length;

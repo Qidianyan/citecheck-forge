@@ -22,8 +22,13 @@ for registry-only laws it is the repeal-evidence article from the corpus.
 `UNVERIFIABLE` is a verdict, not a hallucination type: when no official text is reachable, say so and
 stop. Never guess; if the answer paraphrases instead of quoting, use `EXISTS_UNQUOTED`, not a mismatch.
 
-**Process.** Two reviewers label every row independently; a third adjudicates disagreements and the
-adjudicated verdict goes in the row. Time estimate: 3–10 minutes per row, ~10–16 hours for the pack.
+**Process.** Two reviewers label every row independently. A third person (the arbiter) adjudicates disagreements, and the adjudicated verdict goes in the row.
+**Roles (2026-11-10):**
+- Reviewer A: 安康
+- Reviewer B: TBD
+- Arbiter: 王同鹤
+
+Use initials in `reviewer_initials`; no other personal data. Time estimate: 3–10 minutes per row, ~10–16 hours for the pack.
 
 **Return.** Save the file as the same name `eval/review/review_pack.csv` (UTF-8, keep the header and
 all columns) and hand it back; `node eval/review/apply-reviews.mjs` turns it into

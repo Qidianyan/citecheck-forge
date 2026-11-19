@@ -3,6 +3,7 @@
 
 import { verify, extract, today } from '../core/index.js';
 import { verifyOrgCitations } from '../orgsources/verify.js';
+import { createOrgPoliciesActions } from '../rovo/index.js';
 import { buildReport, toMarkdown, toConfluenceStorage, toJiraAdf, labelFor, fitPayload } from './report.js';
 import lawsJson from '../corpus/index.json' with { type: 'json' };
 
@@ -50,6 +51,7 @@ function accountIdOf(context, payload) {
 
 export function createActions({ client, store, now, audit, orgStore } = {}) {
   const nowFn = now ?? (() => new Date());
+  const orgPolicies = createOrgPoliciesActions({ orgStore, now: nowFn });
 
   /**
    * Statute verdicts (with content checks) plus organisation-source verdicts when an org-source store
@@ -61,7 +63,7 @@ export function createActions({ client, store, now, audit, orgStore } = {}) {
     if (!orgStore) return core;
     let org = [];
     try {
-      org = await verifyOrgCitations(text, { store: orgStore });
+      org = await verifyOrgCitations(text, { store: orgStore, asOf });
     } catch {
       org = []; // org sources are optional: never fail a statute check because of them
     }
@@ -134,11 +136,11 @@ export function createActions({ client, store, now, audit, orgStore } = {}) {
       const quote = typeof payload?.quote === 'string' ? payload.quote : '';
       const asOf = asOfOf(payload?.asOf);
       const input = `${citation}${quote ? `: "${quote}"` : ''}`;
-      const results = verify(input, { asOf, crossref: true });
+      const results = await verifyAll(input, asOf);
       if (!results.length) {
         return {
           error: 'NOT_A_CITATION',
-          hint: 'Accepted patterns: "Điều 45 Luật 91/2025/QH15", "Pasal 13 UU 27/2022", "Article 12 of Vietnam\'s Law on Cyber Security No. 24/2018/QH14", "Section 19 of the Personal Data Protection Act B.E. 2562" — an article/section plus a law name or number.',
+          hint: 'Accepted patterns: "GDPR Article 33", "EU AI Act Article 5", "FRCP Rule 11", "Policy POL-7 §3", "Điều 45 Luật 91/2025/QH15", "Pasal 13 UU 27/2022", "Section 19 of the Personal Data Protection Act B.E. 2562" — an article/rule/section plus a law or policy key.',
         };
       }
       const report = buildReport(results, { source: { type: 'text' }, asOf, verifiedAt: nowFn().toISOString() });
@@ -187,10 +189,13 @@ export function createActions({ client, store, now, audit, orgStore } = {}) {
           source_page: l.source_page ?? null,
           fetched_at: l.fetched_at ?? null,
         }));
-      const counts = { total: rows.length, VN: 0, ID: 0, TH: 0 };
+      const counts = { total: rows.length, EU: 0, US: 0, VN: 0, ID: 0, TH: 0 };
       for (const r of rows) counts[r.country] = (counts[r.country] ?? 0) + 1;
       return fitPayload({ sources: rows, counts });
     },
+
+    /** List and search registered Confluence organisation policies (Rovo Chat & Atlassian MCP). */
+    listRegisteredOrgPolicies: orgPolicies.listRegisteredOrgPolicies,
 
     /** Verify a Confluence page, post the report as a footer comment, label it, and save it. */
     async postConfluenceReport(payload, context = {}) {

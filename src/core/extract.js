@@ -12,10 +12,16 @@ export const ART_RE = new RegExp(
   `(?<lat>(?:Điều|Dieu|Pasal|Section|Sec\\.|Article|Art\\.)\\s*(?<n1>${D}+)[A-Za-z]?)` +
   `|(?<th>มาตรา\\s*(?<n2>${D}+)(?:/${D}+)?)` +
   `|(?<zh>第\\s*(?<n3>${D}+|[${CN_DIG}]+)\\s*条(?:之[一二三四五六七八九十${D}]+)?)`, 'giu');
+export const ART_RE_EN = new RegExp(
+  `(?<lat>(?:Điều|Dieu|Pasal|Section|Sec\\.|Article|Art\\.|Rule|Fed\\.\\s*R\\.\\s*Civ\\.\\s*P\\.)\\s*(?<n1>${D}+)[A-Za-z]?)` +
+  `|(?<th>มาตรา\\s*(?<n2>${D}+)(?:/${D}+)?)` +
+  `|(?<zh>第\\s*(?<n3>${D}+|[${CN_DIG}]+)\\s*条(?:之[一二三四五六七八九十${D}]+)?)`, 'giu');
 export const LAWNUM_RE = new RegExp(
   `(?<![${D}/])${D}+/${D}{4}/(?:QH${D}+|NĐ-CP|ND-CP|NQ-CP|QĐ-TTg|TT-[A-ZĐ]+|UBTVQH${D}+|VBHN-[A-ZĐ]+)(?![A-Za-z0-9])` +
   `|(?<![A-Za-z])(?:UU|PP|Perpres|Permen[${W}]*|Perppu|POJK)\\s*(?:No\\.?|Nomor)?\\s*${D}+\\s*(?:Tahun|/)\\s*${D}{4}` +
   `|(?:Undang-Undang|Peraturan Pemerintah|Peraturan Presiden)\\s+(?:Republik Indonesia\\s+)?(?:No\\.?|Nomor)\\s*${D}+\\s+Tahun\\s+${D}{4}`, 'giu');
+export const LAWNUM_RE_EN = new RegExp(
+  LAWNUM_RE.source + `|Regulation\\s*\\(EU\\)\\s*(?:No\\.?\\s*)?${D}+/${D}+`, 'giu');
 const NB = `(?<![${W}])`, NA = `(?![${W}])`; // Python \b emulation around word chars
 export const CASE_RE = new RegExp(
   `(?:Bản án số|Án lệ số)\\s*[${W}/.\\-]+|Putusan\\s+(?:MK\\s+)?(?:No\\.?|Nomor)\\s*[${W}/.\\-]+|` +
@@ -27,7 +33,7 @@ const CLAUSE_RE = new RegExp(`(?:khoản|ayat|วรรค|第)\\s*\\(?(${D}+|[�
 // Task K (enhanced mode only): article ranges and lists, e.g. "第67–74条", "Pasal 5 sampai dengan Pasal 13",
 // "Điều 5, 6 và 7", "มาตรา 78 ถึง 82", "Articles 5 to 10". One statute row per article.
 const SEP = String.raw`(?:[-–—~]|sampai\s+dengan|sampai|s\.d\.|s/d|đến|tới|ถึง|(?<![A-Za-z])to(?![A-Za-z])|(?<![A-Za-z])through(?![A-Za-z])|至|到)`;
-const MARK = String.raw`(Pasal|Điều|Dieu|มาตรา|Articles|Sections|Article|Section|Art\.|Sec\.)`;
+const MARK = String.raw`(Pasal|Điều|Dieu|มาตรา|Articles|Sections|Rules|Article|Section|Rule|Art\.|Sec\.)`;
 const NUM = String.raw`(${D}+|[${CN_DIG}]+)`;
 const RANGE_RE = new RegExp(String.raw`${MARK}\s*(${D}+)\s*${SEP}\s*(?:${MARK}\s*)?(${D}+)`, 'giu');
 const ZH_RANGE_RE = new RegExp(String.raw`第\s*${NUM}\s*条?\s*(?:[-–—~]|至|到)\s*(?:第\s*)?${NUM}\s*条?`, 'giu');
@@ -78,6 +84,8 @@ export const COUNTRY_WORDS_EN = {
   VN: [...COUNTRY_WORDS.VN, 'Vietnamese', 'Decree ', '/QH1'],
   ID: [...COUNTRY_WORDS.ID, 'Indonesian', 'Tahun '],
   TH: [...COUNTRY_WORDS.TH, 'Thai ', 'Thai\u2019', "Thai'"],
+  EU: ['European Union', 'Regulation (EU)', 'EUR-Lex', 'GDPR', 'EU AI Act', '欧盟'],
+  US: ['United States', 'Federal Rules of Civil Procedure', 'FRCP', 'Fed. R. Civ. P.', 'U.S. District Court', '美国'],
 };
 
 export function detectCountry(text, words = COUNTRY_WORDS) {
@@ -96,8 +104,14 @@ export function aliasHits(line, country, corpus) {
   for (const { key, law, alias, generic } of corpus.aliases) {
     if (generic && law.country !== country) continue;
     if (!key) continue;
+    const needBoundary = corpus.enhanced && key.length <= 6 && /^[a-z ]+$/u.test(key);
     let i = 0;
-    while ((i = n.indexOf(key, i)) !== -1) { hits.push({ start: i, end: i + key.length, law, alias }); i += key.length; }
+    while ((i = n.indexOf(key, i)) !== -1) {
+      const okLeft = !needBoundary || i === 0 || !/[a-z0-9]/u.test(n[i - 1]);
+      const okRight = !needBoundary || i + key.length === n.length || !/[a-z0-9]/u.test(n[i + key.length]);
+      if (okLeft && okRight) hits.push({ start: i, end: i + key.length, law, alias });
+      i += key.length;
+    }
   }
   hits.sort((a, b) => a.start - b.start || (b.end - b.start) - (a.end - a.start)
     || (a.law.translation ? 1 : 0) - (b.law.translation ? 1 : 0));
@@ -142,11 +156,13 @@ export function pinnedVersions(text, corpus) {
   for (const [k, set] of named) if (set.size === 1) pins.set(k, [...set][0]);
   return pins;
 }
-/** The cached law mentioned most often in the document (ties: first mentioned). */
+/** The cached law mentioned most often in the document (preferring `country` when matched; ties: first mentioned). */
 function dominantLaw(text, corpus, country) {
   const counts = new Map();
   for (const line of text.split(/\n+/u)) for (const h of aliasHits(thaiDigits(line), country, corpus)) counts.set(h.law, (counts.get(h.law) || 0) + 1);
   let best = null, n = 0;
+  for (const [l, c] of counts) if (country && l.country === country && c > n) { best = l; n = c; }
+  if (best) return best;
   for (const [l, c] of counts) if (c > n) { best = l; n = c; }
   return best;
 }
@@ -168,7 +184,9 @@ export function extract(text, corpus, country = null, opts = {}) {
     return versionMarkers(law).some((m) => l.includes(m)) ? law : p; // the line itself names this version: keep it
   };
   const lines = text.split(/\n+/u);
-  const ART1 = new RegExp(ART_RE.source, ART_RE.flags.replace('g', ''));
+  const activeArtRe = corpus.enhanced ? ART_RE_EN : ART_RE;
+  const activeLawNumRe = corpus.enhanced ? LAWNUM_RE_EN : LAWNUM_RE;
+  const ART1 = new RegExp(activeArtRe.source, activeArtRe.flags.replace('g', ''));
   /** Enhanced: a quotation in the block-quote that directly follows a citation line (Markdown "> "…""). */
   const nextQuote = (i) => {
     for (let j = i + 1, seen = 0; j < lines.length && seen < 3; j++) {
@@ -194,7 +212,7 @@ export function extract(text, corpus, country = null, opts = {}) {
     const hits = aliasHits(lineT, lc, corpus);
     const spans = hits.map((h) => [h.start, h.end]);
     const unknown = [];
-    for (const m of lineT.matchAll(LAWNUM_RE)) {
+    for (const m of lineT.matchAll(activeLawNumRe)) {
       if (!spans.some(([s, e]) => s <= m.index && m.index < e)) unknown.push([m.index, m[0]]);
     }
     for (const m of lineT.matchAll(BOOK_RE)) {
@@ -262,11 +280,11 @@ export function extract(text, corpus, country = null, opts = {}) {
     if (groups.length) {
       const covered = (pos, len) => groups.some((gr) => pos < gr.end && gr.start < pos + len);
       const items = groups.map((gr) => ({ pos: gr.start, gr }));
-      for (const m of lineT.matchAll(ART_RE)) if (!covered(m.index, m[0].length)) items.push({ pos: m.index, m });
+      for (const m of lineT.matchAll(activeArtRe)) if (!covered(m.index, m[0].length)) items.push({ pos: m.index, m });
       items.sort((a, b) => a.pos - b.pos);
       for (const it of items) if (it.gr) out.push(...groupRows(it.gr)); else out.push(statuteRow(it.m));
     } else {
-      for (const m of lineT.matchAll(ART_RE)) out.push(statuteRow(m));
+      for (const m of lineT.matchAll(activeArtRe)) out.push(statuteRow(m));
     }
     if (corpus.enhanced && opts.followQuotes !== false) {
       const added = out.slice(before).filter((r) => r.type === 'statute');
@@ -275,7 +293,11 @@ export function extract(text, corpus, country = null, opts = {}) {
         if (q) { added[0].quote = q; added[0].quote_lang = scriptOf(q); added[0].quote_from = 'blockquote'; }
       }
     }
-    const mentions = [...hits.map((h) => [h.start, resolveByNumber(h.law, lineT, corpus)]), ...unknown];
+    let mentions = [...hits.map((h) => [h.start, resolveByNumber(h.law, lineT, corpus)]), ...unknown];
+    if (corpus.enhanced && ctx && typeof ctx === 'object' && !ctx.global_pack && ctx.country === country) {
+      const nonComparative = mentions.filter(([, m]) => !(typeof m === 'object' && m && m.global_pack));
+      mentions = nonComparative;
+    }
     if (mentions.length) {
       let best = mentions[0];
       for (const x of mentions) if (x[0] > best[0]) best = x;

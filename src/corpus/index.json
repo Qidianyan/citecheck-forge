@@ -1,5 +1,63 @@
 [
  {
+  "law_id": "EU-AI-ACT-2024-1689",
+  "country": "EU",
+  "lang": "en",
+  "title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+  "number": "2024/1689",
+  "aliases": [
+   "EU AI Act",
+   "AI Act",
+   "Regulation (EU) 2024/1689",
+   "Regulation 2024/1689",
+   "Artificial Intelligence Act",
+   "European AI Act"
+  ],
+  "chinese_aliases": [
+   "人工智能法案",
+   "欧盟人工智能法案"
+  ],
+  "issued": "2024-06-13",
+  "effective": "2024-08-01",
+  "content_current": true,
+  "translation": false,
+  "global_pack": true,
+  "source_page": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+  "source_pdf": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32024R1689",
+  "fetched_at": "2026-11-18 (PT)",
+  "max_article": 113,
+  "article_count": 113
+ },
+ {
+  "law_id": "EU-GDPR-2016-679",
+  "country": "EU",
+  "lang": "en",
+  "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+  "number": "2016/679",
+  "aliases": [
+   "GDPR",
+   "EU GDPR",
+   "Regulation (EU) 2016/679",
+   "Regulation 2016/679",
+   "General Data Protection Regulation"
+  ],
+  "chinese_aliases": [
+   "通用数据保护条例",
+   "一般数据保护条例",
+   "欧盟通用数据保护条例"
+  ],
+  "issued": "2016-04-27",
+  "effective": "2018-05-25",
+  "content_current": true,
+  "translation": false,
+  "global_pack": true,
+  "source_page": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+  "source_pdf": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679",
+  "fetched_at": "2026-11-18 (PT)",
+  "max_article": 99,
+  "article_count": 99
+ },
+ {
   "law_id": "ID-UU-1-1974",
   "country": "ID",
   "lang": "id",
@@ -463,7 +521,7 @@
    "Personal Data Protection Act, B.E. 2562 (English)"
   ],
   "issued": "2019-05-24",
-  "effective": "见官方文本 Section 2（公布次日施行，部分章节延后一年）；全面施行日期【待核实】",
+  "effective": "见官方文本 Section 2（公布次日施行，部分章节延后一年）；全面施行日期（2022-06-01 全面施行）",
   "content_current": true,
   "translation": true,
   "source_page": "https://www.pdpc.or.th/en/pdpc-act/",
@@ -501,6 +559,42 @@
   "max_article": 96,
   "missing_articles": [],
   "article_count": 96
+ },
+ {
+  "law_id": "US-FRCP",
+  "country": "US",
+  "lang": "en",
+  "title": "Federal Rules of Civil Procedure (United States)",
+  "number": "FRCP",
+  "aliases": [
+   "FRCP",
+   "Fed. R. Civ. P.",
+   "Fed. R. Civ. P",
+   "Federal Rules of Civil Procedure",
+   "Federal Rule of Civil Procedure",
+   "U.S. Federal Rules of Civil Procedure",
+   "US FRCP"
+  ],
+  "chinese_aliases": [
+   "联邦民事诉讼规则",
+   "美国联邦民事诉讼规则"
+  ],
+  "issued": "1938-09-16",
+  "effective": "1938-09-16",
+  "repealed_exceptions": {
+   "74": "1997-04-11",
+   "75": "1997-04-11",
+   "76": "1997-04-11",
+   "84": "2015-12-01"
+  },
+  "content_current": true,
+  "translation": false,
+  "global_pack": true,
+  "source_page": "https://www.uscourts.gov/rules-policies/current-rules-practice-procedure/federal-rules-civil-procedure",
+  "source_pdf": "https://www.law.cornell.edu/rules/frcp",
+  "fetched_at": "2026-11-18 (PT)",
+  "max_article": 86,
+  "article_count": 86
  },
  {
   "law_id": "VN-91-2025-QH15",

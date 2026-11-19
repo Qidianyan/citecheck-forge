@@ -15,8 +15,8 @@ const MAG = [
   [/^(?:tỷ|tỉ|miliar|billion|bn)/iu, 1e9], [/^(?:triệu|juta|million|mn)/iu, 1e6], [/^(?:nghìn|ngàn|ribu|thousand)/iu, 1e3],
   [/^亿/u, 1e8], [/^万/u, 1e4], [/^千/u, 1e3], [/^ล้าน/u, 1e6], [/^แสน/u, 1e5], [/^หมื่น/u, 1e4], [/^พัน/u, 1e3],
 ];
-const CURRENCY = /^(?:đồng|vnd|vnđ|越南盾|盾|rupiah|rp|印尼盾|baht|บาท|泰铢|铢|thb|idr)/iu;
-const CURRENCY_PREFIX = /(?:Rp\.?|IDR|VND|THB|฿)\s*$/iu;
+const CURRENCY = /^(?:đồng|vnd|vnđ|越南盾|盾|rupiah|rp|印尼盾|baht|บาท|泰铢|铢|thb|idr|eur|euros?|欧元|usd|dollars?|美元)/iu;
+const CURRENCY_PREFIX = /(?:Rp\.?|IDR|VND|THB|฿|EUR|€|USD|\$)\s*$/iu;
 
 const NUM = /\d+(?:[.,\s]\d{3})*(?:[.,]\d+)?/gu;
 
@@ -40,7 +40,7 @@ export function numericFacts(text) {
     const before = s.slice(Math.max(0, m.index - 6), m.index);
     let rest = s.slice(m.index + m[0].length).replace(/^\s+/u, '');
     // Skip law numbers and article references: "13/2023", "Điều 9", "第9条", "Pasal 5".
-    if (/^\/\d/u.test(rest) || /(?:Điều|Pasal|Article|Section|มาตรา|第|khoản|ayat|Nomor|No\.|số)\s*$/iu.test(before)) continue;
+    if (/^\/\d/u.test(rest) || /(?:Điều|Pasal|Article|Art\.|Section|Sec\.|Rule|มาตรา|第|khoản|ayat|Nomor|No\.|số)\s*$/iu.test(before)) continue;
     if (/^(?:条|款|項|项)/u.test(rest)) continue;
     let mult = 1;
     for (const [re, f] of MAG) if (re.test(rest)) { mult = f; rest = rest.replace(re, '').replace(/^\s+/u, ''); break; }

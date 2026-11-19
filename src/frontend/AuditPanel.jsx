@@ -4,10 +4,11 @@
 
 import React, { useCallback, useEffect, useState } from 'react';
 import {
-  Text, DynamicTable, Button, CodeBlock, Stack, Inline, Heading, SectionMessage, Spinner,
+  Text, DynamicTable, Button, CodeBlock, EmptyState, Stack, Inline, Heading, SectionMessage, Spinner,
 } from '@forge/react';
 import { invoke } from '@forge/bridge';
 import { toAuditModel } from './auditModel.js';
+import { toTable } from './panelModel.js';
 
 const LIST_LIMIT = 100;
 const CSV_MAX = 5000;
@@ -55,13 +56,13 @@ export default function AuditPanel() {
       ) : null}
 
       <Inline>
-        <Button text="Export CSV" onClick={onExportCsv} />
+        <Button iconBefore="download" onClick={onExportCsv}>Export CSV</Button>
       </Inline>
 
       {rows !== null && vm.rows.length > 0 ? (
-        <DynamicTable head={vm.head} rows={vm.rows} />
+        <DynamicTable {...toTable(vm.head, vm.rows)} rowsPerPage={20} />
       ) : (
-        <Text>{rows === null ? '' : 'No verification runs recorded yet.'}</Text>
+        rows === null ? <Spinner label="Loading audit trail" /> : <EmptyState header="No checks recorded yet" description="Every citation check and every share appears here, with who ran it and what was flagged." />
       )}
 
       <Text>{vm.footer}</Text>
@@ -69,9 +70,9 @@ export default function AuditPanel() {
       {csv !== null ? (
         <Stack space="small">
           <Text>
-            CSV export ready — select the text below, copy it into a .csv file, or paste it into a spreadsheet.
+            CSV export ready. Select the text below and paste it into a spreadsheet or a .csv file.
           </Text>
-          <CodeBlock text={csv} language="csv" />
+          <CodeBlock text={csv} language="text" />
         </Stack>
       ) : null}
     </Stack>

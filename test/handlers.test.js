@@ -29,7 +29,7 @@ function fakeApi(calls, responses = []) {
 }
 
 async function respond(calls, product, url, init, responses) {
-  calls.push({ product, url, method: init?.method, body: init?.body });
+  calls.push({ product, url, method: init?.method, body: typeof init?.body === 'string' ? JSON.parse(init.body) : init?.body });
   for (const [prefix, res] of responses) {
     if (url.startsWith(prefix)) return typeof res === 'function' ? res() : res;
   }
@@ -288,10 +288,17 @@ test('verifyCitation: NOT_A_CITATION for prose', async () => {
   assert.ok(out.hint.includes('Điều'));
 });
 
-test('listSources: 30 laws, VN/ID/TH counts, country filter and in_force flags', async () => {
+test('listSources: 33 laws (EU/US/VN/ID/TH), jurisdiction filter and in_force flags', async () => {
   const all = await actions().listSources({});
-  assert.equal(all.sources.length, 30);
-  assert.deepEqual([all.counts.VN, all.counts.ID, all.counts.TH], [16, 8, 6]);
+  assert.equal(all.sources.length, 33);
+  assert.deepEqual([all.counts.EU, all.counts.US, all.counts.VN, all.counts.ID, all.counts.TH], [2, 1, 16, 8, 6]);
+  const eu = await actions().listSources({ country: 'eu' });
+  assert.equal(eu.sources.length, 2);
+  assert.ok(eu.sources.some((s) => s.law_id === 'EU-GDPR-2016-679' && s.in_force === true && s.article_count === 99));
+  assert.ok(eu.sources.some((s) => s.law_id === 'EU-AI-ACT-2024-1689' && s.in_force === true && s.article_count === 113));
+  const us = await actions().listSources({ country: 'us' });
+  assert.equal(us.sources.length, 1);
+  assert.equal(us.sources[0].law_id, 'US-FRCP');
   const vn = await actions().listSources({ country: 'vn' });
   assert.equal(vn.sources.length, 16);
   assert.ok(vn.sources.every((s) => s.country === 'VN' && typeof s.in_force === 'boolean' && 'law_id' in s && 'source_page' in s));

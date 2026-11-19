@@ -371,6 +371,7 @@ function poolSizes(recs) {
   const used = computeUsed(recs);
   const sizes = { VN: 0, ID: 0, TH: 0, not_in_force: 0 };
   for (const law of corpus.laws) {
+    if (!COUNTRIES.includes(law.country)) continue;
     if (!law.articles || law.stub || law.law_id === 'TH-PDPA-2562-EN') continue;
     for (const [num, text] of Object.entries(law.articles)) {
       const key = artKey(num);

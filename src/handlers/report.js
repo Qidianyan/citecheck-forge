@@ -117,6 +117,31 @@ export function summaryLine(report) {
 
 const lawCell = (r) => r.law_title || r.law || r.law_hint || '—';
 
+/**
+ * Verdict → status label used in posted content (no emoji): Confluence status macro colour,
+ * Jira ADF status colour, and the plain-text label used in Markdown.
+ */
+export function statusOf(r) {
+  switch (r?.verdict) {
+    case 'CONTENT_MISMATCH':
+    case 'ARTICLE_NOT_FOUND': return { title: 'FLAGGED', colour: 'Red', adf: 'red' };
+    case 'NOT_IN_FORCE': return { title: 'NOT IN FORCE', colour: 'Yellow', adf: 'yellow' };
+    case 'EXISTS_CONSISTENT': return { title: 'VERIFIED', colour: 'Green', adf: 'green' };
+    case 'EXISTS_UNQUOTED': return { title: 'EXISTS', colour: 'Grey', adf: 'neutral' };
+    default: return { title: 'UNVERIFIABLE', colour: 'Grey', adf: 'neutral' };
+  }
+}
+
+/** Verdict label shown next to the status (misattribution is spelled out). */
+const verdictText = (r) => (r?.suggested_article ? `Misattributed: did you mean article ${r.suggested_article}?` : (r?.verdict_label ?? ''));
+const plainVerdict = (r) => {
+  const t = verdictText(r);
+  const st = statusOf(r).title;
+  return t && t.toUpperCase() !== st ? `${st}: ${t}` : st;
+};
+/** Plain-text verdict for places that cannot carry a status macro (exported for the share renderers). */
+export { plainVerdict };
+
 /** "Why" cell: the English reason plus any content-check advisories as "Note: …" lines. */
 function whyCell(r) {
   const parts = [r.reason_en ?? ''];
@@ -139,7 +164,7 @@ export function toMarkdown(report) {
   ];
   for (const r of report.rows || []) {
     lines.push(`| ${[
-      r.n, esc(r.citation), esc(lawCell(r)), esc(`${r.icon} ${r.verdict_label}`), esc(typeCell(r)), esc(whyCell(r)),
+      r.n, esc(r.citation), esc(lawCell(r)), `**${statusOf(r).title}**${verdictText(r) && verdictText(r).toUpperCase() !== statusOf(r).title ? ` ${esc(verdictText(r))}` : ''}`, esc(typeCell(r)), esc(whyCell(r)),
       r.evidence ? `[official text](${r.evidence})` : '—',
     ].join(' | ')} |`);
   }
@@ -151,11 +176,17 @@ const escHtml = (v) => String(v ?? '')
   .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
   .replaceAll('"', '&quot;').replaceAll("'", '&#39;');
 
+/** Confluence status macro for one row (colour/title come from a fixed map, never from user input). */
+export function statusMacro(r) {
+  const st = statusOf(r);
+  return `<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">${st.colour}</ac:parameter><ac:parameter ac:name="title">${st.title}</ac:parameter></ac:structured-macro>`;
+}
+
 /** Report → Confluence storage-format XHTML (h3, summary paragraph, table; all dynamic text escaped). */
 export function toConfluenceStorage(report) {
   const cell = (v) => `<td>${escHtml(v)}</td>`;
   const rows = (report.rows || []).map((r) => `<tr><td>${r.n}</td><td>${escHtml(r.citation)}</td>`
-    + `<td>${escHtml(lawCell(r))}</td><td>${escHtml(`${r.icon} ${r.verdict_label}`)}</td><td>${escHtml(typeCell(r))}</td>`
+    + `<td>${escHtml(lawCell(r))}</td><td>${statusMacro(r)}${verdictText(r) && verdictText(r).toUpperCase() !== statusOf(r).title ? ` ${escHtml(verdictText(r))}` : ''}</td><td>${escHtml(typeCell(r))}</td>`
     + `<td>${escHtml(whyCell(r))}</td>`
     + `<td>${r.evidence ? `<a href="${escHtml(r.evidence)}">official text</a>` : '—'}</td></tr>`);
   return [
@@ -176,13 +207,14 @@ export function toJiraAdf(report) {
   const linkText = (url, label = 'official text') => ({
     type: 'text', text: label, marks: [{ type: 'link', attrs: { href: url } }],
   });
+  const statusNode = (r) => ({ type: 'status', attrs: { text: statusOf(r).title, color: statusOf(r).adf, localId: `cc-${r.n}` } });
   const headerCells = ['#', 'Citation', 'Law', 'Verdict', 'Type', 'Why', 'Source']
     .map((h) => ({ type: 'tableHeader', content: [para(h)] }));
   const cellsOf = (r) => [
     { type: 'tableCell', content: [para(String(r.n))] },
     { type: 'tableCell', content: [para(r.citation ?? '')] },
     { type: 'tableCell', content: [para(lawCell(r))] },
-    { type: 'tableCell', content: [para(`${r.icon} ${r.verdict_label}`)] },
+    { type: 'tableCell', content: [{ type: 'paragraph', content: [statusNode(r), ...(verdictText(r) && verdictText(r).toUpperCase() !== statusOf(r).title ? [text(` ${verdictText(r)}`)] : [])] }] },
     { type: 'tableCell', content: [para(typeCell(r))] },
     { type: 'tableCell', content: [para(whyCell(r))] },
     r.evidence

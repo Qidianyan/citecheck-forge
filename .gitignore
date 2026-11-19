@@ -11,3 +11,5 @@ dist/
 *.log
 .DS_Store
 ._*
+web/dist/
+web/mock/dist/

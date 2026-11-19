@@ -15,9 +15,15 @@ const FRONT = path.join(ROOT, 'src/frontend');
 const files = fs.readdirSync(FRONT).filter((f) => f.endsWith('.jsx')).map((f) => path.join(FRONT, f));
 const components = new Set(fs.readFileSync(path.join(ROOT, 'tools/uikit/components.txt'), 'utf8').split('\n').filter(Boolean));
 const glyphs = new Set(fs.readFileSync(path.join(ROOT, 'tools/uikit/icon-glyphs.txt'), 'utf8').split('\n').filter(Boolean));
-const TS_PATH = process.env.CITECHECK_TS || '/workspace/competitions/shared/tools/forge-cli/lib/node_modules/@forge/cli/node_modules/typescript';
+const req = createRequire(import.meta.url);
 let ts = null;
-try { ts = createRequire(import.meta.url)(TS_PATH); } catch { ts = null; }
+for (const cand of [process.env.CITECHECK_TS, 'typescript', '/workspace/competitions/shared/tools/forge-cli/lib/node_modules/@forge/cli/node_modules/typescript'].filter(Boolean)) {
+  try {
+    const m = req(cand);
+    const candidate = m?.transpileModule && m?.JsxEmit ? m : (m?.default?.transpileModule && m?.default?.JsxEmit ? m.default : null);
+    if (candidate) { ts = candidate; break; }
+  } catch { ts = null; }
+}
 
 test('frontend JSX files parse', { skip: ts ? false : 'TypeScript (Forge CLI) not installed' }, () => {
   for (const f of files) {

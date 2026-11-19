@@ -3,10 +3,12 @@
 // All logic lives in orgSourcesModel.js (pure, tested); this file only binds it to invocations.
 import React, { useCallback, useEffect, useState } from 'react';
 import {
-  Button, DynamicTable, Heading, Inline, Link, SectionMessage, Spinner, Stack, Text, TextInput,
+  Button, DynamicTable, EmptyState, ErrorMessage, Heading, HelperMessage, Inline, Label, Link, SectionMessage, Spinner, Stack, Text, Textfield,
 } from '@forge/react';
 import { invoke } from '@forge/bridge';
 import { formErrors, toOrgSourcesViewModel } from './orgSourcesModel.js';
+import { validateOrgForm } from './adminModel.js';
+import { toTable } from './panelModel.js';
 
 const HEAD = ['Source key', 'Title', 'Clauses', 'Registered at', 'Page', ''];
 
@@ -33,7 +35,7 @@ export default function OrgSourcesPanel() {
   const register = useCallback(async () => {
     setError(null);
     setNotice(null);
-    const firstError = Object.values(formErrors({ pageId, sourceKey }))[0];
+    const firstError = Object.values({ ...validateOrgForm({ pageId, sourceKey }), ...formErrors({ pageId, sourceKey }) })[0];
     if (firstError) { setError(firstError); return; }
     setBusy(true);
     try {
@@ -72,13 +74,25 @@ export default function OrgSourcesPanel() {
   if (sources === null) return <Spinner />;
 
   const vm = toOrgSourcesViewModel(sources, { error, notice });
+  const fieldErrors = validateOrgForm({ pageId, sourceKey });
+  const table = toTable(HEAD, vm.rows.map((r) => [
+    r.sourceKey,
+    r.title || '—',
+    String(r.clauses),
+    r.registeredAt || '—',
+    r.pageUrl ? <Link href={r.pageUrl} openNewTab>Open page</Link> : '—',
+    <Inline space="space.050">
+      <Button onClick={() => refresh(r.sourceKey)}>Refresh</Button>
+      <Button appearance="danger" onClick={() => remove(r.sourceKey)}>Remove</Button>
+    </Inline>,
+  ]), (_, i) => vm.rows[i].sourceKey);
 
   return (
     <Stack space="medium">
       <Heading size="small">Organisation sources</Heading>
 
       {vm.error ? (
-        <SectionMessage title="Something went wrong" appearance="error">
+        <SectionMessage title="Can't complete this" appearance="error">
           <Text>{vm.error}</Text>
         </SectionMessage>
       ) : null}
@@ -87,29 +101,24 @@ export default function OrgSourcesPanel() {
         <SectionMessage title={vm.notice} appearance="success" />
       ) : null}
 
-      <Inline>
-        <TextInput label="Confluence page ID" name="pageId" value={pageId} onChange={(e) => setPageId(e.target.value)} />
-        <TextInput label="Source key" name="sourceKey" value={sourceKey} onChange={(e) => setSourceKey(e.target.value)} />
-        <Button text="Register page" appearance="primary" onClick={register} isDisabled={busy} />
-      </Inline>
+      <Text>Register a Confluence page (a policy or clause library) as a source. Citations like "Policy POL-7 §3" are then checked against it.</Text>
+      <Stack space="space.100">
+        <Label labelFor="pageId">Confluence page ID</Label>
+        <Textfield id="pageId" name="pageId" value={pageId} onChange={(e) => setPageId(e.target.value)} />
+        {pageId && fieldErrors.pageId ? <ErrorMessage>{fieldErrors.pageId}</ErrorMessage> : <HelperMessage>The number in the page URL after /pages/.</HelperMessage>}
+        <Label labelFor="sourceKey">Source key</Label>
+        <Textfield id="sourceKey" name="sourceKey" value={sourceKey} onChange={(e) => setSourceKey(e.target.value)} />
+        {sourceKey && fieldErrors.sourceKey ? <ErrorMessage>{fieldErrors.sourceKey}</ErrorMessage> : <HelperMessage>How documents cite it, for example POL-7.</HelperMessage>}
+        <Inline><Button appearance="primary" onClick={register} isDisabled={busy}>Register page</Button></Inline>
+      </Stack>
 
       {vm.rows.length > 0 ? (
         <DynamicTable
-          head={HEAD}
-          rows={vm.rows.map((r) => [
-            r.sourceKey,
-            r.title || '—',
-            String(r.clauses),
-            r.registeredAt || '—',
-            r.pageUrl ? <Link href={r.pageUrl}>open page</Link> : '—',
-            <Inline>
-              <Button text="Refresh" onClick={() => refresh(r.sourceKey)} />
-              <Button text="Remove" appearance="danger" onClick={() => remove(r.sourceKey)} />
-            </Inline>,
-          ])}
+          head={table.head}
+          rows={table.rows}
         />
       ) : (
-        <Text>No organisation sources registered yet. Register a Confluence page above.</Text>
+        <EmptyState header="No organisation sources yet" description="Register a policy or clause library page above to check citations against it." />
       )}
     </Stack>
   );
